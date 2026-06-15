@@ -203,7 +203,7 @@ a:hover {
 }
 
 .brand img {
-  height: 2.5rem;
+  height: 3.25rem;
   width: auto;
 }
 
@@ -747,10 +747,9 @@ body.menu-open .menu-toggle span:nth-child(3) {
 }
 
 .footer-brand img {
-  height: 2.25rem;
+  height: 3rem;
   width: auto;
   margin-bottom: 1rem;
-  filter: brightness(0) invert(1);
 }
 
 .footer-brand p {
