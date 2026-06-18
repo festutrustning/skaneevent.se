@@ -573,8 +573,8 @@ body.menu-open .menu-toggle span:nth-child(3) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .gallery-grid-3 {
-    grid-template-columns: repeat(3, 1fr);
+  .gallery-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gallery-item-wide {
@@ -598,7 +598,7 @@ body.menu-open .menu-toggle span:nth-child(3) {
   display: block;
 }
 
-.gallery-grid-3 .gallery-item img {
+.gallery-grid-4 .gallery-item img {
   aspect-ratio: 4 / 3;
 }
 
