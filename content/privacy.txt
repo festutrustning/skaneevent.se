@@ -1,0 +1,138 @@
+Denna integritetspolicy förklarar hur Enta Sverige AB behandlar dina personuppgifter i samband med uthyrning av festutrustning och relaterade tjänster. Vi värnar om din integritet och samlar endast in den information som är nödvändig för att hantera bokningar och kommunikation kopplad till våra tjänster.
+
+⸻
+
+1. Vem är ansvarig för dina uppgifter?
+
+Personuppgiftsansvarig är:
+
+Enta Sverige AB
+Org.nr: 559579-0832
+📍 Lockarpsvägen 6B, 213 76 Malmö
+📧 info@festutrustning.se
+📞 076-677 72 32
+
+⸻
+
+2. Vilka uppgifter samlas in och varför?
+
+Vi samlar in följande uppgifter vid bokning:
+	•	Namn
+	•	E-postadress
+	•	Telefonnummer
+	•	Eventuell adress (vid leverans)
+	•	Information om bokad utrustning och datum
+	•	Betalningsinformation (hanteras säkert via Stripe)
+
+Vid kontakt via kontaktformulär samlas:
+	•	Namn
+	•	E-postadress
+	•	Telefonnummer
+	•	Meddelande
+
+Vid omdömen samlas:
+	•	Namn (valfritt anonymt)
+	•	E-postadress
+	•	Betyg och kommentar
+
+Uppgifterna används för att:
+	•	Hantera och bekräfta bokningar
+	•	Kommunicera kring leverans, genomförande och återlämning
+	•	Fullgöra avtal och rättsliga skyldigheter
+	•	Besvara frågor och förfrågningar
+	•	Förbättra tjänster och kundupplevelse
+	•	Skapa och uppdatera kundkonto
+	•	Föra statistik över kundrelationer och bokningar
+
+⸻
+
+3. Kundregister och automatisk registrering
+
+Vid bokning registreras du automatiskt i vårt kundregister för att förenkla framtida bokningar och förbättra vår service.
+
+Kundkontot kan innehålla:
+	•	Kontaktuppgifter
+	•	Unikt kundnummer
+	•	Bokningshistorik och statistik
+	•	Interna anteckningar för kundservice
+
+Om du redan är registrerad uppdateras dina uppgifter vid behov.
+
+⸻
+
+4. Hur länge sparas dina uppgifter?
+	•	Kunduppgifter: Sparas så länge du är aktiv kund
+	•	Bokningsuppgifter: Sparas i 36 månader
+	•	Kontaktmeddelanden: Raderas inom 12 månader efter avslutat ärende
+	•	Omdömen: Sparas tills de inte längre är relevanta
+	•	Admin-loggar: Sparas i 12 månader
+	•	E-postloggar: Sparas i 6 månader
+
+Du kan när som helst begära radering av dina uppgifter.
+
+⸻
+
+5. Tredjepartstjänster och delning av uppgifter
+
+För att leverera tjänsten används följande leverantörer:
+	•	Supabase (USA): Datalagring och systemhantering
+	•	Stripe (USA): Betalningshantering enligt PCI-DSS
+	•	Google Analytics: Användarstatistik (anonymiserad)
+	•	Facebook Pixel: Marknadsföring (endast med samtycke)
+
+Personuppgifter säljs aldrig vidare och delas endast i den omfattning som krävs för att tillhandahålla tjänsten.
+
+⸻
+
+6. Dina rättigheter enligt GDPR
+
+Du har rätt att:
+	•	Få tillgång till dina personuppgifter
+	•	Begära rättelse eller radering
+	•	Begränsa eller invända mot behandling
+	•	Få ut dina uppgifter (dataportabilitet)
+	•	Återkalla samtycke
+	•	Begära att bli raderad ur kundregister
+	•	Lämna klagomål till Integritetsskyddsmyndigheten (IMY)
+
+Kontakta oss via e-post för att utöva dina rättigheter.
+
+⸻
+
+7. Skydd av dina uppgifter
+
+Personuppgifter lagras i säkra system med moderna säkerhetsåtgärder.
+Endast behörig personal har tillgång till uppgifterna och all dataöverföring sker krypterat (HTTPS/TLS).
+
+⸻
+
+8. Cookies och spårning
+
+Webbplatsen använder cookies för funktionalitet, analys och marknadsföring.
+
+Vi använder:
+	•	Nödvändiga cookies (funktionalitet)
+	•	Funktionella cookies (förbättrad upplevelse)
+	•	Analyscookies (Google Analytics)
+	•	Marknadsföringscookies (Facebook Pixel, vid samtycke)
+
+Du kan ändra dina inställningar via “Cookie-inställningar” eller i din webbläsare.
+
+⸻
+
+9. Ändringar i policyn
+
+Policyn kan uppdateras vid behov.
+Väsentliga ändringar kommuniceras på webbplatsen.
+
+Senast uppdaterad: 7 februari 2026
+
+⸻
+
+10. Kontakt
+
+Har du frågor om hur vi hanterar personuppgifter?
+
+📧 info@festutrustning.se
+📞 076-677 72 32
+📍 Lockarpsvägen 6B, 213 76 Malmö
