@@ -22,14 +22,16 @@
   <meta property="og:url" content="https://skaneevent.se/">
   <meta property="og:title" content="Hyra eventteknik till företagsevent i Skåne | Skåne Event">
   <meta property="og:description" content="Professionell eventteknik för företagsevent i Skåne. Scener, ljud, ljus, LED-skärmar och mer. Begär offert via festutrustning.se.">
-  <meta property="og:image" content="https://skaneevent.se/images/konferens-panel.jpg">
+  <meta property="og:image" content="https://skaneevent.se/images/hero-foretagsevent.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1440">
   <meta property="og:locale" content="sv_SE">
   <meta property="og:site_name" content="Skåne Event">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hyra eventteknik till företagsevent i Skåne">
   <meta name="twitter:description" content="Scener, ljud, ljus, LED-skärmar och mikrofonteknik för företagsevent i hela Skåne.">
-  <meta name="twitter:image" content="https://skaneevent.se/images/konferens-panel.jpg">
+  <meta name="twitter:image" content="https://skaneevent.se/images/hero-foretagsevent.jpg">
 
   <meta name="theme-color" content="#7C3AED">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -39,11 +41,20 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="dns-prefetch" href="https://festutrustning.se">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K4XG6F43Q"></script>
+  <!-- Google Analytics med Consent Mode -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K4XG6F43Q"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-0K4XG6F43Q');
   </script>
@@ -192,10 +203,10 @@
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-bg" role="presentation">
         <img
-          src="/images/konferens-panel.jpg"
+          src="/images/hero-foretagsevent.jpg"
           alt=""
           width="1920"
-          height="1280"
+          height="1440"
           fetchpriority="high"
         >
       </div>
@@ -479,6 +490,19 @@
     </div>
   </footer>
 
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-heading" aria-describedby="cookie-text" hidden>
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-content">
+        <h2 id="cookie-heading">Cookies på skaneevent.se</h2>
+        <p id="cookie-text">Vi använder cookies för att förbättra din upplevelse och analysera trafik. Du kan välja vilka cookies du vill tillåta. Läs mer i vår <a href="https://festutrustning.se/integritet">integritetspolicy</a>.</p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-secondary btn-sm" id="cookie-reject">Endast nödvändiga</button>
+        <button type="button" class="btn btn-primary btn-sm" id="cookie-accept">Acceptera alla</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const mobileNav = document.getElementById('mobile-nav');
@@ -495,6 +519,33 @@
         document.body.classList.remove('menu-open');
       });
     });
+
+    const COOKIE_KEY = 'skaneevent_cookie_consent';
+    const banner = document.getElementById('cookie-banner');
+
+    function setAnalyticsConsent(granted) {
+      gtag('consent', 'update', {
+        analytics_storage: granted ? 'granted' : 'denied'
+      });
+    }
+
+    function saveConsent(value) {
+      localStorage.setItem(COOKIE_KEY, value);
+      banner.hidden = true;
+      setAnalyticsConsent(value === 'all');
+    }
+
+    const savedConsent = localStorage.getItem(COOKIE_KEY);
+    if (savedConsent === 'all') {
+      setAnalyticsConsent(true);
+    } else if (savedConsent === 'necessary') {
+      setAnalyticsConsent(false);
+    } else {
+      banner.hidden = false;
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', () => saveConsent('all'));
+    document.getElementById('cookie-reject').addEventListener('click', () => saveConsent('necessary'));
   </script>
 </body>
 </html>
