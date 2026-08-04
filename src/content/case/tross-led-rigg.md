@@ -34,4 +34,4 @@ Riggen startade klockan 07:00 dagen före. Tross byggdes och certifierades, LED-
 - [Projektor eller LED](/guider/projektor-eller-led/)
 - [Tekniker på plats](/guider/tekniker-pa-plats/)
 
-[Begär offert](/offert/) för liknande produktion i Skåne.
+[Begär offert](https://festutrustning.se/offert) för liknande produktion i Skåne.

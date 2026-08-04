@@ -29,4 +29,4 @@ Planera körschemat med tekniker i god tid. Kick-offs med konferens + fest behö
 
 Se vår guide [tekniker på plats](/guider/tekniker-pa-plats/) och [ljud till företagsevent](/guider/ljud-till-foretagsevent/).
 
-[Begär offert](/offert/) för kick-off eller företagsevent i Skåne.
+[Begär offert](https://festutrustning.se/offert) för kick-off eller företagsevent i Skåne.

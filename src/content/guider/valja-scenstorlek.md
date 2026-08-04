@@ -133,7 +133,7 @@ Berätta för oss:
 5. Behov av talarpodium, räcken, backdrop
 6. Bildlösning – projektor, LED, monitorer
 
-[Begär offert](/offert/) så dimensionerar vi scenen tillsammans med ljud, ljus och bild. Vi erbjuder [eventteknik](/eventteknik/) och scenlösningar i hela Skåne.
+[Begär offert](https://festutrustning.se/offert) så dimensionerar vi scenen tillsammans med ljud, ljus och bild. Vi erbjuder [eventteknik](/eventteknik/) och scenlösningar i hela Skåne.
 
 Scenmoduler, tross och kompletterande utrustning finns via [Festutrustning](https://festutrustning.se/scen) – vilket ger er flexibilitet att bygga rätt scen för just ert program.
 

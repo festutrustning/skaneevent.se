@@ -138,7 +138,7 @@ Mer om specifika eventtyper: [teknik till konferens](/guider/teknik-till-konfere
 
 ## Nästa steg
 
-Osäker på vad som passar er lokal och ert program? [Begär offert](/offert/) – beskriv lokal, ljusförhållanden och program så rekommenderar vi rätt lösning.
+Osäker på vad som passar er lokal och ert program? [Begär offert](https://festutrustning.se/offert) – beskriv lokal, ljusförhållanden och program så rekommenderar vi rätt lösning.
 
 Vi erbjuder [eventteknik](/eventteknik/) i hela Skåne – projektor, LED, monitorer och komplett bildproduktion. Se vårt [case om utomhus LED-scen i Malmö](/case/utomhus-led-scen-malmo/) för ett praktiskt exempel.
 

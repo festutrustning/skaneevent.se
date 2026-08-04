@@ -132,6 +132,6 @@ Vi känner regionen och hjälper er matcha teknik med lokal. Besök vår sida om
 
 ## Nästa steg
 
-[Begär offert](/offert/) med konferensdatum, lokal, gästantal och program. Ju mer detaljer ni kan ge, desto bättre förslag. Vi erbjuder komplett [eventteknik](/eventteknik/) och tekniker i hela Skåne.
+[Begär offert](https://festutrustning.se/offert) med konferensdatum, lokal, gästantal och program. Ju mer detaljer ni kan ge, desto bättre förslag. Vi erbjuder komplett [eventteknik](/eventteknik/) och tekniker i hela Skåne.
 
 Via vårt samarbete med [Festutrustning](https://festutrustning.se/foretag) får ni tillgång till utrustning och erfarenhet från hundratals företagsevent – anpassat till just er konferens.

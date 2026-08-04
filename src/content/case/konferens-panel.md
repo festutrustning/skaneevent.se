@@ -29,4 +29,4 @@ Be paneldeltagarna komma 30 minuter före panelstart för ljudprov. Testa med fa
 - [Teknik till konferens](/guider/teknik-till-konferens/)
 - [Konferens](/konferens/)
 
-[Begär offert](/offert/) för er konferens i Skåne.
+[Begär offert](https://festutrustning.se/offert) för er konferens i Skåne.

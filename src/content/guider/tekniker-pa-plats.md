@@ -157,7 +157,7 @@ Tills batteriet dör, feedback uppstår eller presentationen inte syns.
 
 ## Nästa steg
 
-Osäker på hur många tekniker ni behöver? [Begär offert](/offert/) med program, lokal och gästantal – vi rekommenderar rätt bemanning.
+Osäker på hur många tekniker ni behöver? [Begär offert](https://festutrustning.se/offert) med program, lokal och gästantal – vi rekommenderar rätt bemanning.
 
 Vi erbjuder tekniker till [företagsevent](/foretagsevent/) och [eventteknik](/eventteknik/) i hela Skåne. Våra tekniker har erfarenhet av konferenser, galor, paneler och utomhusproduktioner.
 

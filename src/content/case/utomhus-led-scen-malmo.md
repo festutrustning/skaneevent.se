@@ -39,4 +39,4 @@ Utomhusevent i Skåne ställer särskilda krav:
 
 Utomhusevent kräver alltid backup-plan för väder. Vi hade presenningar redo och generator som reserv. Ett tidigt lokalbesök hade sparat tid vid riggen – något vi nu alltid rekommenderar.
 
-Planerar ni utomhusevent? Se vår guide om [projektor eller LED](/guider/projektor-eller-led/) och [begär offert](/offert/).
+Planerar ni utomhusevent? Se vår guide om [projektor eller LED](/guider/projektor-eller-led/) och [begär offert](https://festutrustning.se/offert).

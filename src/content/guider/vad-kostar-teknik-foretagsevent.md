@@ -69,7 +69,7 @@ Siffrorna är riktmärken – inte offerter. Er faktiska kostnad beror på era s
 
 ## Vad som oftast ingår i en offert
 
-När ni [begär offert](/offert/) hos oss får ni normalt ett tydligt förslag som specificerar:
+När ni [begär offert](https://festutrustning.se/offert) hos oss får ni normalt ett tydligt förslag som specificerar:
 
 - Utrustning (ljud, ljus, scen, bild, mikrofoner)
 - Leverans och rigg
@@ -114,4 +114,4 @@ När ni har en budgetram kan ni börja konkretisera teknikbehovet. Vår [checkli
 
 Vi samarbetar med [Festutrustning](https://festutrustning.se/ljud-ljus-skane) som har ett brett utbud av ljud- och ljusutrustning i Skåne – vilket ger er tillgång till rätt utrustning utan att betala för onödigt omfattande paket.
 
-[Begär offert](/offert/) med datum, lokal, gästantal och ungefärligt program. Ju mer ni berättar, desto träffsäkrare blir prisbilden.
+[Begär offert](https://festutrustning.se/offert) med datum, lokal, gästantal och ungefärligt program. Ju mer ni berättar, desto träffsäkrare blir prisbilden.

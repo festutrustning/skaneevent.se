@@ -152,6 +152,6 @@ Be er teknikpartner besöka lokalen i förväg om panelen är central i programm
 
 ## Nästa steg
 
-[Begär offert](/offert/) och beskriv panelupplägget – antal deltagare, bordlayout, lokal och gästantal. Vi dimensionerar mikrofoner och ljud utifrån era förutsättninger.
+[Begär offert](https://festutrustning.se/offert) och beskriv panelupplägget – antal deltagare, bordlayout, lokal och gästantal. Vi dimensionerar mikrofoner och ljud utifrån era förutsättninger.
 
 Vi erbjuder komplett [eventteknik](/eventteknik/) till konferenser och [företagsevent](/foretagsevent/) i hela Skåne. Utrustningen levereras via [Festutrustning](https://festutrustning.se/ljud-ljus-skane) – med rätt mikrofoner och mixers för paneler i alla storlekar.

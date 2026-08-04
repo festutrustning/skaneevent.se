@@ -65,7 +65,7 @@ Vi dimensionerar alltid utifrån lokal, program och gästantal – inte utifrån
 
 Budget för eventteknik varierar beroende på omfattning, antal dagar och om ni behöver tekniker på plats. Som riktlinje bör ni räkna med att teknik ofta utgör 15–30 % av total eventbudget för ett medelstort företagsevent – mer vid större produktioner med scen, LED och flera tekniker.
 
-Begär offert i god tid via vårt [offertformulär](/offert/). Ju mer ni kan berätta om lokal, datum, gästantal och program, desto träffsäkrare blir förslaget. Vi återkommer med en skräddarsydd lösning – inte en generisk prislista.
+Begär offert i god tid via vårt [offertformulär](https://festutrustning.se/offert). Ju mer ni kan berätta om lokal, datum, gästantal och program, desto träffsäkrare blir förslaget. Vi återkommer med en skräddarsydd lösning – inte en generisk prislista.
 
 ## Lokalval i Skåne
 
@@ -108,4 +108,4 @@ Innan ni går vidare till bokning, se till att ni kan svara ja på följande:
 
 När grunden är lagd är nästa steg att konkretisera teknikbehovet. Vår [checklista för företagsevent](/guider/checklista-foretagsevent/) hjälper er gå igenom alla praktiska detaljer, och guiden om [vad teknik kostar](/guider/vad-kostar-teknik-foretagsevent/) ger er en bättre bild av budgeten.
 
-Har ni datum och lokal klara? [Begär offert](/offert/) – så återkommer vi med ett skräddarsytt förslag anpassat till ert event i Skåne.
+Har ni datum och lokal klara? [Begär offert](https://festutrustning.se/offert) – så återkommer vi med ett skräddarsytt förslag anpassat till ert event i Skåne.
