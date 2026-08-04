@@ -1,0 +1,71 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE } from '../../data/site';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guider');
+  return guides.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, pubDate, updatedDate, tags } = entry.data;
+
+const canonicalPath = `/guider/${entry.id}/`;
+const breadcrumbs = [
+  { name: 'Guider', href: '/guider/' },
+  { name: title, href: canonicalPath },
+];
+
+const jsonLd = {
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  author: { '@id': `${SITE.url}/#organization` },
+  publisher: { '@id': `${SITE.url}/#organization` },
+  mainEntityOfPage: new URL(canonicalPath, SITE.url).href,
+  inLanguage: 'sv-SE',
+  keywords: tags.join(', '),
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  breadcrumbs={breadcrumbs}
+  jsonLd={jsonLd}
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>{title}</h1>
+      <p class="page-lead">{description}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+      <p class="guide-meta">
+        Publicerad {pubDate.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}
+        {updatedDate && (
+          <> · Uppdaterad {updatedDate.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}</>
+        )}
+        {tags.length > 0 && <> · {tags.join(' · ')}</>}
+      </p>
+      <div class="article-body">
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

@@ -1,0 +1,99 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken teknik krävs till en företagsgala?',
+    a: 'Typiskt behövs scen, professionellt ljus, ljud och mikrofoner för tal och eventuell underhållning, samt bildskärmar eller projektion för visuella element och prisutdelning.',
+  },
+  {
+    q: 'Kan ni skapa scenkänsla i en vanlig festlokal?',
+    a: 'Ja. Med rätt ljus, scen och ljud kan vi lyfta de flesta lokaler till en mer högtidlig känsla – även i miljöer som inte är byggda som teatersalar.',
+  },
+  {
+    q: 'Hanterar ni både tal och livemusik/DJ?',
+    a: 'Absolut. Vi planerar ljud och ljus för program som växlar mellan tal, video, prisutdelning och musik eller dansgolv.',
+  },
+  {
+    q: 'Hur lång tid tar rigg inför en gala?',
+    a: 'Det beror på omfattning och lokal. Vi planerar riggtid i förväg och koordinerar med venue så att ni vet exakt när lokalen behöver vara tillgänglig.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'scen' as const,
+    label: 'Scenlösningar hos Festutrustning',
+    context: 'gala_aside',
+  },
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'gala_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Gala i Skåne – scen, ljud och ljus för företagsevent"
+  description="Eventteknik till företagsgalor i Skåne. Scen, ljus, ljud och tekniker för prisutdelningar och galakvällar. Begär offert."
+  canonicalPath="/gala/"
+  h1="Gala i Skåne"
+  lead="Högtidlig scenkänsla, professionellt ljus och ljud som bär hela kvällen – eventteknik för företagsgalor och prisutdelningar i Skåne."
+  breadcrumbs={[{ name: 'Gala', href: '/gala/' }]}
+  ogImage="/images/gala-foretagsevent.jpg"
+  festLinks={festLinks}
+  serviceName="Gala i Skåne"
+  faqs={faqs}
+>
+  <h2>Galor som känns genomtänkta – inte improviserade</h2>
+  <p>
+    En företagsgala är mer än middag och mingel. Det är kvällen då ni firar resultat, uppmärksammar medarbetare och
+    visar upp ert varumärke inför kunder och partners. Ljuset ska sätta stämningen, talen ska bära och prisutdelningen
+    ska kännas värdig. Skåne Event levererar <strong>eventteknik till galor i Skåne</strong> med fokus på scen,
+    ljud och ljus som lyfter hela upplevelsen.
+  </p>
+  <p>
+    Vi arbetar med företag som arrangerar årsgalor, prisutdelningar, jubileum och kombinerade
+    <a href="/konferens/">konferens</a>- och galakvällar. Tekniken planeras utifrån programmet – inte tvärtom.
+  </p>
+
+  <h2>Scen, ljus och ljud i samspel</h2>
+  <p>En lyckad gala kräver att flera tekniska element fungerar tillsammans:</p>
+  <ul>
+    <li><a href="/scen-till-event/">Scen och rigg</a> som ger talare och underhållning rätt plattform</li>
+    <li>Ljusdesign som skapar atmosfär – från diskret till mer dramatiskt</li>
+    <li>Ljud och mikrofoner för tal, video och eventuell livemusik</li>
+    <li>Bild och projektion för logos, nomineringsfilmer och visuella inslag</li>
+  </ul>
+  <p>
+    Vi kan finnas på plats med tekniker som kör ljus och ljud under kvällen, så att övergångar mellan programpunkter
+    blir smidiga och oväntade problem hanteras innan publiken märker dem.
+  </p>
+
+  <h2>Från planering till sista applåd</h2>
+  <p>
+    Galor kräver noggrann planering. Vi går igenom program, tidslinje, antal tal och eventuella specialmoment.
+    Ska det dansas efteråt? Finns det liveband? Behövs spotlight vid prisutdelning? Varje detalj påverkar den
+    tekniska lösningen.
+  </p>
+  <p>
+    Som del av ert större <a href="/foretagsevent/">företagsevent</a> kan vi samordna med
+    <a href="/eventproduktion/">eventproduktion</a> och andra leverantörer. För företag som vill kombinera gala
+    med <a href="/julfest/">julfest</a> eller <a href="/foretagsfest/">företagsfest</a> anpassar vi tekniken
+    efter kvällens flöde.
+  </p>
+
+  <h2>Galor i Skåne</h2>
+  <p>
+    Skåne har många lokaler som lämpar sig för galor – hotellbanketter, eventlokaler och unika industrimiljöer.
+    Vi levererar i hela regionen, inklusive <a href="/malmo/foretagsevent/">Malmö</a>,
+    <a href="/lund/foretagsevent/">Lund</a> och <a href="/helsingborg/foretagsevent/">Helsingborg</a>.
+  </p>
+
+  <h2>Begär offert för er gala</h2>
+  <p>
+    Berätta om ert event – datum, lokal, program och antal gäster. Vi återkommer med ett skräddarsytt tekniskt
+    förslag. <a href="/offert/">Begär offert</a> och låt oss ta hand om tekniken till er galakväll.
+  </p>
+</SolutionPage>

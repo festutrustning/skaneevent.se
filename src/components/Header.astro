@@ -1,0 +1,32 @@
+---
+import { SITE } from '../data/site';
+---
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label={`${SITE.name} – startsida`}>
+      <img src="/logo.png" alt={`${SITE.name} logotyp`} width="280" height="55" loading="eager" />
+    </a>
+    <nav class="nav" aria-label="Huvudnavigation">
+      <a href="/foretagsevent/">Eventlösningar</a>
+      <a href="/eventteknik/">Eventteknik</a>
+      <a href="/guider/">Guider</a>
+      <a href="/case/">Case</a>
+      <a href="/om-oss/">Om oss</a>
+      <a class="btn btn-primary btn-sm" href="/offert/">Begär offert</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-nav" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobilnavigation" hidden>
+    <a href="/foretagsevent/">Eventlösningar</a>
+    <a href="/eventteknik/">Eventteknik</a>
+    <a href="/guider/">Guider</a>
+    <a href="/case/">Case</a>
+    <a href="/om-oss/">Om oss</a>
+    <a class="btn btn-primary" href="/offert/">Begär offert</a>
+  </nav>
+</header>

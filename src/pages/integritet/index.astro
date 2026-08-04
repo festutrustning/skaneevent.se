@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { privacyHtml } from '../../data/privacy-html';
+
+const breadcrumbs = [{ name: 'Integritetspolicy', href: '/integritet/' }];
+---
+
+<BaseLayout
+  title="Integritetspolicy"
+  description="Läs om hur vi hanterar personuppgifter och cookies på skaneevent.se."
+  canonicalPath="/integritet/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="legal-page">
+    <div class="container">
+      <article class="legal-card">
+        <h1>Integritetspolicy</h1>
+        <p class="legal-meta">Senast uppdaterad: 7 februari 2026</p>
+        <div class="legal-prose" set:html={privacyHtml} />
+        <section class="legal-cookies" aria-labelledby="cookies-heading">
+          <h2 id="cookies-heading">Cookies</h2>
+          <p>Vår webbplats använder cookies för att förbättra din upplevelse.</p>
+          <h3>Vilka typer av cookies använder vi?</h3>
+          <div class="legal-cookie-types">
+            <div>
+              <h4>Nödvändiga cookies</h4>
+              <p>Nödvändiga för att webbplatsen ska fungera.</p>
+            </div>
+            <div>
+              <h4>Analyscookies</h4>
+              <p>Hjälper oss förstå hur besökare använder sajten (Google Analytics, vid samtycke).</p>
+            </div>
+          </div>
+          <h3>Hantera cookie-inställningar</h3>
+          <p>Du kan när som helst ändra dina cookie-inställningar.</p>
+          <button type="button" class="legal-cookie-reset" id="cookie-reset">Hantera cookie-inställningar</button>
+        </section>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

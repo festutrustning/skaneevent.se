@@ -1,0 +1,153 @@
+---
+import { SITE, type BreadcrumbItem } from '../data/site';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  ogImage?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  ogImage = SITE.defaultOgImage,
+  breadcrumbs = [],
+  jsonLd,
+  noIndex = false,
+} = Astro.props;
+
+const canonical = new URL(canonicalPath, SITE.url).href;
+const ogImageAbs = new URL(ogImage, SITE.url).href;
+const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
+
+const breadcrumbLd =
+  breadcrumbs.length > 0
+    ? {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Skåne Event', item: SITE.url + '/' },
+          ...breadcrumbs.map((b, i) => ({
+            '@type': 'ListItem',
+            position: i + 2,
+            name: b.name,
+            item: new URL(b.href, SITE.url).href,
+          })),
+        ],
+      }
+    : null;
+
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    url: SITE.url + '/',
+    name: SITE.name,
+    description: SITE.description,
+    publisher: { '@id': `${SITE.url}/#organization` },
+    inLanguage: 'sv-SE',
+  },
+  {
+    '@type': 'Organization',
+    '@id': `${SITE.url}/#organization`,
+    name: SITE.name,
+    legalName: SITE.orgName,
+    url: SITE.url + '/',
+    logo: new URL(SITE.logo, SITE.url).href,
+    telephone: SITE.phone,
+    email: SITE.email,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE.address.street,
+      addressLocality: SITE.address.city,
+      postalCode: SITE.address.postalCode,
+      addressRegion: SITE.address.region,
+      addressCountry: SITE.address.country,
+    },
+    sameAs: SITE.sameAs,
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'festutrustning.se',
+      url: SITE.festutrustning,
+    },
+  },
+];
+
+if (breadcrumbLd) graph.push(breadcrumbLd);
+if (jsonLd) {
+  if (Array.isArray(jsonLd)) graph.push(...jsonLd);
+  else graph.push(jsonLd);
+}
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={noIndex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="sv-se" href={canonical} />
+    <meta name="theme-color" content="#7C3AED" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageAbs} />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:site_name" content={SITE.name} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbs} />
+
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://festutrustning.se" />
+
+    <script is:inline define:vars={{ gaId: SITE.gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+      window.gtag = gtag;
+    </script>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}></script>
+    <script is:inline define:vars={{ gaId: SITE.gaId }}>
+      gtag('js', new Date());
+      gtag('config', gaId);
+    </script>
+
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Hoppa till innehåll</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <CookieBanner />
+    <script>
+      import '../scripts/client.ts';
+    </script>
+  </body>
+</html>

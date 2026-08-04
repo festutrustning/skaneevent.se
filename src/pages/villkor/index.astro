@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { termsHtml } from '../../data/terms-html';
+
+const breadcrumbs = [{ name: 'Allmänna villkor', href: '/villkor/' }];
+---
+
+<BaseLayout
+  title="Allmänna villkor"
+  description="Allmänna villkor för uthyrning av eventteknik via Festutrustning och Enta Sverige AB."
+  canonicalPath="/villkor/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="legal-page">
+    <div class="container">
+      <article class="legal-card">
+        <h1>Allmänna villkor</h1>
+        <p class="legal-meta">Gäller från och med: 1 mars 2024 (senast uppdaterad: 18 april 2026)</p>
+        <div class="legal-prose" set:html={termsHtml} />
+      </article>
+    </div>
+  </div>
+</BaseLayout>

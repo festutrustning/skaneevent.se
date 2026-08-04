@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const breadcrumbs = [
+  { name: 'Begär offert', href: '/offert/' },
+  { name: 'Tack', href: '/offert/tack/' },
+];
+---
+
+<BaseLayout
+  title="Tack för er förfrågan"
+  description="Vi har tagit emot er offertförfrågan och återkommer så snart som möjligt."
+  canonicalPath="/offert/tack/"
+  breadcrumbs={breadcrumbs}
+  noIndex
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Tack – vi hör av oss</h1>
+      <p class="page-lead">
+        Er förfrågan är mottagen. Vi återkommer med ett förslag baserat på ert event.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/">Till startsidan</a>
+        <a class="btn btn-secondary" href="/guider/">Läs våra guider</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

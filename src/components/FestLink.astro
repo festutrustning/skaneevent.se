@@ -1,0 +1,34 @@
+---
+import { festUrl, type FestDestination } from '../data/festutrustning-links';
+
+interface Props {
+  destination: FestDestination;
+  campaign?: string;
+  context: string;
+  anchorType?: 'brand' | 'partial' | 'cta';
+  utm?: boolean;
+  class?: string;
+}
+
+const {
+  destination,
+  campaign,
+  context,
+  anchorType = 'partial',
+  utm = false,
+  class: className,
+} = Astro.props;
+
+const href = festUrl(destination, { campaign, utm });
+---
+
+<a
+  href={href}
+  class={className}
+  data-fest-link
+  data-link-context={context}
+  data-anchor-type={anchorType}
+  data-destination={destination}
+>
+  <slot />
+</a>

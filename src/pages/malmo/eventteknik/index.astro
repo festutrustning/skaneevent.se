@@ -1,0 +1,101 @@
+---
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken eventteknik levererar ni i Malmö?',
+    a: 'Vi levererar ljud, ljus, scen, bild och mikrofoner till företagsevent i Malmö. Omfattningen anpassas efter lokal, program och om ni behöver tekniker på plats.',
+  },
+  {
+    q: 'Kan ni rigga teknik i Malmös konferenslokaler?',
+    a: 'Ja. Vi har erfarenhet av att arbeta i etablerade venue i Malmö och samordnar med lokalens personal kring riggtider och el.',
+  },
+  {
+    q: 'Hur skiljer sig Malmö-leverans från övriga Skåne?',
+    a: 'Tekniken och servicen är densamma – skillnaden är kortare resväg och lokal kännedom om Malmös lokaler och logistik.',
+  },
+  {
+    q: 'Kan ni hantera både dag- och kvällsevent?',
+    a: 'Absolut. Vi planerar teknik för heldagsevent, kvällsgalor och kombinationer med fest – med smidiga övergångar mellan programdelar.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'ljudLjusMalmo' as const,
+    label: 'Ljud och ljus i Malmö – Festutrustning',
+    context: 'malmo_eventteknik_aside',
+  },
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'malmo_eventteknik_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Eventteknik i Malmö – ljud, ljus och rigg"
+  description="Professionell eventteknik i Malmö för företagsevent. Ljud, ljus, scen, mikrofoner och tekniker. Begär offert."
+  canonicalPath="/malmo/eventteknik/"
+  h1="Eventteknik i Malmö"
+  lead="Ljud, ljus, scen och mikrofoner för företagsevent i Malmö – med lokal närvaro och snabb respons i Öresundsregionen."
+  breadcrumbs={[
+    { name: 'Eventteknik', href: '/eventteknik/' },
+    { name: 'Malmö', href: '/malmo/eventteknik/' },
+  ]}
+  ogImage="/images/rigg-eventteknik.jpg"
+  festLinks={festLinks}
+  serviceName="Eventteknik i Malmö"
+  faqs={faqs}
+>
+  <h2>Eventteknik i Malmö – nära när det behövs</h2>
+  <p>
+    Malmö är navet för många företagsevent i södra Skåne. Konferenser, kick-offs, produktlanseringar och galor
+    kräver teknik som fungerar – utan krångel och utan onödig väntan. Skåne Event levererar
+    <strong>eventteknik i Malmö</strong> med lokal förankring och samma kvalitet som vår
+    <a href="/eventteknik/">regionala eventteknik i Skåne</a>.
+  </p>
+  <p>
+    Vi känner till Malmös lokaler, riggförutsättningar och vanliga utmaningar – från centrala hotell till
+    större eventanläggningar vid havet.
+  </p>
+
+  <h2>Vad vi levererar i Malmö</h2>
+  <p>En komplett teknisk lösning kan omfatta:</p>
+  <ul>
+    <li>PA-system och mikrofoner för tal, panel och publikfrågor</li>
+    <li>Ljus för scen, lokal och stämning – se <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a></li>
+    <li><a href="/scen-till-event/">Scen och rigg</a> i lokaler utan fast scen</li>
+    <li>Projektion och bild för presentationer och video</li>
+    <li>Tekniker på plats under <a href="/foretagsevent/">företagsevent</a></li>
+  </ul>
+  <p>
+    Vi dimensionerar utrustningen utifrån ert specifika event – inte en generisk lista.
+  </p>
+
+  <h2>Planering som minskar stress på eventdagen</h2>
+  <p>
+    God eventteknik börjar innan eventdagen. Vi går igenom lokal, program och eluttag i förväg. Vid behov
+    koordinerar vi med lokalens teknikpersonal och andra leverantörer. Det ger lugnare projektledare och
+    tryggare genomförande – oavsett om det gäller en <a href="/konferens/">konferens</a>,
+    <a href="/kickoff/">kick-off</a> eller <a href="/gala/">gala</a>.
+  </p>
+  <p>
+    För större upplägg kan vi samordna med <a href="/eventproduktion/">eventproduktion</a> och ta ansvar
+    för hela det tekniska genomförandet.
+  </p>
+
+  <h2>Malmö och närområdet</h2>
+  <p>
+    Vi arbetar i hela Malmö och kan även leverera till närliggande orter. För företag som vill ha en bredare
+    översikt av våra eventlösningar, se <a href="/malmo/foretagsevent/">företagsevent i Malmö</a> eller
+    vår huvudsida om <a href="/foretagsevent/">företagsevent i Skåne</a>.
+  </p>
+
+  <h2>Begär offert för eventteknik i Malmö</h2>
+  <p>
+    Beskriv ert event – datum, lokal, typ och antal deltagare. Vi återkommer med ett tekniskt förslag.
+    <a href="/offert/">Begär offert</a> idag.
+  </p>
+</SolutionPage>

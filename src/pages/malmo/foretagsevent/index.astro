@@ -1,0 +1,107 @@
+---
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Levererar ni företagseventteknik i hela Malmö?',
+    a: 'Ja. Vi arbetar i hela Malmö med omnejd – från city och Västra Hamnen till lokaler i Öresundsregionen. Vi kan även hantera event i närliggande orter i Skåne.',
+  },
+  {
+    q: 'Har ni erfarenhet av Malmös konferens- och eventlokaler?',
+    a: 'Ja. Vi känner till vanliga venue i Malmö – hotell, konferenscenter och eventlokaler – och kan samordna tekniken med lokalens personal.',
+  },
+  {
+    q: 'Kan ni hantera både små och stora företagsevent i Malmö?',
+    a: 'Absolut. Vi dimensionerar lösningen efter ert event – från interna avdelningsdagar till större konferenser och galor.',
+  },
+  {
+    q: 'Hur snabbt kan ni leverera offert för event i Malmö?',
+    a: 'Vi återkommer normalt inom kort efter att ni fyllt i offertformuläret. Ju mer information om lokal och program, desto mer träffsäkert förslag.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'malmo_foretagsevent_aside',
+  },
+  {
+    destination: 'ljudLjusMalmo' as const,
+    label: 'Ljud och ljus i Malmö – Festutrustning',
+    context: 'malmo_foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Malmö – eventteknik och produktion"
+  description="Professionella företagsevent i Malmö med ljud, ljus, scen och tekniker. Lokal partner för event i Öresundsregionen. Begär offert."
+  canonicalPath="/malmo/foretagsevent/"
+  h1="Företagsevent i Malmö"
+  lead="Eventteknik och produktion för företagsevent i Malmö – ljud, ljus, scen och tekniker med lokal förankring i Öresundsregionen."
+  breadcrumbs={[
+    { name: 'Företagsevent', href: '/foretagsevent/' },
+    { name: 'Malmö', href: '/malmo/foretagsevent/' },
+  ]}
+  ogImage="/images/hero-foretagsevent.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Malmö"
+  faqs={faqs}
+>
+  <h2>Företagsevent i Malmö – lokal partner, regional räckvidd</h2>
+  <p>
+    Malmö är en av Skånes mest dynamiska eventstäder. Här samlas företag för konferenser, produktlanseringar,
+    kick-offs och galor – i allt från moderna konferenscenter vid havet till centrala hotell och unika
+    industrilokaler. Skåne Event är er partner för <strong>företagsevent i Malmö</strong> med fokus på
+    eventteknik som håller hela vägen.
+  </p>
+  <p>
+    Med bas i regionen känner vi till Malmös lokaler, logistik och förutsättningar. Ni får samma kvalitet som
+    våra kunder i hela <a href="/foretagsevent/">Skåne</a> – men med kortare resvägar och snabbare respons
+    när det behövs.
+  </p>
+
+  <h2>Event i Malmös olika miljöer</h2>
+  <p>Malmö erbjuder mångsidiga venue för företagsevent:</p>
+  <ul>
+    <li>Konferens och företagsdagar – se <a href="/konferens/">konferens</a></li>
+    <li>Produktlanseringar i city eller Västra Hamnen – <a href="/produktlansering/">produktlansering</a></li>
+    <li>Kick-offs och strategidagar – <a href="/kickoff/">kick-off</a></li>
+    <li>Galor och företagsfester – <a href="/gala/">gala</a> och <a href="/foretagsfest/">företagsfest</a></li>
+  </ul>
+  <p>
+    Vi dimensionerar <a href="/eventteknik/">eventteknik</a> utifrån lokal, program och antal deltagare –
+    oavsett om eventet sker i en etablerad konferensanläggning eller en mer ovanlig miljö.
+  </p>
+
+  <h2>Teknik anpassad till Malmö-event</h2>
+  <p>
+    Företagsevent i Malmö ställer ofta krav på flexibel teknik: trådlösa mikrofoner för paneler, skarp
+    projektion i dagsljusssalar, eller <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a> som ska växla
+    mellan middag och dansgolv. Vi planerar lösningen i förväg och kan finnas på plats med tekniker under
+    eventet.
+  </p>
+  <p>
+    Behöver ni scen? Se vår sida om <a href="/scen-till-event/">scen till event</a>. För större upplägg kan vi
+    samordna med <a href="/eventproduktion/">eventproduktion</a> och externa partners.
+  </p>
+
+  <h2>Malmö och Öresundsregionen</h2>
+  <p>
+    Många Malmöföretag har deltagare från hela regionen – Lund, Köpenhamn och övriga Skåne. Vi levererar
+    teknik som fungerar för hybrid- och multilokal-upplägg vid behov. För företag i Lund och Helsingborg
+    finns även dedikerade sidor: <a href="/lund/foretagsevent/">företagsevent i Lund</a> och
+    <a href="/helsingborg/foretagsevent/">företagsevent i Helsingborg</a>.
+  </p>
+  <p>
+    För ren <a href="/malmo/eventteknik/">eventteknik i Malmö</a> med fokus på ljud, ljus och rigg har vi
+    en separat sida.
+  </p>
+
+  <h2>Begär offert för ert Malmö-event</h2>
+  <p>
+    Berätta om datum, lokal, typ av event och antal deltagare. Vi återkommer med ett skräddarsytt förslag.
+    <a href="/offert/">Begär offert</a> – och låt oss ta hand om tekniken till ert företagsevent i Malmö.
+  </p>
+</SolutionPage>

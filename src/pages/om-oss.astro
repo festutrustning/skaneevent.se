@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTASection from '../components/CTASection.astro';
+import FestLink from '../components/FestLink.astro';
+import { SITE } from '../data/site';
+
+const breadcrumbs = [{ name: 'Om oss', href: '/om-oss/' }];
+---
+
+<BaseLayout
+  title="Om Skåne Event"
+  description="Skåne Event är specialistresursen för företagsevent och eventteknik i Skåne. Drivs av Festutrustning / Enta Sverige AB i Malmö."
+  canonicalPath="/om-oss/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Om Skåne Event</h1>
+      <p class="page-lead">
+        Den lokala specialistresursen för företag som behöver hjälp att genomföra professionella event i Skåne.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+      <h2>Vi löser tekniken – ni fokuserar på eventet</h2>
+      <p>
+        Skåne Event hjälper företag att planera och genomföra event med rätt teknik:
+        ljud, ljus, scen, bild, mikrofoner och tekniker. Vi arbetar lösningsorienterat –
+        inte som en produktkatalog.
+      </p>
+      <p>
+        Verksamheten drivs av <strong>{SITE.orgName}</strong> (org.nr {SITE.orgNumber})
+        via <FestLink destination="home" context="om_oss" anchorType="brand">Festutrustning.se</FestLink>,
+        med bas på {SITE.address.street} i {SITE.address.city}.
+      </p>
+
+      <h2>Erfarenhet</h2>
+      <p>Vi har erfarenhet av bland annat:</p>
+      <ul>
+        <li>Företagsevent och konferenser</li>
+        <li>Galor och produktlanseringar</li>
+        <li>Företagsfester, julfester och kickoffer</li>
+        <li>Rigg av scen, tross, LED och ljud/ljus</li>
+        <li>Tekniker på plats under genomförande</li>
+      </ul>
+
+      <h2>Hur vi arbetar med Festutrustning</h2>
+      <p>
+        Skåne Event är platsen för planering, rådgivning och B2B-lösningar.
+        Festutrustning är leverantören som levererar utrustning, paket och genomförande.
+        Tillsammans täcker vi resan från idé till färdigt event.
+      </p>
+
+      <p><a class="btn btn-primary" href="/offert/">Begär offert</a></p>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

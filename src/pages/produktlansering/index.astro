@@ -1,0 +1,100 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken teknik behövs till en produktlansering?',
+    a: 'Ofta behövs scen, stark visuell presentation via skärmar eller projektion, professionellt ljud och ljus samt mikrofoner för tal. Vi anpassar efter om lanseringen är intim eller storskalig.',
+  },
+  {
+    q: 'Kan ni hantera video och live-demo på scen?',
+    a: 'Ja. Vi planerar bildväxling, ljud och ljus så att video, presentationer och live-moment flyter samman utan avbrott.',
+  },
+  {
+    q: 'Hjälper ni till med både press-event och intern lansering?',
+    a: 'Absolut. Vi levererar teknik till både externa lanseringar med media och partners samt interna lanseringar för medarbetare.',
+  },
+  {
+    q: 'Hur tidigt bör vi planera tekniken?',
+    a: 'Produktlanseringar har ofta tighta tidsplaner. Kontakta oss så tidigt som möjligt – gärna när datum och lokal är spikade – så hinner vi testa och finjustera.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'scen' as const,
+    label: 'Scen till lansering – Festutrustning',
+    context: 'produktlansering_aside',
+  },
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'produktlansering_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Produktlansering i Skåne – eventteknik som lyfter budskapet"
+  description="Eventteknik till produktlanseringar i Skåne. Scen, ljud, ljus, bild och tekniker för företagsevent. Begär offert."
+  canonicalPath="/produktlansering/"
+  h1="Produktlansering i Skåne"
+  lead="Första intrycket räknas. Scen, ljud, ljus och bild som förstärker ert budskap – eventteknik för produktlanseringar i hela Skåne."
+  breadcrumbs={[{ name: 'Produktlansering', href: '/produktlansering/' }]}
+  ogImage="/images/led-scen-utomhus.jpg"
+  festLinks={festLinks}
+  serviceName="Produktlansering i Skåne"
+  faqs={faqs}
+>
+  <h2>Lanseringar där tekniken förstärker produkten</h2>
+  <p>
+    En produktlansering ska skapa buzz, förmedla nyttan och ge deltagarna en minnesvärd upplevelse. Scenen ska kännas
+    professionell, presentationen skarp och ljuset rätt – så att fokus ligger på produkten, inte på teknikproblem.
+    Skåne Event levererar <strong>eventteknik till produktlanseringar i Skåne</strong> för företag som vill att
+    lanseringen ska kännas lika genomtänkt som själva produkten.
+  </p>
+  <p>
+    Vi arbetar med allt från presslanseringar och partner-event till interna lanseringar och kombinerade
+    <a href="/foretagsevent/">företagsevent</a> med mingel efteråt.
+  </p>
+
+  <h2>Visuellt, auditivt och sceniskt</h2>
+  <p>Produktlanseringar ställer ofta höga krav på flera tekniska moment:</p>
+  <ul>
+    <li><a href="/scen-till-event/">Scen och rigg</a> som ger rätt plattform för tal och demo</li>
+    <li>Storbildssystem eller LED för produktvideo, key visuals och presentationer</li>
+    <li>Ljus som riktar fokus och skapar rätt stämning</li>
+    <li>Ljud och mikrofoner för talare, panel och eventuell underhållning</li>
+    <li>Tekniker som hanterar övergångar mellan video, live och Q&amp;A</li>
+  </ul>
+  <p>
+    Vi samordnar med er marknads- eller kommunikationsavdelning och kan arbeta tillsammans med
+    <a href="/eventproduktion/">eventproduktion</a> eller extern byrå.
+  </p>
+
+  <h2>Olika format, samma precision</h2>
+  <p>
+    Vissa lanseringar är exclusiva middagar med få inbjudna. Andra är större event med media, partners och livestreaming.
+    Tekniken dimensioneras efter format, lokal och hur produkten bäst presenteras – oavsett om det handlar om en
+    fysisk demo, en reveal på scen eller en kombination av båda.
+  </p>
+  <p>
+    För företag som planerar flera event i samband med lansering – till exempel
+    <a href="/konferens/">konferens</a> för partners och separat intern presentation – kan vi leverera teknik till
+    flera tillfällen med samma kvalitetsnivå.
+  </p>
+
+  <h2>Produktlanseringar i Skåne</h2>
+  <p>
+    Skåne har starka tech- och livsmedelskluster, innovationsmiljöer och eventlokaler som lämpar sig för lanseringar.
+    Vi levererar i hela regionen – inklusive <a href="/malmo/foretagsevent/">Malmö</a>,
+    <a href="/lund/foretagsevent/">Lund</a> och <a href="/helsingborg/foretagsevent/">Helsingborg</a> – och kan
+    även hantera mer ovanliga venue med rätt planering.
+  </p>
+
+  <h2>Planera er lansering</h2>
+  <p>
+    Dela datum, lokal, program och ungefärligt antal deltagare. Vi återkommer med ett tekniskt förslag och offert.
+    <a href="/offert/">Begär offert</a> – och låt oss se till att tekniken matchar ambitionen i er produktlansering.
+  </p>
+</SolutionPage>

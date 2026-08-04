@@ -1,0 +1,99 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken eventteknik behöver vi till vårt företagsevent?',
+    a: 'Det beror på program, lokal och antal gäster. Vanligt ingår ljud och mikrofoner, ljus, scen och bild. Vi går igenom ert upplägg och föreslår en lösning som matchar behoven – utan onödig utrustning.',
+  },
+  {
+    q: 'Kan ni ta ansvar för både leverans och rigg?',
+    a: 'Ja. Vi levererar, riggar, testar och monterar ned efter eventet. Vid behov kan tekniker finnas på plats under hela tillställningen.',
+  },
+  {
+    q: 'Arbetar ni med trådlösa mikrofoner och paneldiskussioner?',
+    a: 'Absolut. Vi har erfarenhet av allt från enstaka headset till paneler med flera deltagare, publikfrågor och videoinslag.',
+  },
+  {
+    q: 'Hur skiljer sig eventteknik från eventproduktion?',
+    a: 'Eventteknik fokuserar på utrustning och teknisk genomförande. Eventproduktion omfattar ofta bredare koordinering av program, teknik och genomförande. Vi kan hjälpa till med båda delarna.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'eventteknik_aside',
+  },
+  {
+    destination: 'ljudLjusSkane' as const,
+    label: 'Ljud och ljus i Skåne – Festutrustning',
+    context: 'eventteknik_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Eventteknik i Skåne – ljud, ljus, scen och bild"
+  description="Professionell eventteknik i Skåne för företagsevent. Ljud, ljus, scen, bild, mikrofoner och tekniker. Begär offert."
+  canonicalPath="/eventteknik/"
+  h1="Eventteknik i Skåne"
+  lead="Rätt teknik i rätt tid – ljud, ljus, scen, bild och mikrofoner för företagsevent i hela Skåne. Leverans, rigg och tekniker när ni behöver det."
+  breadcrumbs={[{ name: 'Eventteknik', href: '/eventteknik/' }]}
+  ogImage="/images/ljud-ljus-utrustning.jpg"
+  festLinks={festLinks}
+  serviceName="Eventteknik i Skåne"
+  faqs={faqs}
+>
+  <h2>Eventteknik som håller hela programmet</h2>
+  <p>
+    Tekniska avbrott märks direkt – och de kostar mer än bara tid. Dålig hörbarhet, flimrande projektion eller
+    mikrofoner som strular under panelsamtal underminerar budskapet ni investerat i. Skåne Event levererar
+    professionell <strong>eventteknik i Skåne</strong> för företag som vill att tekniken ska vara osynlig i
+    bakgrunden men avgörande för resultatet.
+  </p>
+  <p>
+    Vi arbetar med <a href="/foretagsevent/">företagsevent</a> i alla storlekar: konferenser, kick-offs, galor,
+    produktlanseringar och interna fester. Tekniken dimensioneras utifrån lokal, program och publik – inte utifrån
+    en generisk paketlösning.
+  </p>
+
+  <h2>Vad vi levererar</h2>
+  <p>En komplett eventteknisk lösning kan omfatta:</p>
+  <ul>
+    <li><strong>Ljud och mikrofoner</strong> – tal, panel, musik och publikfrågor med tydlig återgivning</li>
+    <li><strong>Ljus</strong> – från enkel scenbelysning till atmosfär och effekter för galor och fester</li>
+    <li><strong>Scen och rigg</strong> – se vår sida om <a href="/scen-till-event/">scen till event</a></li>
+    <li><strong>Bild och projektion</strong> – presentationer, videoinslag och visuella element</li>
+    <li><strong>Tekniker på plats</strong> – för trygghet under hela eventet</li>
+  </ul>
+  <p>
+    För företag som främst behöver fokus på ljud och ljus har vi en dedikerad sida om
+    <a href="/ljud-ljus-foretagsevent/">ljud och ljus till företagsevent</a>.
+  </p>
+
+  <h2>Planering som minskar risker</h2>
+  <p>
+    God eventteknik börjar långt före eventdagen. Vi går igenom lokalen, eluttag, riggmöjligheter och programflöde.
+    Finns det videoinslag? Panel med fem deltagare? Awards-show med korta tal och musik? Varje moment påverkar vilken
+    utrustning och vilken bemanning som behövs.
+  </p>
+  <p>
+    När tekniken är planerad i förväg slipper ni improvisera på plats. Det ger lugnare projektledare, tryggare talare
+    och en publik som kan fokusera på innehållet. För större upplägg kan vi samordna med er
+    <a href="/eventproduktion/">eventproduktion</a> eller extern eventbyrå.
+  </p>
+
+  <h2>Eventteknik i hela Skåne</h2>
+  <p>
+    Vi levererar i hela Skåne län – från Malmö och Lund till Helsingborg, Kristianstad och mindre orter.
+    För företag i Malmö med specifika lokala behov finns
+    <a href="/malmo/eventteknik/">eventteknik i Malmö</a> som ett komplement till denna översikt.
+  </p>
+  <p>
+    Oavsett ort arbetar vi med samma princip: rätt utrustning, tydlig kommunikation och genomförande som håller
+    tidsplanen. <a href="/offert/">Begär offert</a> och beskriv ert event – vi återkommer med ett förslag anpassat
+    till era tekniska behov.
+  </p>
+</SolutionPage>

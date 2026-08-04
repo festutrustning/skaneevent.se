@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE } from '../../data/site';
+import FestLink from '../../components/FestLink.astro';
+
+const breadcrumbs = [{ name: 'Begär offert', href: '/offert/' }];
+---
+
+<BaseLayout
+  title="Begär offert på eventteknik"
+  description="Begär kostnadsfri offert på eventteknik till företagsevent i Skåne. Beskriv ert event så återkommer vi med ett skräddarsytt förslag."
+  canonicalPath="/offert/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Begär offert</h1>
+      <p class="page-lead">
+        Berätta om ert event – vi återkommer med förslag på ljud, ljus, scen, bild och tekniker.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width: 40rem;">
+      <form
+        id="offert-form"
+        class="form-grid"
+        name="offert"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        data-lead-form
+        action="/offert/tack/"
+      >
+        <input type="hidden" name="form-name" value="offert" />
+        <p class="hidden" style="display:none;">
+          <label>Leave blank: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-grid form-grid-2">
+          <div class="form-field">
+            <label for="foretag">Företag *</label>
+            <input id="foretag" name="foretag" type="text" required autocomplete="organization" />
+          </div>
+          <div class="form-field">
+            <label for="kontaktperson">Kontaktperson *</label>
+            <input id="kontaktperson" name="kontaktperson" type="text" required autocomplete="name" />
+          </div>
+        </div>
+
+        <div class="form-grid form-grid-2">
+          <div class="form-field">
+            <label for="epost">E-post *</label>
+            <input id="epost" name="epost" type="email" required autocomplete="email" />
+          </div>
+          <div class="form-field">
+            <label for="telefon">Telefon *</label>
+            <input id="telefon" name="telefon" type="tel" required autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-grid form-grid-2">
+          <div class="form-field">
+            <label for="datum">Datum</label>
+            <input id="datum" name="datum" type="date" />
+          </div>
+          <div class="form-field">
+            <label for="ort">Ort *</label>
+            <input id="ort" name="ort" type="text" required placeholder="t.ex. Malmö" />
+          </div>
+        </div>
+
+        <div class="form-grid form-grid-2">
+          <div class="form-field">
+            <label for="eventtyp">Typ av event *</label>
+            <select id="eventtyp" name="eventtyp" required>
+              <option value="">Välj…</option>
+              <option>Företagsevent</option>
+              <option>Konferens</option>
+              <option>Gala</option>
+              <option>Produktlansering</option>
+              <option>Företagsfest</option>
+              <option>Julfest</option>
+              <option>Kickoff</option>
+              <option>Övrigt</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="gaster">Antal gäster</label>
+            <input id="gaster" name="gaster" type="number" min="1" placeholder="t.ex. 120" />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="behov">Vad behövs hjälp med? *</label>
+          <textarea id="behov" name="behov" required placeholder="Ljud, ljus, scen, LED, mikrofoner, tekniker…"></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="budget">Budget/intervall (valfritt)</label>
+          <input id="budget" name="budget" type="text" placeholder="t.ex. 15–30 000 kr" />
+        </div>
+
+        <div class="form-field">
+          <label for="meddelande">Övrig information</label>
+          <textarea id="meddelande" name="meddelande"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Skicka offertförfrågan</button>
+        <p class="form-note">
+          Genom att skicka godkänner ni vår <a href="/integritet/">integritetspolicy</a>.
+          Ni kan också ringa <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a>
+          eller se utrustning hos
+          <FestLink destination="foretag" context="offert_form" anchorType="cta" utm campaign="offert">Festutrustning</FestLink>.
+        </p>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

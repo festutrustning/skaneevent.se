@@ -1,0 +1,99 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken teknik behövs till en kick-off?',
+    a: 'Ofta behövs scen eller talarplats, PA och mikrofoner, projektion för presentationer och ljus som skapar energi. Vi anpassar efter om det är heldag, halvdag eller kvällsevent.',
+  },
+  {
+    q: 'Kan ni hantera både presentationer och interaktiva moment?',
+    a: 'Ja. Vi riggar teknik för tal, video, panel, quiz och eventuell underhållning – med smidiga övergångar mellan programpunkter.',
+  },
+  {
+    q: 'Fungerar lösningen för både små team och hela organisationen?',
+    a: 'Absolut. Vi dimensionerar utrustningen efter antal deltagare och lokal – från avdelnings-kick-off till koncernomfattande event.',
+  },
+  {
+    q: 'Kan kick-off kombineras med fest på kvällen?',
+    a: 'Ja, det är vanligt. Vi planerar tekniken för hela dagen och kvällen – se även vår sida om företagsfest.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'kickoff_aside',
+  },
+  {
+    destination: 'ljudLjusSkane' as const,
+    label: 'Ljud och ljus i Skåne – Festutrustning',
+    context: 'kickoff_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Kick-off i Skåne – eventteknik som sätter tonen"
+  description="Eventteknik till kick-offs och strategidagar i Skåne. Scen, ljud, ljus och bild för energifyllda företagsevent. Begär offert."
+  canonicalPath="/kickoff/"
+  h1="Kick-off i Skåne"
+  lead="Starta året eller projektet med rätt energi – scen, ljud, ljus och teknik för kick-offs och strategidagar i Skåne."
+  breadcrumbs={[{ name: 'Kick-off', href: '/kickoff/' }]}
+  ogImage="/images/hero-foretagsevent.jpg"
+  festLinks={festLinks}
+  serviceName="Kick-off i Skåne"
+  faqs={faqs}
+>
+  <h2>Kick-offs som engagerar från första minuten</h2>
+  <p>
+    En kick-off ska inspirera, förtydliga riktningen och skapa gemensam energi i organisationen. Tekniken spelar
+    stor roll: presentationer ska vara skarpa, talare ska höras tydligt och ljuset ska förstärka budskapet – inte
+    distrahera. Skåne Event levererar <strong>eventteknik till kick-offs i Skåne</strong> för företag som vill
+    att starten ska kännas professionell och genomtänkt.
+  </p>
+  <p>
+    Vi arbetar med ledningsgrupper, HR och kommunikationsavdelningar som planerar årsstarter, projektkick-offs och
+    strategidagar. Lösningen anpassas till ert program och er lokal.
+  </p>
+
+  <h2>Teknik för program med tempo</h2>
+  <p>Kick-offs har ofta ett tight program med flera moment. Vi planerar tekniken för:</p>
+  <ul>
+    <li>Keynote och strategipresentationer med bild och video</li>
+    <li>Paneler och Q&amp;A med flera mikrofoner</li>
+    <li>Workshops och gruppdiskussioner i samma eller angränsande lokaler</li>
+    <li>Interaktiva inslag – quiz, omröstningar och live-moment</li>
+    <li>Avslutande <a href="/foretagsfest/">företagsfest</a> eller mingel på kvällen</li>
+  </ul>
+  <p>
+    Som del av ert <a href="/foretagsevent/">företagsevent</a> samordnar vi
+    <a href="/eventteknik/">eventteknik</a> och kan bistå med <a href="/eventproduktion/">produktion</a>
+    om ni vill ha tekniker på plats under hela dagen.
+  </p>
+
+  <h2>Scen och ljus som skapar fokus</h2>
+  <p>
+    Kick-offs handlar om att rikta uppmärksamheten mot rätt budskap. Med
+    <a href="/scen-till-event/">scen</a>, projektion och genomtänkt ljus skapar vi en tydlig talarplattform –
+    oavsett om eventet sker i konferenslokal, hotell eller mer ovanlig miljö.
+  </p>
+  <p>
+    För företag som vill kombinera kick-off med <a href="/konferens/">konferens</a> eller
+    <a href="/produktlansering/">produktlansering</a> kan vi leverera teknik till flera programdelar i samma vecka.
+  </p>
+
+  <h2>Kick-offs i Skåne</h2>
+  <p>
+    Vi levererar i hela Skåne län – inklusive <a href="/malmo/foretagsevent/">Malmö</a>,
+    <a href="/lund/foretagsevent/">Lund</a> och <a href="/helsingborg/foretagsevent/">Helsingborg</a>.
+    Oavsett ort arbetar vi med samma fokus: teknik som håller hela programmet och ger er organisation en stark start.
+  </p>
+
+  <h2>Planera er kick-off</h2>
+  <p>
+    Berätta om datum, lokal, antal deltagare och program. Vi återkommer med ett tekniskt förslag och offert.
+    <a href="/offert/">Begär offert</a> – och sätt tonen för året med rätt eventteknik.
+  </p>
+</SolutionPage>

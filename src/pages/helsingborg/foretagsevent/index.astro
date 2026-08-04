@@ -1,0 +1,97 @@
+---
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Levererar ni företagseventteknik i Helsingborg?',
+    a: 'Ja. Vi arbetar i Helsingborg och nordvästra Skåne – från city och hamnområdet till konferensanläggningar längs kusten.',
+  },
+  {
+    q: 'Har ni erfarenhet av lokaler i Helsingborg?',
+    a: 'Ja. Vi känner till vanliga venue i Helsingborg och kan samordna tekniken med lokalens personal.',
+  },
+  {
+    q: 'Kan ni hantera både konferenser och galor i Helsingborg?',
+    a: 'Absolut. Vi levererar teknik till konferenser, kick-offs, produktlanseringar, galor och företagsfester.',
+  },
+  {
+    q: 'Levererar ni även till närliggande orter som Landskrona?',
+    a: 'Ja. Vi arbetar i hela nordvästra Skåne och kan leverera teknik till närliggande orter vid behov.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'helsingborg_foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Helsingborg – eventteknik och produktion"
+  description="Professionella företagsevent i Helsingborg med ljud, ljus, scen och tekniker. Partner för event i nordvästra Skåne. Begär offert."
+  canonicalPath="/helsingborg/foretagsevent/"
+  h1="Företagsevent i Helsingborg"
+  lead="Eventteknik för företagsevent i Helsingborg – konferenser, galor och kick-offs med lokal närvaro i nordvästra Skåne."
+  breadcrumbs={[
+    { name: 'Företagsevent', href: '/foretagsevent/' },
+    { name: 'Helsingborg', href: '/helsingborg/foretagsevent/' },
+  ]}
+  ogImage="/images/gala-foretagsevent.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Helsingborg"
+  faqs={faqs}
+>
+  <h2>Företagsevent i Helsingborg – teknik för nordvästra Skåne</h2>
+  <p>
+    Helsingborg är en viktig eventstad i nordvästra Skåne. Här arrangeras företagskonferenser, kick-offs,
+    produktlanseringar och galor i allt från centrala hotell till konferensanläggningar med utsikt över
+    Öresund. Skåne Event är er partner för <strong>företagsevent i Helsingborg</strong> med fokus på
+    eventteknik som håller hela programmet.
+  </p>
+  <p>
+    Vi levererar samma kvalitet som våra kunder i hela <a href="/foretagsevent/">Skåne</a> – med god
+    kännedom om Helsingborgs lokaler och logistik i nordvästra regionen.
+  </p>
+
+  <h2>Event i Helsingborgs olika miljöer</h2>
+  <p>Helsingborg erbjuder mångsidiga venue för företagsevent:</p>
+  <ul>
+    <li>Konferenser och företagsdagar – <a href="/konferens/">konferens</a></li>
+    <li>Kick-offs och strategidagar – <a href="/kickoff/">kick-off</a></li>
+    <li>Produktlanseringar – <a href="/produktlansering/">produktlansering</a></li>
+    <li>Galor och julfester – <a href="/gala/">gala</a> och <a href="/julfest/">julfest</a></li>
+  </ul>
+  <p>
+    Vi dimensionerar <a href="/eventteknik/">eventteknik</a> utifrån lokal, program och antal deltagare –
+    oavsett om eventet sker i city, hamnområdet eller närliggande orter som Landskrona.
+  </p>
+
+  <h2>Teknik för Helsingborgs företagsevent</h2>
+  <p>
+    Företagsevent i Helsingborg ställer ofta krav på flexibel teknik: tydliga presentationer, paneler,
+    och ibland övergång från formellt program till fest. Vi levererar
+    <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a>, mikrofoner, <a href="/scen-till-event/">scen</a>
+    och bild – och kan finnas på plats med tekniker vid behov.
+  </p>
+  <p>
+    För större upplägg samordnar vi med <a href="/eventproduktion/">eventproduktion</a> och externa partners
+    så att tekniken hänger ihop med övriga leverantörer.
+  </p>
+
+  <h2>Helsingborg och nordvästra Skåne</h2>
+  <p>
+    Många Helsingborgsföretag har deltagare från hela regionen – Malmö, Lund och över sundet. Vi planerar
+    teknik som fungerar för ert specifika upplägg. För företag i andra städer finns även
+    <a href="/malmo/foretagsevent/">företagsevent i Malmö</a> och
+    <a href="/lund/foretagsevent/">företagsevent i Lund</a>.
+  </p>
+
+  <h2>Begär offert för ert Helsingborg-event</h2>
+  <p>
+    Berätta om datum, lokal, typ av event och antal deltagare. Vi återkommer med ett skräddarsytt förslag.
+    <a href="/offert/">Begär offert</a> – och låt oss ta hand om tekniken till ert företagsevent i Helsingborg.
+  </p>
+</SolutionPage>

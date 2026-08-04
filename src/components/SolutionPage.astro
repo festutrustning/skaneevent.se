@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import CTASection from './CTASection.astro';
+import FestLink from './FestLink.astro';
+import type { BreadcrumbItem } from '../data/site';
+import type { FestDestination } from '../data/festutrustning-links';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  h1: string;
+  lead: string;
+  breadcrumbs: BreadcrumbItem[];
+  ogImage?: string;
+  festLinks?: { destination: FestDestination; label: string; context: string }[];
+  serviceName?: string;
+  faqs?: { q: string; a: string }[];
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  h1,
+  lead,
+  breadcrumbs,
+  ogImage,
+  festLinks = [],
+  serviceName,
+  faqs = [],
+} = Astro.props;
+
+const jsonLd: Record<string, unknown>[] = [];
+if (serviceName) {
+  jsonLd.push({
+    '@type': 'Service',
+    name: serviceName,
+    description,
+    provider: { '@id': 'https://skaneevent.se/#organization' },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Skåne län' },
+    url: `https://skaneevent.se${canonicalPath}`,
+  });
+}
+if (faqs.length) {
+  jsonLd.push({
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+}
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  ogImage={ogImage}
+  breadcrumbs={breadcrumbs}
+  jsonLd={jsonLd}
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>{h1}</h1>
+      <p class="page-lead">{lead}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="/offert/">Begär offert</a>
+        <a class="btn btn-secondary btn-lg" href="tel:+46766777232">Ring 076-677 72 32</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+      <slot />
+
+      {festLinks.length > 0 && (
+        <aside class="fest-aside">
+          <h2>Nästa steg hos Festutrustning</h2>
+          <p>När ni är redo att gå från planering till konkret utrustning och genomförande:</p>
+          <ul>
+            {festLinks.map((l) => (
+              <li>
+                <FestLink destination={l.destination} context={l.context} campaign={canonicalPath.replace(/\//g, '') || 'home'} utm>
+                  {l.label}
+                </FestLink>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+    </div>
+  </section>
+
+  {faqs.length > 0 && (
+    <section class="section section-alt" aria-labelledby="page-faq">
+      <div class="container">
+        <h2 id="page-faq">Vanliga frågor</h2>
+        <div class="faq-list">
+          {faqs.map((f, i) => (
+            <details class="faq-item" open={i === 0}>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTASection />
+</BaseLayout>

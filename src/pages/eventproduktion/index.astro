@@ -1,0 +1,100 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vad menar ni med eventproduktion?',
+    a: 'Eventproduktion hos oss innebär att vi tar ett helhetsgrepp om det tekniska genomförandet – från planering och koordinering av ljud, ljus, scen och bild till rigg och genomförande på plats.',
+  },
+  {
+    q: 'Ersätter ni en eventbyrå?',
+    a: 'Vi fokuserar på teknik och produktion. Många kunder har egen projektledning eller eventbyrå, och vi samordnar tekniken med dem. Vi kan också vara er tekniska partner genom hela processen.',
+  },
+  {
+    q: 'Kan ni producera både konferenser och galor?',
+    a: 'Ja. Vi har erfarenhet av allt från företagsdagar och produktlanseringar till galakvällar och prisutdelningar med mer avancerade ljus- och scenupplägg.',
+  },
+  {
+    q: 'Hur tidigt bör vi boka eventproduktion?',
+    a: 'Ju tidigare desto bättre – särskilt vid större event och högsäsong. Kontakta oss gärna flera månader i förväg, men vi tar även emot förfrågningar med kortare varsel när det är möjligt.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'eventproduktion_aside',
+  },
+  {
+    destination: 'scen' as const,
+    label: 'Scenlösningar hos Festutrustning',
+    context: 'eventproduktion_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Eventproduktion i Skåne – teknik och genomförande"
+  description="Eventproduktion för företagsevent i Skåne. Planering, ljud, ljus, scen och tekniker – från idé till genomförande. Begär offert."
+  canonicalPath="/eventproduktion/"
+  h1="Eventproduktion i Skåne"
+  lead="Från teknisk planering till genomförande på plats – vi producerar företagsevent i Skåne med ljud, ljus, scen och erfarna tekniker."
+  breadcrumbs={[{ name: 'Eventproduktion', href: '/eventproduktion/' }]}
+  ogImage="/images/eventproduktion.jpg"
+  festLinks={festLinks}
+  serviceName="Eventproduktion i Skåne"
+  faqs={faqs}
+>
+  <h2>Eventproduktion som bär hela upplevelsen</h2>
+  <p>
+    Ett företagsevent med starkt innehåll kan ändå fallera om tekniken inte hänger med. Eventproduktion hos Skåne Event
+    innebär att vi tar ansvar för det tekniska genomförandet – så att programmet flyter, talarna hörs och scenen
+    förmedlar rätt känsla. Vi arbetar med företag i hela Skåne som arrangerar
+    <a href="/foretagsevent/">företagsevent</a>, <a href="/konferens/">konferenser</a>,
+    <a href="/gala/">galor</a> och <a href="/produktlansering/">produktlanseringar</a>.
+  </p>
+  <p>
+    Till skillnad från ren uthyrning fokuserar produktion på helheten: vilken utrustning som behövs, hur den riggas,
+    vem som kör den och hur övergångar mellan programpunkter hanteras smidigt.
+  </p>
+
+  <h2>Vad produktionen omfattar</h2>
+  <p>En typisk produktionsinsats kan inkludera:</p>
+  <ul>
+    <li>Behovsanalys och teknisk planering utifrån program och lokal</li>
+    <li>Koordinering av <a href="/eventteknik/">eventteknik</a> – ljud, ljus, bild och mikrofoner</li>
+    <li>Scen, rigg och eventuella specialmoment – se <a href="/scen-till-event/">scen till event</a></li>
+    <li>Leverans, uppsättning, funktionskontroll och nedmontering</li>
+    <li>Tekniker på plats under eventet vid behov</li>
+  </ul>
+  <p>
+    Vi anpassar omfattningen efter ert event. En intern företagsdag kräver annan produktion än en galakväll med
+    flera talare, livemusik och prisutdelning.
+  </p>
+
+  <h2>Samarbete med er organisation</h2>
+  <p>
+    De flesta av våra kunder har intern projektledning, HR eller kommunikationsavdelning som driver eventet.
+    Vi blir er tekniska partner och kan samordna med lokal, catering, eventbyrå och andra leverantörer.
+    Tydliga kontaktvägar och gemensamma tidsplaner minskar stressen inför eventdagen.
+  </p>
+  <p>
+    För kick-offs och företagsfester där energi och stämning är centralt, se även våra sidor om
+    <a href="/kickoff/">kick-off</a> och <a href="/foretagsfest/">företagsfest</a>.
+  </p>
+
+  <h2>Produktion i Skånes olika miljöer</h2>
+  <p>
+    Skåne erbjuder allt från hotellkonferenser och moderna eventlokaler till industrimiljöer och utomhusarrangemang.
+    Vi har erfarenhet av att anpassa produktionen till olika venue – inklusive lokaler i
+    <a href="/malmo/foretagsevent/">Malmö</a>, <a href="/lund/foretagsevent/">Lund</a> och
+    <a href="/helsingborg/foretagsevent/">Helsingborg</a>.
+  </p>
+
+  <h2>Nästa steg</h2>
+  <p>
+    Berätta om ert kommande event – typ, datum, ort och ungefärligt antal deltagare. Vi återkommer med ett
+    produktionsupplägg och offert. <a href="/offert/">Begär offert</a> idag så tar vi dialogen därifrån.
+  </p>
+</SolutionPage>

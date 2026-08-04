@@ -1,0 +1,96 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken teknik behövs till en företagskonferens?',
+    a: 'Vanligt behövs PA-system, mikrofoner för tal och panel, projektion eller skärmar, samt ljus som gör scenen tydlig för publiken. Vi dimensionerar efter lokal och antal deltagare.',
+  },
+  {
+    q: 'Kan ni hantera paneldiskussioner och publikfrågor?',
+    a: 'Ja. Vi riggar trådlösa mikrofoner, panelmikrofoner och eventuellt handmikrofoner för publikfrågor. Tekniker kan finnas på plats för smidiga övergångar.',
+  },
+  {
+    q: 'Fungerar lösningen i både små och stora konferenslokaler?',
+    a: 'Absolut. Vi anpassar utrustningen till allt från avdelningsmöten i mindre salar till större konferenser med hundratals deltagare.',
+  },
+  {
+    q: 'Hjälper ni med flera spår eller parallella sessioner?',
+    a: 'Ja, vid behov kan vi försörja flera rum eller spår med teknik. Kontakta oss med ert program så planerar vi upplägget.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Konferensteknik hos Festutrustning',
+    context: 'konferens_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Konferens i Skåne – eventteknik för företagsdagar"
+  description="Eventteknik till företagskonferenser i Skåne. Ljud, mikrofoner, bild och ljus för tal, paneler och workshops. Begär offert."
+  canonicalPath="/konferens/"
+  h1="Konferens i Skåne"
+  lead="Tydligt ljud, skarpa presentationer och smidiga paneler – eventteknik för företagskonferenser och företagsdagar i hela Skåne."
+  breadcrumbs={[{ name: 'Konferens', href: '/konferens/' }]}
+  ogImage="/images/konferens-panel.jpg"
+  festLinks={festLinks}
+  serviceName="Konferens i Skåne"
+  faqs={faqs}
+>
+  <h2>Konferenser där tekniken inte stjäl fokus</h2>
+  <p>
+    En företagskonferens ska förmedla budskap, skapa engagemang och ge deltagarna en professionell upplevelse.
+    När mikrofonen krånglar, bilden är suddig eller paneldeltagarna inte hörs tappar ni tempo och trovärdighet.
+    Skåne Event levererar <strong>eventteknik till konferenser i Skåne</strong> – så att talare, paneler och
+    presentationer fungerar från första till sista programpunkt.
+  </p>
+  <p>
+    Vi arbetar med företag som arrangerar årsstämmor, strategidagar, kundkonferenser och interna utbildningsevent.
+    Lösningen anpassas till er lokal, ert program och antalet deltagare.
+  </p>
+
+  <h2>Teknik för olika konferensformat</h2>
+  <p>Konferenser varierar i upplägg. Vi har erfarenhet av:</p>
+  <ul>
+    <li>Keynote och huvudtal med presentation och video</li>
+    <li>Paneldiskussioner med flera deltagare och moderator</li>
+    <li>Workshops och breakout-sessioner i mindre grupper</li>
+    <li>Hybridupplägg där deltagare följer med på distans</li>
+    <li>Galakväller och middagar i samband med konferensen – se <a href="/gala/">gala</a></li>
+  </ul>
+  <p>
+    Oavsett format samordnar vi <a href="/eventteknik/">eventteknik</a> så att övergångar mellan moment blir
+    smidiga och teknikteamet vet exakt vad som händer härnäst.
+  </p>
+
+  <h2>Ljud, bild och ljus för tydlig kommunikation</h2>
+  <p>
+    Konferensdeltagare ska kunna höra varje ord – även längst bak i salen. Vi dimensionerar PA-system och mikrofoner
+    utifrån akustik och rumsstorlek. För presentationer levererar vi projektion eller skärmar med rätt upplösning
+    och ljus som gör talaren synlig utan att blända.
+  </p>
+  <p>
+    Behöver ni mer avancerat ljus eller scenbygge i samband med galamiddag eller prisutdelning? Vi kan kombinera
+    konferensteknik med <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a> och
+    <a href="/scen-till-event/">scenlösningar</a> i samma uppdrag.
+  </p>
+
+  <h2>Konferenser i Skåne</h2>
+  <p>
+    Regionen har ett rikt utbud av konferensanläggningar – från centrala lokaler i
+    <a href="/malmo/foretagsevent/">Malmö</a> och <a href="/lund/foretagsevent/">Lund</a> till hotell och
+    konferenscenter i <a href="/helsingborg/foretagsevent/">Helsingborg</a> och övriga Skåne.
+    Vi känner till vanliga venue och kan samordna tekniken med lokalens personal.
+  </p>
+
+  <h2>Boka teknik till er konferens</h2>
+  <p>
+    Dela program, datum, lokal och antal deltagare – vi återkommer med ett förslag och offert.
+    <a href="/offert/">Begär offert</a> eller ring oss om ni vill diskutera ert kommande
+    <a href="/foretagsevent/">företagsevent</a> i Skåne.
+  </p>
+</SolutionPage>

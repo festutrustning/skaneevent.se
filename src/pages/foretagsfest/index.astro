@@ -1,0 +1,98 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken teknik behövs till en företagsfest?',
+    a: 'Ofta behövs ljud för tal och musik, ljus som skapar stämning, eventuellt mikrofoner och ibland en enklare scen. Vi anpassar efter om det ska talas, dansas eller båda.',
+  },
+  {
+    q: 'Kan ni skapa dansgolv-känsla med ljus och ljud?',
+    a: 'Ja. Vi riggar ljud och ljus som passar både mingel, middag och dans – med smidiga övergångar mellan programdelar.',
+  },
+  {
+    q: 'Fungerar lösningen i festlokaler och hotell?',
+    a: 'Absolut. Vi har erfarenhet av hotellbanketter, eventlokaler och mer ovanliga miljöer i hela Skåne.',
+  },
+  {
+    q: 'Kan ni kombinera företagsfest med mer formellt program?',
+    a: 'Ja. Många företagsfester börjar med tal och presentationer och övergår till fest. Vi planerar tekniken för hela kvällens flöde.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'foretagsfest_aside',
+  },
+  {
+    destination: 'ljudLjusSkane' as const,
+    label: 'Ljud och ljus i Skåne – Festutrustning',
+    context: 'foretagsfest_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsfest i Skåne – ljud, ljus och stämning"
+  description="Eventteknik till företagsfester i Skåne. Ljud, ljus, mikrofoner och tekniker för kvällar som engagerar hela teamet. Begär offert."
+  canonicalPath="/foretagsfest/"
+  h1="Företagsfest i Skåne"
+  lead="Från välkomsttal till dansgolv – ljud, ljus och teknik som sätter rätt ton på er företagsfest i Skåne."
+  breadcrumbs={[{ name: 'Företagsfest', href: '/foretagsfest/' }]}
+  ogImage="/images/scenljus-publik.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsfest i Skåne"
+  faqs={faqs}
+>
+  <h2>Företagsfester som känns genomförda</h2>
+  <p>
+    En företagsfest ska stärka gemenskapen och ge medarbetarna en kväll att minnas – inte en kväll där tekniken
+    strular eller ljudet är för högt vid bordet. Skåne Event levererar <strong>eventteknik till företagsfester
+    i Skåne</strong> med fokus på stämning, tydligt ljud och ljus som lyfter lokalen.
+  </p>
+  <p>
+    Vi arbetar med HR-avdelningar, ledningsgrupper och eventansvariga som vill att tekniken ska vara enkel att
+    hantera och professionellt genomförd. Oavsett om det gäller sommarfest, jubileum eller
+    <a href="/julfest/">julfest</a> anpassar vi lösningen efter kvällens program.
+  </p>
+
+  <h2>Ljud och ljus för hela kvällen</h2>
+  <p>En typisk företagsfest kan innefatta flera moment – och tekniken ska följa med:</p>
+  <ul>
+    <li>Mikrofoner och PA för välkomsttal och eventuella priser</li>
+    <li>Bakgrundsmusik och ljud till video eller quiz</li>
+    <li>Ljus som skapar atmosfär under middag och mingel</li>
+    <li>Större ljud och ljus när dansgolvet öppnar</li>
+  </ul>
+  <p>
+    Se även vår sida om <a href="/ljud-ljus-foretagsevent/">ljud och ljus till företagsevent</a> för mer detaljer
+    om hur vi dimensionerar dessa moment.
+  </p>
+
+  <h2>Planering som sparar stress</h2>
+  <p>
+    Företagsfester planeras ofta vid sidan av ordinarie arbete. Vi tar hand om leverans, rigg och funktionskontroll
+    så att ert team kan fokusera på gästerna. Behövs tekniker på plats under kvällen? Vi kan finnas där för att
+    hantera övergångar och snabbt lösa eventuella problem.
+  </p>
+  <p>
+    För mer formella inslag – till exempel <a href="/gala/">gala</a> eller
+    <a href="/kickoff/">kick-off</a> i samma vecka – kan vi samordna flera event under samma uppdrag.
+  </p>
+
+  <h2>Företagsfester i hela Skåne</h2>
+  <p>
+    Vi levererar till företagsfester i hela Skåne län – från centrala lokaler i
+    <a href="/malmo/foretagsevent/">Malmö</a> och <a href="/lund/foretagsevent/">Lund</a> till
+    <a href="/helsingborg/foretagsevent/">Helsingborg</a> och mindre orter. Som del av ert
+    <a href="/foretagsevent/">företagsevent</a> erbjuder vi samma kvalitet och service oavsett ort.
+  </p>
+
+  <h2>Begär offert för er företagsfest</h2>
+  <p>
+    Berätta om datum, lokal, antal gäster och ungefärligt program. Vi återkommer med ett förslag anpassat till
+    er fest. <a href="/offert/">Begär offert</a> idag.
+  </p>
+</SolutionPage>

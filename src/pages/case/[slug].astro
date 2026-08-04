@@ -1,0 +1,108 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE } from '../../data/site';
+
+export async function getStaticPaths() {
+  const cases = await getCollection('cases');
+  return cases.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const {
+  title,
+  description,
+  pubDate,
+  location,
+  eventType,
+  guests,
+  image,
+  challenge,
+  solution,
+  result,
+} = entry.data;
+
+const canonicalPath = `/case/${entry.id}/`;
+const breadcrumbs = [
+  { name: 'Case', href: '/case/' },
+  { name: title, href: canonicalPath },
+];
+
+const jsonLd = {
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  image: new URL(image, SITE.url).href,
+  author: { '@id': `${SITE.url}/#organization` },
+  publisher: { '@id': `${SITE.url}/#organization` },
+  mainEntityOfPage: new URL(canonicalPath, SITE.url).href,
+  inLanguage: 'sv-SE',
+  about: {
+    '@type': 'Event',
+    name: title,
+    location: { '@type': 'Place', name: location },
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  ogImage={image}
+  breadcrumbs={breadcrumbs}
+  jsonLd={jsonLd}
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>{title}</h1>
+      <p class="page-lead">{description}</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+      <img
+        src={image}
+        alt=""
+        width="960"
+        height="640"
+        loading="eager"
+        style="margin-bottom: 2rem; border-radius: var(--radius-lg); width: 100%; aspect-ratio: 3/2; object-fit: cover;"
+      />
+
+      <div class="case-meta">
+        <span><strong>Plats:</strong> {location}</span>
+        <span><strong>Eventtyp:</strong> {eventType}</span>
+        {guests && <span><strong>Gäster:</strong> {guests}</span>}
+      </div>
+
+      <h2>Utmaning</h2>
+      <p>{challenge}</p>
+
+      <h2>Lösning</h2>
+      <p>{solution}</p>
+
+      <h2>Resultat</h2>
+      <p>{result}</p>
+
+      <div class="article-body">
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Planerar ni ett liknande event?"
+    text="Vi hjälper er med ljud, ljus, scen, bild och tekniker i hela Skåne."
+  />
+</BaseLayout>

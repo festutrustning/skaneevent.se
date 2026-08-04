@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const breadcrumbs = [{ name: 'Guider', href: '/guider/' }];
+
+const guides = (await getCollection('guider')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout
+  title="Guider för företagsevent i Skåne"
+  description="Praktiska guider om eventteknik, planering och genomförande av företagsevent i Skåne. Ljud, ljus, scen, konferens och mer."
+  canonicalPath="/guider/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Guider för företagsevent</h1>
+      <p class="page-lead">
+        Lösningar och praktiska råd för dig som planerar företagsevent i Skåne – från checklistor och budget till ljud, ljus och tekniker på plats.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid card-grid-3">
+        {guides.map((guide) => (
+          <a class="solution-card" href={`/guider/${guide.id}/`}>
+            <h3>{guide.data.title}</h3>
+            <p>{guide.data.description}</p>
+            {guide.data.tags.length > 0 && (
+              <p class="guide-meta">{guide.data.tags.join(' · ')}</p>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Behöver ni hjälp med ert event?"
+    text="Berätta om datum, ort och typ av event – vi återkommer med en skräddarsydd teknisk lösning."
+  />
+</BaseLayout>

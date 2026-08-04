@@ -1,0 +1,235 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+import FestLink from '../components/FestLink.astro';
+
+const faqs = [
+  {
+    q: 'Vilken eventteknik behövs till ett företagsevent i Skåne?',
+    a: 'Det beror på lokal, antal gäster och program. Vanligt är ljud, mikrofoner, ljus, scen och bild. Vi dimensionerar lösningen efter ert event och kan ha tekniker på plats.',
+  },
+  {
+    q: 'Hur begär jag offert?',
+    a: 'Fyll i formuläret på Begär offert. Beskriv datum, ort, typ av event och vad ni behöver hjälp med – vi återkommer med ett skräddarsytt förslag.',
+  },
+  {
+    q: 'Levererar ni i hela Skåne?',
+    a: 'Ja. Vi arbetar i hela Skåne län – Malmö, Lund, Helsingborg, Kristianstad, Landskrona och övriga orter.',
+  },
+  {
+    q: 'Kan ni hjälpa till med rigg och tekniker?',
+    a: 'Absolut. Vi erbjuder leverans, uppsättning, funktionskontroll och nedmontering. Tekniker kan finnas på plats under eventet vid behov.',
+  },
+  {
+    q: 'Vilka typer av företagsevent hjälper ni till med?',
+    a: 'Konferenser, produktlanseringar, galor, kick-offs, mässor, paneldiskussioner, julfester och företagsfester – med fokus på att tekniken fungerar hela vägen.',
+  },
+];
+
+const jsonLd = [
+  {
+    '@type': 'Service',
+    '@id': 'https://skaneevent.se/#service',
+    name: 'Eventteknik för företagsevent i Skåne',
+    description:
+      'Professionell eventteknik och produktion för företagsevent: ljud, ljus, scen, bild, mikrofoner och tekniker.',
+    provider: { '@id': 'https://skaneevent.se/#organization' },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Skåne län' },
+    serviceType: 'Eventteknik och eventproduktion',
+    url: 'https://skaneevent.se/',
+  },
+  {
+    '@type': 'FAQPage',
+    '@id': 'https://skaneevent.se/#faq',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title="Eventteknik och företagsevent i Skåne"
+  description="Professionell eventteknik för företagsevent i Skåne. Ljud, ljus, scen, bild, mikrofoner och tekniker – en partner för hela eventet. Begär offert."
+  canonicalPath="/"
+  ogImage="/images/led-scen-utomhus.jpg"
+  jsonLd={jsonLd}
+>
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" role="presentation">
+      <img src="/images/hero-foretagsevent.jpg" alt="" width="612" height="408" fetchpriority="high" />
+    </div>
+    <div class="container hero-content">
+      <p class="eyebrow">Partner för professionella event i Skåne</p>
+      <h1 id="hero-heading">Eventteknik och företagsevent i Skåne</h1>
+      <p class="hero-lead">
+        Ljud. Ljus. Scen. Bild. Mikrofoner. Tekniker. En partner för hela eventet – från planering till rigg och genomförande.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="/offert/">Begär offert</a>
+        <a class="btn btn-secondary btn-lg" href="/foretagsevent/">Se våra eventlösningar</a>
+      </div>
+      <ul class="hero-trust" aria-label="Fördelar">
+        <li>Leverans i hela Skåne</li>
+        <li>Rigg &amp; tekniker på plats</li>
+        <li>Skräddarsydda lösningar</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="eventtyper" aria-labelledby="eventtyper-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Eventtyper</p>
+        <h2 id="eventtyper-heading">Vilket event planerar ni?</h2>
+        <p>Vi anpassar tekniken efter eventets karaktär – från tal och paneler till gala och fest.</p>
+      </div>
+      <div class="card-grid card-grid-3">
+        <a class="solution-card" href="/foretagsevent/"><h3>Företagsevent</h3><p>Helhetslösning för professionella event i Skåne.</p></a>
+        <a class="solution-card" href="/konferens/"><h3>Konferens</h3><p>Mikrofoner, presentation, ljud och tekniker.</p></a>
+        <a class="solution-card" href="/gala/"><h3>Gala</h3><p>Scen, ljusdesign, PA och specialeffekter.</p></a>
+        <a class="solution-card" href="/produktlansering/"><h3>Produktlansering</h3><p>Scen, bild, branding och reveal-effekter.</p></a>
+        <a class="solution-card" href="/foretagsfest/"><h3>Företagsfest</h3><p>Ljud, DJ, ljus och dansgolv.</p></a>
+        <a class="solution-card" href="/julfest/"><h3>Julfest</h3><p>Teknik till företagsjulfest i Skåne.</p></a>
+        <a class="solution-card" href="/kickoff/"><h3>Kickoff</h3><p>Energi, presentation och underhållning.</p></a>
+        <a class="solution-card" href="/eventproduktion/"><h3>Eventproduktion</h3><p>Planering, rigg, genomförande och tekniker.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="tjanster" aria-labelledby="loser-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Vad vi löser</p>
+        <h2 id="loser-heading">Eventteknik som fungerar</h2>
+        <p>Företagskunden bryr sig om att presentationen hörs, scenen ser professionell ut och någon tar ansvar för helheten.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card"><h3>Ljud &amp; mikrofoner</h3><p>Kristallklart ljud för tal, paneler och underhållning.</p></article>
+        <article class="service-card"><h3>Ljus &amp; atmosfär</h3><p>Scenljus och uplights som förstärker ert varumärke.</p></article>
+        <article class="service-card"><h3>Scen &amp; tross</h3><p>Modulära scener och säkra trossystem.</p></article>
+        <article class="service-card"><h3>Bild &amp; LED</h3><p>LED-väggar och projektion för presentation och branding.</p></article>
+        <article class="service-card"><h3>Specialeffekter</h3><p>Effekter som lyfter gala, lansering och fest.</p></article>
+        <article class="service-card"><h3>Tekniker på plats</h3><p>Rigg, test och drift under eventet.</p></article>
+      </div>
+      <p style="margin-top: 2rem; text-align: center;">
+        <a class="btn btn-primary" href="/eventteknik/">Läs mer om eventteknik</a>
+        <a class="btn btn-secondary" href="/ljud-ljus-foretagsevent/" style="margin-left: 0.75rem;">Ljud &amp; ljus till företagsevent</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="why-heading">
+    <div class="container split">
+      <div class="split-content">
+        <p class="eyebrow">Varför Skåne Event</p>
+        <h2 id="why-heading">Vi löser tekniken till ert företagsevent</h2>
+        <p>
+          Skåne Event är den lokala specialistresursen för professionella event i Skåne.
+          Tekniken levereras av <FestLink destination="home" context="home_why" anchorType="brand">Festutrustning.se</FestLink>
+          – med erfarenhet av konferenser, galor, produktlanseringar och företagsfester.
+        </p>
+        <ul class="check-list">
+          <li>Dimensionering efter lokal, publik och program</li>
+          <li>Leverans, rigg, test och nedmontering</li>
+          <li>Tekniker på plats när det behövs</li>
+          <li>Kostnadsfri offert och personlig rådgivning</li>
+        </ul>
+        <a class="btn btn-primary" href="/offert/">Begär offert nu</a>
+      </div>
+      <div class="split-media">
+        <img
+          src="/images/tross-uppsattning.jpg"
+          alt="Tross och flight cases inför uppsättning av företagsevent"
+          width="1400"
+          height="880"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="case-teaser" aria-labelledby="case-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Genomförda event</p>
+        <h2 id="case-heading">Case från Skåne</h2>
+        <p>Riktiga event, riktiga bilder – så ser tekniklösningarna ut i praktiken.</p>
+      </div>
+      <div class="gallery-grid gallery-grid-4">
+        <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
+          <img src="/images/led-scen-utomhus.jpg" alt="LED-skärm och scen utomhus" width="768" height="1024" loading="lazy" />
+          <figcaption>LED-skärm och scen</figcaption>
+        </a>
+        <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
+          <img src="/images/rigg-eventteknik.jpg" alt="Rigg av tross och LED" width="768" height="1024" loading="lazy" />
+          <figcaption>Tross och LED-rigg</figcaption>
+        </a>
+        <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
+          <img src="/images/ljud-ljus-utrustning.jpg" alt="Ljud och ljus" width="1024" height="683" loading="lazy" />
+          <figcaption>Ljud och ljus</figcaption>
+        </a>
+        <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
+          <img src="/images/dj-ljudutrustning.jpg" alt="DJ och ljud" width="683" height="1024" loading="lazy" />
+          <figcaption>DJ och ljud</figcaption>
+        </a>
+      </div>
+      <p style="margin-top: 1.5rem; text-align: center;"><a class="btn btn-secondary" href="/case/">Se alla case</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="omraden" aria-labelledby="areas-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Geografi</p>
+        <h2 id="areas-heading">Företagsevent i hela Skåne</h2>
+        <p>Särskild fokus på Malmö, Lund och Helsingborg – med leverans i hela länet.</p>
+      </div>
+      <div class="areas-grid">
+        <a href="/malmo/foretagsevent/" class="area-card">Malmö</a>
+        <a href="/lund/foretagsevent/" class="area-card">Lund</a>
+        <a href="/helsingborg/foretagsevent/" class="area-card">Helsingborg</a>
+        <a href="/foretagsevent/" class="area-card">Hela Skåne</a>
+        <a href="/eventteknik/" class="area-card">Eventteknik</a>
+        <a href="/konferens/" class="area-card">Konferens</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="guider-teaser" aria-labelledby="guider-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Kunskap</p>
+        <h2 id="guider-heading">Guider för dig som planerar event</h2>
+        <p>Checklistor, dimensionering och praktiska råd innan ni begär offert.</p>
+      </div>
+      <div class="card-grid card-grid-3">
+        <a class="solution-card" href="/guider/checklista-foretagsevent/"><h3>Checklista för företagsevent</h3><p>Det ni inte får glömma innan eventdagen.</p></a>
+        <a class="solution-card" href="/guider/ljud-till-foretagsevent/"><h3>Vilket ljud behövs?</h3><p>Dimensionera PA efter lokal och publik.</p></a>
+        <a class="solution-card" href="/guider/teknik-till-konferens/"><h3>Teknik till konferens</h3><p>Mikrofoner, bild och AV-checklista.</p></a>
+      </div>
+      <p style="margin-top: 1.5rem; text-align: center;"><a class="btn btn-secondary" href="/guider/">Alla guider</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Vanliga frågor</p>
+        <h2 id="faq-heading">FAQ – företagsevent &amp; eventteknik</h2>
+      </div>
+      <div class="faq-list">
+        {faqs.map((f, i) => (
+          <details class="faq-item" open={i === 0}>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection title="Planerar ni ett event i Skåne?" />
+</BaseLayout>

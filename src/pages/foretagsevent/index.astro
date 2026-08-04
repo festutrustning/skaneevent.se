@@ -1,0 +1,101 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vad ingår i ett företagsevent i Skåne hos er?',
+    a: 'Vi tar ansvar för eventteknik och produktion: ljud, ljus, scen, bild och mikrofoner. Beroende på upplägg kan vi även bistå med rigg, tekniker på plats och koordinering mot lokal och övriga leverantörer.',
+  },
+  {
+    q: 'Hjälper ni både små och stora företagsevent?',
+    a: 'Ja. Vi dimensionerar lösningen efter ert event – från avdelningsmöten och kick-offs till konferenser, galor och produktlanseringar med hundratals deltagare.',
+  },
+  {
+    q: 'Kan ni samordna tekniken med vår eventbyrå eller interna projektledare?',
+    a: 'Absolut. Vi arbetar ofta tillsammans med eventbyråer, interna kommunikatörer och lokaler. Ni får en tydlig kontaktperson och en plan som håller tidslinjen hela vägen.',
+  },
+  {
+    q: 'Levererar ni i hela Skåne?',
+    a: 'Ja, vi arbetar i hela Skåne län – Malmö, Lund, Helsingborg och övriga orter. För lokalt innehåll i specifika städer, se våra sidor för Malmö, Lund och Helsingborg.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Se företagslösningar hos Festutrustning',
+    context: 'foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Skåne – eventteknik och produktion"
+  description="Professionella företagsevent i Skåne med ljud, ljus, scen och tekniker. En partner från planering till genomförande. Begär offert."
+  canonicalPath="/foretagsevent/"
+  h1="Företagsevent i Skåne"
+  lead="Ni planerar eventet – vi ser till att tekniken håller hela vägen. Ljud, ljus, scen, bild och erfarna tekniker för företagsevent i hela Skåne."
+  breadcrumbs={[{ name: 'Företagsevent', href: '/foretagsevent/' }]}
+  ogImage="/images/hero-foretagsevent.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Skåne"
+  faqs={faqs}
+>
+  <h2>En partner för hela företagseventet</h2>
+  <p>
+    Ett lyckat företagsevent handlar om mer än att boka utrustning. Det handlar om att gästerna hör presentationen tydligt,
+    att ljuset förstärker budskapet och att inget tekniskt avbryter programmet. Skåne Event är er partner för
+    <a href="/eventteknik/">eventteknik</a> och <a href="/eventproduktion/">eventproduktion</a> i Skåne – från första
+    behovsanalys till nedmontering efter sista applåden.
+  </p>
+  <p>
+    Vi arbetar med företag som vill fokusera på innehåll, gäster och affärsmål – inte på kablar, signalvägar och
+    sista-minuten-felsökning. Oavsett om ni arrangerar en intern kick-off, en kundkonferens eller en galakväll får ni
+    en lösning som är anpassad till lokal, antal deltagare och programmets karaktär.
+  </p>
+
+  <h2>Typer av företagsevent vi stöttar</h2>
+  <p>Varje event har sina egna krav. Här är några av de vanligaste uppdragen vi tar oss an i Skåne:</p>
+  <ul>
+    <li><a href="/konferens/">Konferenser och företagsdagar</a> med tal, paneler och workshops</li>
+    <li><a href="/kickoff/">Kick-offs</a> och strategimöten som ska energisera hela organisationen</li>
+    <li><a href="/produktlansering/">Produktlanseringar</a> där budskap och visuellt intryck är avgörande</li>
+    <li><a href="/gala/">Galor och prisutdelningar</a> med scenkänsla och professionellt ljus</li>
+    <li><a href="/foretagsfest/">Företagsfester</a> och <a href="/julfest/">julfester</a> som kombinerar program och mingel</li>
+  </ul>
+  <p>
+    Tekniken är alltid utgångspunkten, men vi tänker i hela upplevelsen: hur talaren känner sig på scenen, hur
+    publiken upplever presentationen och hur smidigt övergångarna mellan programpunkter fungerar.
+  </p>
+
+  <h2>Eventteknik som matchar era mål</h2>
+  <p>
+    För de flesta företagsevent behövs en kombination av <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a>,
+    mikrofoner, eventuellt <a href="/scen-till-event/">scen och rigg</a> samt bildskärmar eller projektion.
+    Vi dimensionerar utrustningen utifrån lokalens akustik, ljusförhållanden och hur många som ska delta – inte utifrån
+    en standards lista.
+  </p>
+  <p>
+    Behöver ni tekniker på plats under eventet? Vi kan finnas där för att hantera ljudnivåer, ljusscener, videoväxling
+    och snabb felsökning. För enklare upplägg kan vi leverera, rigga och genomföra funktionskontroll så att ert team
+    kör programmet självt.
+  </p>
+
+  <h2>Skåne som eventregion</h2>
+  <p>
+    Skåne erbjuder allt från moderna konferensanläggningar och hotell till unika industrilokaler och utomhusmiljöer.
+    Vi känner till förutsättningarna i regionen och har erfarenhet av att arbeta i både etablerade venue och
+    mer ovanliga miljöer. För företag med verksamhet i specifika städer har vi dedikerade sidor:
+    <a href="/malmo/foretagsevent/">företagsevent i Malmö</a>,
+    <a href="/lund/foretagsevent/">företagsevent i Lund</a> och
+    <a href="/helsingborg/foretagsevent/">företagsevent i Helsingborg</a>.
+  </p>
+
+  <h2>Så kommer ni igång</h2>
+  <p>
+    Berätta om ert event – datum, ort, typ av tillställning och ungefärligt antal deltagare. Ju tidigare vi är
+    involverade, desto bättre kan vi planera tekniken och undvika överraskningar. Fyll i vårt
+    <a href="/offert/">offertformulär</a> så återkommer vi med ett skräddarsytt förslag anpassat till just ert
+    företagsevent i Skåne.
+  </p>
+</SolutionPage>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  title?: string;
+  text?: string;
+}
+
+const {
+  title = 'Planerar ni ett event i Skåne?',
+  text = 'Berätta om datum, ort och typ av event – så återkommer vi med en skräddarsydd teknisk lösning.',
+} = Astro.props;
+---
+
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container cta-inner">
+    <h2 id="cta-heading">{title}</h2>
+    <p>{text}</p>
+    <div class="cta-actions">
+      <a class="btn btn-white btn-lg" href="/offert/">Begär offert</a>
+      <a class="btn btn-outline-white btn-lg" href="tel:+46766777232">Ring 076-677 72 32</a>
+    </div>
+  </div>
+</section>

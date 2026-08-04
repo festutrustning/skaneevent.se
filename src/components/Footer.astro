@@ -1,0 +1,60 @@
+---
+import { SITE } from '../data/site';
+import { festUrl } from '../data/festutrustning-links';
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="/">
+        <img src="/logo.png" alt={SITE.name} width="260" height="51" loading="lazy" />
+      </a>
+      <p>
+        {SITE.name} är specialistresursen för företagsevent och eventteknik i Skåne.
+        Teknikleverantör: <a
+          href={festUrl('home')}
+          data-fest-link
+          data-link-context="footer_brand"
+          data-anchor-type="brand"
+        >Festutrustning.se</a>.
+      </p>
+      <p class="footer-driven">
+        Skåne Event drivs av <a
+          href={festUrl('home')}
+          data-fest-link
+          data-link-context="footer_driven"
+          data-anchor-type="brand"
+        >Festutrustning.se</a>
+      </p>
+    </div>
+    <div class="footer-links">
+      <h3>Lösningar</h3>
+      <ul>
+        <li><a href="/foretagsevent/">Företagsevent</a></li>
+        <li><a href="/eventteknik/">Eventteknik</a></li>
+        <li><a href="/eventproduktion/">Eventproduktion</a></li>
+        <li><a href="/konferens/">Konferens</a></li>
+        <li><a href="/gala/">Gala</a></li>
+        <li><a href="/guider/">Guider</a></li>
+        <li><a href="/case/">Case</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Kontakt</h3>
+      <ul>
+        <li><a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a></li>
+        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li>{SITE.address.street}, {SITE.address.postalCode} {SITE.address.city}</li>
+        <li><a href="/offert/">Begär offert</a></li>
+        <li><a href="/kontakt/">Kontaktsida</a></li>
+        <li><a href="/villkor/">Allmänna villkor</a></li>
+        <li><a href="/integritet/">Integritetspolicy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {new Date().getFullYear()} {SITE.orgName}. Alla rättigheter förbehållna.</p>
+    </div>
+  </div>
+</footer>

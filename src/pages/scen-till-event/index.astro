@@ -1,0 +1,94 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vilken scen behöver vi till vårt event?',
+    a: 'Det beror på program, antal talare och lokal. Vi föreslår scenstorlek, höjd och eventuella tillägg som trappor, talarstol och backdrop utifrån ert upplägg.',
+  },
+  {
+    q: 'Kan ni rigga scen i lokaler som inte har fast scen?',
+    a: 'Ja. Vi bygger modulära scenlösningar i de flesta lokaler – hotell, konferenscenter, industrilokaler och utomhusmiljöer med rätt planering.',
+  },
+  {
+    q: 'Ingår ljud och ljus i scenpaketet?',
+    a: 'Scen kan levereras separat eller som del av en helhetslösning med ljud, ljus och bild. Vi samordnar allt i ett uppdrag vid behov.',
+  },
+  {
+    q: 'Hur lång tid tar uppsättning och nedmontering?',
+    a: 'Riggtiden beror på scenens omfattning och lokal. Vi planerar tidslinjen i förväg och koordinerar med venue så att ni vet exakt vad som gäller.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'scen' as const,
+    label: 'Scenlösningar hos Festutrustning',
+    context: 'scen_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Scen till event i Skåne – rigg och lösningar"
+  description="Scen till företagsevent i Skåne. Modulära scenlösningar, rigg och teknik för konferenser, galor och lanseringar. Begär offert."
+  canonicalPath="/scen-till-event/"
+  h1="Scen till event i Skåne"
+  lead="Modulära scenlösningar, rigg och säker uppsättning – scen till företagsevent, galor och konferenser i hela Skåne."
+  breadcrumbs={[{ name: 'Scen till event', href: '/scen-till-event/' }]}
+  ogImage="/images/tross-uppsattning.jpg"
+  festLinks={festLinks}
+  serviceName="Scen till event i Skåne"
+  faqs={faqs}
+>
+  <h2>Scen som ger rätt plattform</h2>
+  <p>
+    En bra scen lyfter talare, skapar fokus och ger eventet en professionell ram. Utan rätt plattform kan även
+    starkt innehåll kännas ad hoc. Skåne Event levererar <strong>scen till event i Skåne</strong> – modulära
+    lösningar, rigg och koordinering med ljud, ljus och bild.
+  </p>
+  <p>
+    Vi arbetar med företag som arrangerar <a href="/gala/">galor</a>,
+    <a href="/produktlansering/">produktlanseringar</a>, <a href="/konferens/">konferenser</a> och
+    <a href="/kickoff/">kick-offs</a> där en tydlig talarplattform är avgörande.
+  </p>
+
+  <h2>Modulära scenlösningar</h2>
+  <p>Vi anpassar scenen efter event och lokal:</p>
+  <ul>
+    <li>Scenstorlek och höjd utifrån program och siktlinjer</li>
+    <li>Trappor, räcken och talarstol vid behov</li>
+    <li>Backdrop eller integrering med befintlig dekor</li>
+    <li>Säker rigg enligt gällande krav</li>
+    <li>Koordinering med <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a> och bild</li>
+  </ul>
+  <p>
+    Scenen är ofta navet i övrig <a href="/eventteknik/">eventteknik</a> – vi planerar den tillsammans med
+    mikrofoner, ljus och projektion så att allt hänger ihop.
+  </p>
+
+  <h2>Scen i olika miljöer</h2>
+  <p>
+    Alla lokaler är inte byggda för scen. Vi har erfarenhet av att rigga i hotellsalar, konferenslokaler,
+    industrimiljöer och utomhusarrangemang. Vid behov gör vi platsbesök eller tar in ritningar och bilder
+    för att planera riggen i förväg.
+  </p>
+  <p>
+    Som del av <a href="/eventproduktion/">eventproduktion</a> kan vi ta ansvar för hela det tekniska
+    genomförandet – från scen till sista nedmontering.
+  </p>
+
+  <h2>Scen i hela Skåne</h2>
+  <p>
+    Vi levererar scenlösningar i hela Skåne län – inklusive <a href="/malmo/foretagsevent/">Malmö</a>,
+    <a href="/lund/foretagsevent/">Lund</a> och <a href="/helsingborg/foretagsevent/">Helsingborg</a>.
+    Oavsett ort får ni samma noggrannhet i planering och genomförande.
+  </p>
+
+  <h2>Begär offert för scen</h2>
+  <p>
+    Berätta om ert event – datum, lokal, program och ungefärlig scenstorlek om ni vet den. Vi återkommer med
+    ett förslag. <a href="/offert/">Begär offert</a> och få rätt plattform till ert
+    <a href="/foretagsevent/">företagsevent</a>.
+  </p>
+</SolutionPage>

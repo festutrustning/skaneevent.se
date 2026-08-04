@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../data/site';
+import FestLink from '../components/FestLink.astro';
+
+const breadcrumbs = [{ name: 'Kontakt', href: '/kontakt/' }];
+---
+
+<BaseLayout
+  title="Kontakt"
+  description="Kontakta Skåne Event för eventteknik och företagsevent i Skåne. Telefon, e-post och adress i Malmö."
+  canonicalPath="/kontakt/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="page-hero">
+    <div class="container">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1>Kontakt</h1>
+      <p class="page-lead">Prata med oss om ert event – eller skicka en offertförfrågan.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="/offert/">Begär offert</a>
+        <a class="btn btn-secondary btn-lg" href={`tel:${SITE.phone}`}>Ring {SITE.phoneDisplay}</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container prose-page">
+      <h2>Skåne Event / {SITE.orgName}</h2>
+      <ul>
+        <li>Telefon: <a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a></li>
+        <li>E-post: <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li>Adress: {SITE.address.street}, {SITE.address.postalCode} {SITE.address.city}</li>
+      </ul>
+      <p>
+        Ni kan också kontakta teknikleverantören via
+        <FestLink destination="kontakt" context="kontakt_page" anchorType="cta">Festutrustnings kontaktsida</FestLink>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

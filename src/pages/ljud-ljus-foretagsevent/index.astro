@@ -1,0 +1,93 @@
+---
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Vad ingår i ljud och ljus till företagsevent?',
+    a: 'Typiskt ingår PA-system, mikrofoner, ljus för scen och lokal samt eventuellt effekter beroende på eventtyp. Vi dimensionerar paketet efter lokal, program och antal gäster.',
+  },
+  {
+    q: 'Kan ni anpassa ljuset efter vårt varumärke?',
+    a: 'Ja. Vi kan arbeta med färg och ljusstyrka som matchar er profil – från diskret corporate till mer festlig stämning.',
+  },
+  {
+    q: 'Behöver vi tekniker på plats?',
+    a: 'För enklare event räcker ofta rigg och genomgång. Vid galor, kick-offs eller program med många övergångar rekommenderar vi tekniker under eventet.',
+  },
+  {
+    q: 'Fungerar lösningen både inomhus och utomhus?',
+    a: 'Ja, med rätt planering. Utomhusevent kräver extra hänsyn till väder och el – vi går igenom detta i offertfasen.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'ljudLjusSkane' as const,
+    label: 'Ljud och ljus i Skåne – Festutrustning',
+    context: 'ljud-ljus_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Ljud och ljus till företagsevent i Skåne"
+  description="Professionellt ljud och ljus till företagsevent i Skåne. PA, mikrofoner, scenljus och tekniker. Begär offert."
+  canonicalPath="/ljud-ljus-foretagsevent/"
+  h1="Ljud och ljus till företagsevent"
+  lead="Tydligt ljud och ljus som förstärker budskapet – skräddarsydda lösningar för företagsevent i hela Skåne."
+  breadcrumbs={[{ name: 'Ljud och ljus', href: '/ljud-ljus-foretagsevent/' }]}
+  ogImage="/images/ljud-ljus-utrustning.jpg"
+  festLinks={festLinks}
+  serviceName="Ljud och ljus till företagsevent i Skåne"
+  faqs={faqs}
+>
+  <h2>Ljud och ljus som gör skillnad</h2>
+  <p>
+    Dålig hörbarhet och flat belysning kan förvandla ett ambitiöst företagsevent till en platt upplevelse.
+    Professionellt ljud och ljus gör att talare når publiken, presentationer känns skarpa och stämningen matchar
+    kvällens eller dagens ambition. Skåne Event levererar <strong>ljud och ljus till företagsevent i Skåne</strong>
+    – dimensionerat efter lokal, program och antal deltagare.
+  </p>
+  <p>
+    Vi arbetar med företag som arrangerar <a href="/konferens/">konferenser</a>,
+    <a href="/kickoff/">kick-offs</a>, <a href="/gala/">galor</a>,
+    <a href="/foretagsfest/">företagsfester</a> och <a href="/julfest/">julfester</a>.
+  </p>
+
+  <h2>Ljud – tydligt från första rad till sista</h2>
+  <p>Vi planerar ljudlösningen utifrån hur ert event faktiskt ser ut:</p>
+  <ul>
+    <li>PA-system anpassat till lokalens storlek och akustik</li>
+    <li>Trådlösa mikrofoner, headset och panelmikrofoner</li>
+    <li>Ljud till video, musik och eventuell underhållning</li>
+    <li>Tekniker som justerar nivåer under eventet vid behov</li>
+  </ul>
+  <p>
+    Ljudet är grunden i nästan all <a href="/eventteknik/">eventteknik</a> – vi ser till att det håller hela
+    programmet, oavsett format.
+  </p>
+
+  <h2>Ljus – atmosfär och fokus</h2>
+  <p>
+    Ljuset sätter tonen. För en konferens kan det handla om tydlig scenbelysning och diskret ambientljus.
+    För en gala eller fest kan det innebära färg, rörliga effekter och övergångar som följer programmet.
+    Vi anpassar ljusdesignen efter er profil och eventtyp – inte en generisk standardlösning.
+  </p>
+  <p>
+    I kombination med <a href="/scen-till-event/">scen</a> och bild skapar rätt ljus en helhet som känns
+    genomtänkt och professionell.
+  </p>
+
+  <h2>Ljud och ljus i hela Skåne</h2>
+  <p>
+    Vi levererar i hela Skåne län. För företag i Malmö med lokala behov finns även
+    <a href="/malmo/eventteknik/">eventteknik i Malmö</a>. Oavsett ort får ni samma kvalitet och service som
+    del av ert <a href="/foretagsevent/">företagsevent</a>.
+  </p>
+
+  <h2>Begär offert</h2>
+  <p>
+    Beskriv ert event – datum, lokal, typ och antal gäster. Vi återkommer med ett ljud- och ljusupplägg anpassat
+    till era behov. <a href="/offert/">Begär offert</a> idag.
+  </p>
+</SolutionPage>

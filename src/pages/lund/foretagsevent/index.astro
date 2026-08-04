@@ -1,0 +1,97 @@
+---
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Levererar ni företagseventteknik i Lund?',
+    a: 'Ja. Vi arbetar i Lund och närområde – från universitetsmiljöer och forskningsparker till hotell och konferenslokaler i city.',
+  },
+  {
+    q: 'Har ni erfarenhet av lokaler i Lund?',
+    a: 'Ja. Vi känner till vanliga venue i Lund och kan samordna tekniken med lokalens personal kring rigg och el.',
+  },
+  {
+    q: 'Kan ni hantera både akademiska och företagsevent?',
+    a: 'Absolut. Vi levererar teknik till företagskonferenser, kick-offs, galor och andra professionella event i Lund.',
+  },
+  {
+    q: 'Hur når jag er för offert på event i Lund?',
+    a: 'Fyll i vårt offertformulär med datum, lokal och typ av event – vi återkommer med ett skräddarsytt förslag.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'lund_foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Lund – eventteknik och produktion"
+  description="Professionella företagsevent i Lund med ljud, ljus, scen och tekniker. Partner för event i universitetsstaden. Begär offert."
+  canonicalPath="/lund/foretagsevent/"
+  h1="Företagsevent i Lund"
+  lead="Eventteknik för företagsevent i Lund – konferenser, kick-offs och galor med lokal kännedom i universitetsstaden."
+  breadcrumbs={[
+    { name: 'Företagsevent', href: '/foretagsevent/' },
+    { name: 'Lund', href: '/lund/foretagsevent/' },
+  ]}
+  ogImage="/images/konferens-panel.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Lund"
+  faqs={faqs}
+>
+  <h2>Företagsevent i Lund – teknik för en kunskapsstad</h2>
+  <p>
+    Lund kombinerar akademisk tradition med ett växande näringsliv. Här arrangeras företagskonferenser,
+    forskningsevenemang, kick-offs och galor i allt från historiska miljöer till moderna konferensanläggningar.
+    Skåne Event är er partner för <strong>företagsevent i Lund</strong> med fokus på eventteknik som matchar
+    stadens höga ambitioner.
+  </p>
+  <p>
+    Vi levererar samma kvalitet som våra kunder i hela <a href="/foretagsevent/">Skåne</a> – med kort
+    resväg från Malmö och god kännedom om Lunds lokaler och logistik.
+  </p>
+
+  <h2>Event i Lunds olika miljöer</h2>
+  <p>Lund erbjuder mångsidiga venue för företagsevent:</p>
+  <ul>
+    <li>Konferenser och företagsdagar – <a href="/konferens/">konferens</a></li>
+    <li>Kick-offs och strategimöten – <a href="/kickoff/">kick-off</a></li>
+    <li>Produktlanseringar och partner-event – <a href="/produktlansering/">produktlansering</a></li>
+    <li>Galor och företagsfester – <a href="/gala/">gala</a> och <a href="/foretagsfest/">företagsfest</a></li>
+  </ul>
+  <p>
+    Vi anpassar <a href="/eventteknik/">eventteknik</a> efter lokal, program och antal deltagare – oavsett
+    om eventet sker i centrala Lund eller i närliggande Brunnshög eller Dalby.
+  </p>
+
+  <h2>Teknik för Lunds företagsevent</h2>
+  <p>
+    Företagsevent i Lund kräver ofta flexibel teknik: tydliga presentationer, paneler med flera deltagare
+    och ibland kombination av formellt program och fest. Vi levererar
+    <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a>, mikrofoner, scen och bild – och kan finnas
+    på plats med tekniker vid behov.
+  </p>
+  <p>
+    Behöver ni <a href="/scen-till-event/">scen</a> i en lokal utan fast scen? Vi riggar modulära lösningar
+    och samordnar med <a href="/eventproduktion/">eventproduktion</a> vid större upplägg.
+  </p>
+
+  <h2>Lund och Öresundsregionen</h2>
+  <p>
+    Många Lundföretag har deltagare från Malmö, Köpenhamn och övriga Skåne. Vi planerar teknik som fungerar
+    för ert specifika upplägg – inklusive hybridmoment vid behov. För företag i andra städer finns även
+    <a href="/malmo/foretagsevent/">företagsevent i Malmö</a> och
+    <a href="/helsingborg/foretagsevent/">företagsevent i Helsingborg</a>.
+  </p>
+
+  <h2>Begär offert för ert Lund-event</h2>
+  <p>
+    Berätta om datum, lokal, typ av event och antal deltagare. Vi återkommer med ett skräddarsytt förslag.
+    <a href="/offert/">Begär offert</a> – och låt oss ta hand om tekniken till ert företagsevent i Lund.
+  </p>
+</SolutionPage>
