@@ -14,9 +14,11 @@ interface Props {
   lead: string;
   breadcrumbs: BreadcrumbItem[];
   ogImage?: string;
+  heroImage?: string;
   festLinks?: { destination: FestDestination; label: string; context: string }[];
   serviceName?: string;
   faqs?: { q: string; a: string }[];
+  eyebrow?: string;
 }
 
 const {
@@ -27,10 +29,14 @@ const {
   lead,
   breadcrumbs,
   ogImage,
+  heroImage,
   festLinks = [],
   serviceName,
   faqs = [],
+  eyebrow = 'Skåne Event',
 } = Astro.props;
+
+const heroSrc = heroImage || ogImage || '/images/led-scen-utomhus.jpg';
 
 const jsonLd: Record<string, unknown>[] = [];
 if (serviceName) {
@@ -59,48 +65,86 @@ if (faqs.length) {
   title={title}
   description={description}
   canonicalPath={canonicalPath}
-  ogImage={ogImage}
+  ogImage={ogImage || heroSrc}
   breadcrumbs={breadcrumbs}
   jsonLd={jsonLd}
 >
-  <div class="page-hero">
-    <div class="container">
+  <section class="landing-hero" aria-labelledby="landing-heading">
+    <div class="landing-hero-bg" role="presentation">
+      <img src={heroSrc} alt="" width="1400" height="933" fetchpriority="high" />
+    </div>
+    <div class="container landing-hero-content">
       <Breadcrumbs items={breadcrumbs} />
-      <h1>{h1}</h1>
-      <p class="page-lead">{lead}</p>
+      <p class="eyebrow">{eyebrow}</p>
+      <h1 id="landing-heading">{h1}</h1>
+      <p class="landing-lead">{lead}</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="/offert/">Begär offert</a>
-        <a class="btn btn-secondary btn-lg" href="tel:+46766777232">Ring 076-677 72 32</a>
+        <a class="btn btn-outline-white btn-lg" href="tel:+46766777232">Ring 076-677 72 32</a>
       </div>
+      <ul class="hero-trust" aria-label="Fördelar">
+        <li>Leverans i hela Skåne</li>
+        <li>Rigg &amp; tekniker</li>
+        <li>Kostnadsfri offert</li>
+      </ul>
     </div>
-  </div>
+  </section>
 
-  <section class="section">
-    <div class="container prose-page">
-      <slot />
+  <section class="section landing-body">
+    <div class="container landing-layout">
+      <div class="prose-page landing-prose">
+        <slot />
+      </div>
 
-      {festLinks.length > 0 && (
-        <aside class="fest-aside">
-          <h2>Nästa steg hos Festutrustning</h2>
-          <p>När ni är redo att gå från planering till konkret utrustning och genomförande:</p>
+      <aside class="landing-sidebar">
+        <div class="sidebar-card sidebar-cta">
+          <h2>Planerar ni event?</h2>
+          <p>Berätta om datum, ort och behov – vi återkommer med en teknisk lösning.</p>
+          <a class="btn btn-primary" href="/offert/">Begär offert</a>
+          <a class="btn btn-secondary" href="tel:+46766777232">076-677 72 32</a>
+        </div>
+
+        {festLinks.length > 0 && (
+          <div class="sidebar-card fest-aside">
+            <h2>Teknikleverantör</h2>
+            <p>När ni går från planering till utrustning och genomförande:</p>
+            <ul>
+              {festLinks.map((l) => (
+                <li>
+                  <FestLink
+                    destination={l.destination}
+                    context={l.context}
+                    campaign={canonicalPath.replace(/\//g, '') || 'home'}
+                    utm
+                  >
+                    {l.label}
+                  </FestLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div class="sidebar-card sidebar-links">
+          <h2>Utforska mer</h2>
           <ul>
-            {festLinks.map((l) => (
-              <li>
-                <FestLink destination={l.destination} context={l.context} campaign={canonicalPath.replace(/\//g, '') || 'home'} utm>
-                  {l.label}
-                </FestLink>
-              </li>
-            ))}
+            <li><a href="/foretagsevent/">Företagsevent</a></li>
+            <li><a href="/eventteknik/">Eventteknik</a></li>
+            <li><a href="/guider/">Guider</a></li>
+            <li><a href="/case/">Case</a></li>
           </ul>
-        </aside>
-      )}
+        </div>
+      </aside>
     </div>
   </section>
 
   {faqs.length > 0 && (
     <section class="section section-alt" aria-labelledby="page-faq">
-      <div class="container">
-        <h2 id="page-faq">Vanliga frågor</h2>
+      <div class="container landing-faq">
+        <div class="section-header">
+          <p class="eyebrow" style="color: var(--primary); background: var(--violet-50); border-color: var(--violet-200);">FAQ</p>
+          <h2 id="page-faq">Vanliga frågor</h2>
+        </div>
         <div class="faq-list">
           {faqs.map((f, i) => (
             <details class="faq-item" open={i === 0}>
