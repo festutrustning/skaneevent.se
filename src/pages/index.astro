@@ -61,15 +61,16 @@ const jsonLd = [
     <div class="hero-bg" role="presentation">
       <img src="/images/hero-foretagsevent.jpg" alt="" width="612" height="408" fetchpriority="high" />
     </div>
+    <div class="hero-spotlight" aria-hidden="true"></div>
     <div class="container hero-content">
       <p class="eyebrow">Partner för professionella event i Skåne</p>
-      <h1 id="hero-heading">Eventteknik och företagsevent i Skåne</h1>
+      <h1 id="hero-heading">Eventteknik och <span class="text-gradient">företagsevent</span> i Skåne</h1>
       <p class="hero-lead">
         Ljud. Ljus. Scen. Bild. Mikrofoner. Tekniker. En partner för hela eventet – från planering till rigg och genomförande.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="https://festutrustning.se/offert" data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Begär offert</a>
-        <a class="btn btn-secondary btn-lg" href="/foretagsevent/">Se våra eventlösningar</a>
+        <a class="btn btn-outline-white btn-lg" href="/foretagsevent/">Se våra eventlösningar</a>
       </div>
       <ul class="hero-trust" aria-label="Fördelar">
         <li>Leverans i hela Skåne</li>
@@ -79,7 +80,40 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section" id="eventtyper" aria-labelledby="eventtyper-heading">
+  <section class="stats-bar" aria-label="Snabbfakta">
+    <div class="container stats-inner">
+      <div class="stat">
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <strong>Hela Skåne</strong>
+        <span>Leverans &amp; rigg</span>
+      </div>
+      <div class="stat">
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </span>
+        <strong>Ljud &amp; ljus</strong>
+        <span>Scen &amp; bild</span>
+      </div>
+      <div class="stat">
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <strong>Tekniker</strong>
+        <span>På plats vid behov</span>
+      </div>
+      <div class="stat">
+        <span class="stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </span>
+        <strong>Kostnadsfri</strong>
+        <span>Offert &amp; rådgivning</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="eventtyper" aria-labelledby="eventtyper-heading">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Eventtyper</p>
@@ -87,19 +121,19 @@ const jsonLd = [
         <p>Vi anpassar tekniken efter eventets karaktär – från tal och paneler till gala och fest.</p>
       </div>
       <div class="card-grid card-grid-3">
-        <a class="solution-card" href="/foretagsevent/"><h3>Företagsevent</h3><p>Helhetslösning för professionella event i Skåne.</p></a>
-        <a class="solution-card" href="/konferens/"><h3>Konferens</h3><p>Mikrofoner, presentation, ljud och tekniker.</p></a>
-        <a class="solution-card" href="/gala/"><h3>Gala</h3><p>Scen, ljusdesign, PA och specialeffekter.</p></a>
-        <a class="solution-card" href="/produktlansering/"><h3>Produktlansering</h3><p>Scen, bild, branding och reveal-effekter.</p></a>
-        <a class="solution-card" href="/foretagsfest/"><h3>Företagsfest</h3><p>Ljud, DJ, ljus och dansgolv.</p></a>
-        <a class="solution-card" href="/julfest/"><h3>Julfest</h3><p>Teknik till företagsjulfest i Skåne.</p></a>
-        <a class="solution-card" href="/kickoff/"><h3>Kickoff</h3><p>Energi, presentation och underhållning.</p></a>
-        <a class="solution-card" href="/eventproduktion/"><h3>Eventproduktion</h3><p>Planering, rigg, genomförande och tekniker.</p></a>
+        <a class="solution-card" href="/foretagsevent/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg></span><h3>Företagsevent</h3><p>Helhetslösning för professionella event i Skåne.</p><span class="event-card-arrow">Läs mer →</span></a>
+        <a class="solution-card" href="/konferens/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></span><h3>Konferens</h3><p>Mikrofoner, presentation, ljud och tekniker.</p><span class="event-card-arrow">Läs mer →</span></a>
+        <a class="solution-card" href="/gala/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><h3>Gala</h3><p>Scen, ljusdesign, PA och specialeffekter.</p><span class="event-card-arrow">Läs mer →</span></a>
+        <a class="solution-card" href="/produktlansering/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><h3>Produktlansering</h3><p>Scen, bild, branding och reveal-effekter.</p><span class="event-card-arrow">Läs mer →</span></a>
+        <a class="solution-card" href="/foretagsfest/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span><h3>Företagsfest</h3><p>Ljud, DJ, ljus och dansgolv.</p><span class="event-card-arrow">Läs mer →</span></a>
+        <a class="solution-card" href="/julfest/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg></span><h3>Julfest</h3><p>Teknik till företagsjulfest i Skåne.</p><span class="event-card-arrow">Läs mer →</span></a>
+        <a class="solution-card" href="/kickoff/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><h3>Kickoff</h3><p>Energi, presentation och underhållning.</p><span class="event-card-arrow">Läs mer →</span></a>
+        <a class="solution-card" href="/eventproduktion/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span><h3>Eventproduktion</h3><p>Planering, rigg, genomförande och tekniker.</p><span class="event-card-arrow">Läs mer →</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt" id="tjanster" aria-labelledby="loser-heading">
+  <section class="section section-alt reveal" id="tjanster" aria-labelledby="loser-heading">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Vad vi löser</p>
@@ -107,12 +141,30 @@ const jsonLd = [
         <p>Företagskunden bryr sig om att presentationen hörs, scenen ser professionell ut och någon tar ansvar för helheten.</p>
       </div>
       <div class="services-grid">
-        <article class="service-card"><h3>Ljud &amp; mikrofoner</h3><p>Kristallklart ljud för tal, paneler och underhållning.</p></article>
-        <article class="service-card"><h3>Ljus &amp; atmosfär</h3><p>Scenljus och uplights som förstärker ert varumärke.</p></article>
-        <article class="service-card"><h3>Scen &amp; tross</h3><p>Modulära scener och säkra trossystem.</p></article>
-        <article class="service-card"><h3>Bild &amp; LED</h3><p>LED-väggar och projektion för presentation och branding.</p></article>
-        <article class="service-card"><h3>Specialeffekter</h3><p>Effekter som lyfter gala, lansering och fest.</p></article>
-        <article class="service-card"><h3>Tekniker på plats</h3><p>Rigg, test och drift under eventet.</p></article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></div>
+          <h3>Ljud &amp; mikrofoner</h3><p>Kristallklart ljud för tal, paneler och underhållning.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <h3>Ljus &amp; atmosfär</h3><p>Scenljus och uplights som förstärker ert varumärke.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+          <h3>Scen &amp; tross</h3><p>Modulära scener och säkra trossystem.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>Bild &amp; LED</h3><p>LED-väggar och projektion för presentation och branding.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
+          <h3>Specialeffekter</h3><p>Effekter som lyfter gala, lansering och fest.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h3>Tekniker på plats</h3><p>Rigg, test och drift under eventet.</p>
+        </article>
       </div>
       <p style="margin-top: 2rem; text-align: center;">
         <a class="btn btn-primary" href="/eventteknik/">Läs mer om eventteknik</a>
@@ -121,7 +173,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section" aria-labelledby="why-heading">
+  <section class="section reveal" aria-labelledby="why-heading">
     <div class="container split">
       <div class="split-content">
         <p class="eyebrow">Varför Skåne Event</p>
@@ -151,7 +203,7 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section section-alt" id="case-teaser" aria-labelledby="case-heading">
+  <section class="section section-dark reveal" id="case-teaser" aria-labelledby="case-heading">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Genomförda event</p>
@@ -161,22 +213,34 @@ const jsonLd = [
       <div class="gallery-grid gallery-grid-4">
         <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
           <img src="/images/led-scen-utomhus.jpg" alt="LED-skärm och scen utomhus" width="768" height="1024" loading="lazy" />
-          <figcaption>LED-skärm och scen</figcaption>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Case</span>
+            <figcaption>LED-skärm och scen</figcaption>
+          </div>
         </a>
         <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
           <img src="/images/rigg-eventteknik.jpg" alt="Rigg av tross och LED" width="768" height="1024" loading="lazy" />
-          <figcaption>Tross och LED-rigg</figcaption>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Case</span>
+            <figcaption>Tross och LED-rigg</figcaption>
+          </div>
         </a>
         <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
           <img src="/images/ljud-ljus-utrustning.jpg" alt="Ljud och ljus" width="1024" height="683" loading="lazy" />
-          <figcaption>Ljud och ljus</figcaption>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Case</span>
+            <figcaption>Ljud och ljus</figcaption>
+          </div>
         </a>
         <a class="gallery-item" href="/case/" style="text-decoration: none; color: inherit;">
           <img src="/images/dj-ljudutrustning.jpg" alt="DJ och ljud" width="683" height="1024" loading="lazy" />
-          <figcaption>DJ och ljud</figcaption>
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Case</span>
+            <figcaption>DJ och ljud</figcaption>
+          </div>
         </a>
       </div>
-      <p style="margin-top: 1.5rem; text-align: center;"><a class="btn btn-secondary" href="/case/">Se alla case</a></p>
+      <p style="margin-top: 1.5rem; text-align: center;"><a class="btn btn-outline-white" href="/case/">Se alla case</a></p>
     </div>
   </section>
 
