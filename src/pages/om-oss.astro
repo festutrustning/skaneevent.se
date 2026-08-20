@@ -4,17 +4,10 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CTASection from '../components/CTASection.astro';
 import ContentImage from '../components/ContentImage.astro';
 import FestLink from '../components/FestLink.astro';
-import ImageBand from '../components/ImageBand.astro';
 import PageShowcase from '../components/PageShowcase.astro';
 import { SITE } from '../data/site';
 
 const breadcrumbs = [{ name: 'Om oss', href: '/om-oss/' }];
-
-const bandImages = [
-  { src: '/images/konferens-scen.jpg', alt: 'Konferens' },
-  { src: '/images/tross-uppsattning.jpg', alt: 'Tross' },
-  { src: '/images/led-scen-utomhus.jpg', alt: 'LED utomhus' },
-];
 
 const showcase = [
   { src: '/images/rigg-eventteknik.jpg', alt: 'Rigg eventteknik', caption: 'Rigg i praktiken' },
@@ -38,8 +31,6 @@ const showcase = [
       </p>
     </div>
   </div>
-
-  <ImageBand images={bandImages} />
 
   <section class="section">
     <div class="container prose-page">

@@ -3,15 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
-import ImageBand from '../../components/ImageBand.astro';
 
 const breadcrumbs = [{ name: 'Case', href: '/case/' }];
-
-const bandImages = [
-  { src: '/images/led-scen-utomhus.jpg', alt: 'LED-scen utomhus' },
-  { src: '/images/rigg-eventteknik.jpg', alt: 'Rigg eventteknik' },
-  { src: '/images/dj-ljudutrustning.jpg', alt: 'Ljud till företagsfest' },
-];
 
 const cases = (await getCollection('cases')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -33,8 +26,6 @@ const cases = (await getCollection('cases')).sort(
       </p>
     </div>
   </div>
-
-  <ImageBand images={bandImages} />
 
   <section class="section">
     <div class="container">

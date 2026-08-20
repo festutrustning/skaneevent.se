@@ -5,7 +5,6 @@ export interface PageImage {
 }
 
 export interface PageVisuals {
-  band: PageImage[];
   feature?: PageImage;
   gallery?: PageImage[];
 }
@@ -85,77 +84,62 @@ const I = {
 
 export const PAGE_VISUALS: Record<string, PageVisuals> = {
   '/foretagsevent/': {
-    band: [I.konferensScen, I.tross, I.ledUtomhus],
     feature: I.scenBelysning,
     gallery: [I.rigg, I.eventProduktion, I.gala],
   },
   '/eventteknik/': {
-    band: [I.tross, I.rigg, I.ljudLjus],
     feature: I.eventProduktion,
     gallery: [I.ledHero, I.eventBackstage, I.konferensPublik],
   },
   '/eventproduktion/': {
-    band: [I.eventProduktion, I.tross, I.rigg],
     feature: I.eventBackstage,
     gallery: [I.ledUtomhus, I.scenBelysning, I.gala],
   },
   '/konferens/': {
-    band: [I.konferensScen, I.konferensPublik, I.scenBelysning],
     feature: I.eventEffekter,
     gallery: [I.ljudLjus, I.eventProduktion, I.tross],
   },
   '/gala/': {
-    band: [I.gala, I.scenPublik, I.eventBackstage],
     feature: I.scenBelysning,
     gallery: [I.tross, I.ledHero, I.eventProduktion],
   },
   '/produktlansering/': {
-    band: [I.ledHero, I.ledUtomhus, I.scenPublik],
     feature: I.eventBackstage,
     gallery: [I.tross, I.eventProduktion, I.gala],
   },
   '/foretagsfest/': {
-    band: [I.dj, I.gala, I.scenPublik],
     feature: I.ljudLjus,
     gallery: [I.scenBelysning, I.eventEffekter, I.eventProduktion],
   },
   '/julfest/': {
-    band: [I.gala, I.dj, I.scenBelysning],
     feature: I.scenPublik,
     gallery: [I.ljudLjus, I.eventEffekter, I.eventProduktion],
   },
   '/kickoff/': {
-    band: [I.scenPublik, I.konferensScen, I.gala],
     feature: I.eventBackstage,
     gallery: [I.tross, I.ledHero, I.eventProduktion],
   },
   '/ljud-ljus-foretagsevent/': {
-    band: [I.ljudLjus, I.dj, I.scenBelysning],
     feature: I.eventProduktion,
     gallery: [I.gala, I.rigg, I.konferensPublik],
   },
   '/scen-till-event/': {
-    band: [I.tross, I.ledUtomhus, I.rigg],
     feature: I.ledHero,
     gallery: [I.eventProduktion, I.gala, I.scenPublik],
   },
   '/malmo/foretagsevent/': {
-    band: [I.ledUtomhus, I.konferensScen, I.tross],
     feature: I.rigg,
     gallery: [I.eventProduktion, I.gala, I.ljudLjus],
   },
   '/lund/foretagsevent/': {
-    band: [I.konferensPublik, I.konferensScen, I.tross],
     feature: I.eventEffekter,
     gallery: [I.ljudLjus, I.eventProduktion, I.scenBelysning],
   },
   '/helsingborg/foretagsevent/': {
-    band: [I.gala, I.tross, I.konferensScen],
     feature: I.scenBelysning,
     gallery: [I.rigg, I.ledHero, I.eventProduktion],
   },
   '/malmo/eventteknik/': {
-    band: [I.rigg, I.ledUtomhus, I.ljudLjus],
     feature: I.tross,
     gallery: [I.eventProduktion, I.konferensPublik, I.ledHero],
   },

@@ -4,7 +4,6 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import CTASection from './CTASection.astro';
 import ContentImage from './ContentImage.astro';
 import FestLink from './FestLink.astro';
-import ImageBand from './ImageBand.astro';
 import PageShowcase from './PageShowcase.astro';
 import { getPageVisuals } from '../data/page-images';
 import type { BreadcrumbItem } from '../data/site';
@@ -95,8 +94,6 @@ if (faqs.length) {
       </ul>
     </div>
   </section>
-
-  {visuals && visuals.band.length > 0 && <ImageBand images={visuals.band} />}
 
   <section class="section landing-body">
     <div class="container landing-layout">

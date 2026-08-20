@@ -1909,43 +1909,7 @@ body.menu-open .menu-toggle span:nth-child(3) {
   cursor: pointer;
 }
 
-/* Page visuals – image band, content images, showcases */
-.image-band {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  max-height: 14rem;
-  overflow: hidden;
-}
-
-@media (max-width: 640px) {
-  .image-band {
-    grid-template-columns: 1fr;
-    max-height: none;
-  }
-
-  .image-band-item:not(:first-child) {
-    display: none;
-  }
-}
-
-.image-band-item {
-  position: relative;
-  overflow: hidden;
-}
-
-.image-band-item img {
-  width: 100%;
-  height: 14rem;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.image-band:hover .image-band-item img {
-  transform: scale(1.04);
-}
-
+/* Page visuals – content images, showcases */
 .content-image {
   margin: 0 0 2.5rem;
   border-radius: var(--radius-xl);

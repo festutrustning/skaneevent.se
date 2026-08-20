@@ -3,15 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
-import ImageBand from '../../components/ImageBand.astro';
 
 const breadcrumbs = [{ name: 'Guider', href: '/guider/' }];
-
-const bandImages = [
-  { src: '/images/konferens-scen.jpg', alt: 'Konferens' },
-  { src: '/images/tross-uppsattning.jpg', alt: 'Tross och rigg' },
-  { src: '/images/ljud-ljus-utrustning.jpg', alt: 'Ljud och ljus' },
-];
 
 const guideImages = [
   '/images/konferens-scen.jpg',
@@ -46,8 +39,6 @@ const guides = (await getCollection('guider')).sort(
       </p>
     </div>
   </div>
-
-  <ImageBand images={bandImages} />
 
   <section class="section">
     <div class="container">

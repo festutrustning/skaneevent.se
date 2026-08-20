@@ -4,15 +4,8 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ContentImage from '../components/ContentImage.astro';
 import { SITE } from '../data/site';
 import FestLink from '../components/FestLink.astro';
-import ImageBand from '../components/ImageBand.astro';
 
 const breadcrumbs = [{ name: 'Kontakt', href: '/kontakt/' }];
-
-const bandImages = [
-  { src: '/images/rigg-eventteknik.jpg', alt: 'Eventteknik' },
-  { src: '/images/konferens-scen.jpg', alt: 'Konferens' },
-  { src: '/images/led-scen-utomhus.jpg', alt: 'LED-scen' },
-];
 ---
 
 <BaseLayout
@@ -32,8 +25,6 @@ const bandImages = [
       </div>
     </div>
   </div>
-
-  <ImageBand images={bandImages} />
 
   <section class="section">
     <div class="container prose-page">
