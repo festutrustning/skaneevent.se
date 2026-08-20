@@ -2,7 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import CTASection from './CTASection.astro';
+import ContentImage from './ContentImage.astro';
 import FestLink from './FestLink.astro';
+import ImageBand from './ImageBand.astro';
+import PageShowcase from './PageShowcase.astro';
+import { getPageVisuals } from '../data/page-images';
 import type { BreadcrumbItem } from '../data/site';
 import type { FestDestination } from '../data/festutrustning-links';
 
@@ -36,7 +40,8 @@ const {
   eyebrow = 'Skåne Event',
 } = Astro.props;
 
-const heroSrc = heroImage || ogImage || '/images/led-scen-utomhus.jpg';
+const heroSrc = heroImage || ogImage || '/images/konferens-scen.jpg';
+const visuals = getPageVisuals(canonicalPath);
 
 const jsonLd: Record<string, unknown>[] = [];
 if (serviceName) {
@@ -91,10 +96,23 @@ if (faqs.length) {
     </div>
   </section>
 
+  {visuals && visuals.band.length > 0 && <ImageBand images={visuals.band} />}
+
   <section class="section landing-body">
     <div class="container landing-layout">
       <div class="prose-page landing-prose">
+        {visuals?.feature && (
+          <ContentImage
+            src={visuals.feature.src}
+            alt={visuals.feature.alt}
+            caption={visuals.feature.caption}
+            wide
+          />
+        )}
         <slot />
+        {visuals?.gallery && visuals.gallery.length > 0 && (
+          <PageShowcase images={visuals.gallery} title="Så kan tekniken se ut" />
+        )}
       </div>
 
       <aside class="landing-sidebar">

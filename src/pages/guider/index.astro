@@ -3,8 +3,28 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
+import ImageBand from '../../components/ImageBand.astro';
 
 const breadcrumbs = [{ name: 'Guider', href: '/guider/' }];
+
+const bandImages = [
+  { src: '/images/konferens-scen.jpg', alt: 'Konferens' },
+  { src: '/images/tross-uppsattning.jpg', alt: 'Tross och rigg' },
+  { src: '/images/ljud-ljus-utrustning.jpg', alt: 'Ljud och ljus' },
+];
+
+const guideImages = [
+  '/images/konferens-scen.jpg',
+  '/images/tross-uppsattning.jpg',
+  '/images/ljud-ljus-utrustning.jpg',
+  '/images/led-scen-utomhus.jpg',
+  '/images/eventproduktion.jpg',
+  '/images/scen-belysning.jpg',
+  '/images/rigg-eventteknik.jpg',
+  '/images/gala-foretagsevent.jpg',
+  '/images/event-backstage.jpg',
+  '/images/scen-publik.jpg',
+];
 
 const guides = (await getCollection('guider')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -27,11 +47,21 @@ const guides = (await getCollection('guider')).sort(
     </div>
   </div>
 
+  <ImageBand images={bandImages} />
+
   <section class="section">
     <div class="container">
       <div class="card-grid card-grid-3">
-        {guides.map((guide) => (
+        {guides.map((guide, i) => (
           <a class="solution-card" href={`/guider/${guide.id}/`}>
+            <img
+              class="card-thumb"
+              src={guideImages[i % guideImages.length]}
+              alt=""
+              width="640"
+              height="427"
+              loading="lazy"
+            />
             <h3>{guide.data.title}</h3>
             <p>{guide.data.description}</p>
             {guide.data.tags.length > 0 && (

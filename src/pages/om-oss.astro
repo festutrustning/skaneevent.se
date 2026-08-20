@@ -2,10 +2,25 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import CTASection from '../components/CTASection.astro';
+import ContentImage from '../components/ContentImage.astro';
 import FestLink from '../components/FestLink.astro';
+import ImageBand from '../components/ImageBand.astro';
+import PageShowcase from '../components/PageShowcase.astro';
 import { SITE } from '../data/site';
 
 const breadcrumbs = [{ name: 'Om oss', href: '/om-oss/' }];
+
+const bandImages = [
+  { src: '/images/konferens-scen.jpg', alt: 'Konferens' },
+  { src: '/images/tross-uppsattning.jpg', alt: 'Tross' },
+  { src: '/images/led-scen-utomhus.jpg', alt: 'LED utomhus' },
+];
+
+const showcase = [
+  { src: '/images/rigg-eventteknik.jpg', alt: 'Rigg eventteknik', caption: 'Rigg i praktiken' },
+  { src: '/images/eventproduktion.jpg', alt: 'Eventproduktion', caption: 'Tekniker vid mixer' },
+  { src: '/images/gala-foretagsevent.jpg', alt: 'Gala', caption: 'Gala och större event' },
+];
 ---
 
 <BaseLayout
@@ -24,8 +39,16 @@ const breadcrumbs = [{ name: 'Om oss', href: '/om-oss/' }];
     </div>
   </div>
 
+  <ImageBand images={bandImages} />
+
   <section class="section">
     <div class="container prose-page">
+      <ContentImage
+        src="/images/eventproduktion.jpg"
+        alt="Eventtekniker vid mixer och ljusbord"
+        caption="Erfarna tekniker bakom varje event"
+        wide
+      />
       <h2>Vi löser tekniken – ni fokuserar på eventet</h2>
       <p>
         Skåne Event hjälper företag att planera och genomföra event med rätt teknik:
@@ -56,6 +79,8 @@ const breadcrumbs = [{ name: 'Om oss', href: '/om-oss/' }];
       </p>
 
       <p><a class="btn btn-primary" href="https://festutrustning.se/offert">Begär offert</a></p>
+
+      <PageShowcase images={showcase} title="Event i Skåne" />
     </div>
   </section>
 

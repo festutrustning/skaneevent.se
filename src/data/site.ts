@@ -17,7 +17,7 @@ export const SITE = {
   orgNumber: '559579-0832',
   gaId: 'G-0K4XG6F43Q',
   festutrustning: 'https://festutrustning.se',
-  defaultOgImage: '/images/konferens-panel.jpg',
+  defaultOgImage: '/images/konferens-scen.jpg',
   logo: '/logo.png',
   sameAs: [
     'https://www.facebook.com/profile.php?id=61577953652127',

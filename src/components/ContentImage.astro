@@ -1,0 +1,14 @@
+---
+import type { PageImage } from '../data/page-images';
+
+interface Props extends PageImage {
+  wide?: boolean;
+}
+
+const { src, alt, caption, wide = false } = Astro.props;
+---
+
+<figure class:list={['content-image', { 'content-image-wide': wide }]}>
+  <img src={src} alt={alt} width="1400" height="933" loading="lazy" />
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

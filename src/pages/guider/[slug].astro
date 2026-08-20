@@ -3,7 +3,16 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
+import ContentImage from '../../components/ContentImage.astro';
 import { SITE } from '../../data/site';
+
+const guideImages = [
+  { src: '/images/konferens-scen.jpg', alt: 'Konferens och paneler', caption: 'Teknik som håller hela programmet' },
+  { src: '/images/tross-uppsattning.jpg', alt: 'Tross och rigg', caption: 'Scen och rigg inför event' },
+  { src: '/images/ljud-ljus-utrustning.jpg', alt: 'Ljud och ljus', caption: 'Ljud och ljus i praktiken' },
+  { src: '/images/led-scen-utomhus.jpg', alt: 'LED utomhus', caption: 'LED och scen utomhus' },
+  { src: '/images/eventproduktion.jpg', alt: 'Eventproduktion', caption: 'Tekniker vid mixer och ljusbord' },
+];
 
 export async function getStaticPaths() {
   const guides = await getCollection('guider');
@@ -22,6 +31,8 @@ const breadcrumbs = [
   { name: 'Guider', href: '/guider/' },
   { name: title, href: canonicalPath },
 ];
+
+const heroImage = guideImages[entry.id.length % guideImages.length];
 
 const jsonLd = {
   '@type': 'Article',
@@ -61,6 +72,7 @@ const jsonLd = {
         )}
         {tags.length > 0 && <> · {tags.join(' · ')}</>}
       </p>
+      <ContentImage {...heroImage} wide />
       <div class="article-body">
         <Content />
       </div>

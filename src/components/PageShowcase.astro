@@ -1,0 +1,23 @@
+---
+import type { PageImage } from '../data/page-images';
+
+interface Props {
+  images: PageImage[];
+  title?: string;
+}
+
+const { images, title } = Astro.props;
+if (!images.length) return;
+---
+
+<div class="page-showcase" aria-label={title || 'Bilder från event'}>
+  {title && <p class="page-showcase-title">{title}</p>}
+  <div class="page-showcase-grid">
+    {images.map((img) => (
+      <figure class="page-showcase-item">
+        <img src={img.src} alt={img.alt} width="640" height="427" loading="lazy" />
+        {img.caption && <figcaption>{img.caption}</figcaption>}
+      </figure>
+    ))}
+  </div>
+</div>
