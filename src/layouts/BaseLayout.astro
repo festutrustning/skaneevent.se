@@ -13,6 +13,7 @@ interface Props {
   breadcrumbs?: BreadcrumbItem[];
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noIndex?: boolean;
+  cinematicHome?: boolean;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   breadcrumbs = [],
   jsonLd,
   noIndex = false,
+  cinematicHome = false,
 } = Astro.props;
 
 const canonical = new URL(canonicalPath, SITE.url).href;
@@ -141,7 +143,7 @@ if (jsonLd) {
 
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
-  <body>
+  <body class:list={{ 'page-home': cinematicHome }}>
     <a class="skip-link" href="#main">Hoppa till innehåll</a>
     <Header />
     <main id="main">

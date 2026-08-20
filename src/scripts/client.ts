@@ -104,10 +104,46 @@ function initScrollReveal() {
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 }
 
+function initHeroCinematic() {
+  const hero = document.querySelector('[data-hero-cinematic]');
+  if (!hero) return;
+
+  requestAnimationFrame(() => hero.classList.add('is-ready'));
+
+  const slides = hero.querySelectorAll('.hero-slide');
+  if (slides.length <= 1) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  let current = 0;
+  window.setInterval(() => {
+    slides[current]?.classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current]?.classList.add('is-active');
+  }, 5500);
+}
+
+function initHomeHeader() {
+  if (!document.body.classList.contains('page-home')) return;
+
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 48);
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
 declare function gtag(...args: unknown[]): void;
 
 initMenu();
 initCookies();
 initScrollReveal();
+initHeroCinematic();
+initHomeHeader();
 trackFestClicks();
 trackLeadForms();

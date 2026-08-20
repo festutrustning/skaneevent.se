@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTASection from '../components/CTASection.astro';
 import FestLink from '../components/FestLink.astro';
+import HomeHero from '../components/HomeHero.astro';
 
 const faqs = [
   {
@@ -56,29 +57,9 @@ const jsonLd = [
   canonicalPath="/"
   ogImage="/images/led-scen-utomhus.jpg"
   jsonLd={jsonLd}
+  cinematicHome
 >
-  <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" role="presentation">
-      <img src="/images/hero-foretagsevent.jpg" alt="" width="612" height="408" fetchpriority="high" />
-    </div>
-    <div class="hero-spotlight" aria-hidden="true"></div>
-    <div class="container hero-content">
-      <p class="eyebrow">Partner för professionella event i Skåne</p>
-      <h1 id="hero-heading">Eventteknik och <span class="text-gradient">företagsevent</span> i Skåne</h1>
-      <p class="hero-lead">
-        Ljud. Ljus. Scen. Bild. Mikrofoner. Tekniker. En partner för hela eventet – från planering till rigg och genomförande.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="https://festutrustning.se/offert" data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Begär offert</a>
-        <a class="btn btn-outline-white btn-lg" href="/foretagsevent/">Se våra eventlösningar</a>
-      </div>
-      <ul class="hero-trust" aria-label="Fördelar">
-        <li>Leverans i hela Skåne</li>
-        <li>Rigg &amp; tekniker på plats</li>
-        <li>Skräddarsydda lösningar</li>
-      </ul>
-    </div>
-  </section>
+  <HomeHero />
 
   <section class="stats-bar" aria-label="Snabbfakta">
     <div class="container stats-inner">

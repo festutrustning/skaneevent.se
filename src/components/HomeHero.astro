@@ -1,0 +1,78 @@
+---
+const slides = [
+  { src: '/images/hero-foretagsevent.jpg', alt: '' },
+  { src: '/images/led-scen-utomhus.jpg', alt: '' },
+  { src: '/images/scenljus-publik.jpg', alt: '' },
+  { src: '/images/gala-foretagsevent.jpg', alt: '' },
+  { src: '/images/event-effekter.jpg', alt: '' },
+];
+
+const marqueeItems = [
+  'Gala',
+  'Konferens',
+  'Kickoff',
+  'Produktlansering',
+  'Företagsfest',
+  'Julfest',
+  'LED-scen',
+  'Ljud & ljus',
+  'Eventproduktion',
+  'Hela Skåne',
+];
+---
+
+<section class="hero hero-cinematic" aria-labelledby="hero-heading" data-hero-cinematic>
+  <div class="hero-slideshow" aria-hidden="true">
+    {slides.map((slide, i) => (
+      <div class={`hero-slide${i === 0 ? ' is-active' : ''}`}>
+        <img src={slide.src} alt={slide.alt} width="1400" height="933" fetchpriority={i === 0 ? 'high' : undefined} loading={i === 0 ? undefined : 'lazy'} />
+      </div>
+    ))}
+  </div>
+
+  <div class="hero-beams" aria-hidden="true">
+    <div class="hero-beam hero-beam-1"></div>
+    <div class="hero-beam hero-beam-2"></div>
+    <div class="hero-beam hero-beam-3"></div>
+  </div>
+
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-vignette" aria-hidden="true"></div>
+
+  <div class="container hero-content hero-content-cinematic">
+    <p class="hero-pre">
+      <span class="hero-live-dot" aria-hidden="true"></span>
+      När ljuset dimmas och publiken samlas
+    </p>
+    <h1 id="hero-heading">
+      <span class="hero-line hero-line-1">Eventteknik &amp;</span>
+      <span class="hero-line hero-line-2"><span class="text-shimmer">företagsevent</span></span>
+      <span class="hero-line hero-line-3">i Skåne</span>
+    </h1>
+    <p class="hero-lead hero-lead-cinematic">
+      Ljud. Ljus. Scen. Bild. Tekniker. Allt som får ert event att lyfta – från första rigg till sista applåd.
+    </p>
+    <div class="hero-actions hero-actions-cinematic">
+      <a class="btn btn-primary btn-lg btn-glow" href="https://festutrustning.se/offert" data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Begär offert</a>
+      <a class="btn btn-outline-white btn-lg" href="/foretagsevent/">Utforska eventlösningar</a>
+    </div>
+    <ul class="hero-trust hero-trust-cinematic" aria-label="Fördelar">
+      <li>Leverans i hela Skåne</li>
+      <li>Rigg &amp; tekniker på plats</li>
+      <li>Kostnadsfri offert</li>
+    </ul>
+  </div>
+
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="hero-marquee-track">
+      {[...marqueeItems, ...marqueeItems].map((item) => (
+        <span class="hero-marquee-item">{item}</span>
+      ))}
+    </div>
+  </div>
+
+  <a class="hero-scroll-cue" href="#eventtyper" aria-label="Scrolla ner">
+    <span class="hero-scroll-text">Scrolla</span>
+    <span class="hero-scroll-line" aria-hidden="true"></span>
+  </a>
+</section>
