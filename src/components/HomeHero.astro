@@ -1,10 +1,29 @@
 ---
 const slides = [
-  { src: '/images/hero-foretagsevent.jpg', alt: '' },
-  { src: '/images/led-scen-utomhus.jpg', alt: '' },
-  { src: '/images/scenljus-publik.jpg', alt: '' },
-  { src: '/images/gala-foretagsevent.jpg', alt: '' },
-  { src: '/images/event-effekter.jpg', alt: '' },
+  {
+    src: '/images/konferens-panel.jpg',
+    src960: '/images/konferens-panel-960.jpg',
+    alt: 'Paneldiskussion på scen med publik och professionell eventteknik',
+  },
+  {
+    src: '/images/konferens-publik.jpg',
+    src960: '/images/konferens-publik-960.jpg',
+    alt: 'Publik på företagskonferens i blå scenbelysning',
+  },
+  {
+    src: '/images/scenljus-publik.jpg',
+    src960: '/images/scenljus-publik-960.jpg',
+    alt: 'Scenljus och konfetti på stort företagsevent',
+  },
+  {
+    src: '/images/gala-foretagsevent.jpg',
+    src960: '/images/gala-foretagsevent-960.jpg',
+    alt: 'Publik och scenljus på gala och företagsevent',
+  },
+  {
+    src: '/images/tross-uppsattning.jpg',
+    alt: 'Tross och eventteknik riggas inför företagsevent',
+  },
 ];
 
 const marqueeItems = [
@@ -25,7 +44,19 @@ const marqueeItems = [
   <div class="hero-slideshow" aria-hidden="true">
     {slides.map((slide, i) => (
       <div class={`hero-slide${i === 0 ? ' is-active' : ''}`}>
-        <img src={slide.src} alt={slide.alt} width="1400" height="933" fetchpriority={i === 0 ? 'high' : undefined} loading={i === 0 ? undefined : 'lazy'} />
+        <picture>
+          {slide.src960 && (
+            <source media="(max-width: 768px)" srcset={slide.src960} />
+          )}
+          <img
+            src={slide.src}
+            alt={slide.alt}
+            width="1920"
+            height="1280"
+            fetchpriority={i === 0 ? 'high' : undefined}
+            loading={i === 0 ? undefined : 'lazy'}
+          />
+        </picture>
       </div>
     ))}
   </div>
