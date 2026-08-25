@@ -1,5 +1,8 @@
 ---
 import { SITE } from '../data/site';
+import { offertEventUrlForPath } from '../data/festutrustning-links';
+
+const offertCtaHref = offertEventUrlForPath('/', 'header_cta');
 ---
 
 <header class="site-header" id="top">
@@ -13,7 +16,7 @@ import { SITE } from '../data/site';
       <a href="/guider/">Guider</a>
       <a href="/case/">Case</a>
       <a href="/om-oss/">Om oss</a>
-      <a class="btn btn-primary btn-sm" href="https://festutrustning.se/offert" data-fest-link data-link-context="header_cta" data-anchor-type="cta">Begär offert</a>
+      <a class="btn btn-primary btn-sm" href={offertCtaHref} data-fest-link data-link-context="header_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
     </nav>
     <button class="menu-toggle" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-nav" type="button">
       <span></span>
@@ -27,6 +30,6 @@ import { SITE } from '../data/site';
     <a href="/guider/">Guider</a>
     <a href="/case/">Case</a>
     <a href="/om-oss/">Om oss</a>
-    <a class="btn btn-primary" href="https://festutrustning.se/offert" data-fest-link data-link-context="mobile_nav_cta" data-anchor-type="cta">Begär offert</a>
+    <a class="btn btn-primary" href={offertCtaHref} data-fest-link data-link-context="mobile_nav_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
   </nav>
 </header>

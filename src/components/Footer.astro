@@ -1,6 +1,8 @@
 ---
 import { SITE } from '../data/site';
-import { festUrl } from '../data/festutrustning-links';
+import { festUrl, offertEventUrlForPath } from '../data/festutrustning-links';
+
+const offertCtaHref = offertEventUrlForPath('/', 'footer_offert');
 ---
 
 <footer class="site-footer">
@@ -45,7 +47,7 @@ import { festUrl } from '../data/festutrustning-links';
         <li><a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a></li>
         <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
         <li>{SITE.address.street}, {SITE.address.postalCode} {SITE.address.city}</li>
-        <li><a href="https://festutrustning.se/offert" data-fest-link data-link-context="footer_offert" data-anchor-type="cta">Begär offert</a></li>
+        <li><a href={offertCtaHref} data-fest-link data-link-context="footer_offert" data-anchor-type="cta">Få förslag på eventlösning</a></li>
         <li><a href="/kontakt/">Kontaktsida</a></li>
         <li><a href="/villkor/">Allmänna villkor</a></li>
         <li><a href="/integritet/">Integritetspolicy</a></li>

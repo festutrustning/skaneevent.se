@@ -4,8 +4,10 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ContentImage from '../components/ContentImage.astro';
 import { SITE } from '../data/site';
 import FestLink from '../components/FestLink.astro';
+import { offertEventUrlForPath } from '../data/festutrustning-links';
 
 const breadcrumbs = [{ name: 'Kontakt', href: '/kontakt/' }];
+const offertCtaHref = offertEventUrlForPath('/kontakt/', 'kontakt_hero_cta');
 ---
 
 <BaseLayout
@@ -20,7 +22,7 @@ const breadcrumbs = [{ name: 'Kontakt', href: '/kontakt/' }];
       <h1>Kontakt</h1>
       <p class="page-lead">Prata med oss om ert event – eller skicka en offertförfrågan.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="https://festutrustning.se/offert">Begär offert</a>
+        <a class="btn btn-primary btn-lg" href={offertCtaHref} data-fest-link data-link-context="kontakt_hero_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
         <a class="btn btn-secondary btn-lg" href={`tel:${SITE.phone}`}>Ring {SITE.phoneDisplay}</a>
       </div>
     </div>

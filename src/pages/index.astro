@@ -3,6 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CTASection from '../components/CTASection.astro';
 import FestLink from '../components/FestLink.astro';
 import HomeHero from '../components/HomeHero.astro';
+import { offertEventUrlForPath } from '../data/festutrustning-links';
+
+const offertCtaHref = offertEventUrlForPath('/', 'home_why_cta');
 
 const faqs = [
   {
@@ -170,7 +173,7 @@ const jsonLd = [
           <li>Tekniker på plats när det behövs</li>
           <li>Kostnadsfri offert och personlig rådgivning</li>
         </ul>
-        <a class="btn btn-primary" href="https://festutrustning.se/offert" data-fest-link data-link-context="home_why_cta" data-anchor-type="cta">Begär offert nu</a>
+        <a class="btn btn-primary" href={offertCtaHref} data-fest-link data-link-context="home_why_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
       </div>
       <div class="split-media">
         <img

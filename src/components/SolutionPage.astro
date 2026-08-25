@@ -8,6 +8,10 @@ import PageShowcase from './PageShowcase.astro';
 import { getPageVisuals } from '../data/page-images';
 import type { BreadcrumbItem } from '../data/site';
 import type { FestDestination } from '../data/festutrustning-links';
+import {
+  OFFERT_CTA_LABELS,
+  offertEventUrlForPath,
+} from '../data/festutrustning-links';
 
 interface Props {
   title: string;
@@ -41,6 +45,11 @@ const {
 
 const heroSrc = heroImage || ogImage || '/images/konferens-scen.jpg';
 const visuals = getPageVisuals(canonicalPath);
+const offertCtaHref = offertEventUrlForPath(canonicalPath, 'landing_hero_cta');
+const offertSidebarHref = offertEventUrlForPath(canonicalPath, 'landing_sidebar_cta');
+const offertCtaLabel =
+  OFFERT_CTA_LABELS[canonicalPath.endsWith('/') ? canonicalPath : `${canonicalPath}/`] ??
+  'Få förslag på eventlösning';
 
 const jsonLd: Record<string, unknown>[] = [];
 if (serviceName) {
@@ -84,7 +93,7 @@ if (faqs.length) {
       <h1 id="landing-heading">{h1}</h1>
       <p class="landing-lead">{lead}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="https://festutrustning.se/offert" data-fest-link data-link-context="landing_hero_cta" data-anchor-type="cta">Begär offert</a>
+        <a class="btn btn-primary btn-lg" href={offertCtaHref} data-fest-link data-link-context="landing_hero_cta" data-anchor-type="cta">{offertCtaLabel}</a>
         <a class="btn btn-outline-white btn-lg" href="tel:+46766777232">Ring 076-677 72 32</a>
       </div>
       <ul class="hero-trust" aria-label="Fördelar">
@@ -116,7 +125,7 @@ if (faqs.length) {
         <div class="sidebar-card sidebar-cta">
           <h2>Planerar ni event?</h2>
           <p>Berätta om datum, ort och behov – vi återkommer med en teknisk lösning.</p>
-          <a class="btn btn-primary" href="https://festutrustning.se/offert" data-fest-link data-link-context="landing_sidebar_cta" data-anchor-type="cta">Begär offert</a>
+          <a class="btn btn-primary" href={offertSidebarHref} data-fest-link data-link-context="landing_sidebar_cta" data-anchor-type="cta">{offertCtaLabel}</a>
           <a class="btn btn-secondary" href="tel:+46766777232">076-677 72 32</a>
         </div>
 

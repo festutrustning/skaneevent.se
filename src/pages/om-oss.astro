@@ -6,8 +6,10 @@ import ContentImage from '../components/ContentImage.astro';
 import FestLink from '../components/FestLink.astro';
 import PageShowcase from '../components/PageShowcase.astro';
 import { SITE } from '../data/site';
+import { offertEventUrlForPath } from '../data/festutrustning-links';
 
 const breadcrumbs = [{ name: 'Om oss', href: '/om-oss/' }];
+const offertCtaHref = offertEventUrlForPath('/om-oss/', 'om_oss_cta');
 
 const showcase = [
   { src: '/images/rigg-eventteknik.jpg', alt: 'Rigg eventteknik', caption: 'Rigg i praktiken' },
@@ -69,11 +71,11 @@ const showcase = [
         Tillsammans täcker vi resan från idé till färdigt event.
       </p>
 
-      <p><a class="btn btn-primary" href="https://festutrustning.se/offert">Begär offert</a></p>
+      <p><a class="btn btn-primary" href={offertCtaHref} data-fest-link data-link-context="om_oss_cta" data-anchor-type="cta">Få förslag på eventlösning</a></p>
 
       <PageShowcase images={showcase} title="Event i Skåne" />
     </div>
   </section>
 
-  <CTASection />
+  <CTASection sourcePath="/om-oss/" ctaContext="om_oss_footer_cta" />
 </BaseLayout>

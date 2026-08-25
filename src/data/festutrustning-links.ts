@@ -11,6 +11,7 @@ export const FEST = {
   hyraHogtalareMalmo: `${BASE}/hyra-hogtalare-malmo`,
   produkter: `${BASE}/produkter`,
   offert: `${BASE}/offert`,
+  offertEvent: `${BASE}/offert/event`,
   kontakt: `${BASE}/kontakt`,
 } as const;
 
@@ -85,3 +86,37 @@ export function festUrl(
   u.searchParams.set('utm_campaign', campaign);
   return u.toString();
 }
+
+/** B2B/event offert-CTA med partner-attribution (first-party metadata på FEST). */
+export function buildOffertEventUrl(opts: {
+  campaign?: string;
+  skRef?: string;
+  ctaContext?: string;
+}): string {
+  const url = new URL(FEST.offertEvent);
+  url.searchParams.set('utm_source', 'skaneevent');
+  url.searchParams.set('utm_medium', 'referral');
+  url.searchParams.set('utm_campaign', opts.campaign ?? 'referral');
+  if (opts.skRef) url.searchParams.set('sk_ref', opts.skRef);
+  if (opts.ctaContext) url.searchParams.set('cta_context', opts.ctaContext);
+  return url.toString();
+}
+
+/** Offert-CTA från en Skåne Event-sida med kampanj från link matrix. */
+export function offertEventUrlForPath(sourcePath: string, ctaContext: string): string {
+  const normalized =
+    sourcePath === '/' ? '/' : sourcePath.endsWith('/') ? sourcePath : `${sourcePath}/`;
+  const matrix = LINK_MATRIX[normalized] ?? LINK_MATRIX['/'];
+  return buildOffertEventUrl({
+    campaign: matrix.defaultCampaign,
+    skRef: normalized,
+    ctaContext,
+  });
+}
+
+/** Eventspecifika CTA-etiketter per landningssida. */
+export const OFFERT_CTA_LABELS: Record<string, string> = {
+  '/konferens/': 'Planera er konferens',
+  '/foretagsfest/': 'Få förslag för företagsfesten',
+  '/kickoff/': 'Planera er kickoff',
+};

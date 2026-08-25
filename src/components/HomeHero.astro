@@ -1,4 +1,8 @@
 ---
+import { offertEventUrlForPath } from '../data/festutrustning-links';
+
+const offertCtaHref = offertEventUrlForPath('/', 'home_hero_cta');
+
 const slides = [
   {
     src: '/images/konferens-scen.jpg',
@@ -87,7 +91,7 @@ const marqueeItems = [
       Ljud. Ljus. Scen. Bild. Tekniker. Allt som får ert event att lyfta – från första rigg till sista applåd.
     </p>
     <div class="hero-actions hero-actions-cinematic">
-      <a class="btn btn-primary btn-lg btn-glow" href="https://festutrustning.se/offert" data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Begär offert</a>
+      <a class="btn btn-primary btn-lg btn-glow" href={offertCtaHref} data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
       <a class="btn btn-outline-white btn-lg" href="/foretagsevent/">Utforska eventlösningar</a>
     </div>
     <ul class="hero-trust hero-trust-cinematic" aria-label="Fördelar">
