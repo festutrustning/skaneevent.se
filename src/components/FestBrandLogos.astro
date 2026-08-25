@@ -1,0 +1,69 @@
+---
+import {
+  fetchFestCompanyLogos,
+  fetchFestProductBrandLogos,
+  type FestLogo,
+} from '../lib/festutrustning-sync';
+
+interface Props {
+  showPartners?: boolean;
+  showProductBrands?: boolean;
+}
+
+const { showPartners = true, showProductBrands = true } = Astro.props;
+
+const [productBrands, partners] = await Promise.all([
+  showProductBrands ? fetchFestProductBrandLogos() : Promise.resolve([] as FestLogo[]),
+  showPartners ? fetchFestCompanyLogos() : Promise.resolve([] as FestLogo[]),
+]);
+
+if (productBrands.length === 0 && partners.length === 0) return null;
+---
+
+<section class="section fest-logos" aria-label="Varumärken och samarbetspartners">
+  <div class="container">
+    {productBrands.length > 0 && (
+      <div class="fest-logo-block">
+        <div class="section-header section-header-compact">
+          <h3>Varumärken vi använder</h3>
+          <p>Professionell utrustning från ledande tillverkare – samma sortiment som Festutrustning.se.</p>
+        </div>
+        <ul class="fest-logo-grid" role="list">
+          {productBrands.map((logo) => (
+            <li>
+              {logo.website_url ? (
+                <a href={logo.website_url} target="_blank" rel="noopener noreferrer" title={logo.name}>
+                  <img src={logo.logo_url} alt={logo.name} width="160" height="64" loading="lazy" />
+                </a>
+              ) : (
+                <img src={logo.logo_url} alt={logo.name} width="160" height="64" loading="lazy" />
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    {partners.length > 0 && (
+      <div class="fest-logo-block">
+        <div class="section-header section-header-compact">
+          <h3>Samarbetspartners</h3>
+          <p>Företag vi arbetat med inom event och teknik.</p>
+        </div>
+        <ul class="fest-logo-grid fest-logo-grid-partners" role="list">
+          {partners.map((logo) => (
+            <li>
+              {logo.website_url ? (
+                <a href={logo.website_url} target="_blank" rel="noopener noreferrer" title={logo.name}>
+                  <img src={logo.logo_url} alt={logo.name} width="160" height="64" loading="lazy" />
+                </a>
+              ) : (
+                <img src={logo.logo_url} alt={logo.name} width="160" height="64" loading="lazy" />
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</section>

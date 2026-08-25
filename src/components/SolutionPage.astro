@@ -4,6 +4,8 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import CTASection from './CTASection.astro';
 import ContentImage from './ContentImage.astro';
 import FestLink from './FestLink.astro';
+import FestReviews from './FestReviews.astro';
+import FestBrandLogos from './FestBrandLogos.astro';
 import PageShowcase from './PageShowcase.astro';
 import { getPageVisuals } from '../data/page-images';
 import type { BreadcrumbItem } from '../data/site';
@@ -182,5 +184,8 @@ if (faqs.length) {
     </section>
   )}
 
-  <CTASection />
+  <FestReviews limit={3} />
+  <FestBrandLogos />
+
+  <CTASection sourcePath={canonicalPath} ctaContext="landing_footer_cta" />
 </BaseLayout>

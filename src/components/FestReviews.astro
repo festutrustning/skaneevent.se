@@ -1,0 +1,43 @@
+---
+import { fetchFestReviews, formatReviewDate } from '../lib/festutrustning-sync';
+
+interface Props {
+  limit?: number;
+  title?: string;
+  lead?: string;
+}
+
+const { limit = 6, title = 'Vad våra kunder säger', lead = 'Recensioner från företagsevent vi genomfört – samma team som Festutrustning.se.' } = Astro.props;
+
+const reviews = await fetchFestReviews(limit);
+if (reviews.length === 0) return null;
+---
+
+<section class="section section-dark fest-reviews" aria-labelledby="fest-reviews-heading">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Omdömen</p>
+      <h2 id="fest-reviews-heading">{title}</h2>
+      <p>{lead}</p>
+    </div>
+    <div class="fest-review-list">
+      {reviews.map((review) => (
+        <article class="fest-review-card">
+          <div class="fest-review-meta">
+            <div class="fest-review-stars" aria-label={`Betyg ${review.rating} av 5`}>
+              {[1, 2, 3, 4, 5].map((star) => (
+                <span class={star <= review.rating ? 'fest-star is-filled' : 'fest-star'} aria-hidden="true">★</span>
+              ))}
+            </div>
+            <p class="fest-review-name">{review.customer_name}</p>
+            {review.event_type && <p class="fest-review-event">{review.event_type}</p>}
+            <p class="fest-review-date">{formatReviewDate(review.created_at)}</p>
+          </div>
+          <blockquote class="fest-review-quote">
+            <p>{review.comment}</p>
+          </blockquote>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

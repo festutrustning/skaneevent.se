@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CTASection from '../components/CTASection.astro';
 import FestLink from '../components/FestLink.astro';
 import HomeHero from '../components/HomeHero.astro';
+import FestReviews from '../components/FestReviews.astro';
+import FestBrandLogos from '../components/FestBrandLogos.astro';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
 
 const offertCtaHref = offertEventUrlForPath('/', 'home_why_cta');
@@ -227,6 +229,9 @@ const jsonLd = [
       <p style="margin-top: 1.5rem; text-align: center;"><a class="btn btn-outline-white" href="/case/">Se alla case</a></p>
     </div>
   </section>
+
+  <FestReviews />
+  <FestBrandLogos />
 
   <section class="section" id="omraden" aria-labelledby="areas-heading">
     <div class="container">
