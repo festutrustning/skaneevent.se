@@ -2543,11 +2543,16 @@ body.menu-open .menu-toggle span:nth-child(3) {
   width: auto;
   height: auto;
   object-fit: contain;
+  /* Enhetlig mellangrå – samma ton oavsett originalfärg */
+  filter: brightness(0) invert(0.52);
+  opacity: 0.9;
+  transition: opacity 0.2s ease, filter 0.2s ease;
 }
 
 .fest-logo-grid-partners img {
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  /* Ljusare grå mot mörk bakgrund */
+  filter: brightness(0) invert(0.62);
+  opacity: 0.88;
 }
 
 .fest-logo-grid a {
@@ -2560,6 +2565,11 @@ body.menu-open .menu-toggle span:nth-child(3) {
 
 .fest-logo-grid a:hover img {
   opacity: 1;
+  filter: brightness(0) invert(0.38);
+}
+
+.fest-logo-grid-partners a:hover img {
+  filter: brightness(0) invert(0.78);
 }
 
 .legal-meta {
