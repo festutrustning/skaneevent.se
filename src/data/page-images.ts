@@ -67,8 +67,8 @@ const I = {
   },
   foretagseventLedRigg: {
     src: '/images/foretagsevent-led-rigg.jpg',
-    alt: 'LED-uplights riggas i korridor inför företagsevent',
-    caption: 'LED-rigg inför företagsevent',
+    alt: 'Omgivningsbelysning med LED-uplights i korridor inför företagsevent',
+    caption: 'Omgivningsbelysning',
   },
   foretagseventAtmosfar: {
     src: '/images/foretagsevent-atmosfar.jpg',

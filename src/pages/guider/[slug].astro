@@ -5,15 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
 import ContentImage from '../../components/ContentImage.astro';
 import { buildArticleLd } from '../../components/seo/articleLd';
-
-const guideImages = [
-  { src: '/images/konferens-scen.jpg', alt: 'Konferens och paneler', caption: 'Teknik som håller hela programmet' },
-  { src: '/images/tross-uppsattning.jpg', alt: 'Tross och rigg', caption: 'Scen och rigg inför event' },
-  { src: '/images/ljud-ljus-utrustning.jpg', alt: 'Ljud och ljus', caption: 'Ljud och ljus i praktiken' },
-  { src: '/images/led-scen-utomhus.jpg', alt: 'LED utomhus', caption: 'LED och scen utomhus' },
-  { src: '/images/eventproduktion.jpg', alt: 'Eventtekniker vid mixer och ljusbord', caption: 'Tekniker vid mixer och ljusbord' },
-  { src: '/images/foretagsevent-dj.jpg', alt: 'DJ och ljus på företagsevent', caption: 'Företagsevent med ljud och ljus' },
-];
+import { getGuideImage } from '../../data/guide-images';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guider');
@@ -43,7 +35,7 @@ const breadcrumbs = [
   { name: title, href: canonicalPath },
 ];
 
-const heroImage = guideImages[entry.id.length % guideImages.length];
+const heroImage = getGuideImage(entry.id);
 const pageTitle = seoTitle ?? title;
 const pageDescription = seoDescription ?? description;
 const pageOg = ogImage ?? heroImage.src;

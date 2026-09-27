@@ -1,5 +1,5 @@
 ---
-import { fetchFestReviews, formatReviewDate } from '../lib/festutrustning-sync';
+import { fetchFestReviews } from '../lib/festutrustning-sync';
 
 interface Props {
   limit?: number;
@@ -35,7 +35,6 @@ if (reviews.length === 0) return null;
             </div>
             <p class="fest-review-name">{review.customer_name}</p>
             {review.event_type && <p class="fest-review-event">{review.event_type}</p>}
-            <p class="fest-review-date">{formatReviewDate(review.created_at)}</p>
           </div>
           <blockquote class="fest-review-quote">
             <p>{review.comment}</p>
