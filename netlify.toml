@@ -44,13 +44,3 @@
   to = "https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=offert_redirect&cta_context=offert_path_redirect"
   status = 301
   force = true
-
-[[redirects]]
-  from = "/case/ljud-ljus-foretagsfest"
-  to = "/case/"
-  status = 301
-
-[[redirects]]
-  from = "/case/ljud-ljus-foretagsfest/"
-  to = "/case/"
-  status = 301

@@ -155,4 +155,4 @@ Planerar ni gala i Skåne? [Begär offert](https://festutrustning.se/offert/even
 
 Vi hjälper företag med [företagsevent](/foretagsevent/) i hela regionen och erbjuder komplett [eventteknik](/eventteknik/). Utrustning och genomförande via [Festutrustning](https://festutrustning.se/foretag) – med erfarenhet av galor från 50 till 500 gäster.
 
-Se även vårt [case om DJ och ljud till företagsevent](/case/dj-foretagsevent/) för ett praktiskt exempel.
+Se även vårt [case om ljud och ljus till företagsfest](/case/ljud-ljus-foretagsfest/) för ett praktiskt exempel.
