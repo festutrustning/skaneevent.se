@@ -16,7 +16,7 @@ import {
 } from '../data/festutrustning-links';
 import { getPageSeo, normalizeSeoPath } from '../seo/pages-seo';
 import { buildServiceLd } from './seo/serviceLd';
-import { buildFaqLd } from './seo/faqLd';
+import { buildFaqLd, faqIdFromQuestion } from './seo/faqLd';
 
 interface Props {
   title: string;
@@ -171,7 +171,12 @@ if (faqLd) jsonLd.push(faqLd);
         </div>
         <div class="faq-list">
           {faqs.map((f, i) => (
-            <details class="faq-item" open={i === 0}>
+            <details
+              class="faq-item"
+              data-faq-id={faqIdFromQuestion(f.q)}
+              data-faq-question={f.q}
+              open={i === 0}
+            >
               <summary>{f.q}</summary>
               <p>{f.a}</p>
             </details>

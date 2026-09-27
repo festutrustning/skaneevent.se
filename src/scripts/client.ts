@@ -154,6 +154,44 @@ function trackLeadForms() {
   });
 }
 
+/**
+ * FAQ interest signal — only user-opened details (default-open first item does not fire).
+ * Requires GA4 event-scoped custom dimensions faq_id + faq_question for by-question reporting.
+ */
+function trackFaqExpands() {
+  document.addEventListener(
+    'toggle',
+    (event) => {
+      const el = event.target;
+      if (!(el instanceof HTMLDetailsElement)) return;
+      if (!el.classList.contains('faq-item') || !el.open) return;
+      if (typeof gtag !== 'function') return;
+
+      const summary = el.querySelector('summary');
+      const question = (el.dataset.faqQuestion || summary?.textContent || '').trim();
+      const faqId =
+        (el.dataset.faqId || '').trim() ||
+        question
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '')
+          .slice(0, 80) ||
+        'faq';
+
+      gtag('event', 'faq_expand', {
+        site: SITE_ID,
+        page_path: window.location.pathname,
+        source_page: window.location.pathname,
+        faq_id: faqId,
+        faq_question: question.slice(0, 120),
+      });
+    },
+    true,
+  );
+}
+
 function initScrollReveal() {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReduced) {
@@ -220,3 +258,4 @@ initHomeHeader();
 trackFestClicks();
 trackPhoneClicks();
 trackLeadForms();
+trackFaqExpands();

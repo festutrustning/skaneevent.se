@@ -8,7 +8,7 @@ import FestBrandLogos from '../components/FestBrandLogos.astro';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { fetchFestReviews } from '../lib/festutrustning-sync';
 import { buildServiceLd } from '../components/seo/serviceLd';
-import { buildFaqLd } from '../components/seo/faqLd';
+import { buildFaqLd, faqIdFromQuestion } from '../components/seo/faqLd';
 import { buildAggregateRatingLd } from '../components/seo/aggregateRatingLd';
 
 const offertCtaHref = offertEventUrlForPath('/', 'home_why_cta');
@@ -281,7 +281,12 @@ if (ratingLd) jsonLd.push(ratingLd);
       </div>
       <div class="faq-list">
         {faqs.map((f, i) => (
-          <details class="faq-item" open={i === 0}>
+          <details
+            class="faq-item"
+            data-faq-id={faqIdFromQuestion(f.q)}
+            data-faq-question={f.q}
+            open={i === 0}
+          >
             <summary>{f.q}</summary>
             <p>{f.a}</p>
           </details>

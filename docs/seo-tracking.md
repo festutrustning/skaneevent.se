@@ -4,7 +4,8 @@
 - [ ] Google Search Console-property för `https://skaneevent.se`
 - [ ] Skicka in `https://skaneevent.se/sitemap-index.xml`
 - [ ] Verifiera GA4 `G-0K4XG6F43Q` realtime efter cookie-accept
-- [ ] Bekräfta events: `generate_lead`, `festutrustning_click`
+- [ ] Bekräfta events: `generate_lead`, `festutrustning_click`, `phone_click`, `faq_expand`
+- [ ] GA4 custom dimensions (event-scoped): `faq_id`, `faq_question` — krävs för FAQ per fråga i Enta
 
 ## Mätpunkter per landningssida
 | Metric | Källa | Fönster |
@@ -16,6 +17,8 @@
 | Organic sessions | GA4 | samma |
 | Offert leads | GA4 `generate_lead` | samma |
 | FEST referrals | GA4 `festutrustning_click` | samma |
+| Phone interest | GA4 `phone_click` | samma |
+| FAQ expands | GA4 `faq_expand` | samma |
 
 ## SEO TREND (pedagogisk bedömning)
 Väg samman impressions, clicks, CTR, position, Top 3/10/20, sessions, leads:
