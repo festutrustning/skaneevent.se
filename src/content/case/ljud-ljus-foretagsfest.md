@@ -35,4 +35,4 @@ Utan ljudtekniker hade någon internt behövt sitta vid ljudbordet istället fö
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/)
 - [Företagsevent](/foretagsevent/)
 
-[Begär offert](https://festutrustning.se/offert) för er företagsfest i Skåne.
+[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-ljud-ljus-foretagsfest&sk_ref=%2Fcase%2Fljud-ljus-foretagsfest%2F&cta_context=content_body_cta) för er företagsfest i Skåne.

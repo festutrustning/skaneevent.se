@@ -23,10 +23,12 @@ Sex bordsmikrofoner (gooseneck) monterade framför varje panelist, headset till 
 
 Be paneldeltagarna komma 30 minuter före panelstart för ljudprov. Testa med faktiska deltagare – inte bara tekniker som pratar i mikrofonerna.
 
-## Relaterade guider
+## Relaterade sidor
 
+- [Eventteknik i Malmö](/malmo/eventteknik/)
+- [Eventproduktion](/eventproduktion/)
+- [Konferens](/konferens/)
 - [Mikrofoner till paneldiskussion](/guider/mikrofoner-paneldiskussion/)
 - [Teknik till konferens](/guider/teknik-till-konferens/)
-- [Konferens](/konferens/)
 
-[Begär offert](https://festutrustning.se/offert) för er konferens i Skåne.
+[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-konferens-panel&sk_ref=%2Fcase%2Fkonferens-panel%2F&cta_context=content_body_cta) för er konferens i Skåne.

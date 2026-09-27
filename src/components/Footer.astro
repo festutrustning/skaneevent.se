@@ -44,7 +44,7 @@ const offertCtaHref = offertEventUrlForPath('/', 'footer_offert');
     <div class="footer-contact">
       <h3>Kontakt</h3>
       <ul>
-        <li><a href={`tel:${SITE.phone}`}>{SITE.phoneDisplay}</a></li>
+        <li><a href={`tel:${SITE.phone}`} data-link-context="footer_phone">{SITE.phoneDisplay}</a></li>
         <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
         <li>{SITE.address.street}, {SITE.address.postalCode} {SITE.address.city}</li>
         <li><a href={offertCtaHref} data-fest-link data-link-context="footer_offert" data-anchor-type="cta">Få förslag på eventlösning</a></li>

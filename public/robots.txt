@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Offert redirectas till festutrustning.se (301 force i netlify.toml)
+Disallow: /offert/
+
 Sitemap: https://skaneevent.se/sitemap-index.xml

@@ -144,4 +144,4 @@ Checklistan täcker det mesta – men varje event är unikt. Vi hjälper er gå 
 
 När ni är redo att gå från checklista till konkret lösning kan ni också titta på utbudet hos [Festutrustning](https://festutrustning.se/scen) för scen, tross och kompletterande utrustning.
 
-[Begär offert](https://festutrustning.se/offert) med datum, lokal och ungefärligt program – så återkommer vi med ett skräddarsytt förslag. För konferenser har vi en dedikerad sida om [teknik till konferens](/konferens/) med mer detaljer kring just det formatet.
+[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-checklista-foretagsevent&sk_ref=%2Fguider%2Fchecklista-foretagsevent%2F&cta_context=content_body_cta) med datum, lokal och ungefärligt program – så återkommer vi med ett skräddarsytt förslag. För konferenser har vi en dedikerad sida om [teknik till konferens](/konferens/) med mer detaljer kring just det formatet.

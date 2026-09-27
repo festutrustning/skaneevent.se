@@ -69,7 +69,7 @@ Siffrorna är riktmärken – inte offerter. Er faktiska kostnad beror på era s
 
 ## Vad som oftast ingår i en offert
 
-När ni [begär offert](https://festutrustning.se/offert) hos oss får ni normalt ett tydligt förslag som specificerar:
+När ni [begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-vad-kostar-teknik-foretagsevent&sk_ref=%2Fguider%2Fvad-kostar-teknik-foretagsevent%2F&cta_context=content_body_cta) hos oss får ni normalt ett tydligt förslag som specificerar:
 
 - Utrustning (ljud, ljus, scen, bild, mikrofoner)
 - Leverans och rigg
@@ -110,8 +110,8 @@ En billigare offert som saknar tekniker, ljudprov eller tillräckligt antal mikr
 
 ## Nästa steg
 
-När ni har en budgetram kan ni börja konkretisera teknikbehovet. Vår [checklista för företagsevent](/guider/checklista-foretagsevent/) hjälper er samla information, och sidan om [eventteknik](/eventteknik/) beskriver vilka lösningar vi erbjuder.
+När ni har en budgetram kan ni börja konkretisera teknikbehovet. Vår [checklista för företagsevent](/guider/checklista-foretagsevent/) hjälper er samla information. Se även [eventteknik](/eventteknik/), [eventproduktion](/eventproduktion/) och [eventteknik i Malmö](/malmo/eventteknik/) beroende på hur stort ansvar ni vill lägga på oss.
 
 Vi samarbetar med [Festutrustning](https://festutrustning.se/ljud-ljus-skane) som har ett brett utbud av ljud- och ljusutrustning i Skåne – vilket ger er tillgång till rätt utrustning utan att betala för onödigt omfattande paket.
 
-[Begär offert](https://festutrustning.se/offert) med datum, lokal, gästantal och ungefärligt program. Ju mer ni berättar, desto träffsäkrare blir prisbilden.
+[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-vad-kostar-teknik-foretagsevent&sk_ref=%2Fguider%2Fvad-kostar-teknik-foretagsevent%2F&cta_context=content_body_cta) med datum, lokal, gästantal och ungefärligt program. Ju mer ni berättar, desto träffsäkrare blir prisbilden.

@@ -139,6 +139,22 @@ export const PAGE_VISUALS: Record<string, PageVisuals> = {
     feature: I.scenBelysning,
     gallery: [I.rigg, I.ledHero, I.eventProduktion],
   },
+  '/kristianstad/foretagsevent/': {
+    feature: I.dj,
+    gallery: [I.eventProduktion, I.ljudLjus, I.konferensPublik],
+  },
+  '/landskrona/foretagsevent/': {
+    feature: I.gala,
+    gallery: [I.scenBelysning, I.rigg, I.eventProduktion],
+  },
+  '/trelleborg/foretagsevent/': {
+    feature: I.eventProduktion,
+    gallery: [I.ledHero, I.tross, I.konferensScen],
+  },
+  '/ystad/foretagsevent/': {
+    feature: I.scenBelysning,
+    gallery: [I.eventEffekter, I.gala, I.ljudLjus],
+  },
   '/malmo/eventteknik/': {
     feature: I.tross,
     gallery: [I.eventProduktion, I.konferensPublik, I.ledHero],

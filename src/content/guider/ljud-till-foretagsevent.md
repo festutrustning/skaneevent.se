@@ -111,6 +111,6 @@ För att vi ska kunna ge er rätt förslag, berätta:
 5. Behov av tekniker och inspelning
 6. Eventdatum och riggtider
 
-[Begär offert](https://festutrustning.se/offert) så dimensionerar vi ljudet utifrån era förutsättninger. Vi erbjuder [eventteknik](/eventteknik/) i hela Skåne – från enkla PA-system till full produktion.
+[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-ljud-till-foretagsevent&sk_ref=%2Fguider%2Fljud-till-foretagsevent%2F&cta_context=content_body_cta) så dimensionerar vi ljudet utifrån era förutsättninger. Vi erbjuder [eventteknik](/eventteknik/) i hela Skåne – från enkla PA-system till full produktion.
 
 Som del av Festutrustnings nätverk har vi tillgång till [professionell ljudutrustning i Skåne](https://festutrustning.se/ljud-ljus-skane) – vilket innebär rätt utrustning för er lokals storlek och ert programs krav, utan onödiga mellanhänder.

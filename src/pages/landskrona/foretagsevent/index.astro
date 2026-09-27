@@ -1,0 +1,140 @@
+---
+import OffertLink from '../../../components/OffertLink.astro';
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Levererar ni företagseventteknik i Landskrona?',
+    a: 'Ja. Vi arbetar i Landskrona och längs Öresundskusten mellan Malmö och Helsingborg – med kort planeringshorisont när logistiken tillåter.',
+  },
+  {
+    q: 'Kan ni rigga i historiska miljöer som citadell eller slott?',
+    a: 'Ja, när lokalen tillåter. Historiska miljöer ställer ofta särskilda krav på lastning, el, upphängning och skydd av ytor. Vi planerar det i förväg tillsammans med er och lokalansvarig.',
+  },
+  {
+    q: 'Passar ni för konferens på hotell med middag i annan lokal samma dag?',
+    a: 'Ja. Det är ett vanligt upplägg i Landskrona: heldagskonferens i en anläggning och kvällsprogram i en mer unik miljö. Vi dimensionerar teknik och bemanning för båda lägena.',
+  },
+  {
+    q: 'Hur lång är leveranstiden från Malmö/Helsingborg-området?',
+    a: 'Landskrona ligger mitt emellan Malmö och Helsingborg vid E6/E20. Transport och riggplanering är därför förutsägbar för de flesta företagsdagars upplägg.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'landskrona_foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Landskrona – eventteknik och produktion"
+  description="Företagsevent i Landskrona med ljud, ljus, scen och tekniker. Eventpartner för konferens, kick-off och företagsfest längs Öresund. Begär offert."
+  canonicalPath="/landskrona/foretagsevent/"
+  heroImage="/images/gala-foretagsevent.jpg"
+  eyebrow="Landskrona"
+  h1="Företagsevent i Landskrona"
+  lead="Eventpartner för företagsevent i Landskrona – konferens, kick-off och företagsfest med teknik som fungerar i både moderna och historiska miljöer."
+  breadcrumbs={[
+    { name: 'Företagsevent', href: '/foretagsevent/' },
+    { name: 'Landskrona', href: '/landskrona/foretagsevent/' },
+  ]}
+  ogImage="/images/gala-foretagsevent.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Landskrona"
+  areaServedName="Landskrona"
+  faqs={faqs}
+>
+  <h2>Företagsevent i Landskrona – mitt på Öresundskusten</h2>
+  <p>
+    Landskrona sitter mellan Malmö och Helsingborg, med hamn, industri och ett växande mötesutbud längs
+    vattnet. Här arrangerar företag konferenser, kick-offs, jubileum och kundkvällar – ofta med gäster
+    från hela nordvästra Skåne. Skåne Event är er <strong>eventpartner för företagsevent i Landskrona</strong>:
+    vi tar ansvar för att tekniken håller programmet, inte bara för att leverera lådor.
+  </p>
+  <p>
+    Ni får samma arbetssätt som i övriga <a href="/foretagsevent/">Skåne</a>, med kort resväg från våra
+    övriga leveranser i regionen och tydlig koordinering mot lokal och övriga leverantörer.
+  </p>
+
+  <h2>Eventtyper vi hjälper företag med</h2>
+  <ul>
+    <li><a href="/konferens/">Konferens</a> och strategidagar i flexibla hotell- och möteslokaler</li>
+    <li><a href="/kickoff/">Kick-off</a> och teambuilding med program + kväll</li>
+    <li><a href="/produktlansering/">Produktlansering</a> och partnerträffar</li>
+    <li><a href="/foretagsfest/">Företagsfest</a>, jubileum och <a href="/gala/">gala</a>-känsla</li>
+    <li>Invigningar där ljud, ljus och tidsplan måste sitta från första minut</li>
+  </ul>
+
+  <h2>Helhetsleverans / eventproduktion</h2>
+  <p>
+    Många Landskrona-event kombinerar flera miljöer samma dag. Då räcker det sällan med “hyra av
+    projektor”. Ni behöver någon som tänker igenom signalvägar, bemanning, tid för omrigg och hur
+    stämningen ska växla mellan formellt program och mingel. Det är kärnan i vår
+    <a href="/eventproduktion/">eventproduktion</a>: samlat ansvar så att ni kan fokusera på gäster och innehåll.
+  </p>
+
+  <h2>Eventteknik som del av lösningen</h2>
+  <p>
+    Vi levererar <a href="/eventteknik/">eventteknik</a> anpassad till lokalen:
+  </p>
+  <ul>
+    <li><a href="/ljud-ljus-foretagsevent/">Ljud och ljus</a> för tal, panel och fest</li>
+    <li>Bild/AV, mikrofoner och presentationsteknik</li>
+    <li><a href="/scen-till-event/">Scen</a>, tross och diskret rigg när miljön kräver det</li>
+    <li>Tekniker på plats när programmet inte får stanna</li>
+  </ul>
+  <p>
+    För uthyrning av enskilda produkter pekar vi vidare till Festutrustning – på Skåne Event äger vi
+    planeringen och helhetsansvaret.
+  </p>
+
+  <h2>Logistik: E6, hamn och tvånära storstäder</h2>
+  <p>
+    Landskronas läge vid E6/E20 gör transport och lastning förutsägbar från både Malmö- och
+    Helsingborgshållet. Hamnnära lokaler kan ha särskilda tillträdesregler; historiska miljöer kräver
+    ofta mer tid för inbärning och skonsam upphängning. Vi tar höjd för det i tidplanen redan i offerten.
+  </p>
+
+  <h2>Eventmiljöer i Landskrona</h2>
+  <p>
+    Typiska miljöer för företagsevent här är moderna konferenshotell vid hamnen, industriella
+    eventlokaler och historiska miljöer kring citadell/slott. Många upplägg kombinerar heldagsmöte i en
+    anläggning med middag eller mingel i en mer karaktärsfull lokal. Vi beskriver miljöerna för att hjälpa
+    er planera – utan att påstå att vi levererat till en specifik venue om vi saknar verifierad evidens.
+  </p>
+
+  <h2>Så går ett uppdrag till</h2>
+  <ol>
+    <li>Behovsanalys: program, antal, lokal(er) och önskad stämning</li>
+    <li>Förslag på teknik, bemanning och tidslinje – inklusive eventuell omrigg</li>
+    <li>Samordning med lokalansvarig kring el, lastning och tillgångstider</li>
+    <li>Genomförande och nedmontering</li>
+  </ol>
+
+  <h2>Kostnadsdrivare</h2>
+  <p>
+    Priset påverkas främst av antal lokaler/lägen samma dag, behov av scen och ljusdesign, tekniker på
+    plats, och hur krävande inlastningen är. Avståndet inom Öresundsregionen är oftast sekundärt jämfört
+    med komplexiteten i programmet. Se även
+    <a href="/guider/vad-kostar-teknik-foretagsevent/">vad kostar teknik till företagsevent</a>.
+  </p>
+
+  <h2>Närliggande orter</h2>
+  <p>
+    Arrangerar ni oftare i
+    <a href="/helsingborg/foretagsevent/">Helsingborg</a> eller
+    <a href="/malmo/foretagsevent/">Malmö</a>? Vi täcker hela kustremsan – Landskrona är en naturlig
+    mellanpunkt, inte ett undantag.
+  </p>
+
+  <h2>Begär offert för Landskrona-event</h2>
+  <p>
+    Skicka datum, lokal och upplägg så tar vi fram ett konkret förslag.
+    <OffertLink path="/landskrona/foretagsevent/">Begär offert</OffertLink>
+    för ert företagsevent i Landskrona.
+  </p>
+</SolutionPage>

@@ -1,4 +1,5 @@
 const COOKIE_KEY = 'skaneevent_cookie_consent';
+const SITE_ID = 'skaneevent';
 
 function setAnalyticsConsent(granted: boolean) {
   if (typeof gtag === 'function') {
@@ -53,18 +54,87 @@ function initCookies() {
   });
 }
 
+/** Parse attribution params already present on outbound /offert/event URLs. */
+function attributionFromHref(href: string): {
+  sk_ref: string | null;
+  cta_context: string | null;
+  utm_campaign: string | null;
+  utm_source: string | null;
+  utm_medium: string | null;
+  is_offert_event: boolean;
+} {
+  try {
+    const url = new URL(href, window.location.origin);
+    const path = url.pathname.replace(/\/$/, '') || '/';
+    return {
+      sk_ref: url.searchParams.get('sk_ref'),
+      cta_context: url.searchParams.get('cta_context'),
+      utm_campaign: url.searchParams.get('utm_campaign'),
+      utm_source: url.searchParams.get('utm_source'),
+      utm_medium: url.searchParams.get('utm_medium'),
+      is_offert_event: path === '/offert/event' || path.endsWith('/offert/event'),
+    };
+  } catch {
+    return {
+      sk_ref: null,
+      cta_context: null,
+      utm_campaign: null,
+      utm_source: null,
+      utm_medium: null,
+      is_offert_event: false,
+    };
+  }
+}
+
+/**
+ * Existing event name `festutrustning_click` is the Skaneevent CTA / outbound standard.
+ * Do not invent a parallel quote_cta_click — enrich this event instead.
+ */
 function trackFestClicks() {
   document.addEventListener('click', (event) => {
     const target = event.target as HTMLElement | null;
     const link = target?.closest?.('[data-fest-link]') as HTMLAnchorElement | null;
     if (!link || typeof gtag !== 'function') return;
 
+    const attr = attributionFromHref(link.href);
+    const ctaContext =
+      link.dataset.linkContext || attr.cta_context || 'unknown';
+
     gtag('event', 'festutrustning_click', {
+      site: SITE_ID,
+      page_path: window.location.pathname,
       source_page: window.location.pathname,
       destination_url: link.href,
-      link_context: link.dataset.linkContext || 'unknown',
+      destination: link.href,
+      link_context: ctaContext,
+      cta_context: ctaContext,
       anchor_type: link.dataset.anchorType || 'unknown',
       position: link.dataset.position || 'inline',
+      sk_ref: attr.sk_ref,
+      utm_campaign: attr.utm_campaign,
+      utm_source: attr.utm_source,
+      utm_medium: attr.utm_medium,
+      outbound_to_offert: attr.is_offert_event,
+    });
+  });
+}
+
+/** Phone interest signal only — never treat as booking. */
+function trackPhoneClicks() {
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement | null;
+    const link = target?.closest?.('a[href^="tel:"]') as HTMLAnchorElement | null;
+    if (!link || typeof gtag !== 'function') return;
+
+    const ctaContext = link.dataset.linkContext || link.dataset.phoneContext || 'phone';
+
+    gtag('event', 'phone_click', {
+      site: SITE_ID,
+      page_path: window.location.pathname,
+      source_page: window.location.pathname,
+      destination_url: link.href,
+      cta_context: ctaContext,
+      link_context: ctaContext,
     });
   });
 }
@@ -74,8 +144,10 @@ function trackLeadForms() {
     form.addEventListener('submit', () => {
       if (typeof gtag === 'function') {
         gtag('event', 'generate_lead', {
+          site: SITE_ID,
           form_id: (form as HTMLFormElement).id || 'offert',
           source_page: window.location.pathname,
+          page_path: window.location.pathname,
         });
       }
     });
@@ -146,4 +218,5 @@ initScrollReveal();
 initHeroCinematic();
 initHomeHeader();
 trackFestClicks();
+trackPhoneClicks();
 trackLeadForms();

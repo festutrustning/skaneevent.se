@@ -1,0 +1,150 @@
+---
+import OffertLink from '../../../components/OffertLink.astro';
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Levererar ni företagsevent i Kristianstad och nordöstra Skåne?',
+    a: 'Ja. Vi arbetar i Kristianstad och runt E22-korridoren – inklusive närliggande orter i nordöstra Skåne – med samma kvalitet som i övriga länet.',
+  },
+  {
+    q: 'Kan ni hantera kick-off som blandar konferens och fest?',
+    a: 'Ja. Det är ett vanligt upplägg i Kristianstad: förmiddag med tal och presentationer, eftermiddag/kväll med mingel eller DJ. Vi planerar ljud, bild och bemanning så övergången fungerar.',
+  },
+  {
+    q: 'Samordnar ni tekniken med lokaler som arena, kulturhus eller konferenshotell?',
+    a: 'Ja. Vi samordnar rigg, el och tidsplan med lokalens personal. Ni behöver inte vara mellanhänder mellan teknik och venue.',
+  },
+  {
+    q: 'Vad påverkar kostnaden för företagseventteknik i Kristianstad?',
+    a: 'Omfattningen styrs främst av lokal, antal deltagare, program (tal/panel/scen/fest), behov av tekniker på plats och hur lång riggtid som krävs. Avstånd inom Skåne är sällan den stora kostnadsdrivaren.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'kristianstad_foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Kristianstad – eventteknik och produktion"
+  description="Företagsevent i Kristianstad med ljud, ljus, scen och tekniker. Eventpartner för kick-off, konferens och företagsfest i nordöstra Skåne. Begär offert."
+  canonicalPath="/kristianstad/foretagsevent/"
+  heroImage="/images/konferens-scen.jpg"
+  eyebrow="Kristianstad"
+  h1="Företagsevent i Kristianstad"
+  lead="Eventpartner för företagsevent i Kristianstad – ljud, ljus, scen och tekniker för konferens, kick-off och företagsfest i nordöstra Skåne."
+  breadcrumbs={[
+    { name: 'Företagsevent', href: '/foretagsevent/' },
+    { name: 'Kristianstad', href: '/kristianstad/foretagsevent/' },
+  ]}
+  ogImage="/images/hero-foretagsevent.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Kristianstad"
+  areaServedName="Kristianstad"
+  faqs={faqs}
+>
+  <h2>Företagsevent i Kristianstad – nordöstra Skånes mötesnav</h2>
+  <p>
+    Kristianstad är navet för många företag i nordöstra Skåne. Här arrangeras konferenser, kick-offs,
+    jubileum och företagsfester för organisationer som har verksamhet längs E22, i handels- och
+    logistiknoder, i offentliga verksamheter och i det lokala näringslivet. Skåne Event är er
+    <strong>eventpartner för företagsevent i Kristianstad</strong> – inte bara en uthyrningsfirma.
+  </p>
+  <p>
+    Ni får samma helhetsansvar som våra kunder i övriga
+    <a href="/foretagsevent/">Skåne</a>: behovsanalys, teknikdimensionering, rigg och genomförande –
+    med tydlig kontaktperson hela vägen.
+  </p>
+
+  <h2>Eventtyper vi hjälper företag med i Kristianstad</h2>
+  <ul>
+    <li><a href="/konferens/">Konferenser och företagsdagar</a> med tal, panel och workshops</li>
+    <li><a href="/kickoff/">Kick-offs</a> som blandar program och fest</li>
+    <li><a href="/produktlansering/">Produktlanseringar</a> och partnerträffar</li>
+    <li><a href="/foretagsfest/">Företagsfester</a>, jubileum och <a href="/julfest/">julfester</a></li>
+    <li>Invigningar och interna heldagar där teknik och tidsplan måste hålla</li>
+  </ul>
+
+  <h2>Helhetsleverans – eventproduktion före produktlista</h2>
+  <p>
+    Vårt uppdrag är att se till att programmet fungerar. Det betyder att vi tänker i flöden: hur talaren
+    hörs, hur presentationen syns, hur ljuset stöttar stämningen och hur övergångar mellan
+    programpunkter sker utan tekniska avbrott. Vid större upplägg samordnar vi
+    <a href="/eventproduktion/">eventproduktion</a> mot lokal, catering och övriga leverantörer.
+  </p>
+  <p>
+    Tekniken är en del av lösningen – inte hela erbjudandet. Ni slipper stycka upp ljud, ljus, scen och
+    bemanning i separata spår när ni vill ha ett samlat ansvar.
+  </p>
+
+  <h2>Eventteknik som del av lösningen</h2>
+  <p>
+    För företagsevent i Kristianstad dimensionerar vi <a href="/eventteknik/">eventteknik</a> efter lokal
+    och program:
+  </p>
+  <ul>
+    <li>Ljud för tal, panel och eventuell fest – se <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a></li>
+    <li>Mikrofoner, bild/AV och projektion</li>
+    <li><a href="/scen-till-event/">Scen</a>, tross och rigg när lokalen saknar fast lösning</li>
+    <li>Tekniker på plats när programmet kräver det</li>
+  </ul>
+  <p>
+    Mer om dimensionering finns i guiderna
+    <a href="/guider/vad-kostar-teknik-foretagsevent/">vad kostar teknik till företagsevent</a> och
+    <a href="/guider/tekniker-pa-plats/">tekniker på plats</a>.
+  </p>
+
+  <h2>Logistik i nordöstra Skåne</h2>
+  <p>
+    Kristianstad ligger strategiskt längs E22 med god tillgång till regionala vägar. För oss betyder det
+    planerbar transport, rimliga lastningsfönster och möjlighet att rigga både i citynära lokaler och i
+    anläggningar utanför centrum. Vi planerar inlastning, elbehov och tidslinje tillsammans med er och
+    lokalen – särskilt viktigt när programmet växlar mellan konferensläge och kvällsprogram samma dag.
+  </p>
+
+  <h2>Eventmiljöer i och runt Kristianstad</h2>
+  <p>
+    Staden har flera vanliga miljöer för företagsevent: arenakonferens, kultur- och möteshus, science
+    park-miljöer, hotellkonferens och eventlokaler utanför centrum. Vi nämner dem som typiska
+    förutsättningar – inte som platser där vi automatiskt har levererat. Oavsett venue anpassar vi
+    tekniken till akustik, dagsljus, lastning och lokalens egen utrustning.
+  </p>
+
+  <h2>Case: kick-off med konferens och DJ i Kristianstad</h2>
+  <p>
+    Vi har genomfört företagsevent i Kristianstad. I caset
+    <a href="/case/dj-foretagsevent/">DJ och ljud till företagsevent i Kristianstad</a> levererade vi
+    teknik till en vår-kick-off med cirka 120 medarbetare: konferensljud och presentation på förmiddagen,
+    sedan smidig övergång till mingel och DJ samma dag – med tekniker på plats hela vägen.
+  </p>
+  <p>
+    Caset visar vår roll som eventpartner: ett samlat teknikansvar för hela dagen, inte bara en DJ-setup.
+  </p>
+
+  <h2>Så går ett uppdrag till</h2>
+  <ol>
+    <li>Ni beskriver datum, lokal/ort, eventtyp och ungefärligt antal deltagare</li>
+    <li>Vi föreslår teknikomfattning, bemanning och tidplan</li>
+    <li>Vi samordnar rigg med lokalen och genomför funktionskontroll</li>
+    <li>Under eventet finns tekniker vid behov; efteråt rivs och transporteras utrustningen</li>
+  </ol>
+
+  <h2>Vad som påverkar omfattning och kostnad</h2>
+  <p>
+    Kostnaden styrs främst av: lokalens förutsättningar, publikstorlek, om ni behöver scen/bild,
+    hur länge tekniker behövs på plats, och om programmet har flera lägen (t.ex. konferens + fest).
+    Geografin inom Skåne är sällan den avgörande faktorn jämfört med tekniknivå och bemanning.
+  </p>
+
+  <h2>Begär offert för företagsevent i Kristianstad</h2>
+  <p>
+    Berätta om ert upplägg så återkommer vi med ett konkret förslag.
+    <OffertLink path="/kristianstad/foretagsevent/">Begär offert</OffertLink>
+    – och låt oss ta helhetsansvar för tekniken till ert företagsevent i Kristianstad.
+  </p>
+</SolutionPage>

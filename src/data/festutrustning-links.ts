@@ -10,14 +10,17 @@ export const FEST = {
   ljudLjusMalmo: `${BASE}/ljud-ljus-malmo`,
   hyraHogtalareMalmo: `${BASE}/hyra-hogtalare-malmo`,
   produkter: `${BASE}/produkter`,
-  offert: `${BASE}/offert`,
+  /** Prefer offertEvent for B2B; `offert` aliases to event form to avoid generic rental offert. */
+  offert: `${BASE}/offert/event`,
   offertEvent: `${BASE}/offert/event`,
   kontakt: `${BASE}/kontakt`,
 } as const;
 
 export type FestDestination = keyof typeof FEST;
 
-/** Central deep-link matrix: Skaneevent path → Festutrustning destinations */
+/** Central deep-link matrix: Skaneevent path → Festutrustning destinations.
+ * Keep destinations aligned with src/seo/keyword-ownership.ts (FEST = rental/SKU,
+ * Skåne Event = B2B planning/use-case). Do not invent sitewide SEO links. */
 export const LINK_MATRIX: Record<
   string,
   { destinations: FestDestination[]; defaultCampaign: string }
@@ -70,6 +73,22 @@ export const LINK_MATRIX: Record<
   '/helsingborg/foretagsevent/': {
     destinations: ['foretag'],
     defaultCampaign: 'helsingborg-foretagsevent',
+  },
+  '/kristianstad/foretagsevent/': {
+    destinations: ['foretag'],
+    defaultCampaign: 'kristianstad-foretagsevent',
+  },
+  '/landskrona/foretagsevent/': {
+    destinations: ['foretag'],
+    defaultCampaign: 'landskrona-foretagsevent',
+  },
+  '/trelleborg/foretagsevent/': {
+    destinations: ['foretag'],
+    defaultCampaign: 'trelleborg-foretagsevent',
+  },
+  '/ystad/foretagsevent/': {
+    destinations: ['foretag'],
+    defaultCampaign: 'ystad-foretagsevent',
   },
 };
 

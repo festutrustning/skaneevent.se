@@ -1,6 +1,14 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+const seoFields = {
+  seoTitle: z.string().optional(),
+  seoDescription: z.string().optional(),
+  ogImage: z.string().optional(),
+  noindex: z.boolean().optional(),
+  focusKeyword: z.string().optional(),
+};
+
 const guider = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/guider' }),
   schema: z.object({
@@ -9,6 +17,7 @@ const guider = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
+    ...seoFields,
   }),
 });
 
@@ -25,6 +34,7 @@ const cases = defineCollection({
     challenge: z.string(),
     solution: z.string(),
     result: z.string(),
+    ...seoFields,
   }),
 });
 

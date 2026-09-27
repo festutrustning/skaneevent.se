@@ -23,7 +23,7 @@ const offertCtaHref = offertEventUrlForPath('/kontakt/', 'kontakt_hero_cta');
       <p class="page-lead">Prata med oss om ert event – eller skicka en offertförfrågan.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href={offertCtaHref} data-fest-link data-link-context="kontakt_hero_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
-        <a class="btn btn-secondary btn-lg" href={`tel:${SITE.phone}`}>Ring {SITE.phoneDisplay}</a>
+        <a class="btn btn-secondary btn-lg" href={`tel:${SITE.phone}`} data-link-context="kontakt_hero_phone">Ring {SITE.phoneDisplay}</a>
       </div>
     </div>
   </div>

@@ -1,0 +1,137 @@
+---
+import OffertLink from '../../../components/OffertLink.astro';
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Levererar ni företagsevent i Ystad och sydöstra Skåne?',
+    a: 'Ja. Vi arbetar i Ystad och mot Österlen – för konferens, kick-off, företagsfest och andra företagsevent där tekniken måste hålla hela programmet.',
+  },
+  {
+    q: 'Kan ni komplettera hotellens fasta konferensteknik?',
+    a: 'Ja. Många Ystad-anläggningar har stark bas-AV. Vi kompletterar när ni behöver mer ljud, ljus, scen, LED, extra mikrofoner eller tekniker – och samordnar med husets teknik.',
+  },
+  {
+    q: 'Passar ni för kick-off eller gala i mer upplevelseinriktade miljöer?',
+    a: 'Ja. Ystad och Österlen används ofta just för att eventet ska kännas annorlunda. Vi anpassar teknik och rigg så att upplevelsen förstärks utan att programmet blir tekniskt sårbart.',
+  },
+  {
+    q: 'Hur påverkar avståndet från Malmö offert och planering?',
+    a: 'Transport inom Skåne planeras in, men den stora kostnadsdrivaren är fortfarande tekniknivå, bemanning och riggtid – inte kilometrarna i sig. Tidig bokning ger bättre tidslinje för sydöstra Skåne.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'ystad_foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Ystad – eventteknik och produktion"
+  description="Företagsevent i Ystad med ljud, ljus, scen och tekniker. Eventpartner för konferens, kick-off och företagsfest i sydöstra Skåne och Österlen. Begär offert."
+  canonicalPath="/ystad/foretagsevent/"
+  heroImage="/images/scen-belysning.jpg"
+  eyebrow="Ystad"
+  h1="Företagsevent i Ystad"
+  lead="Eventpartner för företagsevent i Ystad – konferens, kick-off och företagsfest med teknik för både moderna kongressmiljöer och Österlen-känsla."
+  breadcrumbs={[
+    { name: 'Företagsevent', href: '/foretagsevent/' },
+    { name: 'Ystad', href: '/ystad/foretagsevent/' },
+  ]}
+  ogImage="/images/scen-belysning.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Ystad"
+  areaServedName="Ystad"
+  faqs={faqs}
+>
+  <h2>Företagsevent i Ystad – sydöstra Skånes mötesdestination</h2>
+  <p>
+    Ystad drar företag som vill kombinera effektiva möten med en tydlig platskänsla: kust, kulturmiljö och
+    närhet till Österlen. Här arrangeras konferenser, kick-offs, ledningsgrupper, kundevent och
+    företagsfester – ofta med övernattning och ett mer upplevelsebaserat program. Skåne Event är er
+    <strong>eventpartner för företagsevent i Ystad</strong>: vi ser till att ljud, ljus, bild och bemanning
+    bär hela dagen.
+  </p>
+  <p>
+    Det är samma helhetsgrepp som i övriga <a href="/foretagsevent/">Skåne</a>, anpassat till sydöstra
+    regionens lokaler och logistik.
+  </p>
+
+  <h2>Eventtyper vi hjälper företag med</h2>
+  <ul>
+    <li><a href="/konferens/">Konferens</a> och ledningsmöten</li>
+    <li><a href="/kickoff/">Kick-off</a> med energi och tydligt budskap</li>
+    <li><a href="/produktlansering/">Produktlansering</a> och press-/partnerträffar</li>
+    <li><a href="/foretagsfest/">Företagsfest</a>, <a href="/gala/">gala</a> och <a href="/julfest/">julfest</a></li>
+    <li>Jubileum och invigning där första intrycket räknas</li>
+  </ul>
+
+  <h2>Helhetsleverans / eventproduktion</h2>
+  <p>
+    Ystad-event misslyckas sällan på grund av brist på “grejer” – de brister när ingen äger övergångarna.
+    Vi tar det ansvaret via <a href="/eventproduktion/">eventproduktion</a>: från första behovsanalys till
+    riv efter sista programpunkt, inklusive samordning mot hotellteknik och övriga leverantörer.
+  </p>
+
+  <h2>Eventteknik som del av lösningen</h2>
+  <p>
+    Beroende på lokal kompletterar eller bygger vi <a href="/eventteknik/">eventteknik</a>:
+  </p>
+  <ul>
+    <li>Ljud för tal, panel, underhållning och dans</li>
+    <li><a href="/ljud-ljus-foretagsevent/">Ljusdesign</a> för sal, scen och stämning</li>
+    <li>Bild/AV, projektion eller LED-komplettering</li>
+    <li><a href="/scen-till-event/">Scen</a>, tross och säker rigg</li>
+    <li>Tekniker på plats när ni inte kan riskera avbrott</li>
+  </ul>
+  <p>
+    Praktiska checklistor finns i
+    <a href="/guider/teknik-till-konferens/">teknik till konferens</a> och
+    <a href="/guider/checklista-foretagsevent/">checklista för företagsevent</a>.
+  </p>
+
+  <h2>Logistik i sydöstra Skåne</h2>
+  <p>
+    Ystad nås via E65 och regionala vägar från Malmö/Lund, med tåg och färjeläge som påverkar
+    gästflöden. För teknik betyder det: boka tillgångstider i god tid, räkna med lastning i
+    hotell-/spa-miljöer, och planera reservtid när eventet ligger en bit från Öresundsregionens
+    kärna. Vi är vana att leverera i hela länet – Ystad är en planerad körning, inte ett undantag.
+  </p>
+
+  <h2>Eventmiljöer i Ystad och mot Österlen</h2>
+  <p>
+    Här finns allt från moderna kongresshotell med avancerad hus-teknik till klassiska hotell i city och
+    kustnära konferensanläggningar med spa och större salar. Vissa miljöer är redan tekniskt starka; då
+    är vårt värde oftast komplettering, bemanning och helhetskoordinering. Andra kräver mer uppbyggnad
+    från grunden. Vi utgår från lokalens faktiska kapacitet och hittar inte på leveranshistorik.
+  </p>
+
+  <h2>Så går ett uppdrag till</h2>
+  <ol>
+    <li>Ni beskriver mål, datum, lokal och ungefärligt antal</li>
+    <li>Vi kartlägger vad huset redan har och vad som saknas</li>
+    <li>Ni får förslag på teknik, bemanning och tidplan</li>
+    <li>Vi riggar, kör och river – med en tydlig kontaktperson</li>
+  </ol>
+
+  <h2>Kostnadsdrivare</h2>
+  <p>
+    I Ystad påverkas omfattningen särskilt av: om ni kör i en lokal med stark hus-AV eller behöver
+    bygga mer själva, om programmet har scen/underhållning, antal dagar (konferens + middag +
+    övernattning), och teknikerbehov. Transport i Skåne ingår i planeringen men dominerar sällan
+    offerten jämfört med produktionsnivån. Se
+    <a href="/guider/vad-kostar-teknik-foretagsevent/">vad kostar teknik till företagsevent</a>.
+  </p>
+
+  <h2>Begär offert för Ystad-event</h2>
+  <p>
+    Mer om hur vi arbetar i hela länet finns under
+    <a href="/foretagsevent/">företagsevent i Skåne</a>.
+    <OffertLink path="/ystad/foretagsevent/">Begär offert</OffertLink>
+    – berätta om lokal och program så tar vi fram ett konkret förslag för ert företagsevent i Ystad.
+  </p>
+</SolutionPage>

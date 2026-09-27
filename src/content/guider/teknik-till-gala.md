@@ -151,7 +151,7 @@ Galor ligger ofta i intervallet 40 000–120 000 kr för teknik beroende på sto
 
 ## Nästa steg
 
-Planerar ni gala i Skåne? [Begär offert](https://festutrustning.se/offert) med datum, lokal, gästantal och program. Vi skräddarsyr ljud, ljus, scen och tekniker efter er kväll.
+Planerar ni gala i Skåne? [Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-teknik-till-gala&sk_ref=%2Fguider%2Fteknik-till-gala%2F&cta_context=content_body_cta) med datum, lokal, gästantal och program. Vi skräddarsyr ljud, ljus, scen och tekniker efter er kväll.
 
 Vi hjälper företag med [företagsevent](/foretagsevent/) i hela regionen och erbjuder komplett [eventteknik](/eventteknik/). Utrustning och genomförande via [Festutrustning](https://festutrustning.se/foretag) – med erfarenhet av galor från 50 till 500 gäster.
 

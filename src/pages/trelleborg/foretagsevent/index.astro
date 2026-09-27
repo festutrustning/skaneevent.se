@@ -1,0 +1,132 @@
+---
+import OffertLink from '../../../components/OffertLink.astro';
+import SolutionPage from '../../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Levererar ni företagsevent i Trelleborg?',
+    a: 'Ja. Vi arbetar i Trelleborg och södra Skåne – från citynära hotell och konferenslokaler till kustnära anläggningar.',
+  },
+  {
+    q: 'Kan ni hantera event med gäster som kommer via färja eller från utlandet?',
+    a: 'Ja. Trelleborg är en färje- och logistiknod. Vi planerar tidslinjer med marginal för ankomst, incheckning och sen rigg när gästflöden påverkas av trafik och avgångar.',
+  },
+  {
+    q: 'Har ni kapacitet för både mindre företagsmöten och större scenerade event?',
+    a: 'Ja. Vi dimensionerar från styrelsemöte och kick-off till större konferens- och eventytor med scen, ljud och ljus – alltid utifrån program och lokal.',
+  },
+  {
+    q: 'Samordnar ni teknik med hotellens egen AV-utrustning?',
+    a: 'Ja. Många lokaler har basutrustning som räcker för enkla möten. När ni behöver mer – paneler, starkare ljud, scenljus eller tekniker – kompletterar och samordnar vi utan att skapa dubbelarbete.',
+  },
+];
+
+const festLinks = [
+  {
+    destination: 'foretag' as const,
+    label: 'Företagslösningar hos Festutrustning',
+    context: 'trelleborg_foretagsevent_aside',
+  },
+];
+---
+
+<SolutionPage
+  title="Företagsevent i Trelleborg – eventteknik och produktion"
+  description="Företagsevent i Trelleborg med ljud, ljus, scen och tekniker. Eventpartner för konferens, kick-off och företagsfest i södra Skåne. Begär offert."
+  canonicalPath="/trelleborg/foretagsevent/"
+  heroImage="/images/eventproduktion.jpg"
+  eyebrow="Trelleborg"
+  h1="Företagsevent i Trelleborg"
+  lead="Eventpartner för företagsevent i Trelleborg – teknik och genomförande för konferens, kick-off och företagsfest i Sveriges sydligaste stad."
+  breadcrumbs={[
+    { name: 'Företagsevent', href: '/foretagsevent/' },
+    { name: 'Trelleborg', href: '/trelleborg/foretagsevent/' },
+  ]}
+  ogImage="/images/eventproduktion.jpg"
+  festLinks={festLinks}
+  serviceName="Företagsevent i Trelleborg"
+  areaServedName="Trelleborg"
+  faqs={faqs}
+>
+  <h2>Företagsevent i Trelleborg – södra Skånes logistikstad</h2>
+  <p>
+    Trelleborg är mer än en genomfartsort. Här möts hamn, industri, handel och ett växande utbud av
+    konferens- och eventytor vid kusten. Företag håller kick-offs, kunddagar, konferenser och
+    personalfester med deltagare från Malmöregionen och ibland från andra sidan Östersjön. Skåne Event
+    är er <strong>eventpartner för företagsevent i Trelleborg</strong> – vi tar ansvar för teknik och
+    genomförande så att ni äger innehållet.
+  </p>
+  <p>
+    Leveransen sker inom samma kvalitetsram som övriga <a href="/foretagsevent/">företagsevent i Skåne</a>,
+    med planering som tar hänsyn till stadens särskilda logistik.
+  </p>
+
+  <h2>Eventtyper vi hjälper till med</h2>
+  <ul>
+    <li><a href="/konferens/">Konferens</a> och heldagsmöten</li>
+    <li><a href="/kickoff/">Kick-off</a> och teambuilding</li>
+    <li><a href="/foretagsfest/">Företagsfest</a> och <a href="/julfest/">julfest</a></li>
+    <li><a href="/produktlansering/">Produktlansering</a> och kundevent</li>
+    <li>Jubileum, invigning och blandade program med scenkänsla</li>
+  </ul>
+
+  <h2>Helhetsleverans framför uthyrningslista</h2>
+  <p>
+    I Trelleborg ser vi både mindre, personliga mötesmiljöer och större flexibla eventytor. Skillnaden i
+    teknikbehov är stor – därför börjar vi i programmet, inte i en produktkatalog. Via
+    <a href="/eventproduktion/">eventproduktion</a> kan vi samordna ljud, ljus, scen, bild och bemanning
+    till en tidslinje ni kan lita på.
+  </p>
+
+  <h2>Eventteknik i lösningen</h2>
+  <p>
+    <a href="/eventteknik/">Eventteknik</a> vi vanligtvis dimensionerar:
+  </p>
+  <ul>
+    <li>PA och mikrofoner för tal och panel</li>
+    <li><a href="/ljud-ljus-foretagsevent/">Ljus</a> för presentation, middag och dans</li>
+    <li>Bild/AV och eventuellt LED/projektion</li>
+    <li><a href="/scen-till-event/">Scen</a> och tross vid behov</li>
+    <li>Tekniker på plats under kritiska moment</li>
+  </ul>
+
+  <h2>Logistik: färja, E6 och kustnära lokaler</h2>
+  <p>
+    Trelleborgs roll som färjeläge påverkar hur gäster och leveranser rör sig i stan. Vi planerar
+    lastning, parkering och riggtider med marginal – särskilt när eventet ligger nära hamn eller när
+    deltagare anländer i vågor. Från Malmöregionen är avståndet kort; det som avgör är tillgång till
+    lokalen, el och hur mycket som ska upp innan första programpunkt.
+  </p>
+
+  <h2>Eventmiljöer i Trelleborg</h2>
+  <p>
+    Vanliga miljöer är moderna konferenshotell med större flexibla salar, mindre charmiga hotell för
+    intima företagsgrupper, och kustnära anläggningar där konferens kombineras med aktiviteter. Vissa
+    lokaler har stark egen teknikbas; andra behöver kompletteras. Vi utgår från lokalens faktiska
+    förutsättningar och överdriver aldrig vad som redan ingår.
+  </p>
+
+  <h2>Så går ett uppdrag till</h2>
+  <ol>
+    <li>Ni delar datum, lokal, mål med dagen och publikstorlek</li>
+    <li>Vi föreslår omfattning, bemanning och riskpunkter (t.ex. omrigg eller hybrid)</li>
+    <li>Vi stämmer av med lokalen kring lastning och el</li>
+    <li>Vi genomför, övervakar och river efter eventet</li>
+  </ol>
+
+  <h2>Vad som driver kostnaden</h2>
+  <p>
+    Störst påverkan har: salens storlek och akustik, om ni behöver scen/ljusshow, antal mikrofoner och
+    bildytor, samt teknikerbemanning. Internationella gästflöden kan kräva mer buffert i tidplanen, men
+    det är planering – inte automatiskt dyrare teknik. Läs mer i
+    <a href="/guider/vad-kostar-teknik-foretagsevent/">kostnadsguiden</a>.
+  </p>
+
+  <h2>Begär offert för Trelleborg-event</h2>
+  <p>
+    Behöver ni samma partner på flera orter i länet? Se
+    <a href="/foretagsevent/">företagsevent i Skåne</a>.
+    <OffertLink path="/trelleborg/foretagsevent/">Begär offert</OffertLink>
+    med datum och lokal – så återkommer vi med ett förslag för ert företagsevent i Trelleborg.
+  </p>
+</SolutionPage>

@@ -14,6 +14,9 @@ import {
   OFFERT_CTA_LABELS,
   offertEventUrlForPath,
 } from '../data/festutrustning-links';
+import { getPageSeo, normalizeSeoPath } from '../seo/pages-seo';
+import { buildServiceLd } from './seo/serviceLd';
+import { buildFaqLd } from './seo/faqLd';
 
 interface Props {
   title: string;
@@ -26,13 +29,15 @@ interface Props {
   heroImage?: string;
   festLinks?: { destination: FestDestination; label: string; context: string }[];
   serviceName?: string;
+  /** City for Service areaServed on geo landings. */
+  areaServedName?: string;
   faqs?: { q: string; a: string }[];
   eyebrow?: string;
 }
 
 const {
-  title,
-  description,
+  title: propTitle,
+  description: propDescription,
   canonicalPath,
   h1,
   lead,
@@ -41,11 +46,16 @@ const {
   heroImage,
   festLinks = [],
   serviceName,
+  areaServedName,
   faqs = [],
   eyebrow = 'Skåne Event',
 } = Astro.props;
 
-const heroSrc = heroImage || ogImage || '/images/konferens-scen.jpg';
+const seo = getPageSeo(normalizeSeoPath(canonicalPath));
+const title = seo?.title ?? propTitle;
+const description = seo?.description ?? propDescription;
+
+const heroSrc = heroImage || ogImage || seo?.ogImage || '/images/konferens-scen.jpg';
 const visuals = getPageVisuals(canonicalPath);
 const offertCtaHref = offertEventUrlForPath(canonicalPath, 'landing_hero_cta');
 const offertSidebarHref = offertEventUrlForPath(canonicalPath, 'landing_sidebar_cta');
@@ -55,25 +65,12 @@ const offertCtaLabel =
 
 const jsonLd: Record<string, unknown>[] = [];
 if (serviceName) {
-  jsonLd.push({
-    '@type': 'Service',
-    name: serviceName,
-    description,
-    provider: { '@id': 'https://skaneevent.se/#organization' },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Skåne län' },
-    url: `https://skaneevent.se${canonicalPath}`,
-  });
+  jsonLd.push(
+    buildServiceLd({ name: serviceName, description, canonicalPath, areaServedName }),
+  );
 }
-if (faqs.length) {
-  jsonLd.push({
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  });
-}
+const faqLd = buildFaqLd(faqs);
+if (faqLd) jsonLd.push(faqLd);
 ---
 
 <BaseLayout
@@ -96,7 +93,7 @@ if (faqs.length) {
       <p class="landing-lead">{lead}</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href={offertCtaHref} data-fest-link data-link-context="landing_hero_cta" data-anchor-type="cta">{offertCtaLabel}</a>
-        <a class="btn btn-outline-white btn-lg" href="tel:+46766777232">Ring 076-677 72 32</a>
+        <a class="btn btn-outline-white btn-lg" href="tel:+46766777232" data-link-context="landing_hero_phone">Ring 076-677 72 32</a>
       </div>
       <ul class="hero-trust" aria-label="Fördelar">
         <li>Leverans i hela Skåne</li>
@@ -128,7 +125,7 @@ if (faqs.length) {
           <h2>Planerar ni event?</h2>
           <p>Berätta om datum, ort och behov – vi återkommer med en teknisk lösning.</p>
           <a class="btn btn-primary" href={offertSidebarHref} data-fest-link data-link-context="landing_sidebar_cta" data-anchor-type="cta">{offertCtaLabel}</a>
-          <a class="btn btn-secondary" href="tel:+46766777232">076-677 72 32</a>
+          <a class="btn btn-secondary" href="tel:+46766777232" data-link-context="landing_sidebar_phone">076-677 72 32</a>
         </div>
 
         {festLinks.length > 0 && (

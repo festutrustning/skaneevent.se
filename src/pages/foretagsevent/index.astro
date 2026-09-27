@@ -1,4 +1,5 @@
 ---
+import OffertLink from '../../components/OffertLink.astro';
 import SolutionPage from '../../components/SolutionPage.astro';
 
 const faqs = [
@@ -16,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Levererar ni i hela Skåne?',
-    a: 'Ja, vi arbetar i hela Skåne län – Malmö, Lund, Helsingborg och övriga orter. För lokalt innehåll i specifika städer, se våra sidor för Malmö, Lund och Helsingborg.',
+    a: 'Ja, vi arbetar i hela Skåne län. För lokalt innehåll finns dedikerade sidor för Malmö, Lund, Helsingborg, Kristianstad, Landskrona, Trelleborg och Ystad.',
   },
 ];
 
@@ -88,16 +89,20 @@ const festLinks = [
     Skåne erbjuder allt från moderna konferensanläggningar och hotell till unika industrilokaler och utomhusmiljöer.
     Vi känner till förutsättningarna i regionen och har erfarenhet av att arbeta i både etablerade venue och
     mer ovanliga miljöer. För företag med verksamhet i specifika städer har vi dedikerade sidor:
-    <a href="/malmo/foretagsevent/">företagsevent i Malmö</a>,
-    <a href="/lund/foretagsevent/">företagsevent i Lund</a> och
-    <a href="/helsingborg/foretagsevent/">företagsevent i Helsingborg</a>.
+    <a href="/malmo/foretagsevent/">Malmö</a>,
+    <a href="/lund/foretagsevent/">Lund</a>,
+    <a href="/helsingborg/foretagsevent/">Helsingborg</a>,
+    <a href="/kristianstad/foretagsevent/">Kristianstad</a>,
+    <a href="/landskrona/foretagsevent/">Landskrona</a>,
+    <a href="/trelleborg/foretagsevent/">Trelleborg</a> och
+    <a href="/ystad/foretagsevent/">Ystad</a>.
   </p>
 
   <h2>Så kommer ni igång</h2>
   <p>
     Berätta om ert event – datum, ort, typ av tillställning och ungefärligt antal deltagare. Ju tidigare vi är
     involverade, desto bättre kan vi planera tekniken och undvika överraskningar. Fyll i vårt
-    <a href="https://festutrustning.se/offert">offertformulär</a> så återkommer vi med ett skräddarsytt förslag anpassat till just ert
+    <OffertLink path="/foretagsevent/">offertformulär</OffertLink> så återkommer vi med ett skräddarsytt förslag anpassat till just ert
     företagsevent i Skåne.
   </p>
 </SolutionPage>

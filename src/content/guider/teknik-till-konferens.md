@@ -128,10 +128,10 @@ Se även vår fullständiga [checklista för företagsevent](/guider/checklista-
 
 Skåne har ett rikt utbud av konferenslokaler – från Malmö Live och moderna anläggningar i Lund till hotellkonferenser i Helsingborg och Kristianstad. Många har fast teknik som ibland räcker, men vid större event eller specifika krav behövs extern utrustning och personal.
 
-Vi känner regionen och hjälper er matcha teknik med lokal. Besök vår sida om [konferens](/konferens/) för mer om våra konferenslösningar.
+Vi känner regionen och hjälper er matcha teknik med lokal. Besök vår sida om [konferens](/konferens/) för mer om våra konferenslösningar. För Malmö-uppdrag, se [eventteknik i Malmö](/malmo/eventteknik/) och vårt [case om konferenspanelen](/case/konferens-panel/).
 
 ## Nästa steg
 
-[Begär offert](https://festutrustning.se/offert) med konferensdatum, lokal, gästantal och program. Ju mer detaljer ni kan ge, desto bättre förslag. Vi erbjuder komplett [eventteknik](/eventteknik/) och tekniker i hela Skåne.
+[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-teknik-till-konferens&sk_ref=%2Fguider%2Fteknik-till-konferens%2F&cta_context=content_body_cta) med konferensdatum, lokal, gästantal och program. Ju mer detaljer ni kan ge, desto bättre förslag. Vi erbjuder komplett [eventteknik](/eventteknik/), [eventproduktion](/eventproduktion/) och tekniker i hela Skåne.
 
 Via vårt samarbete med [Festutrustning](https://festutrustning.se/foretag) får ni tillgång till utrustning och erfarenhet från hundratals företagsevent – anpassat till just er konferens.

@@ -1,18 +1,27 @@
 ---
+import OffertLink from '../../components/OffertLink.astro';
 import SolutionPage from '../../components/SolutionPage.astro';
 
 const faqs = [
   {
     q: 'Vad menar ni med eventproduktion?',
-    a: 'Eventproduktion hos oss innebär att vi tar ett helhetsgrepp om det tekniska genomförandet – från planering och koordinering av ljud, ljus, scen och bild till rigg och genomförande på plats.',
+    a: 'Eventproduktion hos Skåne Event innebär att vi tar helhetsansvar för det tekniska genomförandet: behovsanalys, teknikplan, transport, rigg, ljudprov, drift under eventet och nedrigg. Fokus är resultatet – inte att ni ska välja produkter.',
   },
   {
     q: 'Ersätter ni en eventbyrå?',
-    a: 'Vi fokuserar på teknik och produktion. Många kunder har egen projektledning eller eventbyrå, och vi samordnar tekniken med dem. Vi kan också vara er tekniska partner genom hela processen.',
+    a: 'Nej, inte som kreativ byrå. Vi är den tekniska produktionspartnern. Många kunder har egen projektledning eller eventbyrå – vi samordnar tekniken med dem. Ni kan också använda oss som enda tekniska kontakt genom hela processen.',
+  },
+  {
+    q: 'Hur skiljer sig eventproduktion från att hyra utrustning?',
+    a: 'Uthyrning ger grejer. Produktion ger plan, rigg, bemanning och ansvar för att programmet fungerar. Utrustningen levereras av samma team via Festutrustning, men upplägget styrs av ert event – inte av en produktkatalog.',
   },
   {
     q: 'Kan ni producera både konferenser och galor?',
-    a: 'Ja. Vi har erfarenhet av allt från företagsdagar och produktlanseringar till galakvällar och prisutdelningar med mer avancerade ljus- och scenupplägg.',
+    a: 'Ja. Vi arbetar med företagsdagar, paneler, produktlanseringar, galor och prisutdelningar – från kompletterande mikrofoner i befintlig lokal till full scen med LED, tross och tekniker.',
+  },
+  {
+    q: 'Vad påverkar priset på eventproduktion?',
+    a: 'Omfattning av teknik, lokal, gästantal, riggtid, antal tekniker, scen/bild och eventuella specialmoment. Vi specificerar vad som ingår i offerten. Mer om kostnadsdrivare finns i vår guide om vad teknik till företagsevent kostar.',
   },
   {
     q: 'Hur tidigt bör vi boka eventproduktion?',
@@ -57,23 +66,66 @@ const festLinks = [
     <a href="/gala/">galor</a> och <a href="/produktlansering/">produktlanseringar</a>.
   </p>
   <p>
-    Till skillnad från ren uthyrning fokuserar produktion på helheten: vilken utrustning som behövs, hur den riggas,
-    vem som kör den och hur övergångar mellan programpunkter hanteras smidigt.
+    Till skillnad från ren uthyrning fokuserar produktion på helheten: vilken lösning som behövs, hur den riggas,
+    vem som kör den och hur övergångar mellan programpunkter hanteras. Ni köper ett fungerande event – inte en
+    lista med artiklar.
   </p>
 
-  <h2>Vad produktionen omfattar</h2>
+  <h2>Produktionsprocess – från förfrågan till nedrigg</h2>
+  <ol>
+    <li><strong>Förfrågan</strong> – eventtyp, datum, ort, lokal och mål med dagen</li>
+    <li><strong>Behovsanalys</strong> – vad gästerna måste höra och se, och var riskerna sitter</li>
+    <li><strong>Teknikplan</strong> – ljud, ljus, scen/bild, bemanning, tidslinje och ansvarsfördelning</li>
+    <li><strong>Lokalbesök</strong> – vid behov (access, el, lastning, takhöjd, akustik)</li>
+    <li><strong>Planering mot er &amp; andra leverantörer</strong> – byrå, lokal, catering, program</li>
+    <li><strong>Transport &amp; rigg</strong> – uppsättning enligt överenskommen access</li>
+    <li><strong>Soundcheck / funktionskontroll</strong> – innan publik</li>
+    <li><strong>Genomförande</strong> – tekniker på plats när programmet kräver det</li>
+    <li><strong>Nedrigg</strong> – nedmontering och bortforsling</li>
+  </ol>
+
+  <h2>Vad produktionen kan omfatta</h2>
   <p>En typisk produktionsinsats kan inkludera:</p>
   <ul>
-    <li>Behovsanalys och teknisk planering utifrån program och lokal</li>
-    <li>Koordinering av <a href="/eventteknik/">eventteknik</a> – ljud, ljus, bild och mikrofoner</li>
-    <li>Scen, rigg och eventuella specialmoment – se <a href="/scen-till-event/">scen till event</a></li>
+    <li>Koordinering av <a href="/eventteknik/">eventteknik</a> – ljud, mikrofoner, ljus och bild</li>
+    <li><a href="/scen-till-event/">Scen, tross och rigg</a> inklusive specialmoment</li>
+    <li>LED eller projektion för presentation, branding och reveal</li>
     <li>Leverans, uppsättning, funktionskontroll och nedmontering</li>
-    <li>Tekniker på plats under eventet vid behov</li>
+    <li>Tekniker på plats – se även <a href="/guider/tekniker-pa-plats/">varför tekniker lönar sig</a></li>
   </ul>
   <p>
-    Vi anpassar omfattningen efter ert event. En intern företagsdag kräver annan produktion än en galakväll med
-    flera talare, livemusik och prisutdelning.
+    En intern företagsdag kräver annan produktion än en galakväll med flera talare, livemusik och prisutdelning.
+    För lokal närvaro i Malmö, se <a href="/malmo/eventteknik/">eventteknik i Malmö</a>.
   </p>
+
+  <h2>Vad påverkar priset på eventproduktion?</h2>
+  <ul>
+    <li>Omfattning av teknik och scen/bild</li>
+    <li>Lokalens förutsättningar och access</li>
+    <li>Antal gäster och eventets längd</li>
+    <li>Riggtid (samma dag vs dagen före)</li>
+    <li>Antal tekniker och rollfördelning</li>
+    <li>Transport och logistik</li>
+  </ul>
+  <p>
+    Vi specificerar vad som ingår i offerten. Riktmärken finns i
+    <a href="/guider/vad-kostar-teknik-foretagsevent/">vad kostar teknik till företagsevent</a>.
+  </p>
+
+  <h2>Case – produktioner vi genomfört</h2>
+  <ul>
+    <li>
+      <a href="/case/utomhus-led-scen-malmo/">Utomhus LED-scen i Malmö</a> – ca 400 gäster, line array, LED,
+      ljud- och ljustechniker
+    </li>
+    <li>
+      <a href="/case/tross-led-rigg/">Tross och LED till produktlansering i Lund</a> – ca 250 gäster, rigg dagen före
+    </li>
+    <li>
+      <a href="/case/konferens-panel/">Konferens med panel i Malmö</a> – ca 200 deltagare, mikrofoner och tekniker
+    </li>
+  </ul>
+  <p>Fler exempel: <a href="/case/">alla case</a>.</p>
 
   <h2>Samarbete med er organisation</h2>
   <p>
@@ -82,21 +134,23 @@ const festLinks = [
     Tydliga kontaktvägar och gemensamma tidsplaner minskar stressen inför eventdagen.
   </p>
   <p>
-    För kick-offs och företagsfester där energi och stämning är centralt, se även våra sidor om
+    För kick-offs och företagsfester där energi och stämning är centralt, se även
     <a href="/kickoff/">kick-off</a> och <a href="/foretagsfest/">företagsfest</a>.
   </p>
 
   <h2>Produktion i Skånes olika miljöer</h2>
   <p>
     Skåne erbjuder allt från hotellkonferenser och moderna eventlokaler till industrimiljöer och utomhusarrangemang.
-    Vi har erfarenhet av att anpassa produktionen till olika venue – inklusive lokaler i
+    Vi anpassar produktionen till venue i
     <a href="/malmo/foretagsevent/">Malmö</a>, <a href="/lund/foretagsevent/">Lund</a> och
-    <a href="/helsingborg/foretagsevent/">Helsingborg</a>.
+    <a href="/helsingborg/foretagsevent/">Helsingborg</a> – och övriga orter i länet.
   </p>
 
   <h2>Nästa steg</h2>
   <p>
     Berätta om ert kommande event – typ, datum, ort och ungefärligt antal deltagare. Vi återkommer med ett
-    produktionsupplägg och offert. <a href="https://festutrustning.se/offert">Begär offert</a> idag så tar vi dialogen därifrån.
+    produktionsupplägg och offert.
+    <OffertLink path="/eventproduktion/">Begär offert</OffertLink>
+    – ni behöver inte veta exakt vilken teknik som krävs.
   </p>
 </SolutionPage>

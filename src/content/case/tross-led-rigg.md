@@ -28,10 +28,13 @@ Med gäster på golvet kunde vi inte bygga en statisk scen med stödben som bloc
 
 Riggen startade klockan 07:00 dagen före. Tross byggdes och certifierades, LED-moduler hissades och kabeldrasning genomfördes. Ljudprov med kundens talare klockan 18:00. Eventdag med ljudtekniker, ljusoperatör och bildtekniker.
 
-## Relaterade guider
+## Relaterade sidor
 
+- [Eventproduktion](/eventproduktion/)
+- [Produktlansering](/produktlansering/)
+- [Scen till event](/scen-till-event/)
 - [Välja scenstorlek](/guider/valja-scenstorlek/)
 - [Projektor eller LED](/guider/projektor-eller-led/)
 - [Tekniker på plats](/guider/tekniker-pa-plats/)
 
-[Begär offert](https://festutrustning.se/offert) för liknande produktion i Skåne.
+[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-tross-led-rigg&sk_ref=%2Fcase%2Ftross-led-rigg%2F&cta_context=content_body_cta) för liknande produktion i Skåne.

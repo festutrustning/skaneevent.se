@@ -1,6 +1,8 @@
 # Keyword ownership map – Skaneevent.se vs Festutrustning.se
 
-Senast uppdaterad: 2026-08-04
+Senast uppdaterad: 2026-09-27
+
+> **SoT i kod:** [`src/seo/keyword-ownership.ts`](../src/seo/keyword-ownership.ts) (smoke-testad). Denna doc är den mänskliga översikten.
 
 ## Princip
 

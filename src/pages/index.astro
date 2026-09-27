@@ -6,6 +6,10 @@ import HomeHero from '../components/HomeHero.astro';
 import FestReviews from '../components/FestReviews.astro';
 import FestBrandLogos from '../components/FestBrandLogos.astro';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
+import { fetchFestReviews } from '../lib/festutrustning-sync';
+import { buildServiceLd } from '../components/seo/serviceLd';
+import { buildFaqLd } from '../components/seo/faqLd';
+import { buildAggregateRatingLd } from '../components/seo/aggregateRatingLd';
 
 const offertCtaHref = offertEventUrlForPath('/', 'home_why_cta');
 
@@ -32,28 +36,26 @@ const faqs = [
   },
 ];
 
-const jsonLd = [
+const reviews = await fetchFestReviews(12);
+const ratingLd = buildAggregateRatingLd(reviews);
+const faqLd = buildFaqLd(faqs);
+
+const jsonLd: Record<string, unknown>[] = [
   {
-    '@type': 'Service',
+    ...buildServiceLd({
+      name: 'Eventteknik för företagsevent i Skåne',
+      description:
+        'Professionell eventteknik och produktion för företagsevent: ljud, ljus, scen, bild, mikrofoner och tekniker.',
+      canonicalPath: '/',
+    }),
     '@id': 'https://skaneevent.se/#service',
-    name: 'Eventteknik för företagsevent i Skåne',
-    description:
-      'Professionell eventteknik och produktion för företagsevent: ljud, ljus, scen, bild, mikrofoner och tekniker.',
-    provider: { '@id': 'https://skaneevent.se/#organization' },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Skåne län' },
     serviceType: 'Eventteknik och eventproduktion',
-    url: 'https://skaneevent.se/',
-  },
-  {
-    '@type': 'FAQPage',
-    '@id': 'https://skaneevent.se/#faq',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
   },
 ];
+if (faqLd) {
+  jsonLd.push({ ...faqLd, '@id': 'https://skaneevent.se/#faq' });
+}
+if (ratingLd) jsonLd.push(ratingLd);
 ---
 
 <BaseLayout
@@ -238,12 +240,16 @@ const jsonLd = [
       <div class="section-header">
         <p class="eyebrow">Geografi</p>
         <h2 id="areas-heading">Företagsevent i hela Skåne</h2>
-        <p>Särskild fokus på Malmö, Lund och Helsingborg – med leverans i hela länet.</p>
+        <p>Företagsevent-landningar i sju skånska städer – med leverans i hela länet.</p>
       </div>
       <div class="areas-grid">
         <a href="/malmo/foretagsevent/" class="area-card">Malmö</a>
         <a href="/lund/foretagsevent/" class="area-card">Lund</a>
         <a href="/helsingborg/foretagsevent/" class="area-card">Helsingborg</a>
+        <a href="/kristianstad/foretagsevent/" class="area-card">Kristianstad</a>
+        <a href="/landskrona/foretagsevent/" class="area-card">Landskrona</a>
+        <a href="/trelleborg/foretagsevent/" class="area-card">Trelleborg</a>
+        <a href="/ystad/foretagsevent/" class="area-card">Ystad</a>
         <a href="/foretagsevent/" class="area-card">Hela Skåne</a>
         <a href="/eventteknik/" class="area-card">Eventteknik</a>
         <a href="/konferens/" class="area-card">Konferens</a>

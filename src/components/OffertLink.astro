@@ -1,0 +1,23 @@
+---
+import { offertEventUrlForPath } from '../data/festutrustning-links';
+
+interface Props {
+  /** Skaneevent path that owns this CTA (with trailing slash). */
+  path: string;
+  context?: string;
+  class?: string;
+}
+
+const { path, context = 'landing_body_cta', class: className } = Astro.props;
+const href = offertEventUrlForPath(path, context);
+---
+
+<a
+  href={href}
+  class={className}
+  data-fest-link
+  data-link-context={context}
+  data-anchor-type="cta"
+>
+  <slot />
+</a>

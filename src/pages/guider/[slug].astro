@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
 import ContentImage from '../../components/ContentImage.astro';
-import { SITE } from '../../data/site';
+import { buildArticleLd } from '../../components/seo/articleLd';
 
 const guideImages = [
   { src: '/images/konferens-scen.jpg', alt: 'Konferens och paneler', caption: 'Teknik som håller hela programmet' },
@@ -24,7 +24,17 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, description, pubDate, updatedDate, tags } = entry.data;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  tags,
+  seoTitle,
+  seoDescription,
+  ogImage,
+  noindex,
+} = entry.data;
 
 const canonicalPath = `/guider/${entry.id}/`;
 const breadcrumbs = [
@@ -33,27 +43,28 @@ const breadcrumbs = [
 ];
 
 const heroImage = guideImages[entry.id.length % guideImages.length];
+const pageTitle = seoTitle ?? title;
+const pageDescription = seoDescription ?? description;
+const pageOg = ogImage ?? heroImage.src;
 
-const jsonLd = {
-  '@type': 'Article',
-  headline: title,
-  description,
-  datePublished: pubDate.toISOString(),
-  dateModified: (updatedDate ?? pubDate).toISOString(),
-  author: { '@id': `${SITE.url}/#organization` },
-  publisher: { '@id': `${SITE.url}/#organization` },
-  mainEntityOfPage: new URL(canonicalPath, SITE.url).href,
-  inLanguage: 'sv-SE',
-  keywords: tags.join(', '),
-};
+const jsonLd = buildArticleLd({
+  title: pageTitle,
+  description: pageDescription,
+  canonicalPath,
+  datePublished: pubDate,
+  dateModified: updatedDate,
+  keywords: tags,
+});
 ---
 
 <BaseLayout
-  title={title}
-  description={description}
+  title={pageTitle}
+  description={pageDescription}
   canonicalPath={canonicalPath}
+  ogImage={pageOg}
   breadcrumbs={breadcrumbs}
   jsonLd={jsonLd}
+  noIndex={noindex}
 >
   <div class="page-hero">
     <div class="container">
@@ -79,5 +90,5 @@ const jsonLd = {
     </div>
   </section>
 
-  <CTASection />
+  <CTASection sourcePath="/guider/" ctaContext="guide_footer_cta" />
 </BaseLayout>

@@ -3,6 +3,9 @@ import { SITE, type BreadcrumbItem } from '../data/site';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import { getPageSeo, normalizeSeoPath } from '../seo/pages-seo';
+import { buildOrganizationGraph } from '../components/seo/organizationGraph';
+import { buildBreadcrumbLd } from '../components/seo/breadcrumbLd';
 import '../styles/global.css';
 
 interface Props {
@@ -17,72 +20,28 @@ interface Props {
 }
 
 const {
-  title,
-  description,
+  title: propTitle,
+  description: propDescription,
   canonicalPath,
-  ogImage = SITE.defaultOgImage,
+  ogImage: propOgImage,
   breadcrumbs = [],
   jsonLd,
-  noIndex = false,
+  noIndex: propNoIndex = false,
   cinematicHome = false,
 } = Astro.props;
+
+const registry = getPageSeo(normalizeSeoPath(canonicalPath));
+const title = registry?.title ?? propTitle;
+const description = registry?.description ?? propDescription;
+const ogImage = propOgImage ?? registry?.ogImage ?? SITE.defaultOgImage;
+const noIndex = propNoIndex || registry?.noindex === true;
 
 const canonical = new URL(canonicalPath, SITE.url).href;
 const ogImageAbs = new URL(ogImage, SITE.url).href;
 const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
 
-const breadcrumbLd =
-  breadcrumbs.length > 0
-    ? {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Skåne Event', item: SITE.url + '/' },
-          ...breadcrumbs.map((b, i) => ({
-            '@type': 'ListItem',
-            position: i + 2,
-            name: b.name,
-            item: new URL(b.href, SITE.url).href,
-          })),
-        ],
-      }
-    : null;
-
-const graph: Record<string, unknown>[] = [
-  {
-    '@type': 'WebSite',
-    '@id': `${SITE.url}/#website`,
-    url: SITE.url + '/',
-    name: SITE.name,
-    description: SITE.description,
-    publisher: { '@id': `${SITE.url}/#organization` },
-    inLanguage: 'sv-SE',
-  },
-  {
-    '@type': 'Organization',
-    '@id': `${SITE.url}/#organization`,
-    name: SITE.name,
-    legalName: SITE.orgName,
-    url: SITE.url + '/',
-    logo: new URL(SITE.logo, SITE.url).href,
-    telephone: SITE.phone,
-    email: SITE.email,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE.address.street,
-      addressLocality: SITE.address.city,
-      postalCode: SITE.address.postalCode,
-      addressRegion: SITE.address.region,
-      addressCountry: SITE.address.country,
-    },
-    sameAs: SITE.sameAs,
-    parentOrganization: {
-      '@type': 'Organization',
-      name: 'festutrustning.se',
-      url: SITE.festutrustning,
-    },
-  },
-];
-
+const graph: Record<string, unknown>[] = [...buildOrganizationGraph()];
+const breadcrumbLd = buildBreadcrumbLd(breadcrumbs);
 if (breadcrumbLd) graph.push(breadcrumbLd);
 if (jsonLd) {
   if (Array.isArray(jsonLd)) graph.push(...jsonLd);
