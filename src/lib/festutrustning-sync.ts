@@ -66,9 +66,15 @@ async function festRest<T>(path: string): Promise<T[]> {
   }
 }
 
+/** Eventtyper som hör hemma på B2B-sajten (inte privata fester/bröllop). */
+export const BUSINESS_EVENT_TYPES = ['Företagsevent', 'Presentation'] as const;
+
 export async function fetchFestReviews(limit = 6): Promise<FestReview[]> {
+  // PostgREST in.() kräver citattecken vid icke-ASCII (å/ä/ö).
+  const inList = BUSINESS_EVENT_TYPES.map((t) => `"${t}"`).join(',');
+  const eventFilter = encodeURIComponent(`in.(${inList})`);
   const rows = await festRest<FestReview>(
-    `reviews?approved=eq.true&archived=eq.false&select=id,customer_name,rating,comment,event_type,created_at&order=created_at.desc&limit=${limit}`
+    `reviews?approved=eq.true&archived=eq.false&event_type=${eventFilter}&select=id,customer_name,rating,comment,event_type,created_at&order=created_at.desc&limit=${limit}`
   );
   return rows;
 }

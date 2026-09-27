@@ -12,7 +12,7 @@ export interface PageVisuals {
 const I = {
   konferensScen: {
     src: '/images/konferens-scen.jpg',
-    alt: 'Publik på företagskonferens i professionell lokalbelysning',
+    alt: 'Publik på företagskonferens i professionell blå lokalbelysning',
     caption: 'Konferens & paneler i professionell miljö',
   },
   konferensPublik: {
@@ -22,12 +22,12 @@ const I = {
   },
   scenBelysning: {
     src: '/images/scen-belysning.jpg',
-    alt: 'Publik på event med scenbelysning och bokeh',
-    caption: 'Scenbelysning som skapar rätt atmosfär',
+    alt: 'Publik på företagskonferens med projekterat ljusmönster',
+    caption: 'Ljusdesign som sätter tonen i salen',
   },
   scenPublik: {
     src: '/images/scen-publik.jpg',
-    alt: 'Publik med upplyfta händer vid live-event',
+    alt: 'Publik med upplyfta händer framför varmt scenljus',
     caption: 'Energi och engagemang i salen',
   },
   ledUtomhus: {
@@ -37,8 +37,8 @@ const I = {
   },
   ledHero: {
     src: '/images/led-scen-hero.jpg',
-    alt: 'Scen och ljus riggat inför företagsevent',
-    caption: 'Scen, ljus och bild i samma lösning',
+    alt: 'Publik filmar live-event med intensivt scenljus',
+    caption: 'Scenljus och atmosfär på live-event',
   },
   tross: {
     src: '/images/tross-uppsattning.jpg',
@@ -60,104 +60,124 @@ const I = {
     alt: 'DJ och ljudutrustning till företagsfest',
     caption: 'Ljud till fest och mingel',
   },
+  foretagseventDj: {
+    src: '/images/foretagsevent-dj.jpg',
+    alt: 'DJ-bord och ljus på företagsevent med Oktoberfest-tema',
+    caption: 'Företagsevent med DJ, ljus och stämning',
+  },
+  foretagseventLedRigg: {
+    src: '/images/foretagsevent-led-rigg.jpg',
+    alt: 'LED-uplights riggas i korridor inför företagsevent',
+    caption: 'LED-rigg inför företagsevent',
+  },
+  foretagseventAtmosfar: {
+    src: '/images/foretagsevent-atmosfar.jpg',
+    alt: 'Gäster under lila eventljus på företagsfest',
+    caption: 'Atmosfärljus på företagsfest',
+  },
+  foretagseventBankett: {
+    src: '/images/foretagsevent-bankett.jpg',
+    alt: 'Bankettsal dukad för företagsevent med ljuskronor',
+    caption: 'Bankett och galamiljö',
+  },
   eventProduktion: {
     src: '/images/eventproduktion.jpg',
-    alt: 'Eventtekniker vid mixer och ljusbord',
+    alt: 'Eventtekniker vid mixer och ljusbord under produktion',
     caption: 'Tekniker vid mixer och ljusbord',
   },
   eventBackstage: {
     src: '/images/event-backstage.jpg',
-    alt: 'Publik och ljuseffekter på stort event',
-    caption: 'Storskalig eventproduktion',
+    alt: 'Publik under konfettiregn och blått scenljus',
+    caption: 'Storskalig eventproduktion med effekter',
   },
   gala: {
-    src: '/images/gala-foretagsevent.jpg',
-    alt: 'Publik och scenljus på gala och företagsevent',
+    src: '/images/foretagsevent-bankett.jpg',
+    alt: 'Bankettsal dukad för gala och företagsevent',
     caption: 'Gala och större företagsevent',
   },
   eventEffekter: {
     src: '/images/event-effekter.jpg',
-    alt: 'Publik på konferens med varm scenbelysning',
+    alt: 'Publik på konferens med blått scenljus och ljusmönster',
     caption: 'Atmosfär och ljusdesign',
   },
 } as const satisfies Record<string, PageImage>;
 
 export const PAGE_VISUALS: Record<string, PageVisuals> = {
   '/foretagsevent/': {
-    feature: I.scenBelysning,
-    gallery: [I.rigg, I.eventProduktion, I.gala],
+    feature: I.foretagseventDj,
+    gallery: [I.eventProduktion, I.foretagseventLedRigg, I.foretagseventBankett],
   },
   '/eventteknik/': {
     feature: I.eventProduktion,
-    gallery: [I.ledHero, I.eventBackstage, I.konferensPublik],
+    gallery: [I.foretagseventDj, I.foretagseventLedRigg, I.konferensPublik],
   },
   '/eventproduktion/': {
-    feature: I.eventBackstage,
-    gallery: [I.ledUtomhus, I.scenBelysning, I.gala],
+    feature: I.eventProduktion,
+    gallery: [I.ledUtomhus, I.foretagseventDj, I.foretagseventBankett],
   },
   '/konferens/': {
     feature: I.eventEffekter,
     gallery: [I.ljudLjus, I.eventProduktion, I.tross],
   },
   '/gala/': {
-    feature: I.scenBelysning,
-    gallery: [I.tross, I.ledHero, I.eventProduktion],
+    feature: I.foretagseventBankett,
+    gallery: [I.tross, I.foretagseventDj, I.eventProduktion],
   },
   '/produktlansering/': {
     feature: I.eventBackstage,
-    gallery: [I.tross, I.eventProduktion, I.gala],
+    gallery: [I.tross, I.eventProduktion, I.foretagseventBankett],
   },
   '/foretagsfest/': {
-    feature: I.ljudLjus,
-    gallery: [I.scenBelysning, I.eventEffekter, I.eventProduktion],
+    feature: I.foretagseventDj,
+    gallery: [I.foretagseventAtmosfar, I.foretagseventLedRigg, I.eventProduktion],
   },
   '/julfest/': {
-    feature: I.scenPublik,
-    gallery: [I.ljudLjus, I.eventEffekter, I.eventProduktion],
+    feature: I.foretagseventAtmosfar,
+    gallery: [I.foretagseventDj, I.ljudLjus, I.eventProduktion],
   },
   '/kickoff/': {
-    feature: I.eventBackstage,
-    gallery: [I.tross, I.ledHero, I.eventProduktion],
+    feature: I.foretagseventDj,
+    gallery: [I.foretagseventLedRigg, I.eventProduktion, I.foretagseventBankett],
   },
   '/ljud-ljus-foretagsevent/': {
-    feature: I.eventProduktion,
-    gallery: [I.gala, I.rigg, I.konferensPublik],
+    feature: I.foretagseventDj,
+    gallery: [I.foretagseventLedRigg, I.eventProduktion, I.konferensPublik],
   },
   '/scen-till-event/': {
-    feature: I.ledHero,
-    gallery: [I.eventProduktion, I.gala, I.scenPublik],
+    feature: I.ledUtomhus,
+    gallery: [I.eventProduktion, I.foretagseventDj, I.foretagseventBankett],
   },
   '/malmo/foretagsevent/': {
-    feature: I.rigg,
-    gallery: [I.eventProduktion, I.gala, I.ljudLjus],
+    feature: I.foretagseventDj,
+    gallery: [I.eventProduktion, I.foretagseventLedRigg, I.ljudLjus],
   },
   '/lund/foretagsevent/': {
     feature: I.eventEffekter,
-    gallery: [I.ljudLjus, I.eventProduktion, I.scenBelysning],
+    gallery: [I.foretagseventDj, I.foretagseventLedRigg, I.scenBelysning],
   },
   '/helsingborg/foretagsevent/': {
-    feature: I.scenBelysning,
-    gallery: [I.rigg, I.ledHero, I.eventProduktion],
+    feature: I.foretagseventDj,
+    gallery: [I.foretagseventLedRigg, I.eventProduktion, I.foretagseventBankett],
   },
   '/kristianstad/foretagsevent/': {
     feature: I.dj,
-    gallery: [I.eventProduktion, I.ljudLjus, I.konferensPublik],
+    gallery: [I.foretagseventDj, I.ljudLjus, I.konferensPublik],
   },
   '/landskrona/foretagsevent/': {
-    feature: I.gala,
-    gallery: [I.scenBelysning, I.rigg, I.eventProduktion],
+    feature: I.foretagseventBankett,
+    gallery: [I.foretagseventDj, I.rigg, I.eventProduktion],
   },
   '/trelleborg/foretagsevent/': {
     feature: I.eventProduktion,
-    gallery: [I.ledHero, I.tross, I.konferensScen],
+    gallery: [I.foretagseventDj, I.tross, I.konferensScen],
   },
   '/ystad/foretagsevent/': {
-    feature: I.scenBelysning,
-    gallery: [I.eventEffekter, I.gala, I.ljudLjus],
+    feature: I.foretagseventDj,
+    gallery: [I.foretagseventBankett, I.eventEffekter, I.ljudLjus],
   },
   '/malmo/eventteknik/': {
     feature: I.tross,
-    gallery: [I.eventProduktion, I.konferensPublik, I.ledHero],
+    gallery: [I.eventProduktion, I.foretagseventDj, I.foretagseventLedRigg],
   },
 };
 

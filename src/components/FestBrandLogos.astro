@@ -20,16 +20,16 @@ const [productBrands, partners] = await Promise.all([
 if (productBrands.length === 0 && partners.length === 0) return null;
 ---
 
-<section class="section fest-logos" aria-label="Varumärken och samarbetspartners">
+<section class="section fest-logos" aria-label="Varumärken och företagsreferenser">
   <div class="container">
-    {productBrands.length > 0 && (
+    {partners.length > 0 && (
       <div class="fest-logo-block">
         <div class="section-header section-header-compact">
-          <h3>Varumärken vi använder</h3>
-          <p>Professionell utrustning från ledande tillverkare – samma sortiment som Festutrustning.se.</p>
+          <h3>Företagsreferenser</h3>
+          <p>Företag vi arbetat med via Festutrustning.se.</p>
         </div>
-        <ul class="fest-logo-grid" role="list">
-          {productBrands.map((logo) => (
+        <ul class="fest-logo-grid fest-logo-grid-partners" role="list">
+          {partners.map((logo) => (
             <li>
               {logo.website_url ? (
                 <a href={logo.website_url} target="_blank" rel="noopener noreferrer" title={logo.name}>
@@ -44,14 +44,14 @@ if (productBrands.length === 0 && partners.length === 0) return null;
       </div>
     )}
 
-    {partners.length > 0 && (
+    {productBrands.length > 0 && (
       <div class="fest-logo-block">
         <div class="section-header section-header-compact">
-          <h3>Samarbetspartners</h3>
-          <p>Företag vi arbetat med inom event och teknik.</p>
+          <h3>Varumärken vi använder</h3>
+          <p>Professionell utrustning från ledande tillverkare – samma sortiment som Festutrustning.se.</p>
         </div>
-        <ul class="fest-logo-grid fest-logo-grid-partners" role="list">
-          {partners.map((logo) => (
+        <ul class="fest-logo-grid" role="list">
+          {productBrands.map((logo) => (
             <li>
               {logo.website_url ? (
                 <a href={logo.website_url} target="_blank" rel="noopener noreferrer" title={logo.name}>

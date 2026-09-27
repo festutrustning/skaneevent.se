@@ -7,7 +7,11 @@ interface Props {
   lead?: string;
 }
 
-const { limit = 6, title = 'Vad våra kunder säger', lead = 'Recensioner från företagsevent vi genomfört – samma team som Festutrustning.se.' } = Astro.props;
+const {
+  limit = 6,
+  title = 'Vad våra kunder säger',
+  lead = 'Företagsreferenser från Festutrustning.se – omdömen från företagsevent och presentationer.',
+} = Astro.props;
 
 const reviews = await fetchFestReviews(limit);
 if (reviews.length === 0) return null;
