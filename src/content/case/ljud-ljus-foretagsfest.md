@@ -31,8 +31,11 @@ Utan ljudtekniker hade någon internt behövt sitta vid ljudbordet istället fö
 
 ## Relaterade resurser
 
+Detta case beskriver ett genomfört uppdrag – hur tekniken fungerade i praktiken. Vill ni planera liknande leverans i Helsingborg? Se vårt erbjudande för [företagsevent och eventteknik i Helsingborg](/helsingborg/foretagsevent/).
+
+- [Företagsevent i Helsingborg](/helsingborg/foretagsevent/) – kommersiell översikt, teknik och offert
 - [Teknik till gala](/guider/teknik-till-gala/)
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/)
-- [Företagsevent](/foretagsevent/)
+- [Företagsevent i Skåne](/foretagsevent/)
 
 [Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-ljud-ljus-foretagsfest&sk_ref=%2Fcase%2Fljud-ljus-foretagsfest%2F&cta_context=content_body_cta) för er företagsfest i Skåne.

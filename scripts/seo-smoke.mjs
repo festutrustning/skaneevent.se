@@ -131,6 +131,68 @@ else {
   }
 }
 
+// --- SE-0 Helsingborg case → money ownership repair ---
+const caseHbg = readHtml('case/ljud-ljus-foretagsfest');
+if (!caseHbg) fail('dist/case/ljud-ljus-foretagsfest/index.html saknas');
+else {
+  if (!caseHbg.includes('canonical') || !caseHbg.includes('/case/ljud-ljus-foretagsfest/')) {
+    fail('SE-0 case canonical self saknas');
+  }
+  if (/rel=["']canonical["'][^>]*helsingborg\/foretagsevent/i.test(caseHbg)) {
+    fail('SE-0 case får inte canonical till money page');
+  }
+  if (/noindex/i.test(caseHbg) && !/index,\s*follow/i.test(caseHbg)) {
+    fail('SE-0 case får inte noindex');
+  }
+  if (!caseHbg.includes('/helsingborg/foretagsevent/')) {
+    fail('SE-0 case saknar länk till money page /helsingborg/foretagsevent/');
+  }
+  if (!caseHbg.includes('application/ld+json') || !caseHbg.includes('Article')) {
+    fail('SE-0 case saknar Article JSON-LD');
+  }
+  // Title/H1 preserved (no generic deopt)
+  if (!caseHbg.includes('Ljud och ljus till företagsfest i Helsingborg')) {
+    fail('SE-0 case title/H1 får inte ändras i denna repair');
+  }
+}
+
+const moneyHbg = readHtml('helsingborg/foretagsevent');
+if (!moneyHbg) fail('dist/helsingborg/foretagsevent/index.html saknas');
+else {
+  if (!moneyHbg.includes('canonical') || !moneyHbg.includes('/helsingborg/foretagsevent/')) {
+    fail('SE-0 money canonical self saknas');
+  }
+  if (/festutrustning\.se.*rel=["']canonical|canonical[^>]*festutrustning/i.test(moneyHbg)) {
+    fail('SE-0 money får inte cross-domain canonical');
+  }
+  if (!moneyHbg.includes('/case/ljud-ljus-foretagsfest/')) {
+    fail('SE-0 money saknar länk till case proof');
+  }
+  if (!moneyHbg.includes('"@type":"Service"') && !moneyHbg.includes('"@type": "Service"')) {
+    fail('SE-0 money saknar Service JSON-LD');
+  }
+  if (!moneyHbg.includes('Helsingborg') || !moneyHbg.includes('City')) {
+    // areaServed City signal
+    if (!/"name"\s*:\s*"Helsingborg"/.test(moneyHbg)) {
+      fail('SE-0 money saknar areaServed Helsingborg');
+    }
+  }
+  if (!moneyHbg.includes('Företagsevent i Helsingborg')) {
+    fail('SE-0 money H1/title-kärna får inte ändras');
+  }
+}
+
+const malmoEt = readHtml('malmo/eventteknik');
+if (!malmoEt) fail('dist/malmo/eventteknik/index.html saknas (PROTECT)');
+else {
+  if (!malmoEt.includes('Eventteknik i Malmö')) {
+    fail('SE-0 får inte röra /malmo/eventteknik H1');
+  }
+  if (!malmoEt.includes('/malmo/eventteknik/')) {
+    fail('SE-0 Malmö working owner canonical saknas');
+  }
+}
+
 const indexable = listIndexableSeoPaths();
 if (indexable.length < 10) fail(`För få indexerbara SoT-paths: ${indexable.length}`);
 
@@ -143,3 +205,4 @@ if (errors.length) {
 console.log('SEO smoke PASS');
 console.log(`  SoT paths: ${Object.keys(PAGES_SEO).length} (${indexable.length} indexerbara)`);
 console.log(`  Sitemap files: ${sitemapFiles.join(', ')}`);
+console.log('  SE-0 case↔money + Malmö protect checks: OK');
