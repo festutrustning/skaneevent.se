@@ -2842,6 +2842,7 @@ body.has-dark-hero:not(.page-home) .site-header:not(.is-scrolled) :focus-visible
 .landing-hero-content {
   position: relative;
   z-index: 2;
+  max-width: var(--max-width);
   padding-block: 0;
 }
 
