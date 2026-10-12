@@ -23,7 +23,6 @@ const {
   title: propTitle,
   description: propDescription,
   canonicalPath,
-  ogImage: propOgImage,
   breadcrumbs = [],
   jsonLd,
   noIndex: propNoIndex = false,
@@ -33,7 +32,7 @@ const {
 const registry = getPageSeo(normalizeSeoPath(canonicalPath));
 const title = registry?.title ?? propTitle;
 const description = registry?.description ?? propDescription;
-const ogImage = propOgImage ?? registry?.ogImage ?? SITE.defaultOgImage;
+const ogImage = '/brand/typografi-og.png';
 const noIndex = propNoIndex || registry?.noindex === true;
 
 const canonical = new URL(canonicalPath, SITE.url).href;
@@ -60,14 +59,18 @@ if (jsonLd) {
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="sv-se" href={canonical} />
     <meta name="theme-color" content="#7C3AED" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageAbs} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="sv_SE" />
     <meta property="og:site_name" content={SITE.name} />
 
