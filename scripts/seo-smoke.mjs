@@ -117,6 +117,19 @@ else {
     fail('Home description matchar inte PAGES_SEO');
   }
   if (!homeHtml.includes('application/ld+json')) fail('Home saknar JSON-LD');
+  if (!homeHtml.includes('href="/favicon.svg"')) fail('Home saknar SVG-favicon');
+  if (!homeHtml.includes('href="/favicon-32.png"')) fail('Home saknar 32px-favicon');
+  if (!homeHtml.includes('href="/apple-touch-icon.png"')) fail('Home saknar apple-touch-icon');
+  if (!homeHtml.includes('property="og:image" content="https://skaneevent.se/brand/typografi-og.png"')) {
+    fail('Home og:image är inte typografi-og.png');
+  }
+  if (!homeHtml.includes('property="og:image:width" content="1200"')) fail('Home saknar og:image:width');
+  if (!homeHtml.includes('property="og:image:height" content="630"')) fail('Home saknar og:image:height');
+  if (!homeHtml.includes('name="twitter:image" content="https://skaneevent.se/brand/typografi-og.png"')) {
+    fail('Home twitter:image är inte typografi-og.png');
+  }
+  if (!homeHtml.includes('src="/brand/typografi-logo-light.svg"')) fail('Home saknar ljus logotyp');
+  if (!homeHtml.includes('"logo":"https://skaneevent.se/logo.png"')) fail('Organization-logo i JSON-LD har ändrats');
 }
 
 const konferens = readHtml('konferens');
