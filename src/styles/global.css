@@ -2846,7 +2846,7 @@ body.has-dark-hero:not(.page-home) .site-header:not(.is-scrolled) :focus-visible
 }
 
 .landing-hero h1 {
-  max-width: 14ch;
+  max-width: 18ch;
   margin: 0 0 1rem;
   font-size: clamp(2.4rem, 5vw, 4.25rem);
   font-weight: 750;
