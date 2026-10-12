@@ -80,7 +80,18 @@ if (jsonLd) {
     <meta name="twitter:image" content={ogImageAbs} />
 
     {cinematicHome ? (
-      <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+      <>
+        <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          href="/images/tross-uppsattning-960.avif"
+          imagesrcset="/images/tross-uppsattning-960.avif 960w, /images/tross-uppsattning-1400.avif 1400w"
+          imagesizes="100vw"
+          fetchpriority="high"
+        />
+      </>
     ) : (
       <>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -113,7 +124,7 @@ if (jsonLd) {
   </head>
   <body class:list={{ 'page-home': cinematicHome }}>
     <a class="skip-link" href="#main">Hoppa till innehåll</a>
-    <Header surface={cinematicHome ? 'light' : 'dark'} />
+    <Header surface={cinematicHome ? 'light' : 'dark'} overlay={cinematicHome} />
     <main id="main">
       <slot />
     </main>

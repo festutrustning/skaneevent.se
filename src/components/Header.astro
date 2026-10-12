@@ -5,17 +5,27 @@ import { offertEventUrlForPath } from '../data/festutrustning-links';
 interface Props {
   /** Ljus sidbakgrund använder marinblå logotyp. Mörk header använder den ljusa. */
   surface?: 'light' | 'dark';
+  /** Startsida: vit logotyp över heron, marinblå när headern blir vit. */
+  overlay?: boolean;
 }
 
-const { surface = 'dark' } = Astro.props;
+const { surface = 'dark', overlay = false } = Astro.props;
 const logoSrc = surface === 'light' ? '/brand/typografi-logo.svg' : '/brand/typografi-logo-light.svg';
 const offertCtaHref = offertEventUrlForPath('/', 'header_cta');
+const ctaLabel = overlay ? 'Begär offert' : 'Få förslag på eventlösning';
 ---
 
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label={`${SITE.name} – startsida`}>
-      <img src={logoSrc} alt={SITE.name} width="322" height="78" loading="eager" />
+      {overlay ? (
+        <>
+          <img class="brand-logo brand-logo-light" src="/brand/typografi-logo-light.svg" alt="" width="322" height="78" loading="eager" />
+          <img class="brand-logo brand-logo-ink" src="/brand/typografi-logo.svg" alt="" width="322" height="78" loading="eager" />
+        </>
+      ) : (
+        <img src={logoSrc} alt={SITE.name} width="322" height="78" loading="eager" />
+      )}
     </a>
     <nav class="nav" aria-label="Huvudnavigation">
       <a href="/foretagsevent/">Eventlösningar</a>
@@ -23,7 +33,7 @@ const offertCtaHref = offertEventUrlForPath('/', 'header_cta');
       <a href="/guider/">Guider</a>
       <a href="/case/">Case</a>
       <a href="/om-oss/">Om oss</a>
-      <a class="btn btn-primary btn-sm" href={offertCtaHref} data-fest-link data-link-context="header_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
+      <a class="btn btn-primary btn-sm" href={offertCtaHref} data-fest-link data-link-context="header_cta" data-anchor-type="cta">{ctaLabel}</a>
     </nav>
     <button class="menu-toggle" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-nav" type="button">
       <span></span>
@@ -37,6 +47,6 @@ const offertCtaHref = offertEventUrlForPath('/', 'header_cta');
     <a href="/guider/">Guider</a>
     <a href="/case/">Case</a>
     <a href="/om-oss/">Om oss</a>
-    <a class="btn btn-primary" href={offertCtaHref} data-fest-link data-link-context="mobile_nav_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
+    <a class="btn btn-primary" href={offertCtaHref} data-fest-link data-link-context="mobile_nav_cta" data-anchor-type="cta">{ctaLabel}</a>
   </nav>
 </header>

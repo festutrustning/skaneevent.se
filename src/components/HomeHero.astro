@@ -3,9 +3,27 @@ import { SITE } from '../data/site';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
 
 const offertCtaHref = offertEventUrlForPath('/', 'home_hero_cta');
+const heroAvif = '/images/tross-uppsattning-960.avif 960w, /images/tross-uppsattning-1400.avif 1400w';
+const heroWebp = '/images/tross-uppsattning-960.webp 960w, /images/tross-uppsattning-1400.webp 1400w';
 ---
 
 <section class="home-hero" aria-labelledby="hero-heading">
+  <div class="home-hero-media">
+    <picture>
+      <source type="image/avif" srcset={heroAvif} sizes="100vw" />
+      <source type="image/webp" srcset={heroWebp} sizes="100vw" />
+      <img
+        src="/images/tross-uppsattning.jpg"
+        alt=""
+        width="1400"
+        height="933"
+        fetchpriority="high"
+        decoding="async"
+        onerror="this.hidden = true"
+      />
+    </picture>
+  </div>
+  <div class="home-hero-shade" aria-hidden="true"></div>
   <div class="home-cone" aria-hidden="true"></div>
   <div class="container home-hero-grid">
     <div class="home-hero-copy">
@@ -21,6 +39,11 @@ const offertCtaHref = offertEventUrlForPath('/', 'home_hero_cta');
         <a class="home-btn home-btn-primary" href={offertCtaHref} data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Begär offert</a>
         <a class="home-btn home-btn-ghost" href={`tel:${SITE.phone}`} data-link-context="home_hero_phone">Ring oss</a>
       </div>
+      <ul class="home-hero-stats">
+        <li><span>250+</span> genomförda event</li>
+        <li><span>4</span> år i branschen</li>
+        <li><span>24 h</span> svarstid</li>
+      </ul>
     </div>
   </div>
 </section>
