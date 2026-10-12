@@ -1,130 +1,26 @@
 ---
+import { SITE } from '../data/site';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
 
 const offertCtaHref = offertEventUrlForPath('/', 'home_hero_cta');
-
-const slides = [
-  {
-    src: '/images/konferens-scen.jpg',
-    src960: '/images/konferens-scen-960.jpg',
-    alt: 'Publik på företagskonferens i professionell lokalbelysning',
-  },
-  {
-    src: '/images/foretagsevent-dj.jpg',
-    src960: '/images/foretagsevent-dj-960.jpg',
-    alt: 'DJ-bord och ljus på företagsevent i Skåne',
-  },
-  {
-    src: '/images/foretagsevent-led-rigg.jpg',
-    src960: '/images/foretagsevent-led-rigg-960.jpg',
-    alt: 'Omgivningsbelysning med LED-uplights inför företagsevent',
-  },
-  {
-    src: '/images/foretagsevent-bankett.jpg',
-    src960: '/images/foretagsevent-bankett-960.jpg',
-    alt: 'Bankettsal dukad för företagsevent',
-  },
-  {
-    src: '/images/led-scen-utomhus.jpg',
-    alt: 'LED-skärm och scen riggad utomhus i Skåne',
-  },
-  {
-    src: '/images/tross-uppsattning.jpg',
-    alt: 'Tross och eventteknik riggas inför företagsevent',
-  },
-  {
-    src: '/images/scen-belysning.jpg',
-    src960: '/images/scen-belysning-960.jpg',
-    alt: 'Publik på företagskonferens med projekterat ljusmönster',
-  },
-  {
-    src: '/images/eventproduktion.jpg',
-    alt: 'Eventtekniker vid mixer och ljusbord under produktion',
-  },
-  {
-    src: '/images/rigg-eventteknik.jpg',
-    alt: 'Rigg av tross och LED inför företagsevent',
-  },
-];
-
-const marqueeItems = [
-  'Gala',
-  'Konferens',
-  'Kickoff',
-  'Produktlansering',
-  'Företagsfest',
-  'Julfest',
-  'LED-scen',
-  'Ljud & ljus',
-  'Eventproduktion',
-  'Hela Skåne',
-];
 ---
 
-<section class="hero hero-cinematic" aria-labelledby="hero-heading" data-hero-cinematic>
-  <div class="hero-slideshow" aria-hidden="true">
-    {slides.map((slide, i) => (
-      <div class={`hero-slide${i === 0 ? ' is-active' : ''}`}>
-        <picture>
-          {slide.src960 && (
-            <source media="(max-width: 768px)" srcset={slide.src960} />
-          )}
-          <img
-            src={slide.src}
-            alt={slide.alt}
-            width="1920"
-            height="1280"
-            fetchpriority={i === 0 ? 'high' : undefined}
-            loading={i === 0 ? undefined : 'lazy'}
-          />
-        </picture>
+<section class="home-hero" aria-labelledby="hero-heading">
+  <div class="home-cone" aria-hidden="true"></div>
+  <div class="container home-hero-grid">
+    <div class="home-hero-copy">
+      <p class="home-kicker">Eventteknik i Skåne</p>
+      <span class="home-rule" aria-hidden="true"></span>
+      <h1 id="hero-heading">
+        Eventteknik &amp;<br />
+        <span class="home-key">företagsevent</span><br />
+        i Skåne
+      </h1>
+      <p class="home-lead">Ljud, ljus och scen för företagsevent i hela Skåne.</p>
+      <div class="home-actions">
+        <a class="home-btn home-btn-primary" href={offertCtaHref} data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Begär offert</a>
+        <a class="home-btn home-btn-ghost" href={`tel:${SITE.phone}`} data-link-context="home_hero_phone">Ring oss</a>
       </div>
-    ))}
-  </div>
-
-  <div class="hero-beams" aria-hidden="true">
-    <div class="hero-beam hero-beam-1"></div>
-    <div class="hero-beam hero-beam-2"></div>
-    <div class="hero-beam hero-beam-3"></div>
-  </div>
-
-  <div class="hero-grain" aria-hidden="true"></div>
-  <div class="hero-vignette" aria-hidden="true"></div>
-
-  <div class="container hero-content hero-content-cinematic">
-    <p class="hero-pre">
-      <span class="hero-live-dot" aria-hidden="true"></span>
-      När ljuset dimmas och publiken samlas
-    </p>
-    <h1 id="hero-heading">
-      <span class="hero-line hero-line-1">Eventteknik &amp;</span>
-      <span class="hero-line hero-line-2"><span class="text-shimmer">företagsevent</span></span>
-      <span class="hero-line hero-line-3">i Skåne</span>
-    </h1>
-    <p class="hero-lead hero-lead-cinematic">
-      Ljud. Ljus. Scen. Bild. Tekniker. Allt som får ert event att lyfta – från första rigg till sista applåd.
-    </p>
-    <div class="hero-actions hero-actions-cinematic">
-      <a class="btn btn-primary btn-lg btn-glow" href={offertCtaHref} data-fest-link data-link-context="home_hero_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
-      <a class="btn btn-outline-white btn-lg" href="/foretagsevent/">Utforska eventlösningar</a>
-    </div>
-    <ul class="hero-trust hero-trust-cinematic" aria-label="Fördelar">
-      <li>Leverans i hela Skåne</li>
-      <li>Rigg &amp; tekniker på plats</li>
-      <li>Kostnadsfri offert</li>
-    </ul>
-  </div>
-
-  <div class="hero-marquee" aria-hidden="true">
-    <div class="hero-marquee-track">
-      {[...marqueeItems, ...marqueeItems].map((item) => (
-        <span class="hero-marquee-item">{item}</span>
-      ))}
     </div>
   </div>
-
-  <a class="hero-scroll-cue" href="#eventtyper" aria-label="Scrolla ner">
-    <span class="hero-scroll-text">Scrolla</span>
-    <span class="hero-scroll-line" aria-hidden="true"></span>
-  </a>
 </section>

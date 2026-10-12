@@ -5,19 +5,21 @@ interface Props {
   limit?: number;
   title?: string;
   lead?: string;
+  reveal?: boolean;
 }
 
 const {
   limit = 6,
   title = 'Vad våra kunder säger',
   lead = 'Företagsreferenser från Festutrustning.se – omdömen från företagsevent och presentationer.',
+  reveal = false,
 } = Astro.props;
 
 const reviews = await fetchFestReviews(limit);
 if (reviews.length === 0) return null;
 ---
 
-<section class="section section-dark fest-reviews" aria-labelledby="fest-reviews-heading">
+<section class:list={['section', 'section-dark', 'fest-reviews', { reveal }]} aria-labelledby="fest-reviews-heading">
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">Omdömen</p>
