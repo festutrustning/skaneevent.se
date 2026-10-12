@@ -235,10 +235,11 @@ function initHeroCinematic() {
 }
 
 function initHomeHeader() {
-  if (!document.body.classList.contains('page-home')) return;
+  const darkHero = document.body.classList.contains('page-home') || document.body.classList.contains('has-dark-hero');
+  if (!darkHero) return;
 
   const header = document.querySelector('.site-header');
-  const hero = document.querySelector('.home-hero');
+  const hero = document.querySelector('.home-hero, .landing-hero');
   if (!(header instanceof HTMLElement)) return;
 
   const onScroll = () => {

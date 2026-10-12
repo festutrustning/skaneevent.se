@@ -17,6 +17,8 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noIndex?: boolean;
   cinematicHome?: boolean;
+  /** Mörk hero under en transparent header. */
+  darkHero?: boolean;
 }
 
 const {
@@ -27,7 +29,9 @@ const {
   jsonLd,
   noIndex: propNoIndex = false,
   cinematicHome = false,
+  darkHero = false,
 } = Astro.props;
+const overlayHeader = cinematicHome || darkHero;
 
 const registry = getPageSeo(normalizeSeoPath(canonicalPath));
 const title = registry?.title ?? propTitle;
@@ -114,9 +118,9 @@ if (jsonLd) {
 
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
-  <body class:list={{ 'page-home': cinematicHome }}>
+  <body class:list={{ 'page-home': cinematicHome, 'has-dark-hero': overlayHeader }}>
     <a class="skip-link" href="#main">Hoppa till innehåll</a>
-    <Header surface="light" overlay={cinematicHome} />
+    <Header surface="light" overlay={overlayHeader} />
     <main id="main">
       <slot />
     </main>

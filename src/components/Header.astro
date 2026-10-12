@@ -12,7 +12,7 @@ interface Props {
 const { surface = 'dark', overlay = false } = Astro.props;
 const logoSrc = surface === 'light' ? '/brand/typografi-logo.svg' : '/brand/typografi-logo-light.svg';
 const offertCtaHref = offertEventUrlForPath('/', 'header_cta');
-const ctaLabel = overlay ? 'Begär offert' : 'Få förslag på eventlösning';
+const ctaLabel = 'Begär offert';
 ---
 
 <header class="site-header" id="top">
