@@ -1,17 +1,19 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CTASection from '../components/CTASection.astro';
 import FestLink from '../components/FestLink.astro';
 import HomeHero from '../components/HomeHero.astro';
 import FestReviews from '../components/FestReviews.astro';
-import FestBrandLogos from '../components/FestBrandLogos.astro';
+import { SITE } from '../data/site';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { fetchFestReviews } from '../lib/festutrustning-sync';
 import { buildServiceLd } from '../components/seo/serviceLd';
 import { buildFaqLd, faqIdFromQuestion } from '../components/seo/faqLd';
 import { buildAggregateRatingLd } from '../components/seo/aggregateRatingLd';
+import '../styles/home.css';
 
-const offertCtaHref = offertEventUrlForPath('/', 'home_why_cta');
+const offertWhyHref = offertEventUrlForPath('/', 'home_why_cta');
+const offertCloseHref = offertEventUrlForPath('/', 'cta_section');
 
 const faqs = [
   {
@@ -33,6 +35,106 @@ const faqs = [
   {
     q: 'Vilka typer av företagsevent hjälper ni till med?',
     a: 'Konferenser, produktlanseringar, galor, kick-offs, mässor, paneldiskussioner, julfester och företagsfester – med fokus på att tekniken fungerar hela vägen.',
+  },
+];
+
+const services = [
+  {
+    href: '/ljud-ljus-foretagsevent/',
+    title: 'Ljud',
+    text: 'PA, mikrofoner och mixer för tal, panel och fest. Dimensionerat efter lokal och publik.',
+  },
+  {
+    href: '/ljud-ljus-foretagsevent/',
+    title: 'Ljus',
+    text: 'Scenljus och uplights som följer programmet, från middag till dansgolv.',
+  },
+  {
+    href: '/scen-till-event/',
+    title: 'Scen',
+    text: 'Modulscen och tross, byggd efter takhöjd, siktlinjer och antal talare.',
+  },
+  {
+    href: '/eventteknik/',
+    title: 'Bild',
+    text: 'LED och projektion för presentation, produkt och varumärke.',
+  },
+];
+
+const eventTypes = [
+  { href: '/foretagsevent/', label: 'Företagsevent' },
+  { href: '/konferens/', label: 'Konferens' },
+  { href: '/gala/', label: 'Gala' },
+  { href: '/produktlansering/', label: 'Produktlansering' },
+  { href: '/foretagsfest/', label: 'Företagsfest' },
+  { href: '/julfest/', label: 'Julfest' },
+  { href: '/kickoff/', label: 'Kickoff' },
+  { href: '/eventproduktion/', label: 'Eventproduktion' },
+];
+
+const featuredCaseIds = ['utomhus-led-scen-malmo', 'ljud-ljus-foretagsfest', 'tross-led-rigg'] as const;
+
+const delivered: Record<(typeof featuredCaseIds)[number], string> = {
+  'utomhus-led-scen-malmo': 'LED-scen, line array och tekniker utomhus.',
+  'ljud-ljus-foretagsfest': 'PA, scenljus och mikrofoner från mingel till dansgolv.',
+  'tross-led-rigg': 'Tross, hängd LED-skärm och scen i industrilokal.',
+};
+
+const allCases = await getCollection('cases');
+const featuredCases = featuredCaseIds.flatMap((id) => {
+  const entry = allCases.find((item) => item.id === id);
+  return entry ? [{ entry, delivered: delivered[id] }] : [];
+});
+
+const cities = [
+  { href: '/malmo/foretagsevent/', label: 'Malmö' },
+  { href: '/lund/foretagsevent/', label: 'Lund' },
+  { href: '/helsingborg/foretagsevent/', label: 'Helsingborg' },
+];
+
+const morePlaces = [
+  { href: '/kristianstad/foretagsevent/', label: 'Kristianstad' },
+  { href: '/landskrona/foretagsevent/', label: 'Landskrona' },
+  { href: '/trelleborg/foretagsevent/', label: 'Trelleborg' },
+  { href: '/ystad/foretagsevent/', label: 'Ystad' },
+  { href: '/foretagsevent/', label: 'Hela Skåne' },
+  { href: '/eventteknik/', label: 'Eventteknik' },
+  { href: '/konferens/', label: 'Konferens' },
+];
+
+const guides = [
+  {
+    href: '/guider/checklista-foretagsevent/',
+    title: 'Checklista för företagsevent',
+    text: 'Det ni inte får glömma innan eventdagen.',
+  },
+  {
+    href: '/guider/ljud-till-foretagsevent/',
+    title: 'Vilket ljud behövs?',
+    text: 'Dimensionera PA efter lokal och publik.',
+  },
+  {
+    href: '/guider/teknik-till-konferens/',
+    title: 'Teknik till konferens',
+    text: 'Mikrofoner, bild och AV-checklista.',
+  },
+];
+
+const steps = [
+  {
+    n: '01',
+    title: 'Förfrågan',
+    text: 'Berätta datum, ort, antal gäster och vad som ska hända på scen.',
+  },
+  {
+    n: '02',
+    title: 'Förslag',
+    text: 'Vi dimensionerar ljud, ljus, scen och bild efter lokal och program. Offerten kostar inget.',
+  },
+  {
+    n: '03',
+    title: 'Genomförande',
+    text: 'Leverans, rigg, funktionskontroll och nedmontering. Tekniker på plats när det behövs.',
   },
 ];
 
@@ -68,217 +170,165 @@ if (ratingLd) jsonLd.push(ratingLd);
 >
   <HomeHero />
 
-  <section class="stats-bar" aria-label="Snabbfakta">
-    <div class="container stats-inner">
-      <div class="stat">
-        <span class="stat-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </span>
-        <strong>Hela Skåne</strong>
-        <span>Leverans &amp; rigg</span>
-      </div>
-      <div class="stat">
-        <span class="stat-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-        </span>
-        <strong>Ljud &amp; ljus</strong>
-        <span>Scen &amp; bild</span>
-      </div>
-      <div class="stat">
-        <span class="stat-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </span>
-        <strong>Tekniker</strong>
-        <span>På plats vid behov</span>
-      </div>
-      <div class="stat">
-        <span class="stat-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </span>
-        <strong>Kostnadsfri</strong>
-        <span>Offert &amp; rådgivning</span>
+  <section class="home-band reveal" aria-label="Siffror och belägg">
+    <div class="container">
+      <div class="home-split">
+        <div>
+          <p class="home-kicker">Bevis</p>
+          <h2>Det vi kan belägga</h2>
+          <p class="home-prose">
+            Bas på {SITE.address.street} i {SITE.address.city}. Leverans och rigg i hela Skåne.
+            Företagssiffror publiceras först när de går att visa.
+          </p>
+        </div>
+        <dl class="home-facts">
+          <div>
+            <dt>Genomförda event</dt>
+            <dd class="home-todo">TODO: Rasmus fyller i</dd>
+          </div>
+          <div>
+            <dt>År i branschen</dt>
+            <dd class="home-todo">TODO: Rasmus fyller i</dd>
+          </div>
+          <div>
+            <dt>Kända uppdragsgivare</dt>
+            <dd class="home-todo">TODO: Rasmus fyller i</dd>
+          </div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <section class="section reveal" id="eventtyper" aria-labelledby="eventtyper-heading">
+  <section class="home-band home-band-muted reveal" id="tjanster" aria-labelledby="tjanster-heading">
     <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Eventtyper</p>
-        <h2 id="eventtyper-heading">Vilket event planerar ni?</h2>
-        <p>Vi anpassar tekniken efter eventets karaktär – från tal och paneler till gala och fest.</p>
+      <div class="home-split home-split-intro">
+        <div>
+          <p class="home-kicker">Tjänster</p>
+          <h2 id="tjanster-heading">Ljud, ljus, scen och bild</h2>
+        </div>
+        <p class="home-prose">
+          Presentationen ska höras, scenen ska synas och någon ska ta ansvar för helheten.
+          Utrustningen levereras av <FestLink destination="home" context="home_why" anchorType="brand">Festutrustning.se</FestLink>.
+        </p>
       </div>
-      <div class="card-grid card-grid-3">
-        <a class="solution-card" href="/foretagsevent/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg></span><h3>Företagsevent</h3><p>Helhetslösning för professionella event i Skåne.</p><span class="event-card-arrow">Läs mer →</span></a>
-        <a class="solution-card" href="/konferens/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg></span><h3>Konferens</h3><p>Mikrofoner, presentation, ljud och tekniker.</p><span class="event-card-arrow">Läs mer →</span></a>
-        <a class="solution-card" href="/gala/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><h3>Gala</h3><p>Scen, ljusdesign, PA och specialeffekter.</p><span class="event-card-arrow">Läs mer →</span></a>
-        <a class="solution-card" href="/produktlansering/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><h3>Produktlansering</h3><p>Scen, bild, branding och reveal-effekter.</p><span class="event-card-arrow">Läs mer →</span></a>
-        <a class="solution-card" href="/foretagsfest/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span><h3>Företagsfest</h3><p>Ljud, DJ, ljus och dansgolv.</p><span class="event-card-arrow">Läs mer →</span></a>
-        <a class="solution-card" href="/julfest/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg></span><h3>Julfest</h3><p>Teknik till företagsjulfest i Skåne.</p><span class="event-card-arrow">Läs mer →</span></a>
-        <a class="solution-card" href="/kickoff/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><h3>Kickoff</h3><p>Energi, presentation och underhållning.</p><span class="event-card-arrow">Läs mer →</span></a>
-        <a class="solution-card" href="/eventproduktion/"><span class="event-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span><h3>Eventproduktion</h3><p>Planering, rigg, genomförande och tekniker.</p><span class="event-card-arrow">Läs mer →</span></a>
+      <div class="home-services">
+        {services.map((service) => (
+          <a class="home-service" href={service.href}>
+            <h3>{service.title}</h3>
+            <p>{service.text}</p>
+            <span class="home-more">Läs mer</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  <section class="section section-alt reveal" id="tjanster" aria-labelledby="loser-heading">
+  <section class="home-band reveal" id="eventtyper" aria-labelledby="eventtyper-heading">
     <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Vad vi löser</p>
-        <h2 id="loser-heading">Eventteknik som fungerar</h2>
-        <p>Företagskunden bryr sig om att presentationen hörs, scenen ser professionell ut och någon tar ansvar för helheten.</p>
+      <p class="home-kicker">Eventtyper</p>
+      <h2 id="eventtyper-heading">Vilket event planerar ni?</h2>
+      <ul class="home-types">
+        {eventTypes.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-band home-band-ink reveal" id="case-teaser" aria-labelledby="case-heading">
+    <div class="container">
+      <div class="home-split home-split-intro">
+        <div>
+          <p class="home-kicker">Case</p>
+          <h2 id="case-heading">Tre uppdrag i Skåne</h2>
+        </div>
+        <p class="home-prose">Egna bilder från genomförda event. Rubrik, ort och vad som levererades.</p>
       </div>
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></div>
-          <h3>Ljud &amp; mikrofoner</h3><p>Kristallklart ljud för tal, paneler och underhållning.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
-          <h3>Ljus &amp; atmosfär</h3><p>Scenljus och uplights som förstärker ert varumärke.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
-          <h3>Scen &amp; tross</h3><p>Modulära scener och säkra trossystem.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <h3>Bild &amp; LED</h3><p>LED-väggar och projektion för presentation och branding.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
-          <h3>Specialeffekter</h3><p>Effekter som lyfter gala, lansering och fest.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <h3>Tekniker på plats</h3><p>Rigg, test och drift under eventet.</p>
-        </article>
+      <div class="home-cases">
+        {featuredCases.map(({ entry, delivered: line }, index) => (
+          <a class:list={['home-case', { 'home-case-lead': index === 0 }]} href={`/case/${entry.id}/`}>
+            <img
+              src={entry.data.image}
+              alt={`${entry.data.eventType} i ${entry.data.location}`}
+              width={index === 0 ? 768 : 768}
+              height={1024}
+              loading="lazy"
+            />
+            <div class="home-case-copy">
+              <p class="home-kicker">{entry.data.location}{entry.data.guests ? ` · ${entry.data.guests}` : ''}</p>
+              <h3>{entry.data.title}</h3>
+              <p>{line}</p>
+            </div>
+          </a>
+        ))}
       </div>
-      <p style="margin-top: 2rem; text-align: center;">
-        <a class="btn btn-primary" href="/eventteknik/">Läs mer om eventteknik</a>
-        <a class="btn btn-secondary" href="/ljud-ljus-foretagsevent/" style="margin-left: 0.75rem;">Ljud &amp; ljus till företagsevent</a>
+      <p class="home-after"><a class="home-text-link" href="/case/">Se alla case</a></p>
+    </div>
+  </section>
+
+  <section class="home-band reveal" aria-labelledby="steps-heading">
+    <div class="container">
+      <p class="home-kicker">Så går det till</p>
+      <h2 id="steps-heading">Från förfrågan till genomfört event</h2>
+      <ol class="home-steps">
+        {steps.map((step) => (
+          <li>
+            <span class="home-step-n" aria-hidden="true">{step.n}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </li>
+        ))}
+      </ol>
+      <p class="home-after">
+        <a class="home-btn home-btn-primary" href={offertWhyHref} data-fest-link data-link-context="home_why_cta" data-anchor-type="cta">Begär offert</a>
       </p>
     </div>
   </section>
 
-  <section class="section reveal" aria-labelledby="why-heading">
-    <div class="container split">
-      <div class="split-content">
-        <p class="eyebrow">Varför Skåne Event</p>
-        <h2 id="why-heading">Vi löser tekniken till ert företagsevent</h2>
-        <p>
-          Skåne Event är den lokala specialistresursen för professionella event i Skåne.
-          Tekniken levereras av <FestLink destination="home" context="home_why" anchorType="brand">Festutrustning.se</FestLink>
-          – med erfarenhet av konferenser, galor, produktlanseringar och företagsfester.
-        </p>
-        <ul class="check-list">
-          <li>Dimensionering efter lokal, publik och program</li>
-          <li>Leverans, rigg, test och nedmontering</li>
-          <li>Tekniker på plats när det behövs</li>
-          <li>Kostnadsfri offert och personlig rådgivning</li>
-        </ul>
-        <a class="btn btn-primary" href={offertCtaHref} data-fest-link data-link-context="home_why_cta" data-anchor-type="cta">Få förslag på eventlösning</a>
+  <FestReviews
+    limit={3}
+    title="Omdömen från genomförda uppdrag"
+    lead="Hämtade från Festutrustning.se."
+    reveal
+  />
+
+  <section class="home-band reveal" id="omraden" aria-labelledby="areas-heading">
+    <div class="container">
+      <p class="home-kicker">Område</p>
+      <h2 id="areas-heading">Malmö, Lund, Helsingborg och övriga Skåne</h2>
+      <div class="home-cities">
+        {cities.map((city) => (
+          <a href={city.href}>{city.label}</a>
+        ))}
       </div>
-      <div class="split-media">
-        <img
-          src="/images/tross-uppsattning.jpg"
-          alt="Tross och flight cases inför uppsättning av företagsevent"
-          width="1400"
-          height="880"
-          loading="lazy"
-        />
-      </div>
+      <ul class="home-places">
+        {morePlaces.map((place) => (
+          <li><a href={place.href}>{place.label}</a></li>
+        ))}
+      </ul>
     </div>
   </section>
 
-  <section class="section section-dark reveal" id="case-teaser" aria-labelledby="case-heading">
+  <section class="home-band home-band-muted reveal" id="guider-teaser" aria-labelledby="guider-heading">
     <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Genomförda event</p>
-        <h2 id="case-heading">Case från Skåne</h2>
-        <p>Riktiga event, riktiga bilder – så ser tekniklösningarna ut i praktiken.</p>
+      <p class="home-kicker">Guider</p>
+      <h2 id="guider-heading">Innan ni begär offert</h2>
+      <div class="home-guides">
+        {guides.map((guide) => (
+          <a href={guide.href}>
+            <h3>{guide.title}</h3>
+            <p>{guide.text}</p>
+          </a>
+        ))}
       </div>
-      <div class="gallery-grid gallery-grid-4">
-        <a class="gallery-item" href="/foretagsevent/" style="text-decoration: none; color: inherit;">
-          <img src="/images/foretagsevent-dj.jpg" alt="DJ-bord och ljus på företagsevent" width="1920" height="2560" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Företagsevent</span>
-            <figcaption>DJ, ljus &amp; stämning</figcaption>
-          </div>
-        </a>
-        <a class="gallery-item" href="/eventteknik/" style="text-decoration: none; color: inherit;">
-          <img src="/images/foretagsevent-led-rigg.jpg" alt="Omgivningsbelysning med LED-uplights inför företagsevent" width="1920" height="2560" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Ljus</span>
-            <figcaption>Omgivningsbelysning</figcaption>
-          </div>
-        </a>
-        <a class="gallery-item" href="/gala/" style="text-decoration: none; color: inherit;">
-          <img src="/images/foretagsevent-bankett.jpg" alt="Bankettsal dukad för företagsevent" width="1920" height="2560" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Gala</span>
-            <figcaption>Bankett &amp; galamiljö</figcaption>
-          </div>
-        </a>
-        <a class="gallery-item" href="/eventproduktion/" style="text-decoration: none; color: inherit;">
-          <img src="/images/eventproduktion.jpg" alt="Eventtekniker vid mixer och ljusbord" width="1920" height="1280" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-tag">Produktion</span>
-            <figcaption>Tekniker vid mixer</figcaption>
-          </div>
-        </a>
-      </div>
-      <p style="margin-top: 1.5rem; text-align: center;"><a class="btn btn-outline-white" href="/case/">Se alla case</a></p>
+      <p class="home-after"><a class="home-text-link" href="/guider/">Alla guider</a></p>
     </div>
   </section>
 
-  <FestReviews />
-  <FestBrandLogos />
-
-  <section class="section" id="omraden" aria-labelledby="areas-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Geografi</p>
-        <h2 id="areas-heading">Företagsevent i hela Skåne</h2>
-        <p>Företagsevent-landningar i sju skånska städer – med leverans i hela länet.</p>
-      </div>
-      <div class="areas-grid">
-        <a href="/malmo/foretagsevent/" class="area-card">Malmö</a>
-        <a href="/lund/foretagsevent/" class="area-card">Lund</a>
-        <a href="/helsingborg/foretagsevent/" class="area-card">Helsingborg</a>
-        <a href="/kristianstad/foretagsevent/" class="area-card">Kristianstad</a>
-        <a href="/landskrona/foretagsevent/" class="area-card">Landskrona</a>
-        <a href="/trelleborg/foretagsevent/" class="area-card">Trelleborg</a>
-        <a href="/ystad/foretagsevent/" class="area-card">Ystad</a>
-        <a href="/foretagsevent/" class="area-card">Hela Skåne</a>
-        <a href="/eventteknik/" class="area-card">Eventteknik</a>
-        <a href="/konferens/" class="area-card">Konferens</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="guider-teaser" aria-labelledby="guider-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Kunskap</p>
-        <h2 id="guider-heading">Guider för dig som planerar event</h2>
-        <p>Checklistor, dimensionering och praktiska råd innan ni begär offert.</p>
-      </div>
-      <div class="card-grid card-grid-3">
-        <a class="solution-card" href="/guider/checklista-foretagsevent/"><h3>Checklista för företagsevent</h3><p>Det ni inte får glömma innan eventdagen.</p></a>
-        <a class="solution-card" href="/guider/ljud-till-foretagsevent/"><h3>Vilket ljud behövs?</h3><p>Dimensionera PA efter lokal och publik.</p></a>
-        <a class="solution-card" href="/guider/teknik-till-konferens/"><h3>Teknik till konferens</h3><p>Mikrofoner, bild och AV-checklista.</p></a>
-      </div>
-      <p style="margin-top: 1.5rem; text-align: center;"><a class="btn btn-secondary" href="/guider/">Alla guider</a></p>
-    </div>
-  </section>
-
-  <section class="section" id="faq" aria-labelledby="faq-heading">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Vanliga frågor</p>
-        <h2 id="faq-heading">FAQ – företagsevent &amp; eventteknik</h2>
-      </div>
+  <section class="home-band reveal" id="faq" aria-labelledby="faq-heading">
+    <div class="container home-faq">
+      <p class="home-kicker">Vanliga frågor</p>
+      <h2 id="faq-heading">FAQ – företagsevent &amp; eventteknik</h2>
       <div class="faq-list">
         {faqs.map((f, i) => (
           <details
@@ -295,5 +345,16 @@ if (ratingLd) jsonLd.push(ratingLd);
     </div>
   </section>
 
-  <CTASection title="Planerar ni ett event i Skåne?" />
+  <section class="home-close reveal" aria-labelledby="cta-heading">
+    <div class="container home-close-inner">
+      <p class="home-kicker">Kontakt</p>
+      <h2 id="cta-heading">Planerar ni ett event i Skåne?</h2>
+      <p>Berätta om datum, ort och typ av event. Vi återkommer med ett förslag.</p>
+      <p class="home-sla">Svarstid: <span class="home-todo">TODO: Rasmus fyller i</span></p>
+      <div class="home-actions">
+        <a class="home-btn home-btn-primary" href={offertCloseHref} data-fest-link data-link-context="cta_section" data-anchor-type="cta">Begär offert</a>
+        <a class="home-btn home-btn-ghost" href={`tel:${SITE.phone}`} data-link-context="landing_footer_phone">Ring {SITE.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
