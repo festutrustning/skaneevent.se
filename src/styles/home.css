@@ -363,6 +363,11 @@ body.page-home .site-header {
   .home-hero-stats {
     display: none;
   }
+
+  .home-hero {
+    min-height: auto;
+    padding-bottom: 5.5rem;
+  }
 }
 
 .home-hero-stats span {
