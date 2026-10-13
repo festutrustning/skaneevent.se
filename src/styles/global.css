@@ -2399,6 +2399,18 @@ body.menu-open .menu-toggle span:nth-child(3) {
   margin-top: 1rem;
 }
 
+.form-alert {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  background: var(--mist);
+  color: var(--ink);
+  border-left: 3px solid var(--gold);
+}
+
+.form-alert button {
+  margin-top: 0.75rem;
+}
+
 .guide-meta {
   font-size: 0.875rem;
   color: var(--gray-500);
