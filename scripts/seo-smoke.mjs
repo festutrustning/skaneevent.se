@@ -229,6 +229,11 @@ else if (!offertPage.includes('https://skaneevent.se/offert/')) {
   fail('/offert/ saknar canonical till skaneevent.se/offert/');
 }
 
+const netlifyToml = fs.readFileSync(path.join(root, 'netlify.toml'), 'utf8');
+if (/from\s*=\s*"\/offert/.test(netlifyToml)) {
+  fail('netlify.toml redirectar fortfarande /offert');
+}
+
 const indexable = listIndexableSeoPaths();
 if (indexable.length < 10) fail(`För få indexerbara SoT-paths: ${indexable.length}`);
 
