@@ -238,13 +238,18 @@ function initHomeHeader() {
   if (!document.body.classList.contains('page-home')) return;
 
   const header = document.querySelector('.site-header');
-  if (!header) return;
+  const hero = document.querySelector('.home-hero');
+  if (!(header instanceof HTMLElement)) return;
 
   const onScroll = () => {
-    header.classList.toggle('is-scrolled', window.scrollY > 48);
+    const pastHero = hero instanceof HTMLElement
+      ? hero.getBoundingClientRect().bottom <= header.offsetHeight + 1
+      : window.scrollY > 48;
+    header.classList.toggle('is-scrolled', pastHero);
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
   onScroll();
 }
 
