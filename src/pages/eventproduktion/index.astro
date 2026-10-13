@@ -29,18 +29,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'eventproduktion_aside',
-  },
-  {
-    destination: 'scen' as const,
-    label: 'Scenlösningar hos Festutrustning',
-    context: 'eventproduktion_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -53,7 +41,6 @@ const festLinks = [
   lead="Från teknisk planering till genomförande på plats – vi producerar företagsevent i Skåne med ljud, ljus, scen och erfarna tekniker."
   breadcrumbs={[{ name: 'Eventproduktion', href: '/eventproduktion/' }]}
   ogImage="/images/eventproduktion.jpg"
-  festLinks={festLinks}
   serviceName="Eventproduktion i Skåne"
   faqs={faqs}
 >

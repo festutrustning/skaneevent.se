@@ -22,7 +22,7 @@ Eventteknik är inte en standardprodukt. Ett frukostseminarium för 30 personer 
 - **Tekniker** – självrigg vs. tekniker på plats under eventet
 - **Avstånd och logistik** – leverans, lastning och tid i lokal
 
-Därför ger vi alltid skräddarsydda offerter – inte generiska paketpriser som sällan stämmer.
+Därför räknar vi varje offert utifrån ert event, inte från ett färdigt paketpris.
 
 ## Typiska kostnadskategorier
 
@@ -48,7 +48,7 @@ Projektor och duk är ofta det mest kostnadseffektiva alternativet. LED-skärmar
 
 Tekniker på plats är en investering i trygghet. En ljudtekniker under en heldagskonferens, en ljusoperatör vid gala eller en produktionstekniker vid större event – priset beror på antal tekniker, timmar och komplexitet.
 
-Många företag upplever att kostnaden för en tekniker är väl investerad: färre avbrott, smidigare övergångar och någon som löser problem innan gästerna märker det.
+Många företag räknar tekniker som en del av uppdraget: färre avbrott mellan programpunkter och någon som löser problem innan gästerna märker det.
 
 ### Rigg och logistik
 

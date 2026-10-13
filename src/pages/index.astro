@@ -42,12 +42,12 @@ const services = [
   {
     href: '/ljud-ljus-foretagsevent/',
     title: 'Ljud',
-    text: 'PA, mikrofoner och mixer för tal, panel och fest. Dimensionerat efter lokal och publik.',
+    text: 'PA, mikrofoner och mixer för tal och panel. Dimensionerat efter lokal och publik.',
   },
   {
     href: '/ljud-ljus-foretagsevent/',
     title: 'Ljus',
-    text: 'Scenljus och uplights som följer programmet, från middag till dansgolv.',
+    text: 'Scenljus och uplights som följer programmets delar.',
   },
   {
     href: '/scen-till-event/',
@@ -238,7 +238,7 @@ if (ratingLd) jsonLd.push(ratingLd);
       <div class="home-split home-split-intro">
         <div>
           <p class="home-kicker">Case</p>
-          <h2 id="case-heading">Tre uppdrag i Skåne</h2>
+          <h2 id="case-heading">{['Inga', 'Ett', 'Två', 'Tre', 'Fyra', 'Fem', 'Sex', 'Sju', 'Åtta', 'Nio', 'Tio'][allCases.length] ?? allCases.length} uppdrag i Skåne</h2>
         </div>
         <p class="home-prose">Egna bilder från genomförda event. Rubrik, ort och vad som levererades.</p>
       </div>
@@ -286,7 +286,6 @@ if (ratingLd) jsonLd.push(ratingLd);
   <FestReviews
     limit={3}
     title="Omdömen från genomförda uppdrag"
-    lead="Hämtade från Festutrustning.se."
     reveal
   />
 
