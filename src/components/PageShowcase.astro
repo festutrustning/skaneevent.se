@@ -1,5 +1,6 @@
 ---
 import type { PageImage } from '../data/page-images';
+import { responsiveSources } from '../lib/responsive-image';
 
 interface Props {
   images: PageImage[];
@@ -15,7 +16,15 @@ if (!images.length) return;
   <div class="page-showcase-grid">
     {images.map((img) => (
       <figure class="page-showcase-item">
-        <img src={img.src} alt={img.alt} width="640" height="427" loading="lazy" />
+        {responsiveSources(img.src) ? (
+          <picture>
+            <source type="image/avif" srcset={responsiveSources(img.src)!.avif} sizes="(min-width: 800px) 20rem, 100vw" />
+            <source type="image/webp" srcset={responsiveSources(img.src)!.webp} sizes="(min-width: 800px) 20rem, 100vw" />
+            <img src={img.src} alt={img.alt} width="640" height="427" loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
+        ) : (
+          <img src={img.src} alt={img.alt} width="640" height="427" loading="lazy" decoding="async" fetchpriority="low" />
+        )}
         {img.caption && <figcaption>{img.caption}</figcaption>}
       </figure>
     ))}

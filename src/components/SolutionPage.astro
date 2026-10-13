@@ -14,6 +14,7 @@ import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { getPageSeo, normalizeSeoPath } from '../seo/pages-seo';
 import { buildServiceLd } from './seo/serviceLd';
 import { buildFaqLd, faqIdFromQuestion } from './seo/faqLd';
+import { responsiveSources } from '../lib/responsive-image';
 
 interface Props {
   title: string;
@@ -71,6 +72,8 @@ const crowdHeroes = new Set([
 const requestedHero = heroImage || ogImage || seo?.ogImage || '';
 const heroPhoto = requestedHero && !crowdHeroes.has(requestedHero) ? requestedHero : '';
 
+const heroSet = heroPhoto ? responsiveSources(heroPhoto) : null;
+
 const jsonLd: Record<string, unknown>[] = [];
 if (serviceName) {
   jsonLd.push(
@@ -89,11 +92,20 @@ if (faqLd) jsonLd.push(faqLd);
   breadcrumbs={breadcrumbs}
   jsonLd={jsonLd}
   darkHero
+  heroPreload={heroSet ? { href: heroSet.preload, srcset: heroSet.avif } : undefined}
 >
   <section class="landing-hero" aria-labelledby="landing-heading">
     {heroPhoto && (
       <div class="landing-hero-bg">
-        <img src={heroPhoto} alt="" width="1400" height="933" fetchpriority="high" decoding="async" />
+        {heroSet ? (
+          <picture>
+            <source type="image/avif" srcset={heroSet.avif} sizes="100vw" />
+            <source type="image/webp" srcset={heroSet.webp} sizes="100vw" />
+            <img src={heroPhoto} alt="" width="1400" height="933" fetchpriority="high" decoding="sync" />
+          </picture>
+        ) : (
+          <img src={heroPhoto} alt="" width="1400" height="933" fetchpriority="high" />
+        )}
       </div>
     )}
     <div class="landing-hero-shade" aria-hidden="true"></div>

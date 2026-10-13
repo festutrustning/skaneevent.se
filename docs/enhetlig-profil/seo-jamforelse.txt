@@ -1,0 +1,3 @@
+Jämförelse av dist före och efter.
+Sidor: 43
+Title, meta description, canonical, H1 och JSON-LD är identiska på alla sidor.

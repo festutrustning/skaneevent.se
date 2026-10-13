@@ -19,6 +19,7 @@ interface Props {
   cinematicHome?: boolean;
   /** Mörk hero under en transparent header. */
   darkHero?: boolean;
+  heroPreload?: { href: string; srcset: string };
 }
 
 const {
@@ -30,6 +31,7 @@ const {
   noIndex: propNoIndex = false,
   cinematicHome = false,
   darkHero = false,
+  heroPreload,
 } = Astro.props;
 const overlayHeader = cinematicHome || darkHero;
 
@@ -91,6 +93,17 @@ if (jsonLd) {
         type="image/avif"
         href="/images/tross-uppsattning-960.avif"
         imagesrcset="/images/tross-uppsattning-960.avif 960w, /images/tross-uppsattning-1400.avif 1400w"
+        imagesizes="100vw"
+        fetchpriority="high"
+      />
+    )}
+    {heroPreload && (
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        href={heroPreload.href}
+        imagesrcset={heroPreload.srcset}
         imagesizes="100vw"
         fetchpriority="high"
       />
