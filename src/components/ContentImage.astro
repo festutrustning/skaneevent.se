@@ -1,14 +1,24 @@
 ---
 import type { PageImage } from '../data/page-images';
+import { responsiveSources } from '../lib/responsive-image';
 
 interface Props extends PageImage {
   wide?: boolean;
 }
 
 const { src, alt, caption, wide = false } = Astro.props;
+const sources = responsiveSources(src);
 ---
 
 <figure class:list={['content-image', { 'content-image-wide': wide }]}>
-  <img src={src} alt={alt} width="1400" height="933" loading="lazy" />
+  {sources ? (
+    <picture>
+      <source type="image/avif" srcset={sources.avif} sizes="(min-width: 900px) 42rem, 100vw" />
+      <source type="image/webp" srcset={sources.webp} sizes="(min-width: 900px) 42rem, 100vw" />
+      <img src={src} alt={alt} width="1400" height="933" loading="lazy" decoding="async" fetchpriority="low" />
+    </picture>
+  ) : (
+    <img src={src} alt={alt} width="1400" height="933" loading="lazy" decoding="async" fetchpriority="low" />
+  )}
   {caption && <figcaption>{caption}</figcaption>}
 </figure>

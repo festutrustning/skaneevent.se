@@ -17,6 +17,9 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noIndex?: boolean;
   cinematicHome?: boolean;
+  /** Mörk hero under en transparent header. */
+  darkHero?: boolean;
+  heroPreload?: { href: string; srcset: string };
 }
 
 const {
@@ -27,7 +30,10 @@ const {
   jsonLd,
   noIndex: propNoIndex = false,
   cinematicHome = false,
+  darkHero = false,
+  heroPreload,
 } = Astro.props;
+const overlayHeader = cinematicHome || darkHero;
 
 const registry = getPageSeo(normalizeSeoPath(canonicalPath));
 const title = registry?.title ?? propTitle;
@@ -58,7 +64,7 @@ if (jsonLd) {
     <meta name="robots" content={noIndex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="sv-se" href={canonical} />
-    <meta name="theme-color" content={cinematicHome ? '#0E1A2B' : '#7C3AED'} />
+    <meta name="theme-color" content="#0E1A2B" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -79,25 +85,28 @@ if (jsonLd) {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageAbs} />
 
-    {cinematicHome ? (
-      <>
-        <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-        <link
-          rel="preload"
-          as="image"
-          type="image/avif"
-          href="/images/tross-uppsattning-960.avif"
-          imagesrcset="/images/tross-uppsattning-960.avif 960w, /images/tross-uppsattning-1400.avif 1400w"
-          imagesizes="100vw"
-          fetchpriority="high"
-        />
-      </>
-    ) : (
-      <>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-      </>
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {cinematicHome && (
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        href="/images/tross-uppsattning-960.avif"
+        imagesrcset="/images/tross-uppsattning-960.avif 960w, /images/tross-uppsattning-1400.avif 1400w"
+        imagesizes="100vw"
+        fetchpriority="high"
+      />
+    )}
+    {heroPreload && (
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        href={heroPreload.href}
+        imagesrcset={heroPreload.srcset}
+        imagesizes="100vw"
+        fetchpriority="high"
+      />
     )}
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://festutrustning.se" />
@@ -122,9 +131,9 @@ if (jsonLd) {
 
     <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
   </head>
-  <body class:list={{ 'page-home': cinematicHome }}>
+  <body class:list={{ 'page-home': cinematicHome, 'has-dark-hero': overlayHeader }}>
     <a class="skip-link" href="#main">Hoppa till innehåll</a>
-    <Header surface={cinematicHome ? 'light' : 'dark'} overlay={cinematicHome} />
+    <Header surface="light" overlay={overlayHeader} />
     <main id="main">
       <slot />
     </main>

@@ -10,13 +10,11 @@ import PageShowcase from './PageShowcase.astro';
 import { getPageVisuals } from '../data/page-images';
 import type { BreadcrumbItem } from '../data/site';
 import type { FestDestination } from '../data/festutrustning-links';
-import {
-  OFFERT_CTA_LABELS,
-  offertEventUrlForPath,
-} from '../data/festutrustning-links';
+import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { getPageSeo, normalizeSeoPath } from '../seo/pages-seo';
 import { buildServiceLd } from './seo/serviceLd';
 import { buildFaqLd, faqIdFromQuestion } from './seo/faqLd';
+import { responsiveSources } from '../lib/responsive-image';
 
 interface Props {
   title: string;
@@ -55,13 +53,26 @@ const seo = getPageSeo(normalizeSeoPath(canonicalPath));
 const title = seo?.title ?? propTitle;
 const description = seo?.description ?? propDescription;
 
-const heroSrc = heroImage || ogImage || seo?.ogImage || '/images/konferens-scen.jpg';
 const visuals = getPageVisuals(canonicalPath);
 const offertCtaHref = offertEventUrlForPath(canonicalPath, 'landing_hero_cta');
 const offertSidebarHref = offertEventUrlForPath(canonicalPath, 'landing_sidebar_cta');
-const offertCtaLabel =
-  OFFERT_CTA_LABELS[canonicalPath.endsWith('/') ? canonicalPath : `${canonicalPath}/`] ??
-  'Få förslag på eventlösning';
+const crowdHeroes = new Set([
+  '/images/konferens-scen.jpg',
+  '/images/konferens-publik.jpg',
+  '/images/konferens-scen-960.jpg',
+  '/images/scen-belysning.jpg',
+  '/images/scen-publik.jpg',
+  '/images/scenljus-publik.jpg',
+  '/images/led-scen-hero.jpg',
+  '/images/gala-foretagsevent.jpg',
+  '/images/event-backstage.jpg',
+  '/images/event-effekter.jpg',
+  '/images/foretagsevent-atmosfar.jpg',
+]);
+const requestedHero = heroImage || ogImage || seo?.ogImage || '';
+const heroPhoto = requestedHero && !crowdHeroes.has(requestedHero) ? requestedHero : '';
+
+const heroSet = heroPhoto ? responsiveSources(heroPhoto) : null;
 
 const jsonLd: Record<string, unknown>[] = [];
 if (serviceName) {
@@ -77,23 +88,36 @@ if (faqLd) jsonLd.push(faqLd);
   title={title}
   description={description}
   canonicalPath={canonicalPath}
-  ogImage={ogImage || heroSrc}
+  ogImage={ogImage || heroPhoto}
   breadcrumbs={breadcrumbs}
   jsonLd={jsonLd}
+  darkHero
+  heroPreload={heroSet ? { href: heroSet.preload, srcset: heroSet.avif } : undefined}
 >
   <section class="landing-hero" aria-labelledby="landing-heading">
-    <div class="landing-hero-bg" role="presentation">
-      <img src={heroSrc} alt="" width="1400" height="933" fetchpriority="high" />
-    </div>
-    <div class="hero-spotlight" aria-hidden="true"></div>
+    {heroPhoto && (
+      <div class="landing-hero-bg">
+        {heroSet ? (
+          <picture>
+            <source type="image/avif" srcset={heroSet.avif} sizes="100vw" />
+            <source type="image/webp" srcset={heroSet.webp} sizes="100vw" />
+            <img src={heroPhoto} alt="" width="1400" height="933" fetchpriority="high" decoding="sync" />
+          </picture>
+        ) : (
+          <img src={heroPhoto} alt="" width="1400" height="933" fetchpriority="high" />
+        )}
+      </div>
+    )}
+    <div class="landing-hero-shade" aria-hidden="true"></div>
+    <div class="landing-cone" aria-hidden="true"></div>
     <div class="container landing-hero-content">
       <Breadcrumbs items={breadcrumbs} />
       <p class="eyebrow">{eyebrow}</p>
       <h1 id="landing-heading">{h1}</h1>
       <p class="landing-lead">{lead}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href={offertCtaHref} data-fest-link data-link-context="landing_hero_cta" data-anchor-type="cta">{offertCtaLabel}</a>
-        <a class="btn btn-outline-white btn-lg" href="tel:+46766777232" data-link-context="landing_hero_phone">Ring 076-677 72 32</a>
+        <a class="btn btn-primary btn-lg" href={offertCtaHref} data-fest-link data-link-context="landing_hero_cta" data-anchor-type="cta">Begär offert</a>
+        <a class="btn btn-outline-white btn-lg" href="tel:+46766777232" data-link-context="landing_hero_phone">Ring oss</a>
       </div>
       <ul class="hero-trust" aria-label="Fördelar">
         <li>Leverans i hela Skåne</li>
@@ -124,7 +148,7 @@ if (faqLd) jsonLd.push(faqLd);
         <div class="sidebar-card sidebar-cta">
           <h2>Planerar ni event?</h2>
           <p>Berätta om datum, ort och behov – vi återkommer med en teknisk lösning.</p>
-          <a class="btn btn-primary" href={offertSidebarHref} data-fest-link data-link-context="landing_sidebar_cta" data-anchor-type="cta">{offertCtaLabel}</a>
+          <a class="btn btn-primary" href={offertSidebarHref} data-fest-link data-link-context="landing_sidebar_cta" data-anchor-type="cta">Begär offert</a>
           <a class="btn btn-secondary" href="tel:+46766777232" data-link-context="landing_sidebar_phone">076-677 72 32</a>
         </div>
 
@@ -166,7 +190,7 @@ if (faqLd) jsonLd.push(faqLd);
     <section class="section section-alt" aria-labelledby="page-faq">
       <div class="container landing-faq">
         <div class="section-header">
-          <p class="eyebrow" style="color: var(--primary); background: var(--violet-50); border-color: var(--violet-200);">FAQ</p>
+          <p class="eyebrow">FAQ</p>
           <h2 id="page-faq">Vanliga frågor</h2>
         </div>
         <div class="faq-list">
