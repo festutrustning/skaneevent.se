@@ -21,12 +21,18 @@ function initMenu() {
     document.body.classList.toggle('menu-open', !open);
   });
 
+  const closeMenu = () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    mobileNav.hidden = true;
+    document.body.classList.remove('menu-open');
+  };
+
   mobileNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      toggle.setAttribute('aria-expanded', 'false');
-      mobileNav.hidden = true;
-      document.body.classList.remove('menu-open');
-    });
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeMenu();
   });
 }
 
