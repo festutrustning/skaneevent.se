@@ -21,18 +21,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'scen' as const,
-    label: 'Scenlösningar hos Festutrustning',
-    context: 'gala_aside',
-  },
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'gala_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -45,7 +33,6 @@ const festLinks = [
   lead="Högtidlig scenkänsla, professionellt ljus och ljud som bär hela kvällen – eventteknik för företagsgalor och prisutdelningar i Skåne."
   breadcrumbs={[{ name: 'Gala', href: '/gala/' }]}
   ogImage="/images/foretagsevent-bankett.jpg"
-  festLinks={festLinks}
   serviceName="Gala i Skåne"
   faqs={faqs}
 >
@@ -95,7 +82,7 @@ const festLinks = [
 
   <h2>Begär offert för er gala</h2>
   <p>
-    Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris.
+    Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris. Offerten kostar inget.
     <OffertLink path="/gala/">Begär offert</OffertLink>. Vi tar hand om tekniken till er galakväll.
   </p>
 </SolutionPage>

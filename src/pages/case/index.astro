@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
+import CapacityOverview from '../../components/CapacityOverview.astro';
 
 const breadcrumbs = [{ name: 'Case', href: '/case/' }];
 
@@ -22,27 +23,36 @@ const cases = (await getCollection('cases')).sort(
       <Breadcrumbs items={breadcrumbs} />
       <h1>Case</h1>
       <p class="page-lead">
-        Exempel på hur vi hjälpt företag i Skåne med ljud, ljus, scen, bild och tekniker – från planering till genomförande.
+        Exempel på ljud, bild, scen och personal vi redan satt in. Nästa uppdrag dimensioneras efter lokalen och programmet.
       </p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
+      <div class="section-header">
+        <h2>Vad vi sätter in</h2>
+        <p>Byggstenarna skalas efter lokal, publik och program. Gästantalet på korten gäller det uppdraget.</p>
+      </div>
+      <CapacityOverview />
       <div class="card-grid card-grid-3">
         {cases.map((item) => (
-          <a class="solution-card" href={`/case/${item.id}/`}>
-            <img
-              src={item.data.image}
-              alt=""
-              width="400"
-              height="267"
-              loading="lazy"
-              style="margin-bottom: 1rem; border-radius: var(--radius); aspect-ratio: 3/2; object-fit: cover; width: 100%;"
-            />
+          <a class="solution-card case-card" href={`/case/${item.id}/`}>
+            {item.data.image && (
+              <img
+                src={item.data.image}
+                alt={item.data.imageAlt ?? ''}
+                width="400"
+                height="267"
+                loading="lazy"
+                style="margin-bottom: 1rem; border-radius: var(--radius); aspect-ratio: 3/2; object-fit: cover; width: 100%;"
+              />
+            )}
             <h3>{item.data.title}</h3>
-            <p>{item.data.description}</p>
-            <p class="guide-meta">{item.data.location} · {item.data.eventType}</p>
+            <p class="case-card-fact">{item.data.location} · {item.data.eventType}</p>
+            <p>{item.data.kit}</p>
+            <p>{item.data.crew}</p>
+            {item.data.guests && <p class="case-card-fact">{item.data.guests} gäster på det här eventet</p>}
           </a>
         ))}
       </div>
@@ -51,6 +61,6 @@ const cases = (await getCollection('cases')).sort(
 
   <CTASection
     title="Vill ni ha liknande lösning?"
-    text="Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris."
+    text="Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris. Offerten kostar inget."
   />
 </BaseLayout>

@@ -3,12 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import CTASection from './CTASection.astro';
 import ContentImage from './ContentImage.astro';
-import FestLink from './FestLink.astro';
 import FestBrandLogos from './FestBrandLogos.astro';
 import PageShowcase from './PageShowcase.astro';
 import { getPageVisuals } from '../data/page-images';
 import type { BreadcrumbItem } from '../data/site';
-import type { FestDestination } from '../data/festutrustning-links';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { getPageSeo, normalizeSeoPath } from '../seo/pages-seo';
 import { buildServiceLd } from './seo/serviceLd';
@@ -24,7 +22,6 @@ interface Props {
   breadcrumbs: BreadcrumbItem[];
   ogImage?: string;
   heroImage?: string;
-  festLinks?: { destination: FestDestination; label: string; context: string }[];
   serviceName?: string;
   /** City for Service areaServed on geo landings. */
   areaServedName?: string;
@@ -41,7 +38,6 @@ const {
   breadcrumbs,
   ogImage,
   heroImage,
-  festLinks = [],
   serviceName,
   areaServedName,
   faqs = [],
@@ -146,31 +142,10 @@ if (faqLd) jsonLd.push(faqLd);
       <aside class="landing-sidebar">
         <div class="sidebar-card sidebar-cta">
           <h2>Planerar ni event?</h2>
-          <p>Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris.</p>
+          <p>Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris. Offerten kostar inget.</p>
           <a class="btn btn-primary" href={offertSidebarHref} data-fest-link data-link-context="landing_sidebar_cta" data-anchor-type="cta">Begär offert</a>
           <a class="btn btn-secondary" href="tel:+46766777232" data-link-context="landing_sidebar_phone">076-677 72 32</a>
         </div>
-
-        {festLinks.length > 0 && (
-          <div class="sidebar-card fest-aside">
-            <h2>Teknikleverantör</h2>
-            <p>När ni går från planering till utrustning och genomförande:</p>
-            <ul>
-              {festLinks.map((l) => (
-                <li>
-                  <FestLink
-                    destination={l.destination}
-                    context={l.context}
-                    campaign={canonicalPath.replace(/\//g, '') || 'home'}
-                    utm
-                  >
-                    {l.label}
-                  </FestLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
 
         <div class="sidebar-card sidebar-links">
           <h2>Utforska mer</h2>

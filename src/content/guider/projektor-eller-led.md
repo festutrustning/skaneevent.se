@@ -138,8 +138,8 @@ Mer om specifika eventtyper: [teknik till konferens](/guider/teknik-till-konfere
 
 ## Nästa steg
 
-Osäker på vad som passar er lokal och ert program? [Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-projektor-eller-led&sk_ref=%2Fguider%2Fprojektor-eller-led%2F&cta_context=content_body_cta) – beskriv lokal, ljusförhållanden och program så rekommenderar vi rätt lösning.
+Osäker på vad som passar er lokal och ert program? [Begär offert](/offert/?sk_ref=%2Fguider%2Fprojektor-eller-led%2F&cta_context=content_body_cta) – beskriv lokal, ljusförhållanden och program så rekommenderar vi rätt lösning.
 
-Vi erbjuder [eventteknik](/eventteknik/) i hela Skåne – projektor, LED, monitorer och komplett bildproduktion. Se vårt [case om utomhus LED-scen i Malmö](/case/utomhus-led-scen-malmo/) för ett praktiskt exempel.
+Vi erbjuder [eventteknik](/eventteknik/) i hela Skåne – projektor, LED, monitorer och komplett bildproduktion. Se vårt [case om LED-skärm till storbildsvisning i Helsingborg](/case/tross-led-rigg/) för ett praktiskt exempel.
 
 LED-moduler och projektorer finns via [Festutrustning](https://festutrustning.se/scen) – vilket ger er tillgång till rätt utrustning utan att behöva välja mellan kvalitet och budget.

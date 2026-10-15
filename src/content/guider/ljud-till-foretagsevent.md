@@ -14,7 +14,7 @@ Om gästerna inte hör vad som sägs spelar resten av eventet ingen roll. Ljud �
 
 Dåligt ljud skapar frustration. Gäster som lutar sig fram, viskar till varandra eller tittar på mobilen istället för talaren – det underminerar syftet med eventet. Bra ljud är däremot nästan osynligt: allt flyter, budskapet når fram och gästerna kan fokusera på innehållet.
 
-Professionellt ljud handlar om mer än volym. Det handlar om klarhet, jämn täckning i hela rummet, rätt mikrofonval och en operatör som kan hantera övergångar smidigt.
+Professionellt ljud handlar om mer än volym. Det handlar om klarhet, jämn täckning i hela rummet, rätt mikrofonval och en operatör som kan gå mellan tal, film och musik utan avbrott.
 
 ## Dimensionera PA-systemet efter lokal och gästantal
 
@@ -54,7 +54,7 @@ En ljudtekniker:
 
 - Balanserar nivåer mellan talare
 - Hanterar feedback och brus
-- Säkerställer smidiga övergångar
+- Håller tidslinjen mellan tal, film och musik
 - Löser tekniska problem i realtid
 - Kör ljudprov före eventstart
 
@@ -111,6 +111,6 @@ För att vi ska kunna ge er rätt förslag, berätta:
 5. Behov av tekniker och inspelning
 6. Eventdatum och riggtider
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-ljud-till-foretagsevent&sk_ref=%2Fguider%2Fljud-till-foretagsevent%2F&cta_context=content_body_cta) så dimensionerar vi ljudet utifrån era förutsättninger. Vi erbjuder [eventteknik](/eventteknik/) i hela Skåne – från enkla PA-system till full produktion.
+[Begär offert](/offert/?sk_ref=%2Fguider%2Fljud-till-foretagsevent%2F&cta_context=content_body_cta) så dimensionerar vi ljudet utifrån era förutsättninger. Vi erbjuder [eventteknik](/eventteknik/) i hela Skåne – från enkla PA-system till full produktion.
 
 Som del av Festutrustnings nätverk har vi tillgång till [professionell ljudutrustning i Skåne](https://festutrustning.se/ljud-ljus-skane) – vilket innebär rätt utrustning för er lokals storlek och ert programs krav, utan onödiga mellanhänder.

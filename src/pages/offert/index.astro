@@ -33,8 +33,13 @@ const breadcrumbs = [{ name: 'Begär offert', href: '/offert/' }];
         data-netlify="true"
         netlify-honeypot="bot-field"
         data-lead-form
-        action="/offert/tack/"
+        data-intake-url={import.meta.env.PUBLIC_QUOTE_INTAKE_URL ?? ''}
+        action="/offert/"
       >
+        <p id="offert-error" class="form-alert" hidden role="alert">
+          Vi kunde inte skicka förfrågan just nu. Ring {SITE.phoneDisplay} så hjälper vi er, eller försök igen.
+          <button type="button" class="btn btn-secondary" id="offert-retry">Försök igen</button>
+        </p>
         <input type="hidden" name="form-name" value="offert" />
         <p class="hidden" style="display:none;">
           <label>Leave blank: <input name="bot-field" /></label>
@@ -109,6 +114,12 @@ const breadcrumbs = [{ name: 'Begär offert', href: '/offert/' }];
           <textarea id="meddelande" name="meddelande"></textarea>
         </div>
 
+        {import.meta.env.PUBLIC_TURNSTILE_SITE_KEY && (
+          <div
+            class="cf-turnstile"
+            data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY}
+          />
+        )}
         <button type="submit" class="btn btn-primary btn-lg">Skicka offertförfrågan</button>
         <p class="form-note">
           Vi svarar inom 24 timmar.
@@ -121,4 +132,7 @@ const breadcrumbs = [{ name: 'Begär offert', href: '/offert/' }];
       </form>
     </div>
   </section>
+  {import.meta.env.PUBLIC_TURNSTILE_SITE_KEY && (
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  )}
 </BaseLayout>

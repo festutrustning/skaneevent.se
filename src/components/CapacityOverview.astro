@@ -1,0 +1,39 @@
+---
+import { capacityBlocks, capacityClose } from '../data/capacity';
+
+interface Props {
+  variant?: 'home' | 'page';
+}
+
+const { variant = 'page' } = Astro.props;
+const isHome = variant === 'home';
+---
+
+<div class={isHome ? 'home-capacity' : 'capacity-grid'}>
+  {
+    capacityBlocks.map((block) => (
+      <article>
+        <h3>{block.title}</h3>
+        <p>{block.text}</p>
+        <ul>
+          {block.examples.map((example) => (
+            <li>
+              <a href={example.href}>{example.label}</a>
+            </li>
+          ))}
+        </ul>
+      </article>
+    ))
+  }
+</div>
+<p class={isHome ? 'home-prose home-capacity-note' : 'capacity-note'}>
+  {capacityClose.text} Se också
+  {
+    capacityClose.links.map((link, index) => (
+      <span>
+        {index === 0 ? ' ' : index === capacityClose.links.length - 1 ? ' och ' : ', '}
+        <a href={link.href}>{link.label}</a>
+      </span>
+    ))
+  }.
+</p>

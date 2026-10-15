@@ -21,13 +21,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Se företagslösningar hos Festutrustning',
-    context: 'foretagsevent_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -40,7 +33,6 @@ const festLinks = [
   lead="Ni planerar eventet – vi ser till att tekniken håller hela vägen. Ljud, ljus, scen, bild och erfarna tekniker för företagsevent i hela Skåne."
   breadcrumbs={[{ name: 'Företagsevent', href: '/foretagsevent/' }]}
   ogImage="/images/foretagsevent-dj.jpg"
-  festLinks={festLinks}
   serviceName="Företagsevent i Skåne"
   faqs={faqs}
 >
@@ -67,8 +59,7 @@ const festLinks = [
     <li><a href="/foretagsfest/">Företagsfester</a> och <a href="/julfest/">julfester</a> som kombinerar program och mingel</li>
   </ul>
   <p>
-    Tekniken är alltid utgångspunkten, men vi tänker i hela upplevelsen: hur talaren känner sig på scenen, hur
-    publiken upplever presentationen och hur tal, film och musik följer på varandra utan väntan.
+    Tekniken utgår från programmet: hur talaren hörs, hur presentationen syns och hur ni går mellan programpunkter utan avbrott.
   </p>
 
   <h2>Eventteknik som matchar era mål</h2>
@@ -118,7 +109,7 @@ const festLinks = [
   <!-- TODO Rasmus: namn, roll, telefon för kontaktperson -->
   <h2>Så kommer ni igång</h2>
   <p>
-    Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris.
+    Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris. Offerten kostar inget.
     Fyll i vårt <OffertLink path="/foretagsevent/">offertformulär</OffertLink>.
   </p>
 </SolutionPage>

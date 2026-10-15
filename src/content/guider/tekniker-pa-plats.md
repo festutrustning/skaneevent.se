@@ -139,7 +139,7 @@ Vi erbjuder detta som alternativ – men var ärliga med er kompetens. Ett enkla
 
 **Panel** – Ljudtekniker med erfarenhet av panelmix. Se [mikrofoner till paneldiskussion](/guider/mikrofoner-paneldiskussion/).
 
-**Utomhus** – Produktionstekniker med erfarenhet av utomhus. Se [case om utomhus LED-scen](/case/utomhus-led-scen-malmo/).
+**Utomhus** – Produktionstekniker med erfarenhet av utomhus. Se [case om storbildsvisning i Helsingborg](/case/tross-led-rigg/).
 
 **Företagsfest med DJ** – Ljudtekniker som hanterar både tal och dansgolv.
 
@@ -159,7 +159,7 @@ Tills batteriet dör, feedback uppstår eller presentationen inte syns.
 
 ## Nästa steg
 
-Osäker på hur många tekniker ni behöver? [Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-tekniker-pa-plats&sk_ref=%2Fguider%2Ftekniker-pa-plats%2F&cta_context=content_body_cta) med program, lokal och gästantal – vi rekommenderar rätt bemanning.
+Osäker på hur många tekniker ni behöver? [Begär offert](/offert/?sk_ref=%2Fguider%2Ftekniker-pa-plats%2F&cta_context=content_body_cta) med program, lokal och gästantal – vi rekommenderar rätt bemanning.
 
 Vi erbjuder tekniker till [företagsevent](/foretagsevent/), [eventteknik](/eventteknik/) och [eventproduktion](/eventproduktion/) i hela Skåne – inklusive [eventteknik i Malmö](/malmo/eventteknik/). Våra tekniker har erfarenhet av konferenser, galor, paneler och utomhusproduktioner.
 

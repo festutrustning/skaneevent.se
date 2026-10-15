@@ -80,7 +80,7 @@ Utomhusevent i Skåne ställer extra krav:
 - **Tillstånd** – Bygglov eller tillstånd vid offentlig plats
 - **El** – Generator eller tillräcklig kapacitet
 
-Utomhus LED-scener kräver ofta tross och fundament. Se vårt [case om utomhus LED-scen i Malmö](/case/utomhus-led-scen-malmo/) för ett exempel.
+Utomhus LED-scener kräver ofta tross och fundament. Se vårt [case om scen och LED-skärm i Helsingborg](/case/tross-led-rigg/) för ett exempel.
 
 ## Scen och bild
 
@@ -133,7 +133,7 @@ Berätta för oss:
 5. Behov av talarpodium, räcken, backdrop
 6. Bildlösning – projektor, LED, monitorer
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-valja-scenstorlek&sk_ref=%2Fguider%2Fvalja-scenstorlek%2F&cta_context=content_body_cta) så dimensionerar vi scenen tillsammans med ljud, ljus och bild. Vi erbjuder [eventteknik](/eventteknik/) och scenlösningar i hela Skåne.
+[Begär offert](/offert/?sk_ref=%2Fguider%2Fvalja-scenstorlek%2F&cta_context=content_body_cta) så dimensionerar vi scenen tillsammans med ljud, ljus och bild. Vi erbjuder [eventteknik](/eventteknik/) och scenlösningar i hela Skåne.
 
 Scenmoduler, tross och kompletterande utrustning finns via [Festutrustning](https://festutrustning.se/scen) – vilket ger er flexibilitet att bygga rätt scen för just ert program.
 
