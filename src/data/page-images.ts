@@ -58,9 +58,14 @@ const I = {
   dj: {
     src: '/images/dj-ljudutrustning.jpg',
     alt: 'DJ och ljudutrustning till företagsfest',
-    caption: 'Ljud till fest och mingel',
+    caption: 'Ljud till tal, mingel och kvällsprogram',
   },
   foretagseventDj: {
+    src: '/images/foretagsevent-dj.jpg',
+    alt: 'DJ-bord och ljus på företagsevent med Oktoberfest-tema',
+    caption: 'Ljud och ljus till företagsevent',
+  },
+  foretagseventDjFest: {
     src: '/images/foretagsevent-dj.jpg',
     alt: 'DJ-bord och ljus på företagsevent med Oktoberfest-tema',
     caption: 'Företagsevent med DJ, ljus och stämning',
@@ -128,15 +133,15 @@ export const PAGE_VISUALS: Record<string, PageVisuals> = {
     gallery: [I.tross, I.eventProduktion, I.foretagseventBankett],
   },
   '/foretagsfest/': {
-    feature: I.foretagseventDj,
+    feature: I.foretagseventDjFest,
     gallery: [I.foretagseventAtmosfar, I.foretagseventLedRigg, I.eventProduktion],
   },
   '/julfest/': {
     feature: I.foretagseventAtmosfar,
-    gallery: [I.foretagseventDj, I.ljudLjus, I.eventProduktion],
+    gallery: [I.foretagseventDjFest, I.ljudLjus, I.eventProduktion],
   },
   '/kickoff/': {
-    feature: I.foretagseventDj,
+    feature: I.foretagseventDjFest,
     gallery: [I.foretagseventLedRigg, I.eventProduktion, I.foretagseventBankett],
   },
   '/ljud-ljus-foretagsevent/': {

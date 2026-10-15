@@ -4,7 +4,6 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import CTASection from './CTASection.astro';
 import ContentImage from './ContentImage.astro';
 import FestLink from './FestLink.astro';
-import FestReviews from './FestReviews.astro';
 import FestBrandLogos from './FestBrandLogos.astro';
 import PageShowcase from './PageShowcase.astro';
 import { getPageVisuals } from '../data/page-images';
@@ -147,7 +146,7 @@ if (faqLd) jsonLd.push(faqLd);
       <aside class="landing-sidebar">
         <div class="sidebar-card sidebar-cta">
           <h2>Planerar ni event?</h2>
-          <p>Berätta om datum, ort och behov – vi återkommer med en teknisk lösning.</p>
+          <p>Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris.</p>
           <a class="btn btn-primary" href={offertSidebarHref} data-fest-link data-link-context="landing_sidebar_cta" data-anchor-type="cta">Begär offert</a>
           <a class="btn btn-secondary" href="tel:+46766777232" data-link-context="landing_sidebar_phone">076-677 72 32</a>
         </div>
@@ -210,7 +209,7 @@ if (faqLd) jsonLd.push(faqLd);
     </section>
   )}
 
-  <FestReviews limit={3} />
+  <!-- TODO Rasmus: riktiga B2B-omdömen -->
   <FestBrandLogos />
 
   <CTASection sourcePath={canonicalPath} ctaContext="landing_footer_cta" />

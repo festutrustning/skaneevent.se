@@ -5,7 +5,7 @@ export const SITE = {
     'Professionell eventteknik och företagsevent i Skåne. Ljud, ljus, scen, bild, mikrofoner och tekniker – en partner för hela eventet.',
   phone: '+46766777232',
   phoneDisplay: '076-677 72 32',
-  email: 'info@festutrustning.se',
+  email: 'info@skaneevent.se',
   address: {
     street: 'Lockarpsvägen 6B',
     postalCode: '213 76',
