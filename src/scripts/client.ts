@@ -199,9 +199,46 @@ function trackLeadForms() {
   });
 }
 
+type TurnstileApi = {
+  ready: (callback: () => void) => void;
+  render: (element: HTMLElement, options: { sitekey: string }) => string;
+};
+
+function turnstileApi(): TurnstileApi | undefined {
+  return (window as Window & { turnstile?: TurnstileApi }).turnstile;
+}
+
+function mountTurnstile(form: HTMLFormElement) {
+  const widget = form.querySelector('.cf-turnstile');
+  if (!(widget instanceof HTMLElement) || widget.dataset.mounted === '1') return;
+  const sitekey = widget.dataset.sitekey;
+  const api = turnstileApi();
+  if (!sitekey || !api) return;
+  widget.dataset.mounted = '1';
+  widget.replaceChildren();
+  api.ready(() => {
+    api.render(widget, { sitekey });
+  });
+}
+
+function turnstileToken(form: HTMLFormElement): string {
+  const values = [...form.querySelectorAll('input[name="cf-turnstile-response"]')]
+    .map((el) => (el instanceof HTMLInputElement ? el.value.trim() : ''))
+    .filter(Boolean);
+  return values.at(-1) ?? '';
+}
+
 function initOffertForm() {
   const form = document.getElementById('offert-form');
   if (!(form instanceof HTMLFormElement)) return;
+  const waitForTurnstile = window.setInterval(() => {
+    mountTurnstile(form);
+    if (form.querySelector('.cf-turnstile') instanceof HTMLElement
+      && (form.querySelector('.cf-turnstile') as HTMLElement).dataset.mounted === '1') {
+      window.clearInterval(waitForTurnstile);
+    }
+  }, 100);
+  window.setTimeout(() => window.clearInterval(waitForTurnstile), 8000);
 
   const button = form.querySelector('button[type="submit"]');
   const errorBox = document.getElementById('offert-error');
@@ -224,7 +261,7 @@ function initOffertForm() {
     const data = new FormData(form);
     const attribution = readQuoteAttribution();
     const payload = {
-      turnstile_token: String(data.get('cf-turnstile-response') || ''),
+      turnstile_token: turnstileToken(form),
       lead_uid: leadUid(),
       company: data.get('foretag'),
       contact_name: data.get('kontaktperson'),
@@ -252,18 +289,6 @@ function initOffertForm() {
       },
     };
 
-    const backup = () => {
-      const params = new URLSearchParams();
-      data.forEach((value, key) => {
-        if (typeof value === 'string') params.append(key, value);
-      });
-      return fetch('/offert/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: params.toString(),
-      }).catch(() => undefined);
-    };
-
     const intakeUrl = form.dataset.intakeUrl || '';
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort(), 10000);
@@ -289,7 +314,6 @@ function initOffertForm() {
       }
       window.location.assign('/offert/tack/');
     } catch {
-      void backup();
       showError();
     } finally {
       window.clearTimeout(timer);
