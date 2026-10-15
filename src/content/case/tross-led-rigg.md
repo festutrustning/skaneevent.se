@@ -1,37 +1,30 @@
 ---
-title: Tross och LED-rigg till produktlansering i Lund
-description: Case om tross, LED-skärm och eventteknik till produktlansering i Lund – scen, ljud, ljus och tekniker för 250 gäster.
+title: Scen och LED-skärm till storbildsvisning av fotbolls-VM i Helsingborg
+description: Scen, LED-skärm, ljud och sändning när Sveriges VM-match visades för cirka 4000 personer i Helsingborg, juni 2026.
 pubDate: 2026-06-12
-location: Lund
-eventType: Produktlansering
-guests: ca 250
-image: /images/rigg-eventteknik.jpg
-challenge: Ett tech-företag i Lund skulle lansera en ny produktlinje i en ombyggd industrilokal. Lokalen hade hög takhöjd men ingen befintlig scen eller teknik. Kunden ville ha en imponerande visuell upplevelse med stor LED-yta, men taket krävde trosslösning eftersom golvyta var begränsad av gästytan.
-solution: Vi byggde en trosskonstruktion med hängd LED-skärm (6×3 meter), riggade line array-ljud och rörliga scenljus i trossen. Scenmoduler 6×4 meter med svart markduk och backdrop. Tre trådlösa headset till talare och produktdemonstratörer, bildtekniker som hanterade presentationer och live-video på LED. Ljudtekniker och ljusoperatör på plats. Riggen skedde dagen före eventet med funktionskontroll kvällen innan.
-result: Produktlanseringen upplevdes som en premium-event av både kund och gäster. LED-skärmen visade produktvideo och live-demo i skarp kvalitet. Trosslösningen gav rymlig gästytan utan att kompromissa med den visuella effekten. Kunden publicerade eventfilm som använt vår produktion som bas. Företaget har anlitat oss vid ytterligare två lanseringar sedan dess.
+location: Helsingborg
+eventType: Storbildsvisning
+guests: ca 4000 personer
+image: /images/vm-storbild-helsingborg-riggning.webp
+imageAlt: Scen med tak och truss riggas på gräsytan inför storbildsvisningen i Helsingborg
 ---
 
-## Bakgrund
+## Uppdraget
 
-Industrilokalen i Lund erbjöd 400 kvm eventyta med 6 meters takhöjd – men inga riggpunkter, ingen scen och dålig akustik. Kunden ville att lanseringen skulle kännas som en stor produktion, inte ett möte i en lokal.
+I juni 2026 visades Sveriges match i fotbolls-VM på storbild i Helsingborg. Det var en offentlig visning, och ungefär 4000 personer kom för att se matchen.
 
-## Varför tross?
+## Det vi levererade
 
-Med gäster på golvet kunde vi inte bygga en statisk scen med stödben som blockerade sikten. Trosslösningen gav:
+Vi byggde scenen och ställde upp LED-skärmen. Vi stod också för sändningen av matchen och för ljudsystemet och mikrofonerna. Skyltningen hängde i truss som vi riggade.
 
-- LED-skärm hängd centralt ovanför scen
-- Scenljus riktat från trossen
-- Ljud som hängdes i takhöjd
-- Fri gästytan runt scenen
+Under hela evenemanget fanns en ljudtekniker och en AV-tekniker från oss på plats.
 
-## Teknisk genomförande
-
-Riggen startade klockan 07:00 dagen före. Tross byggdes och certifierades, LED-moduler hissades och kabeldrasning genomfördes. Ljudprov med kundens talare klockan 18:00. Eventdag med ljudtekniker, ljusoperatör och bildtekniker.
+**Levererat:** scen, LED-skärm, sändning av matchen, ljudsystem, mikrofoner, truss för skyltning, ljudtekniker och AV-tekniker.
 
 ## Relaterade sidor
 
+- [Företagsevent i Helsingborg](/helsingborg/foretagsevent/)
 - [Eventproduktion](/eventproduktion/)
-- [Produktlansering](/produktlansering/)
 - [Scen till event](/scen-till-event/)
 - [Välja scenstorlek](/guider/valja-scenstorlek/)
 - [Projektor eller LED](/guider/projektor-eller-led/)
