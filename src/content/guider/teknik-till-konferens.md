@@ -132,6 +132,6 @@ Vi känner regionen och hjälper er matcha teknik med lokal. Besök vår sida om
 
 ## Nästa steg
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-teknik-till-konferens&sk_ref=%2Fguider%2Fteknik-till-konferens%2F&cta_context=content_body_cta) med konferensdatum, lokal, gästantal och program. Ju mer detaljer ni kan ge, desto bättre förslag. Vi erbjuder komplett [eventteknik](/eventteknik/), [eventproduktion](/eventproduktion/) och tekniker i hela Skåne.
+[Begär offert](/offert/?sk_ref=%2Fguider%2Fteknik-till-konferens%2F&cta_context=content_body_cta) med konferensdatum, lokal, gästantal och program. Ju mer detaljer ni kan ge, desto bättre förslag. Vi erbjuder komplett [eventteknik](/eventteknik/), [eventproduktion](/eventproduktion/) och tekniker i hela Skåne.
 
 Via vårt samarbete med [Festutrustning](https://festutrustning.se/foretag) får ni tillgång till utrustning och erfarenhet från hundratals företagsevent – anpassat till just er konferens.

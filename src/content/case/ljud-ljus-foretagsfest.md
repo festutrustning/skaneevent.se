@@ -40,4 +40,4 @@ Detta case beskriver ett genomfört uppdrag – hur tekniken fungerade i praktik
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/)
 - [Företagsevent i Skåne](/foretagsevent/)
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-ljud-ljus-foretagsfest&sk_ref=%2Fcase%2Fljud-ljus-foretagsfest%2F&cta_context=content_body_cta) för er företagsfest i Skåne.
+[Begär offert](/offert/?sk_ref=%2Fcase%2Fljud-ljus-foretagsfest%2F&cta_context=content_body_cta) för er företagsfest i Skåne.
