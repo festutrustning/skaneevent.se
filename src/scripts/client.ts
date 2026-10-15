@@ -200,7 +200,6 @@ function trackLeadForms() {
 }
 
 type TurnstileApi = {
-  ready: (callback: () => void) => void;
   render: (element: HTMLElement, options: { sitekey: string }) => string;
 };
 
@@ -216,9 +215,7 @@ function mountTurnstile(form: HTMLFormElement) {
   if (!sitekey || !api) return;
   widget.dataset.mounted = '1';
   widget.replaceChildren();
-  api.ready(() => {
-    api.render(widget, { sitekey });
-  });
+  api.render(widget, { sitekey });
 }
 
 function turnstileToken(form: HTMLFormElement): string {
@@ -260,8 +257,13 @@ function initOffertForm() {
 
     const data = new FormData(form);
     const attribution = readQuoteAttribution();
+    const token = turnstileToken(form);
+    if (form.querySelector('.cf-turnstile') && !token) {
+      showError();
+      return;
+    }
     const payload = {
-      turnstile_token: turnstileToken(form),
+      turnstile_token: token,
       lead_uid: leadUid(),
       company: data.get('foretag'),
       contact_name: data.get('kontaktperson'),
