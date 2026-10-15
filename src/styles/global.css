@@ -2446,6 +2446,64 @@ body.menu-open {
   margin: 0 0 1.25rem 1.25rem;
 }
 
+.capacity-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .capacity-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.capacity-grid article {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.capacity-grid h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.capacity-grid p,
+.capacity-grid li {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.capacity-grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capacity-note {
+  max-width: 42rem;
+  margin: 0 0 2.5rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.case-card p + p {
+  margin-top: 0.45rem;
+}
+
+.case-card .case-card-fact {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
 .case-meta {
   display: flex;
   flex-wrap: wrap;

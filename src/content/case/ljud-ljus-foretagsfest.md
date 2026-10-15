@@ -5,6 +5,8 @@ pubDate: 2026-06-13
 location: Helsingborg
 eventType: Företagsfest
 guests: ca 180
+kit: PA med sub, fyra mikrofoner, scen 4×3 m och uplights
+crew: Ljudtekniker. Rigg samma dag
 image: /images/foretagsevent-dj.jpg
 challenge: Ett konsultbolag i Helsingborg skulle hålla årets företagsfest i en hotellball i centrala stan. Programmet inkluderade mingel, middag, tal av VD, prisutdelning till medarbetare och sedan dansgolv med DJ. Hotellballen hade grundbelysning men inget PA-system eller scenljus anpassat för ett dynamiskt program.
 solution: Vi levererade PA-system med subwoofer, fyra trådlösa mikrofoner (headset till toastmaster, handhållna till tal och prisutdelning), scenmoduler 4×3 meter med talarpodium och scenljus. Atmosfärljus vid borden med uplights, spotlights på scen som kunde tändas vid program. Ljudtekniker som hanterade volymväxlingar från mingel till tal till dansgolv. Riggen samma dag med ljudprov en timme före gästernas ankomst.

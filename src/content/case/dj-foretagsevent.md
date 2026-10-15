@@ -5,6 +5,8 @@ pubDate: 2026-06-14
 location: Kristianstad
 eventType: Kick-off / företagsevent
 guests: ca 120
+kit: PA i zoner, scen 4×3 m, projektor och DJ-setup
+crew: Ljudtekniker hela dagen
 image: /images/dj-ljudutrustning.jpg
 challenge: Ett logistikföretag i Kristianstad skulle hålla vår-kick-off i en eventlokal utanför centrum. Programmet kombinerade förmiddagskonferens med tal och presentationer, lunch och eftermiddagsaktiviteter, och avslutades med mingel och DJ. Kunden behövde ljud som fungerade för både tal och dans, plus en DJ-setup som inte såg amatörmässig ut.
 solution: Vi riggade PA-system med separata zoner – huvudsystem för tal och presentationer, förstärkt system vid dansytan. Scenmoduler 4×3 meter med projektor och duk för presentationer, trådlösa mikrofoner till tre talare och en handhållen för Q&A. DJ-bord med monitorer, Pioneer-setup och integration i huvudsystemet. Ljudtekniker på plats hela dagen som hanterade växling mellan konferensläge och DJ-läge.

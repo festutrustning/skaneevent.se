@@ -5,6 +5,8 @@ pubDate: 2026-06-11
 location: Malmö
 eventType: Utomhus företagsevent
 guests: ca 400
+kit: Line array, LED P3.9, scen 8×6 m, väderskydd och generator
+crew: Ljud, ljus och produktionstekniker
 image: /images/led-scen-utomhus.jpg
 challenge: Ett medelstort IT-bolag i Malmö skulle firas 15-årsjubileum med utomhusevent vid havsfronten. Lokalen saknade scen och teknik, och arrangören behövde en lösning som fungerade i dagsljus vid tal, övergick till kvällsprogram med underhållning och höll för eventuellt regn och vind från Öresund.
 solution: Vi riggade en utomhus LED-scen med modulskärm P3.9 som bakgrund, trosskonstruktion med tak över scen och teknik, samt line array-ljud för jämn täckning över hela ytan. Scenmoduler 8×6 meter med trappsteg och räcken, scenljus och frontljus på talare. Tre trådlösa mikrofoner till talare och toastmaster, plus handhållna för prisutdelning. En ljudtekniker och en ljusoperatör på plats hela kvällen, plus produktionstekniker vid rigg. Generator som backup till lokal el.

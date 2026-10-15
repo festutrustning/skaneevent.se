@@ -651,14 +651,88 @@ body.page-home .home-hero :focus-visible {
 
 @media (min-width: 900px) {
   .home-cases {
-    grid-template-columns: 1.35fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1.4fr 1fr 1fr;
     gap: 1.5rem;
   }
 
   .home-case-lead {
+    grid-column: 1;
     grid-row: 1 / span 2;
   }
+}
+
+.home-capacity {
+  display: grid;
+  gap: 1px;
+  margin-top: 2.5rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+@media (min-width: 800px) {
+  .home-capacity {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.home-capacity article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.home-capacity h3 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.home-capacity p,
+.home-capacity li {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.home-capacity ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-capacity a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.home-capacity a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--gold);
+}
+
+.home-capacity-note {
+  margin-top: 1.5rem;
+}
+
+.home-capacity-note a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+}
+
+.home-capacity-note a:hover {
+  color: inherit;
 }
 
 .home-case {
@@ -699,7 +773,7 @@ body.page-home .home-hero :focus-visible {
   width: 100%;
   margin-top: auto;
   padding: 1.5rem;
-  background: linear-gradient(180deg, transparent, rgb(14 26 43 / 0.82) 58%);
+  background: linear-gradient(180deg, transparent, rgb(14 26 43 / 0.92) 46%);
 }
 
 .home-case-copy .home-kicker {
