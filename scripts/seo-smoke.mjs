@@ -145,10 +145,11 @@ else {
 }
 
 // --- SE-0 Helsingborg case → money ownership repair ---
-const caseHbg = readHtml('case/ljud-ljus-foretagsfest');
-if (!caseHbg) fail('dist/case/ljud-ljus-foretagsfest/index.html saknas');
+// Helsingborg-caset är dj-foretagsevent (Hyrox på Majoren CrossFit).
+const caseHbg = readHtml('case/dj-foretagsevent');
+if (!caseHbg) fail('dist/case/dj-foretagsevent/index.html saknas');
 else {
-  if (!caseHbg.includes('canonical') || !caseHbg.includes('/case/ljud-ljus-foretagsfest/')) {
+  if (!caseHbg.includes('canonical') || !caseHbg.includes('/case/dj-foretagsevent/')) {
     fail('SE-0 case canonical self saknas');
   }
   if (/rel=["']canonical["'][^>]*helsingborg\/foretagsevent/i.test(caseHbg)) {
@@ -163,9 +164,9 @@ else {
   if (!caseHbg.includes('application/ld+json') || !caseHbg.includes('Article')) {
     fail('SE-0 case saknar Article JSON-LD');
   }
-  // Title/H1 preserved (no generic deopt)
-  if (!caseHbg.includes('Ljud och ljus till företagsfest i Helsingborg')) {
-    fail('SE-0 case title/H1 får inte ändras i denna repair');
+  // Title/H1 ska vara caset självt, inte en generisk rubrik
+  if (!caseHbg.includes('Hyrox-träning på Majoren CrossFit i Helsingborg')) {
+    fail('SE-0 case title/H1 saknar Helsingborg-kärnan');
   }
 }
 
@@ -178,7 +179,7 @@ else {
   if (/festutrustning\.se.*rel=["']canonical|canonical[^>]*festutrustning/i.test(moneyHbg)) {
     fail('SE-0 money får inte cross-domain canonical');
   }
-  if (!moneyHbg.includes('/case/ljud-ljus-foretagsfest/')) {
+  if (!moneyHbg.includes('/case/dj-foretagsevent/')) {
     fail('SE-0 money saknar länk till case proof');
   }
   if (!moneyHbg.includes('"@type":"Service"') && !moneyHbg.includes('"@type": "Service"')) {
