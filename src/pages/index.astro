@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import FestLink from '../components/FestLink.astro';
 import HomeHero from '../components/HomeHero.astro';
 import FestReviews from '../components/FestReviews.astro';
+import CapacityOverview from '../components/CapacityOverview.astro';
 import { SITE } from '../data/site';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { fetchFestReviews } from '../lib/festutrustning-sync';
@@ -42,12 +43,12 @@ const services = [
   {
     href: '/ljud-ljus-foretagsevent/',
     title: 'Ljud',
-    text: 'PA, mikrofoner och mixer för tal, panel och fest. Dimensionerat efter lokal och publik.',
+    text: 'PA, mikrofoner och mixer för tal och panel. Dimensionerat efter lokal och publik.',
   },
   {
     href: '/ljud-ljus-foretagsevent/',
     title: 'Ljus',
-    text: 'Scenljus och uplights som följer programmet, från middag till dansgolv.',
+    text: 'Scenljus och uplights som följer programmets delar.',
   },
   {
     href: '/scen-till-event/',
@@ -72,18 +73,18 @@ const eventTypes = [
   { href: '/eventproduktion/', label: 'Eventproduktion' },
 ];
 
-const featuredCaseIds = ['utomhus-led-scen-malmo', 'ljud-ljus-foretagsfest', 'tross-led-rigg'] as const;
-
-const delivered: Record<(typeof featuredCaseIds)[number], string> = {
-  'utomhus-led-scen-malmo': 'LED-scen, line array och tekniker utomhus.',
-  'ljud-ljus-foretagsfest': 'PA, scenljus och mikrofoner från mingel till dansgolv.',
-  'tross-led-rigg': 'Tross, hängd LED-skärm och scen i industrilokal.',
-};
+const caseOrder = [
+  'utomhus-led-scen-malmo',
+  'ljud-ljus-foretagsfest',
+  'tross-led-rigg',
+  'konferens-panel',
+  'dj-foretagsevent',
+];
 
 const allCases = await getCollection('cases');
-const featuredCases = featuredCaseIds.flatMap((id) => {
+const showcaseCases = caseOrder.flatMap((id) => {
   const entry = allCases.find((item) => item.id === id);
-  return entry ? [{ entry, delivered: delivered[id] }] : [];
+  return entry ? [entry] : [];
 });
 
 const cities = [
@@ -233,29 +234,49 @@ if (ratingLd) jsonLd.push(ratingLd);
     </div>
   </section>
 
+  <section class="home-band reveal" id="kapacitet" aria-labelledby="kapacitet-heading">
+    <div class="container">
+      <div class="home-split home-split-intro">
+        <div>
+          <p class="home-kicker">Kapacitet</p>
+          <h2 id="kapacitet-heading">Vi sätter in det programmet kräver</h2>
+        </div>
+        <p class="home-prose">
+          Ljud, bild, scen och personal skalas efter lokal, publik och program.
+          Casen nedan är exempel på hur en leverans kan se ut.
+        </p>
+      </div>
+      <CapacityOverview variant="home" />
+    </div>
+  </section>
+
   <section class="home-band home-band-ink reveal" id="case-teaser" aria-labelledby="case-heading">
     <div class="container">
       <div class="home-split home-split-intro">
         <div>
           <p class="home-kicker">Case</p>
-          <h2 id="case-heading">Tre uppdrag i Skåne</h2>
+          <h2 id="case-heading">Så har leveranserna sett ut</h2>
         </div>
-        <p class="home-prose">Egna bilder från genomförda event. Rubrik, ort och vad som levererades.</p>
+        <p class="home-prose">
+          Plats, teknik och personal från uppdrag vi redan kört. Gästantalet gäller det eventet.
+        </p>
       </div>
       <div class="home-cases">
-        {featuredCases.map(({ entry, delivered: line }, index) => (
+        {showcaseCases.map((entry, index) => (
           <a class:list={['home-case', { 'home-case-lead': index === 0 }]} href={`/case/${entry.id}/`}>
             <img
               src={entry.data.image}
               alt={`${entry.data.eventType} i ${entry.data.location}`}
-              width={index === 0 ? 768 : 768}
-              height={1024}
+              width="768"
+              height="1024"
               loading="lazy"
             />
             <div class="home-case-copy">
-              <p class="home-kicker">{entry.data.location}{entry.data.guests ? ` · ${entry.data.guests}` : ''}</p>
+              <p class="home-kicker">{entry.data.location} · {entry.data.eventType}</p>
               <h3>{entry.data.title}</h3>
-              <p>{line}</p>
+              <p>{entry.data.kit}</p>
+              <p>{entry.data.crew}</p>
+              {entry.data.guests && <p>{entry.data.guests} gäster på det här eventet</p>}
             </div>
           </a>
         ))}
@@ -286,7 +307,6 @@ if (ratingLd) jsonLd.push(ratingLd);
   <FestReviews
     limit={3}
     title="Omdömen från genomförda uppdrag"
-    lead="Hämtade från Festutrustning.se."
     reveal
   />
 

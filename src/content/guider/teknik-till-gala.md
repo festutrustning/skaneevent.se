@@ -8,7 +8,7 @@ tags:
   - företagsevent
 ---
 
-En företagsgala ska kännas speciell. Rätt teknik skapar atmosfären som lyfter kvällen från vanlig middag till minnesvärd upplevelse – medan dålig teknik kan sabba stämningen redan vid första tal. Den här guiden fokuserar på teknik till galor och formella företagskvällar i Skåne.
+En företagsgala har tal, film, prisutdelning och ofta musik i samma lokal. Rätt ljud, ljus och scen gör att varje del hörs och syns. Dålig teknik märks redan vid första talet. Den här guiden handlar om teknik till galor och formella företagskvällar i Skåne.
 
 ## Galans tekniska utmaningar
 
@@ -151,7 +151,7 @@ Galor ligger ofta i intervallet 40 000–120 000 kr för teknik beroende på sto
 
 ## Nästa steg
 
-Planerar ni gala i Skåne? [Begär offert](/offert/?sk_ref=%2Fguider%2Fteknik-till-gala%2F&cta_context=content_body_cta) med datum, lokal, gästantal och program. Vi skräddarsyr ljud, ljus, scen och tekniker efter er kväll.
+Planerar ni gala i Skåne? [Begär offert](/offert/?sk_ref=%2Fguider%2Fteknik-till-gala%2F&cta_context=content_body_cta) med datum, lokal, gästantal och program. Vi tar fram ljud, ljus, scen och bemanning efter er kväll.
 
 Vi hjälper företag med [företagsevent](/foretagsevent/) i hela regionen och erbjuder komplett [eventteknik](/eventteknik/). Utrustning och genomförande via [Festutrustning](https://festutrustning.se/foretag) – med erfarenhet av galor från 50 till 500 gäster.
 

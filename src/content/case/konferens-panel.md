@@ -5,6 +5,8 @@ pubDate: 2026-06-15
 location: Malmö
 eventType: Konferens
 guests: ca 200
+kit: Sex bordsmikrofoner, headset, publikmikrofon, projektor och duk
+crew: Ljud- och bildtekniker
 image: /images/konferens-scen.jpg
 challenge: En branschorganisation skulle hålla heldagskonferens i Malmö med keynote, tre parallella spår och avslutande paneldiskussion med sex branschexperter plus moderator. Konferenslokalen hade projektor och grundljud, men panelen krävde fler mikrofoner än lokalen kunde erbjuda, och kunden ville ha professionell bildinspelning av panelen.
 solution: Vi kompletterade lokalens teknik med sex trådlösa bordsmikrofoner till paneldeltagarna, headset till moderator, handhållen mikrofon för publikfrågor och dedikerad ljudmixer med ljudtekniker. Projektor och ny duk för skarpare bild, talaremonitor på scen. Scenmoduler för panelbord och stolar. Bildinspelning med kamera och direktmatning från ljudmixern. Ljudtekniker och bildtekniker på plats hela dagen, med ljudprov 45 minuter före panelstart.

@@ -147,7 +147,7 @@ Be er teknikpartner besöka lokalen i förväg om panelen är central i programm
 ## Relaterade guider
 
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/) – grundläggande ljudplanering
-- [Teknik till konferens](/guider/teknik-till-konferens/) – helhetslösning för konferenser
+- [Teknik till konferens](/guider/teknik-till-konferens/) – ljud, bild och mikrofoner för konferenser
 - [Tekniker på plats](/guider/tekniker-pa-plats/) – varför operatör gör skillnad
 
 ## Nästa steg

@@ -5,6 +5,8 @@ pubDate: 2026-06-12
 location: Lund
 eventType: Produktlansering
 guests: ca 250
+kit: Tross, hängd LED 6×3 m, scen 6×4 m och line array
+crew: Ljud, ljus och bild. Rigg dagen före
 image: /images/rigg-eventteknik.jpg
 challenge: Ett tech-företag i Lund skulle lansera en ny produktlinje i en ombyggd industrilokal. Lokalen hade hög takhöjd men ingen befintlig scen eller teknik. Kunden ville ha en imponerande visuell upplevelse med stor LED-yta, men taket krävde trosslösning eftersom golvyta var begränsad av gästytan.
 solution: Vi byggde en trosskonstruktion med hängd LED-skärm (6×3 meter), riggade line array-ljud och rörliga scenljus i trossen. Scenmoduler 6×4 meter med svart markduk och backdrop. Tre trådlösa headset till talare och produktdemonstratörer, bildtekniker som hanterade presentationer och live-video på LED. Ljudtekniker och ljusoperatör på plats. Riggen skedde dagen före eventet med funktionskontroll kvällen innan.

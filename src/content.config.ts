@@ -30,6 +30,8 @@ const cases = defineCollection({
     location: z.string(),
     eventType: z.string(),
     guests: z.string().optional(),
+    kit: z.string(),
+    crew: z.string(),
     image: z.string(),
     challenge: z.string(),
     solution: z.string(),

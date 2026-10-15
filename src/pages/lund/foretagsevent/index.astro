@@ -21,13 +21,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'lund_foretagsevent_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -43,7 +36,6 @@ const festLinks = [
     { name: 'Lund', href: '/lund/foretagsevent/' },
   ]}
   ogImage="/images/konferens-scen.jpg"
-  festLinks={festLinks}
   serviceName="Företagsevent i Lund"
   faqs={faqs}
 >
@@ -94,7 +86,7 @@ const festLinks = [
 
   <h2>Begär offert för ert Lund-event</h2>
   <p>
-    Berätta om datum, lokal, typ av event och antal deltagare. Vi återkommer med ett skräddarsytt förslag.
-    <OffertLink path="/lund/foretagsevent/">Begär offert</OffertLink> – och låt oss ta hand om tekniken till ert företagsevent i Lund.
+    Berätta om datum, lokal, typ av event och antal deltagare. Ni får ett förslag med utrustning, bemanning och tidsplan. Offerten kostar inget.
+    <OffertLink path="/lund/foretagsevent/">Begär offert</OffertLink>.
   </p>
 </SolutionPage>

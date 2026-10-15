@@ -25,13 +25,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'helsingborg_foretagsevent_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -47,7 +40,6 @@ const festLinks = [
     { name: 'Helsingborg', href: '/helsingborg/foretagsevent/' },
   ]}
   ogImage="/images/foretagsevent-dj.jpg"
-  festLinks={festLinks}
   serviceName="Företagsevent i Helsingborg"
   areaServedName="Helsingborg"
   faqs={faqs}
@@ -121,7 +113,7 @@ const festLinks = [
 
   <h2>Begär offert för ert Helsingborg-event</h2>
   <p>
-    Berätta om datum, lokal, typ av event och antal deltagare. Vi återkommer med ett skräddarsytt förslag.
-    <OffertLink path="/helsingborg/foretagsevent/">Begär offert</OffertLink> – och låt oss ta hand om tekniken till ert företagsevent i Helsingborg.
+    Berätta om datum, lokal, typ av event och antal deltagare. Ni får ett förslag med utrustning, bemanning och tidsplan. Offerten kostar inget.
+    <OffertLink path="/helsingborg/foretagsevent/">Begär offert</OffertLink>.
   </p>
 </SolutionPage>
