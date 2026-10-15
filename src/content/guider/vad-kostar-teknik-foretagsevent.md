@@ -56,6 +56,8 @@ Leverans, uppsättning, funktionskontroll och nedmontering ingår i de flesta of
 
 ## Budget som riktlinje
 
+<!-- TODO Rasmus: bekräfta prisintervallen -->
+
 Som tumregel för medelstora företagsevent i Skåne:
 
 | Typ av event | Ungefärlig teknikbudget |

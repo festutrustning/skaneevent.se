@@ -85,6 +85,8 @@ Koordinerar helheten – ljud, ljus, bild och scen. Relevant vid:
 
 ## Vad tekniker kostar – och vad det sparar
 
+<!-- TODO Rasmus: bekräfta prisintervallen -->
+
 En ljudtekniker för en heldag kostar typiskt 4 000–8 000 kr beroende på omfattning. Ljusoperatör och bildtekniker i liknande range.
 
 Det kan kännas som en extra kostnad – men jämför med:
