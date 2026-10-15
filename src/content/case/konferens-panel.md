@@ -5,7 +5,11 @@ pubDate: 2026-06-15
 location: Malmö
 eventType: Presentation
 kit: Mikrofoner, högtalare och stämningsbelysning
+image: /images/konferens-panel.jpg
+imageAlt: Mikrofon, högtalare och stämningsbelysning vid en presentation
 ---
+
+<!-- Generisk bild, inte från presentationen i Malmö. -->
 
 ## Uppdraget
 

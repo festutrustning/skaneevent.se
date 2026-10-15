@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  PUBLIC_QUOTE_INTAKE_URL = "https://vibncjluhzsuhymwumdt.supabase.co/functions/v1/public-quote-intake"
+
 [[headers]]
   for = "/*"
   [headers.values]
