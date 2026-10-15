@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Vad påverkar priset på eventteknik i Malmö?',
-    a: 'Antal gäster, lokalens förutsättningar, eventets längd, riggtid (samma dag eller dagen före), mängd teknik, scen/LED, bemanning och transport. Vi ger skräddarsydd offert – se även vår guide om vad som kostar teknik till företagsevent.',
+    a: 'Antal gäster, lokalens förutsättningar, eventets längd, riggtid (samma dag eller dagen före), mängd teknik, scen eller LED, bemanning och transport. Vi skickar ett förslag på teknik och pris. Se även vår guide om vad som kostar teknik till företagsevent.',
   },
   {
     q: 'Hur skiljer sig Malmö-leverans från övriga Skåne?',
@@ -26,19 +26,6 @@ const faqs = [
   {
     q: 'Är ni en uthyrningsfirma eller en eventpartner?',
     a: 'Skåne Event är er tekniska eventpartner: vi dimensionerar, planerar och genomför. Utrustningen levereras av samma team via Festutrustning – ni slipper bygga ihop lösningen själva.',
-  },
-];
-
-const festLinks = [
-  {
-    destination: 'ljudLjusMalmo' as const,
-    label: 'Ljud och ljus i Malmö – Festutrustning',
-    context: 'malmo_eventteknik_aside',
-  },
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'malmo_eventteknik_aside',
   },
 ];
 ---
@@ -50,22 +37,21 @@ const festLinks = [
   heroImage="/images/eventproduktion.jpg"
   eyebrow="Eventteknik"
   h1="Eventteknik i Malmö"
-  lead="Ljud, ljus, scen och mikrofoner för företagsevent i Malmö – med lokal närvaro och snabb respons i Öresundsregionen."
+  lead="Utrustningen utgår från Malmö. Ljud, ljus, scen och mikrofoner för företagsevent, med kort resväg i Öresundsregionen."
   breadcrumbs={[
     { name: 'Eventteknik', href: '/eventteknik/' },
     { name: 'Malmö', href: '/malmo/eventteknik/' },
   ]}
   ogImage="/images/eventproduktion.jpg"
-  festLinks={festLinks}
   serviceName="Eventteknik i Malmö"
   faqs={faqs}
 >
   <h2>Eventteknik i Malmö – nära när det behövs</h2>
   <p>
     Malmö är navet för många företagsevent i södra Skåne. Konferenser, kick-offs, produktlanseringar och galor
-    kräver teknik som fungerar – utan krångel och utan onödig väntan. Skåne Event levererar
-    <strong>eventteknik i Malmö</strong> med lokal förankring och samma kvalitet som vår
-    <a href="/eventteknik/">regionala eventteknik i Skåne</a>.
+    kräver teknik som fungerar. Skåne Event levererar
+    <strong>eventteknik i Malmö</strong>. Utrustningen utgår från Malmö, med samma kvalitet som vår
+    <a href="/eventteknik/">eventteknik i hela Skåne</a>.
   </p>
   <p>
     Vi utgår från ert resultat: att presentationen hörs, scenen ser professionell ut och att någon tar ansvar
@@ -99,20 +85,21 @@ const festLinks = [
     <li><strong>Nedrigg</strong> – nedmontering och bortforsling enligt överenskommen tid</li>
   </ol>
   <p>
-    För större upplägg där ni vill att vi tar helhetsansvar för det tekniska genomförandet, se
-    <a href="/eventproduktion/">eventproduktion</a>.
+    För större upplägg, se <a href="/eventproduktion/">eventproduktion</a>. Vi levererar, riggar, kör och plockar ner.
   </p>
 
   <h2>Malmö-logistik och lokaltyper</h2>
   <p>
     Kort resväg från vårt lager i Malmö (Lockarpsvägen) gör det enklare att planera riggfönster, merutrustning
-    och snabb återkomst om något behöver kompletteras. Vi arbetar bland annat med:
+    och snabb återkomst om något behöver kompletteras.
+    <!-- TODO Rasmus: bekräfta att adressen är lagret -->
+    Vi arbetar bland annat med:
   </p>
   <ul>
     <li>Hotell- och konferenslokaler med befintlig grundteknik som behöver kompletteras</li>
     <li>Företagsarena och eventytor utan fast scen</li>
-    <li>Utomhusytor där väder, el och lastning styr upplägget – som i vårt
-      <a href="/case/utomhus-led-scen-malmo/">utomhuscase i Västra Hamnen</a></li>
+    <li>Utomhusytor där väder, el och lastning styr upplägget, som takterrassen i Hyllie i vårt
+      <a href="/case/utomhus-led-scen-malmo/">case om kontorsinvigningen</a></li>
   </ul>
   <p>
     Citylogistik handlar ofta om lastzon, hiss, tidiga/sena accessfönster och samordning med lokalens personal.
@@ -141,18 +128,19 @@ const festLinks = [
   <p>Så här har tekniken sett ut i praktiken:</p>
   <ul>
     <li>
-      <a href="/case/konferens-panel/">Konferens med paneldiskussion</a> – ca 200 deltagare, mikrofoner,
-      bild och tekniker på plats
+      <a href="/case/konferens-panel/">Presentation för ett finansbolag</a>: mikrofoner, högtalare och
+      stämningsbelysning för inbjudna gäster
     </li>
     <li>
-      <a href="/case/utomhus-led-scen-malmo/">Utomhus LED-scen</a> – ca 400 gäster, line array, LED och
-      tekniker under hela kvällen
+      <a href="/case/utomhus-led-scen-malmo/">Kontorsinvigning på takterrass i Hyllie</a>, ca 100 gäster:
+      ljud, ljus, DJ och konfetti, med utsikt över Öresund och bron
     </li>
   </ul>
   <p>
-    Fler exempel finns under <a href="/case/">case</a>. Relaterade guider:
-    <a href="/guider/teknik-till-konferens/">teknik till konferens</a> och
-    <a href="/guider/tekniker-pa-plats/">tekniker på plats</a>.
+    <!-- TODO Rasmus: antal gäster och lokal för finansbolagets presentation i Malmö -->
+    Fler exempel finns under <a href="/case/">case</a>.
+    <a href="/eventteknik/">Eventteknik i hela Skåne</a>.
+    <a href="/malmo/foretagsevent/">Planera ett företagsevent i Malmö</a>.
   </p>
 
   <h2>Planering som minskar stress på eventdagen</h2>
@@ -164,8 +152,8 @@ const festLinks = [
 
   <h2>Begär offert för eventteknik i Malmö</h2>
   <p>
-    Beskriv ert event – datum, lokal, typ och antal deltagare. Vi återkommer med ett tekniskt förslag.
-    <OffertLink path="/malmo/eventteknik/">Begär offert</OffertLink> – ni behöver inte veta exakt vilken
+    Beskriv ert event: datum, lokal, typ och antal deltagare. Vi återkommer med ett tekniskt förslag.
+    <OffertLink path="/malmo/eventteknik/">Begär offert</OffertLink>. Ni behöver inte veta exakt vilken
     utrustning som krävs.
   </p>
 </SolutionPage>

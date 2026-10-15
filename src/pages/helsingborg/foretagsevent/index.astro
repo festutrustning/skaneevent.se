@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: 'Har ni erfarenhet av lokaler i Helsingborg?',
-    a: 'Ja. Vi känner till vanliga venue i Helsingborg och kan samordna tekniken med lokalens personal. Se även vårt case om ljud och ljus till företagsfest i Helsingborg.',
+    a: 'Ja. Vi har riggat på Majoren CrossFit och samordnar tekniken med lokalens personal.',
   },
   {
     q: 'Kan ni hantera både konferenser och galor i Helsingborg?',
-    a: 'Absolut. Vi levererar teknik till konferenser, kick-offs, produktlanseringar, galor och företagsfester.',
+    a: 'Ja. Vi levererar teknik till konferenser, kick-offs, produktlanseringar, galor och företagsfester.',
   },
   {
     q: 'Levererar ni även till närliggande orter som Landskrona?',
@@ -25,13 +25,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'helsingborg_foretagsevent_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -41,33 +34,35 @@ const festLinks = [
   heroImage="/images/foretagsevent-dj.jpg"
   eyebrow="Helsingborg"
   h1="Företagsevent i Helsingborg"
-  lead="Eventteknik för företagsevent i Helsingborg – konferenser, galor och kick-offs med lokal närvaro i nordvästra Skåne."
+  lead="Eventteknik för företagsevent i Helsingborg. Konferenser, galor och kick-offs med lokal närvaro i nordvästra Skåne."
   breadcrumbs={[
     { name: 'Företagsevent', href: '/foretagsevent/' },
     { name: 'Helsingborg', href: '/helsingborg/foretagsevent/' },
   ]}
   ogImage="/images/foretagsevent-dj.jpg"
-  festLinks={festLinks}
   serviceName="Företagsevent i Helsingborg"
   areaServedName="Helsingborg"
   faqs={faqs}
 >
-  <h2>Företagsevent i Helsingborg – teknik för nordvästra Skåne</h2>
+  <h2>Konferens och publika event i Helsingborg</h2>
   <p>
-    Helsingborg är en viktig eventstad i nordvästra Skåne. Här arrangeras företagskonferenser, kick-offs,
-    produktlanseringar och galor i allt från centrala hotell till konferensanläggningar med utsikt över
-    Öresund. Skåne Event är er partner för <strong>företagsevent i Helsingborg</strong> med fokus på
-    eventteknik som håller hela programmet.
+    I december 2025 riggade vi ljud, ljus, DJ-utrustning, omgivningsbelysning och truss till ett
+    Hyrox-träningspass på Majoren CrossFit, med omkring 200 deltagare. I juni 2026 satte vi scen,
+    LED-skärm, sändning, ljud, mikrofoner och truss för skyltning till en offentlig storbildsvisning
+    av Sveriges match i fotbolls-VM, med omkring 4000 personer och ljudtekniker och AV-tekniker på plats.
   </p>
   <p>
-    Vi levererar samma kvalitet som våra kunder i hela <a href="/foretagsevent/">Skåne</a> – med god
-    kännedom om Helsingborgs lokaler och logistik i nordvästra regionen.
+    Vi är teknikleverantör till konferenser, träningsevent och publika visningar i Helsingborg.
+    Läs mer om <a href="/konferens/">konferens</a>,
+    <a href="/case/dj-foretagsevent/">Hyrox-passet</a> och
+    <a href="/case/tross-led-rigg/">VM-visningen</a>.
   </p>
+  <!-- TODO Rasmus: fler lokaler i Helsingborg som får nämnas -->
   <p>
-    Behöver ni en teknisk eventleverans snarare än att hyra utrustning styckvis? Vi tar ansvar för
-    planering, rigg och genomförande av ljud, ljus, scen och bild – och kan bemanna med tekniker när
-    programmet kräver det. Mer om vår regionala
-    <a href="/eventteknik/">eventteknik i Skåne</a>.
+    Behöver ni en teknisk leverans i stället för att bara få utrustning levererad? Vi planerar, riggar
+    och kör ljud, ljus, scen och bild, och kan ha tekniker på plats när programmet kräver det.
+    Mer om <a href="/eventteknik/">eventteknik i Skåne</a> och
+    <a href="/foretagsevent/">företagsevent i Skåne</a>.
   </p>
 
   <h2>Event i Helsingborgs olika miljöer</h2>
@@ -97,19 +92,20 @@ const festLinks = [
   </p>
 
   <h2>Case från Helsingborg</h2>
-  <p>
-    Så här har en teknisk leverans sett ut i praktiken – utan att ersätta den här sidans erbjudande:
-  </p>
+  <p>Så här har tekniska leveranser i Helsingborg sett ut:</p>
   <ul>
     <li>
-      <a href="/case/ljud-ljus-foretagsfest/">Ljud och ljus till företagsfest i Helsingborg</a>
-      – mingel, middag, tal/prisutdelning och dansgolv för ca 180 gäster, med tekniker på plats
+      <a href="/case/dj-foretagsevent/">Hyrox-träning på Majoren CrossFit</a>, ca 200 deltagare: ljud, ljus,
+      DJ-utrustning, omgivningsbelysning och truss
+    </li>
+    <li>
+      <a href="/case/tross-led-rigg/">Storbildsvisning av fotbolls-VM</a>, ca 4000 personer: scen, LED-skärm,
+      ljud, sändning och tekniker på plats
+    </li>
+    <li>
+      <a href="/case/ljud-ljus-foretagsfest/">Ljud och ljus till företagsfest</a>
     </li>
   </ul>
-  <p>
-    Casen visar genomförande och resultat. Den här sidan beskriver vad ni kan beställa för nästa event i
-    Helsingborg.
-  </p>
 
   <h2>Helsingborg och nordvästra Skåne</h2>
   <p>
@@ -121,7 +117,7 @@ const festLinks = [
 
   <h2>Begär offert för ert Helsingborg-event</h2>
   <p>
-    Berätta om datum, lokal, typ av event och antal deltagare. Vi återkommer med ett skräddarsytt förslag.
-    <OffertLink path="/helsingborg/foretagsevent/">Begär offert</OffertLink> – och låt oss ta hand om tekniken till ert företagsevent i Helsingborg.
+    Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris.
+    <OffertLink path="/helsingborg/foretagsevent/">Begär offert</OffertLink>. Vi tar hand om tekniken till ert företagsevent i Helsingborg.
   </p>
 </SolutionPage>

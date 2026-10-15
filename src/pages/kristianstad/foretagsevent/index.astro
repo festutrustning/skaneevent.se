@@ -20,14 +20,6 @@ const faqs = [
     a: 'Omfattningen styrs främst av lokal, antal deltagare, program (tal/panel/scen/fest), behov av tekniker på plats och hur lång riggtid som krävs. Avstånd inom Skåne är sällan den stora kostnadsdrivaren.',
   },
 ];
-
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'kristianstad_foretagsevent_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -43,7 +35,6 @@ const festLinks = [
     { name: 'Kristianstad', href: '/kristianstad/foretagsevent/' },
   ]}
   ogImage="/images/hero-foretagsevent.jpg"
-  festLinks={festLinks}
   serviceName="Företagsevent i Kristianstad"
   areaServedName="Kristianstad"
   faqs={faqs}
@@ -56,8 +47,8 @@ const festLinks = [
     <strong>eventpartner för företagsevent i Kristianstad</strong> – inte bara en uthyrningsfirma.
   </p>
   <p>
-    Ni får samma helhetsansvar som våra kunder i övriga
-    <a href="/foretagsevent/">Skåne</a>: behovsanalys, teknikdimensionering, rigg och genomförande –
+    Ni får samma upplägg som våra kunder i övriga
+    <a href="/foretagsevent/">Skåne</a>: vi levererar, riggar, kör och plockar ner,
     med tydlig kontaktperson hela vägen.
   </p>
 
@@ -70,7 +61,7 @@ const festLinks = [
     <li>Invigningar och interna heldagar där teknik och tidsplan måste hålla</li>
   </ul>
 
-  <h2>Helhetsleverans – eventproduktion före produktlista</h2>
+  <h2>Så levererar vi i Kristianstad</h2>
   <p>
     Vårt uppdrag är att se till att programmet fungerar. Det betyder att vi tänker i flöden: hur talaren
     hörs, hur presentationen syns, hur ljuset stöttar stämningen och hur övergångar mellan
@@ -113,6 +104,12 @@ const festLinks = [
     park-miljöer, hotellkonferens och eventlokaler utanför centrum. Vi nämner dem som typiska
     förutsättningar – inte som platser där vi automatiskt har levererat. Oavsett venue anpassar vi
     tekniken till akustik, dagsljus, lastning och lokalens egen utrustning.
+    <!-- TODO Rasmus: lokaler i Kristianstad där ni har jobbat -->
+  </p>
+  <p>
+    Se även <a href="/eventteknik/">eventteknik</a>,
+    <a href="/lund/foretagsevent/">företagsevent i Lund</a> och
+    <a href="/malmo/foretagsevent/">företagsevent i Malmö</a>.
   </p>
 
   <h2>Case: kick-off med konferens och DJ i Kristianstad</h2>
@@ -144,7 +141,7 @@ const festLinks = [
   <h2>Begär offert för företagsevent i Kristianstad</h2>
   <p>
     Berätta om ert upplägg så återkommer vi med ett konkret förslag.
-    <OffertLink path="/kristianstad/foretagsevent/">Begär offert</OffertLink>
-    – och låt oss ta helhetsansvar för tekniken till ert företagsevent i Kristianstad.
+    <OffertLink path="/kristianstad/foretagsevent/">Begär offert</OffertLink>.
+    Vi levererar, riggar, kör och plockar ner.
   </p>
 </SolutionPage>
