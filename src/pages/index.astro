@@ -1,15 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FestLink from '../components/FestLink.astro';
 import HomeHero from '../components/HomeHero.astro';
-import FestReviews from '../components/FestReviews.astro';
-import { SITE } from '../data/site';
+import FestLink from '../components/FestLink.astro';
 import { offertEventUrlForPath } from '../data/festutrustning-links';
-import { fetchFestReviews } from '../lib/festutrustning-sync';
+import { SITE } from '../data/site';
 import { buildServiceLd } from '../components/seo/serviceLd';
 import { buildFaqLd, faqIdFromQuestion } from '../components/seo/faqLd';
-import { buildAggregateRatingLd } from '../components/seo/aggregateRatingLd';
 import '../styles/home.css';
 
 const offertWhyHref = offertEventUrlForPath('/', 'home_why_cta');
@@ -22,7 +19,7 @@ const faqs = [
   },
   {
     q: 'Hur begär jag offert?',
-    a: 'Fyll i formuläret på Begär offert. Beskriv datum, ort, typ av event och vad ni behöver hjälp med – vi återkommer med ett skräddarsytt förslag.',
+    a: 'Fyll i formuläret på Begär offert med datum, ort, typ av event och vad ni behöver hjälp med. Vi återkommer med ett förslag på teknik och pris.',
   },
   {
     q: 'Levererar ni i hela Skåne?',
@@ -30,7 +27,7 @@ const faqs = [
   },
   {
     q: 'Kan ni hjälpa till med rigg och tekniker?',
-    a: 'Absolut. Vi erbjuder leverans, uppsättning, funktionskontroll och nedmontering. Tekniker kan finnas på plats under eventet vid behov.',
+    a: 'Ja. Vi erbjuder leverans, uppsättning, funktionskontroll och nedmontering. Tekniker kan finnas på plats under eventet vid behov.',
   },
   {
     q: 'Vilka typer av företagsevent hjälper ni till med?',
@@ -42,12 +39,12 @@ const services = [
   {
     href: '/ljud-ljus-foretagsevent/',
     title: 'Ljud',
-    text: 'PA, mikrofoner och mixer för tal, panel och fest. Dimensionerat efter lokal och publik.',
+    text: 'PA för tal och panel, och musik när programmet kräver det. Dimensionerat efter lokal och publik.',
   },
   {
     href: '/ljud-ljus-foretagsevent/',
     title: 'Ljus',
-    text: 'Scenljus och uplights som följer programmet, från middag till dansgolv.',
+    text: 'Scenljus och uplights som följer programmet, från tal och middag till kvällens musik.',
   },
   {
     href: '/scen-till-event/',
@@ -138,8 +135,6 @@ const steps = [
   },
 ];
 
-const reviews = await fetchFestReviews(12);
-const ratingLd = buildAggregateRatingLd(reviews);
 const faqLd = buildFaqLd(faqs);
 
 const jsonLd: Record<string, unknown>[] = [
@@ -157,7 +152,6 @@ const jsonLd: Record<string, unknown>[] = [
 if (faqLd) {
   jsonLd.push({ ...faqLd, '@id': 'https://skaneevent.se/#faq' });
 }
-if (ratingLd) jsonLd.push(ratingLd);
 ---
 
 <BaseLayout
@@ -169,33 +163,6 @@ if (ratingLd) jsonLd.push(ratingLd);
   cinematicHome
 >
   <HomeHero />
-
-  <section class="home-band reveal" aria-label="Skåne Event i siffror">
-    <div class="container">
-      <div class="home-split">
-        <div>
-          <h2>Skåne Event i siffror</h2>
-          <p class="home-prose">
-            Bas på {SITE.address.street} i {SITE.address.city}. Leverans och rigg i hela Skåne.
-          </p>
-        </div>
-        <dl class="home-facts">
-          <div>
-            <dt>Genomförda event</dt>
-            <dd>250+</dd>
-          </div>
-          <div>
-            <dt>År i branschen</dt>
-            <dd>4</dd>
-          </div>
-          <div>
-            <dt>Svarstid</dt>
-            <dd>24 h</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </section>
 
   <section class="home-band home-band-muted reveal" id="tjanster" aria-labelledby="tjanster-heading">
     <div class="container">
@@ -283,12 +250,7 @@ if (ratingLd) jsonLd.push(ratingLd);
     </div>
   </section>
 
-  <FestReviews
-    limit={3}
-    title="Omdömen från genomförda uppdrag"
-    lead="Hämtade från Festutrustning.se."
-    reveal
-  />
+  <!-- TODO Rasmus: riktiga B2B-omdömen -->
 
   <section class="home-band reveal" id="omraden" aria-labelledby="areas-heading">
     <div class="container">
