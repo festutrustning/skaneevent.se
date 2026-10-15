@@ -6,8 +6,8 @@ location: Helsingborg
 eventType: Träningsevent
 guests: ca 200 deltagare
 kit: Ljud, ljus, DJ-utrustning, omgivningsbelysning och truss
-image: /images/dj-ljudutrustning.jpg
-imageAlt: DJ- och ljudutrustning
+image: /images/rigg-eventteknik.jpg
+imageAlt: Isac och Noah riggar truss på en flightcase i Majoren CrossFit
 ---
 
 ## Uppdraget

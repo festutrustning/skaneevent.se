@@ -47,8 +47,8 @@ const I = {
   },
   rigg: {
     src: '/images/rigg-eventteknik.jpg',
-    alt: 'Rigg av tross och LED inför företagsevent',
-    caption: 'Rigg av tross och LED',
+    alt: 'Truss riggas på en flightcase i Majoren CrossFit',
+    caption: 'Truss på Majoren CrossFit',
   },
   ljudLjus: {
     src: '/images/ljud-ljus-utrustning.jpg',

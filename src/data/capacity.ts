@@ -3,17 +3,15 @@ export const capacityBlocks = [
     title: 'Ljud',
     text: 'Zon-PA och tal i en lokal, eller line array över en öppen yta. Ljudet dimensioneras efter rummet och programmet.',
     examples: [
-      { href: '/case/dj-foretagsevent/', label: 'Zoner och DJ i Kristianstad' },
-      { href: '/case/utomhus-led-scen-malmo/', label: 'Line array på utomhusscen i Malmö' },
+      { href: '/case/dj-foretagsevent/', label: 'Ljud och DJ på Hyrox i Helsingborg' },
+      { href: '/case/utomhus-led-scen-malmo/', label: 'Ljud till invigning i Hyllie' },
     ],
   },
   {
     title: 'Bild',
     text: 'Projektor i konferenslokal, hängd LED i tross, eller LED som syns i dagsljus utomhus. Ytan följer lokalen och innehållet.',
     examples: [
-      { href: '/case/konferens-panel/', label: 'Projektor till panel i Malmö' },
-      { href: '/case/tross-led-rigg/', label: 'Hängd LED 6×3 m i Lund' },
-      { href: '/case/utomhus-led-scen-malmo/', label: 'Dagsljus-LED utomhus i Malmö' },
+      { href: '/case/tross-led-rigg/', label: 'LED-skärm till VM-visning i Helsingborg' },
     ],
   },
   {
@@ -21,16 +19,16 @@ export const capacityBlocks = [
     text: 'Modulscen, tross, väderskydd och reservel. Vi bygger efter programmet: tal, panel, lansering eller utomhuskväll.',
     examples: [
       { href: '/guider/valja-scenstorlek/', label: 'Så väljer ni scenstorlek' },
-      { href: '/case/tross-led-rigg/', label: 'Tross och scen i Lund' },
-      { href: '/case/utomhus-led-scen-malmo/', label: 'Utomhusscen med väderskydd' },
+      { href: '/case/tross-led-rigg/', label: 'Scen och truss till VM-visning i Helsingborg' },
+      { href: '/case/dj-foretagsevent/', label: 'Truss på Majoren CrossFit' },
     ],
   },
   {
     title: 'Personal',
     text: 'Ljud, ljus, bild och produktion, bemannat efter programmet. En ljudtekniker kan räcka en kväll. Lansering och utomhus har flera roller, och rigg kan börja dagen före.',
     examples: [
-      { href: '/case/ljud-ljus-foretagsfest/', label: 'En ljudtekniker på företagsfest' },
-      { href: '/case/tross-led-rigg/', label: 'Ljud, ljus och bild i Lund' },
+      { href: '/case/ljud-ljus-foretagsfest/', label: 'DJ på firmafest i Lund' },
+      { href: '/case/tross-led-rigg/', label: 'Ljudtekniker och AV-tekniker i Helsingborg' },
       { href: '/guider/tekniker-pa-plats/', label: 'När tekniker är på plats' },
     ],
   },
@@ -41,6 +39,6 @@ export const capacityClose = {
   links: [
     { href: '/gala/', label: 'Gala' },
     { href: '/julfest/', label: 'Julfest' },
-    { href: '/case/ljud-ljus-foretagsfest/', label: 'företagsfesten i Helsingborg' },
+    { href: '/case/ljud-ljus-foretagsfest/', label: 'firmafesten i Lund' },
   ],
 } as const;

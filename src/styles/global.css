@@ -2082,6 +2082,7 @@ body.menu-open {
 
 .landing-layout {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.5rem;
 }
 
@@ -2786,7 +2787,9 @@ body.menu-open {
 
 .prose-page,
 .landing-prose {
-  max-width: 68ch;
+  min-width: 0;
+  max-width: min(68ch, 100%);
+  overflow-wrap: anywhere;
 }
 
 .eyebrow {

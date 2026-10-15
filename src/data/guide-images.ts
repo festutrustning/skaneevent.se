@@ -23,7 +23,7 @@ export const GUIDE_IMAGES: Record<string, GuideImage> = {
   },
   'valja-scenstorlek': {
     src: '/images/rigg-eventteknik.jpg',
-    alt: 'Rigg av tross och scen inför företagsevent',
+    alt: 'Truss riggas på en flightcase i Majoren CrossFit',
     caption: 'Scen och tross dimensioneras efter programmet',
   },
   'mikrofoner-paneldiskussion': {
