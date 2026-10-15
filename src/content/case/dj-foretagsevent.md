@@ -1,36 +1,30 @@
 ---
-title: DJ och ljud till företagsevent i Kristianstad
-description: Case om DJ, ljudutrustning och eventteknik till företagsevent i Kristianstad – kick-off med 120 medarbetare.
+title: Ljud, ljus och DJ till Hyrox-träning på Majoren CrossFit i Helsingborg
+description: Ljud, ljus, DJ-utrustning och truss när världsstjärnor från Hyrox körde ett träningspass med cirka 200 deltagare på Majoren CrossFit, december 2025.
 pubDate: 2026-06-14
-location: Kristianstad
-eventType: Kick-off / företagsevent
-guests: ca 120
-kit: PA i zoner, scen 4×3 m, projektor och DJ-setup
-crew: Ljudtekniker hela dagen
+location: Helsingborg
+eventType: Träningsevent
+guests: ca 200 deltagare
+kit: Ljud, ljus, DJ-utrustning, omgivningsbelysning och truss
 image: /images/dj-ljudutrustning.jpg
-challenge: Ett logistikföretag i Kristianstad skulle hålla vår-kick-off i en eventlokal utanför centrum. Programmet kombinerade förmiddagskonferens med tal och presentationer, lunch och eftermiddagsaktiviteter, och avslutades med mingel och DJ. Kunden behövde ljud som fungerade för både tal och dans, plus en DJ-setup som inte såg amatörmässig ut.
-solution: Vi riggade PA-system med separata zoner – huvudsystem för tal och presentationer, förstärkt system vid dansytan. Scenmoduler 4×3 meter med projektor och duk för presentationer, trådlösa mikrofoner till tre talare och en handhållen för Q&A. DJ-bord med monitorer, Pioneer-setup och integration i huvudsystemet. Ljudtekniker på plats hela dagen som hanterade växling mellan konferensläge och DJ-läge.
-result: Kick-offen upplevdes som genomtänkt och professionell. Förmiddagens presentationer flöt utan tekniska avbrott, och övergången till eftermiddagens mingel och DJ var smidig. Medarbetarna dansade till midnatt – ljudteknikern höll volymen på rätt nivå hela kvällen. HR-chefen berömde att de slapp tänka på teknik och kunde fokusera på innehållet.
+imageAlt: DJ- och ljudutrustning
 ---
 
-## Bakgrund
+## Uppdraget
 
-Kick-offs kombinerar ofta seriöst innehåll med fest – och tekniken måste hantera båda. Kunden hade tidigare hyrt DJ-utrustning separat och hanterat konferensljud själva, med dåligt resultat vid övergången.
+I december 2025 kom världsstjärnor från ett Hyrox-event i Köpenhamn över till Helsingborg. På Majoren CrossFit körde de ett uppskruvat träningspass tillsammans med gymmets medlemmar, och ungefär 200 personer deltog.
 
-## Teknisk lösning
+## Det vi levererade
 
-**Konferensläge** – Tydligt tal via headset och handhållna mikrofoner, projektor med talarnas presentationer, låg bakgrundsmusik vid pauser.
+Vi stod för ljud, ljus och DJ-utrustning. Vi byggde också en trussrigg och satte upp omgivningsbelysning i lokalen.
 
-**DJ-läge** – Samma PA-system omkonfigurerat med mer bas och dynamik. DJ-bord med professionell setup, inte en laptop och högtalare.
+**Levererat:** ljud, ljus, DJ-utrustning, omgivningsbelysning och truss.
 
-**En tekniker, hela dagen** – Samma ljudtekniker hanterade båda lägena och visste exakt när omställningen skulle ske.
+## Relaterade sidor
 
-## Tips för liknande event
-
-Planera körschemat med tekniker i god tid. Kick-offs med konferens + fest behöver tydliga tidpunkter för teknikskiften.
-
-Se vår guide [tekniker på plats](/guider/tekniker-pa-plats/) och [ljud till företagsevent](/guider/ljud-till-foretagsevent/).
-
-Se även [företagsevent i Kristianstad](/kristianstad/foretagsevent/) för hur vi arbetar lokalt som eventpartner.
+- [Företagsevent i Helsingborg](/helsingborg/foretagsevent/)
+- [Eventteknik](/eventteknik/)
+- [Ljud och ljus till företagsevent](/ljud-ljus-foretagsevent/)
+- [Ljud till företagsevent](/guider/ljud-till-foretagsevent/)
 
 [Begär offert](/offert/?sk_ref=%2Fcase%2Fdj-foretagsevent%2F&cta_context=content_body_cta) för kick-off eller företagsevent i Skåne.

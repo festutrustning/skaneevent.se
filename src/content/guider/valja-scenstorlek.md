@@ -80,7 +80,7 @@ Utomhusevent i Skåne ställer extra krav:
 - **Tillstånd** – Bygglov eller tillstånd vid offentlig plats
 - **El** – Generator eller tillräcklig kapacitet
 
-Utomhus LED-scener kräver ofta tross och fundament. Se vårt [case om utomhus LED-scen i Malmö](/case/utomhus-led-scen-malmo/) för ett exempel.
+Utomhus LED-scener kräver ofta tross och fundament. Se vårt [case om scen och LED-skärm i Helsingborg](/case/tross-led-rigg/) för ett exempel.
 
 ## Scen och bild
 

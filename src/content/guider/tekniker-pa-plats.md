@@ -137,7 +137,7 @@ Vi erbjuder detta som alternativ – men var ärliga med er kompetens. Ett enkla
 
 **Panel** – Ljudtekniker med erfarenhet av panelmix. Se [mikrofoner till paneldiskussion](/guider/mikrofoner-paneldiskussion/).
 
-**Utomhus** – Produktionstekniker med erfarenhet av utomhus. Se [case om utomhus LED-scen](/case/utomhus-led-scen-malmo/).
+**Utomhus** – Produktionstekniker med erfarenhet av utomhus. Se [case om storbildsvisning i Helsingborg](/case/tross-led-rigg/).
 
 **Företagsfest med DJ** – Ljudtekniker som hanterar både tal och dansgolv.
 

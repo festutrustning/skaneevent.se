@@ -264,18 +264,20 @@ if (ratingLd) jsonLd.push(ratingLd);
       <div class="home-cases">
         {showcaseCases.map((entry, index) => (
           <a class:list={['home-case', { 'home-case-lead': index === 0 }]} href={`/case/${entry.id}/`}>
-            <img
-              src={entry.data.image}
-              alt={`${entry.data.eventType} i ${entry.data.location}`}
-              width="768"
-              height="1024"
-              loading="lazy"
-            />
+            {entry.data.image && (
+              <img
+                src={entry.data.image}
+                alt={entry.data.imageAlt ?? `${entry.data.eventType} i ${entry.data.location}`}
+                width="768"
+                height="1024"
+                loading="lazy"
+              />
+            )}
             <div class="home-case-copy">
               <p class="home-kicker">{entry.data.location} · {entry.data.eventType}</p>
               <h3>{entry.data.title}</h3>
-              <p>{entry.data.kit}</p>
-              <p>{entry.data.crew}</p>
+              {entry.data.kit && <p>{entry.data.kit}</p>}
+              {entry.data.crew && <p>{entry.data.crew}</p>}
               {entry.data.guests && <p>{entry.data.guests} gäster på det här eventet</p>}
             </div>
           </a>

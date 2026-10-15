@@ -1,44 +1,30 @@
 ---
-title: Utomhus LED-scen i Malmö – sommarkväll med 400 gäster
-description: Case om utomhus LED-scen och eventteknik till företagsevent i Malmö – ljud, ljus, scen och tekniker på plats en sommarkväll.
+title: Ljud, ljus, DJ och konfetti till kontorsinvigning på takterrass i Hyllie
+description: Ljud, ljus, DJ och konfetti när ett dentalföretag invigde sitt nya kontor med cirka 100 gäster på en takterrass i Hyllie, juni 2026.
 pubDate: 2026-06-11
-location: Malmö
-eventType: Utomhus företagsevent
-guests: ca 400
-kit: Line array, LED P3.9, scen 8×6 m, väderskydd och generator
-crew: Ljud, ljus och produktionstekniker
-image: /images/led-scen-utomhus.jpg
-challenge: Ett medelstort IT-bolag i Malmö skulle firas 15-årsjubileum med utomhusevent vid havsfronten. Lokalen saknade scen och teknik, och arrangören behövde en lösning som fungerade i dagsljus vid tal, övergick till kvällsprogram med underhållning och höll för eventuellt regn och vind från Öresund.
-solution: Vi riggade en utomhus LED-scen med modulskärm P3.9 som bakgrund, trosskonstruktion med tak över scen och teknik, samt line array-ljud för jämn täckning över hela ytan. Scenmoduler 8×6 meter med trappsteg och räcken, scenljus och frontljus på talare. Tre trådlösa mikrofoner till talare och toastmaster, plus handhållna för prisutdelning. En ljudtekniker och en ljusoperatör på plats hela kvällen, plus produktionstekniker vid rigg. Generator som backup till lokal el.
-result: Eventet genomfördes felfritt trots blåst från havet. Tal och prisutdelning på eftermiddagen sågs tydligt på LED-skärmen även i dagsljus. Kvällsprogrammet med band och dansgolv levererades med fullt ljus- och ljudprogram. Kunden berömde särskilt att teknikerna löste en akut mikrofonfråga utan att gästerna märkte det. Arrangören har bokat om oss till nästa års jubileum.
+location: Malmö (Hyllie)
+eventType: Kontorsinvigning
+guests: ca 100 gäster
+kit: Ljud, ljus, DJ och konfetti
+image: /images/takterrass-hyllie-utsikt.webp
+imageAlt: Utsikt från takterrassen i Hyllie mot Öresund och Öresundsbron
 ---
 
-## Bakgrund
+## Uppdraget
 
-Kunden arrangerar årligen ett större event för medarbetare och partners. Tidigare år hade de använt inomhuslokaler, men 15-årsjubileet skulle hållas utomhus vid en eventyta i Västra Hamnen – med havet som bakgrund och plats för 400 gäster.
+I juni 2026 invigde ett dentalföretag sitt nya kontor i Hyllie i Malmö. Festen hölls på takterrassen, med utsikt över Öresund och bron, och ungefär 100 gäster var där.
 
-## Tekniska utmaningar
+## Det vi levererade
 
-Utomhusevent i Skåne ställer särskilda krav:
+Vi stod för ljud, ljus och DJ. När lokalen formellt skulle invigas sköt vi konfetti.
 
-- **Väder** – Vind, regn och temperaturförändringar påverkar både utrustning och gäster
-- **Dagsljus** – Tal och presentationer på eftermiddagen kräver kraftfull LED, inte projektor
-- **Ljudspridning** – Öppen yta utan väggar kräver riktat ljud
-- **El** – Begränsad kapacitet i utomhusel krävde noggrann planering
-- **Logistik** – Lastning, rigg och nedmontering vid en aktiv eventyta
+**Levererat:** ljud, ljus, DJ och konfetti till invigningen.
 
-## Vår lösning i detalj
+## Relaterade sidor
 
-**Scen och LED** – Modulscen 8×6 meter med trosskonstruktion och väderskyddat tak. LED-skärm P3.9 som backdrop med kundens logo och dynamiskt innehåll under kvällen.
+- [Eventteknik i Malmö](/malmo/eventteknik/)
+- [Företagsevent i Malmö](/malmo/foretagsevent/)
+- [Ljud och ljus till företagsevent](/ljud-ljus-foretagsevent/)
+- [Eventteknik](/eventteknik/)
 
-**Ljud** – Line array-system riktat mot publikytan, subwoofer för kvällsunderhållning, monitorer på scen. Trådlösa headset till toastmaster, handhållna till prisutdelning.
-
-**Ljus** – Frontljus på talare, bakgrundsbelysning på LED, dynamiskt ljusprogram för kvällsunderhållning och dansgolv.
-
-**Personal** – Produktionstekniker vid rigg, ljudtekniker och ljusoperatör under eventet.
-
-## Lärdomar
-
-Utomhusevent kräver alltid backup-plan för väder. Vi hade presenningar redo och generator som reserv. Ett tidigt lokalbesök hade sparat tid vid riggen – något vi nu alltid rekommenderar.
-
-Planerar ni liknande leverans? Se [eventteknik i Malmö](/malmo/eventteknik/), [eventproduktion](/eventproduktion/) och vår guide om [projektor eller LED](/guider/projektor-eller-led/). [Begär offert](/offert/?sk_ref=%2Fcase%2Futomhus-led-scen-malmo%2F&cta_context=content_body_cta).
+[Begär offert](/offert/?sk_ref=%2Fcase%2Futomhus-led-scen-malmo%2F&cta_context=content_body_cta).
