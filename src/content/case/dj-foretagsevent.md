@@ -5,6 +5,7 @@ pubDate: 2026-06-14
 location: Helsingborg
 eventType: Träningsevent
 guests: ca 200 deltagare
+kit: Ljud, ljus, DJ-utrustning, omgivningsbelysning och truss
 image: /images/dj-ljudutrustning.jpg
 imageAlt: DJ- och ljudutrustning
 ---
@@ -26,4 +27,4 @@ Vi stod för ljud, ljus och DJ-utrustning. Vi byggde också en trussrigg och sat
 - [Ljud och ljus till företagsevent](/ljud-ljus-foretagsevent/)
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/)
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-dj-foretagsevent&sk_ref=%2Fcase%2Fdj-foretagsevent%2F&cta_context=content_body_cta) för kick-off eller företagsevent i Skåne.
+[Begär offert](/offert/?sk_ref=%2Fcase%2Fdj-foretagsevent%2F&cta_context=content_body_cta) för kick-off eller företagsevent i Skåne.

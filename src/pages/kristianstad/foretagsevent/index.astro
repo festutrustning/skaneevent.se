@@ -21,13 +21,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'kristianstad_foretagsevent_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -43,7 +36,6 @@ const festLinks = [
     { name: 'Kristianstad', href: '/kristianstad/foretagsevent/' },
   ]}
   ogImage="/images/hero-foretagsevent.jpg"
-  festLinks={festLinks}
   serviceName="Företagsevent i Kristianstad"
   areaServedName="Kristianstad"
   faqs={faqs}
@@ -70,7 +62,7 @@ const festLinks = [
     <li>Invigningar och interna heldagar där teknik och tidsplan måste hålla</li>
   </ul>
 
-  <h2>Helhetsleverans – eventproduktion före produktlista</h2>
+  <h2>Eventproduktion före produktlista</h2>
   <p>
     Vårt uppdrag är att se till att programmet fungerar. Det betyder att vi tänker i flöden: hur talaren
     hörs, hur presentationen syns, hur ljuset stöttar stämningen och hur övergångar mellan
@@ -132,8 +124,7 @@ const festLinks = [
 
   <h2>Begär offert för företagsevent i Kristianstad</h2>
   <p>
-    Berätta om ert upplägg så återkommer vi med ett konkret förslag.
-    <OffertLink path="/kristianstad/foretagsevent/">Begär offert</OffertLink>
-    – och låt oss ta helhetsansvar för tekniken till ert företagsevent i Kristianstad.
+    Berätta om ert upplägg. Ni får ett förslag med utrustning, bemanning och tidsplan. Offerten kostar inget.
+    <OffertLink path="/kristianstad/foretagsevent/">Begär offert</OffertLink>.
   </p>
 </SolutionPage>

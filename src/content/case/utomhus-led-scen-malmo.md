@@ -5,6 +5,7 @@ pubDate: 2026-06-11
 location: Malmö (Hyllie)
 eventType: Kontorsinvigning
 guests: ca 100 gäster
+kit: Ljud, ljus, DJ och konfetti
 image: /images/takterrass-hyllie-utsikt.webp
 imageAlt: Utsikt från takterrassen i Hyllie mot Öresund och Öresundsbron
 ---
@@ -26,4 +27,4 @@ Vi stod för ljud, ljus och DJ. När lokalen formellt skulle invigas sköt vi ko
 - [Ljud och ljus till företagsevent](/ljud-ljus-foretagsevent/)
 - [Eventteknik](/eventteknik/)
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-utomhus-led-scen-malmo&sk_ref=%2Fcase%2Futomhus-led-scen-malmo%2F&cta_context=content_body_cta).
+[Begär offert](/offert/?sk_ref=%2Fcase%2Futomhus-led-scen-malmo%2F&cta_context=content_body_cta).

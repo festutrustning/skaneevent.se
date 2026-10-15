@@ -11,11 +11,13 @@ interface Props {
 const {
   limit = 6,
   title = 'Vad våra kunder säger',
-  lead = 'Företagsreferenser från Festutrustning.se – omdömen från företagsevent och presentationer.',
+  lead = '',
   reveal = false,
 } = Astro.props;
 
-const reviews = await fetchFestReviews(limit);
+const reviews = (await fetchFestReviews(Math.max(limit, 12))).filter((review) =>
+  review.customer_name.trim().toLowerCase().startsWith('emilia'),
+).slice(0, limit);
 if (reviews.length === 0) return null;
 ---
 
@@ -24,7 +26,7 @@ if (reviews.length === 0) return null;
     <div class="section-header">
       <p class="eyebrow">Omdömen</p>
       <h2 id="fest-reviews-heading">{title}</h2>
-      <p>{lead}</p>
+      {lead ? <p>{lead}</p> : null}
     </div>
     <div class="fest-review-list">
       {reviews.map((review) => (

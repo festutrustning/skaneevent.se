@@ -147,11 +147,11 @@ Be er teknikpartner besöka lokalen i förväg om panelen är central i programm
 ## Relaterade guider
 
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/) – grundläggande ljudplanering
-- [Teknik till konferens](/guider/teknik-till-konferens/) – helhetslösning för konferenser
+- [Teknik till konferens](/guider/teknik-till-konferens/) – ljud, bild och mikrofoner för konferenser
 - [Tekniker på plats](/guider/tekniker-pa-plats/) – varför operatör gör skillnad
 
 ## Nästa steg
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=guide-mikrofoner-paneldiskussion&sk_ref=%2Fguider%2Fmikrofoner-paneldiskussion%2F&cta_context=content_body_cta) och beskriv panelupplägget – antal deltagare, bordlayout, lokal och gästantal. Vi dimensionerar mikrofoner och ljud utifrån era förutsättninger.
+[Begär offert](/offert/?sk_ref=%2Fguider%2Fmikrofoner-paneldiskussion%2F&cta_context=content_body_cta) och beskriv panelupplägget – antal deltagare, bordlayout, lokal och gästantal. Vi dimensionerar mikrofoner och ljud utifrån era förutsättninger.
 
 Vi erbjuder komplett [eventteknik](/eventteknik/) till konferenser och [företagsevent](/foretagsevent/) i hela Skåne. Utrustningen levereras via [Festutrustning](https://festutrustning.se/ljud-ljus-skane) – med rätt mikrofoner och mixers för paneler i alla storlekar.

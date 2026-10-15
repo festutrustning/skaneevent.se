@@ -106,19 +106,16 @@ export function festUrl(
   return u.toString();
 }
 
-/** B2B/event offert-CTA med partner-attribution (first-party metadata på FEST). */
+/** Offertknapp på skaneevent.se. Kampanj sparas i sessionStorage, inte i den här URL:en. */
 export function buildOffertEventUrl(opts: {
   campaign?: string;
   skRef?: string;
   ctaContext?: string;
 }): string {
-  const url = new URL(FEST.offertEvent);
-  url.searchParams.set('utm_source', 'skaneevent');
-  url.searchParams.set('utm_medium', 'referral');
-  url.searchParams.set('utm_campaign', opts.campaign ?? 'referral');
+  const url = new URL('/offert/', 'https://skaneevent.se');
   if (opts.skRef) url.searchParams.set('sk_ref', opts.skRef);
   if (opts.ctaContext) url.searchParams.set('cta_context', opts.ctaContext);
-  return url.toString();
+  return `${url.pathname}${url.search}`;
 }
 
 /** Offert-CTA från en Skåne Event-sida med kampanj från link matrix. */

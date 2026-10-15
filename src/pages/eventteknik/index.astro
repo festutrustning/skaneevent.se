@@ -21,18 +21,6 @@ const faqs = [
   },
 ];
 
-const festLinks = [
-  {
-    destination: 'foretag' as const,
-    label: 'Företagslösningar hos Festutrustning',
-    context: 'eventteknik_aside',
-  },
-  {
-    destination: 'ljudLjusSkane' as const,
-    label: 'Ljud och ljus i Skåne – Festutrustning',
-    context: 'eventteknik_aside',
-  },
-];
 ---
 
 <SolutionPage
@@ -45,7 +33,6 @@ const festLinks = [
   lead="Rätt teknik i rätt tid – ljud, ljus, scen, bild och mikrofoner för företagsevent i hela Skåne. Leverans, rigg och tekniker när ni behöver det."
   breadcrumbs={[{ name: 'Eventteknik', href: '/eventteknik/' }]}
   ogImage="/images/konferens-publik.jpg"
-  festLinks={festLinks}
   serviceName="Eventteknik i Skåne"
   faqs={faqs}
 >

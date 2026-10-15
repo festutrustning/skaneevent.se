@@ -207,6 +207,34 @@ else {
   }
 }
 
+function walkHtml(dir, hits) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) walkHtml(full, hits);
+    else if (entry.name.endsWith('.html')) {
+      const html = fs.readFileSync(full, 'utf8');
+      if (/festutrustning\.se\/offert/i.test(html)) hits.push(path.relative(dist, full));
+    }
+  }
+}
+
+const offertLinks = [];
+walkHtml(dist, offertLinks);
+if (offertLinks.length) {
+  fail(`Offertlänk pekar fortfarande på festutrustning.se: ${offertLinks.slice(0, 5).join(', ')}`);
+}
+
+const offertPage = readHtml('offert');
+if (!offertPage) fail('dist/offert/index.html saknas');
+else if (!offertPage.includes('https://skaneevent.se/offert/')) {
+  fail('/offert/ saknar canonical till skaneevent.se/offert/');
+}
+
+const netlifyToml = fs.readFileSync(path.join(root, 'netlify.toml'), 'utf8');
+if (/from\s*=\s*"\/offert/.test(netlifyToml)) {
+  fail('netlify.toml redirectar fortfarande /offert');
+}
+
 const indexable = listIndexableSeoPaths();
 if (indexable.length < 10) fail(`För få indexerbara SoT-paths: ${indexable.length}`);
 

@@ -24,6 +24,8 @@ const {
   guests,
   image,
   imageAlt,
+  kit,
+  crew,
   challenge,
   solution,
   result,
@@ -85,7 +87,9 @@ const jsonLd = buildArticleLd({
       <div class="case-meta">
         <span><strong>Plats:</strong> {location}</span>
         <span><strong>Eventtyp:</strong> {eventType}</span>
-        {guests && <span><strong>Gäster:</strong> {guests}</span>}
+        {guests && <span><strong>Gäster:</strong> {guests} på det här eventet</span>}
+        {kit && <span><strong>Teknik:</strong> {kit}</span>}
+        {crew && <span><strong>Personal:</strong> {crew}</span>}
       </div>
 
       {challenge && (

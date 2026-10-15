@@ -30,7 +30,8 @@ const cases = defineCollection({
     location: z.string(),
     eventType: z.string(),
     guests: z.string().optional(),
-    // Valfria: fylls bara när vi har bekräftade uppgifter från uppdraget.
+    kit: z.string().optional(),
+    crew: z.string().optional(),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     challenge: z.string().optional(),

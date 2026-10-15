@@ -58,12 +58,12 @@ const I = {
   dj: {
     src: '/images/dj-ljudutrustning.jpg',
     alt: 'DJ och ljudutrustning till företagsfest',
-    caption: 'Ljud till fest och mingel',
+    caption: 'Ljudutrustning till företagsevent',
   },
   foretagseventDj: {
     src: '/images/foretagsevent-dj.jpg',
     alt: 'DJ-bord och ljus på företagsevent med Oktoberfest-tema',
-    caption: 'Företagsevent med DJ, ljus och stämning',
+    caption: 'Ljud och ljus på företagsevent',
   },
   foretagseventLedRigg: {
     src: '/images/foretagsevent-led-rigg.jpg',

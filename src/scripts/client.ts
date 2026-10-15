@@ -21,12 +21,18 @@ function initMenu() {
     document.body.classList.toggle('menu-open', !open);
   });
 
+  const closeMenu = () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    mobileNav.hidden = true;
+    document.body.classList.remove('menu-open');
+  };
+
   mobileNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      toggle.setAttribute('aria-expanded', 'false');
-      mobileNav.hidden = true;
-      document.body.classList.remove('menu-open');
-    });
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeMenu();
   });
 }
 
@@ -72,7 +78,7 @@ function attributionFromHref(href: string): {
       utm_campaign: url.searchParams.get('utm_campaign'),
       utm_source: url.searchParams.get('utm_source'),
       utm_medium: url.searchParams.get('utm_medium'),
-      is_offert_event: path === '/offert/event' || path.endsWith('/offert/event'),
+      is_offert_event: path === '/offert' || path === '/offert/event' || path.endsWith('/offert/event'),
     };
   } catch {
     return {
@@ -139,8 +145,47 @@ function trackPhoneClicks() {
   });
 }
 
+const QUOTE_ATTRIBUTION_KEY = 'skaneevent_quote_attribution';
+const QUOTE_LEAD_KEY = 'skaneevent_lead_uid';
+
+function readQuoteAttribution(): Record<string, string> {
+  try {
+    const parsed = JSON.parse(sessionStorage.getItem(QUOTE_ATTRIBUTION_KEY) || '{}');
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function initQuoteAttribution() {
+  const params = new URLSearchParams(window.location.search);
+  const stored = readQuoteAttribution();
+  if (!stored.landing_page) {
+    stored.landing_page = `${window.location.pathname}${window.location.search}`;
+    if (document.referrer) stored.referrer = document.referrer;
+  }
+  for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid']) {
+    const value = params.get(key);
+    if (value && !stored[key]) stored[key] = value;
+  }
+  const skRef = params.get('sk_ref');
+  const ctaContext = params.get('cta_context');
+  if (skRef) stored.sk_ref = skRef;
+  if (ctaContext) stored.cta_context = ctaContext;
+  sessionStorage.setItem(QUOTE_ATTRIBUTION_KEY, JSON.stringify(stored));
+}
+
+function leadUid(): string {
+  const existing = sessionStorage.getItem(QUOTE_LEAD_KEY);
+  if (existing) return existing;
+  const created = crypto.randomUUID();
+  sessionStorage.setItem(QUOTE_LEAD_KEY, created);
+  return created;
+}
+
 function trackLeadForms() {
   document.querySelectorAll('form[data-lead-form]').forEach((form) => {
+    if (form instanceof HTMLFormElement && form.dataset.intakeUrl !== undefined) return;
     form.addEventListener('submit', () => {
       if (typeof gtag === 'function') {
         gtag('event', 'generate_lead', {
@@ -151,6 +196,112 @@ function trackLeadForms() {
         });
       }
     });
+  });
+}
+
+function initOffertForm() {
+  const form = document.getElementById('offert-form');
+  if (!(form instanceof HTMLFormElement)) return;
+
+  const button = form.querySelector('button[type="submit"]');
+  const errorBox = document.getElementById('offert-error');
+  const retry = document.getElementById('offert-retry');
+  if (!(button instanceof HTMLButtonElement)) return;
+  const idleLabel = button.textContent || 'Skicka offertförfrågan';
+
+  const showError = () => {
+    if (errorBox) errorBox.hidden = false;
+    button.disabled = false;
+    button.textContent = idleLabel;
+  };
+
+  const submit = async () => {
+    if (!form.reportValidity()) return;
+    errorBox?.setAttribute('hidden', '');
+    button.disabled = true;
+    button.textContent = 'Skickar…';
+
+    const data = new FormData(form);
+    const attribution = readQuoteAttribution();
+    const payload = {
+      turnstile_token: String(data.get('cf-turnstile-response') || ''),
+      lead_uid: leadUid(),
+      company: data.get('foretag'),
+      contact_name: data.get('kontaktperson'),
+      email: data.get('epost'),
+      phone: data.get('telefon'),
+      city: data.get('ort'),
+      event_type: data.get('eventtyp'),
+      needs: data.get('behov'),
+      event_date: data.get('datum') || null,
+      guest_count: data.get('gaster') || null,
+      budget: data.get('budget') || null,
+      message: data.get('meddelande') || null,
+      bot_field: data.get('bot-field') || '',
+      attribution: {
+        utm_source: attribution.utm_source || null,
+        utm_medium: attribution.utm_medium || null,
+        utm_campaign: attribution.utm_campaign || null,
+        utm_term: attribution.utm_term || null,
+        utm_content: attribution.utm_content || null,
+        gclid: attribution.gclid || null,
+        landing_page: attribution.landing_page || null,
+        referrer: attribution.referrer || null,
+        sk_ref: attribution.sk_ref || null,
+        cta_context: attribution.cta_context || null,
+      },
+    };
+
+    const backup = () => {
+      const params = new URLSearchParams();
+      data.forEach((value, key) => {
+        if (typeof value === 'string') params.append(key, value);
+      });
+      return fetch('/offert/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
+      }).catch(() => undefined);
+    };
+
+    const intakeUrl = form.dataset.intakeUrl || '';
+    const controller = new AbortController();
+    const timer = window.setTimeout(() => controller.abort(), 10000);
+    try {
+      if (!intakeUrl) throw new Error('missing-intake');
+      const response = await fetch(intakeUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+      const result = await response.json().catch(() => null) as { ok?: boolean; quote_id?: string } | null;
+      if (!response.ok || !result?.ok || !result.quote_id) throw new Error('intake');
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          site: SITE_ID,
+          form_id: 'offert-form',
+          lead_uid: payload.lead_uid,
+          cta_context: payload.attribution.cta_context,
+          source_page: window.location.pathname,
+          page_path: window.location.pathname,
+        });
+      }
+      window.location.assign('/offert/tack/');
+    } catch {
+      void backup();
+      showError();
+    } finally {
+      window.clearTimeout(timer);
+    }
+  };
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    void submit();
+  });
+  retry?.addEventListener('click', () => {
+    void submit();
   });
 }
 
@@ -258,6 +409,7 @@ declare function gtag(...args: unknown[]): void;
 
 initMenu();
 initCookies();
+initQuoteAttribution();
 initScrollReveal();
 initHeroCinematic();
 initHomeHeader();
@@ -265,3 +417,4 @@ trackFestClicks();
 trackPhoneClicks();
 trackLeadForms();
 trackFaqExpands();
+initOffertForm();

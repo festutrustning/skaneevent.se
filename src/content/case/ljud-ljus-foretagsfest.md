@@ -5,6 +5,7 @@ pubDate: 2026-06-13
 location: Lund
 eventType: Firmafest
 guests: ca 80 gäster
+kit: Stämningsbelysning, festbelysning, högtalare, DJ med quiz och karaokutrustning
 image: /images/foretagsevent-dj.jpg
 imageAlt: DJ spelar på företagsfest
 ---
@@ -30,4 +31,4 @@ Vi levererade stämningsbelysning, festbelysning och högtalare till alla festyt
 - [Ljud och ljus till företagsevent](/ljud-ljus-foretagsevent/)
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/)
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-ljud-ljus-foretagsfest&sk_ref=%2Fcase%2Fljud-ljus-foretagsfest%2F&cta_context=content_body_cta) för er företagsfest i Skåne.
+[Begär offert](/offert/?sk_ref=%2Fcase%2Fljud-ljus-foretagsfest%2F&cta_context=content_body_cta) för er företagsfest i Skåne.

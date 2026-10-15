@@ -5,6 +5,8 @@ pubDate: 2026-06-12
 location: Helsingborg
 eventType: Storbildsvisning
 guests: ca 4000 personer
+kit: Scen, LED-skärm, sändning, ljud, mikrofoner och truss för skyltning
+crew: Ljudtekniker och AV-tekniker
 image: /images/vm-storbild-helsingborg-riggning.webp
 imageAlt: Scen med tak och truss riggas på gräsytan inför storbildsvisningen i Helsingborg
 ---
@@ -30,4 +32,4 @@ Under hela evenemanget fanns en ljudtekniker och en AV-tekniker från oss på pl
 - [Projektor eller LED](/guider/projektor-eller-led/)
 - [Tekniker på plats](/guider/tekniker-pa-plats/)
 
-[Begär offert](https://festutrustning.se/offert/event?utm_source=skaneevent&utm_medium=referral&utm_campaign=case-tross-led-rigg&sk_ref=%2Fcase%2Ftross-led-rigg%2F&cta_context=content_body_cta) för liknande produktion i Skåne.
+[Begär offert](/offert/?sk_ref=%2Fcase%2Ftross-led-rigg%2F&cta_context=content_body_cta) för liknande produktion i Skåne.
