@@ -128,7 +128,7 @@ Se även vår fullständiga [checklista för företagsevent](/guider/checklista-
 
 Skåne har ett rikt utbud av konferenslokaler – från Malmö Live och moderna anläggningar i Lund till hotellkonferenser i Helsingborg och Kristianstad. Många har fast teknik som ibland räcker, men vid större event eller specifika krav behövs extern utrustning och personal.
 
-Vi känner regionen och hjälper er matcha teknik med lokal. Besök vår sida om [konferens](/konferens/) för mer om våra konferenslösningar. För Malmö-uppdrag, se [eventteknik i Malmö](/malmo/eventteknik/) och vårt [case om konferenspanelen](/case/konferens-panel/).
+Vi känner regionen och hjälper er matcha teknik med lokal. Besök vår sida om [konferens](/konferens/) för mer om våra konferenslösningar. För Malmö-uppdrag, se [eventteknik i Malmö](/malmo/eventteknik/) och vårt [case om presentation för inbjudna i Malmö](/case/konferens-panel/).
 
 ## Nästa steg
 

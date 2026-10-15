@@ -75,9 +75,9 @@ const eventTypes = [
 const featuredCaseIds = ['utomhus-led-scen-malmo', 'ljud-ljus-foretagsfest', 'tross-led-rigg'] as const;
 
 const delivered: Record<(typeof featuredCaseIds)[number], string> = {
-  'utomhus-led-scen-malmo': 'LED-scen, line array och tekniker utomhus.',
-  'ljud-ljus-foretagsfest': 'PA, scenljus och mikrofoner från mingel till dansgolv.',
-  'tross-led-rigg': 'Tross, hängd LED-skärm och scen i industrilokal.',
+  'utomhus-led-scen-malmo': 'Ljud, ljus, DJ och konfetti på takterrassen.',
+  'ljud-ljus-foretagsfest': 'Stämningsbelysning, högtalare och DJ med quiz.',
+  'tross-led-rigg': 'Scen, LED-skärm, ljud och sändning av matchen.',
 };
 
 const allCases = await getCollection('cases');
@@ -247,7 +247,7 @@ if (ratingLd) jsonLd.push(ratingLd);
           <a class:list={['home-case', { 'home-case-lead': index === 0 }]} href={`/case/${entry.id}/`}>
             <img
               src={entry.data.image}
-              alt={`${entry.data.eventType} i ${entry.data.location}`}
+              alt={entry.data.imageAlt ?? ''}
               width={index === 0 ? 768 : 768}
               height={1024}
               loading="lazy"
