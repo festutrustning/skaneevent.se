@@ -241,10 +241,14 @@ function initOffertForm() {
   const errorBox = document.getElementById('offert-error');
   const retry = document.getElementById('offert-retry');
   if (!(button instanceof HTMLButtonElement)) return;
+  form.dataset.bound = '1';
   const idleLabel = button.textContent || 'Skicka offertförfrågan';
 
   const showError = () => {
-    if (errorBox) errorBox.hidden = false;
+    if (errorBox instanceof HTMLElement) {
+      errorBox.hidden = false;
+      errorBox.focus();
+    }
     button.disabled = false;
     button.textContent = idleLabel;
   };
@@ -433,14 +437,22 @@ function initHomeHeader() {
 
 declare function gtag(...args: unknown[]): void;
 
-initMenu();
-initCookies();
-initQuoteAttribution();
-initScrollReveal();
-initHeroCinematic();
-initHomeHeader();
-trackFestClicks();
-trackPhoneClicks();
-trackLeadForms();
-trackFaqExpands();
-initOffertForm();
+for (const start of [
+  initMenu,
+  initCookies,
+  initQuoteAttribution,
+  initScrollReveal,
+  initHeroCinematic,
+  initHomeHeader,
+  trackFestClicks,
+  trackPhoneClicks,
+  trackLeadForms,
+  trackFaqExpands,
+  initOffertForm,
+]) {
+  try {
+    start();
+  } catch {
+    // En del får inte stoppa offertformuläret.
+  }
+}
