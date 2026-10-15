@@ -30,10 +30,12 @@ const cases = defineCollection({
     location: z.string(),
     eventType: z.string(),
     guests: z.string().optional(),
-    image: z.string(),
-    challenge: z.string(),
-    solution: z.string(),
-    result: z.string(),
+    // Valfria: fylls bara när vi har bekräftade uppgifter från uppdraget.
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    challenge: z.string().optional(),
+    solution: z.string().optional(),
+    result: z.string().optional(),
     ...seoFields,
   }),
 });
