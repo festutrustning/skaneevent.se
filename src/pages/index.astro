@@ -8,6 +8,7 @@ import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { SITE } from '../data/site';
 import { buildServiceLd } from '../components/seo/serviceLd';
 import { buildFaqLd, faqIdFromQuestion } from '../components/seo/faqLd';
+import { formatGuests } from '../lib/case-display';
 import '../styles/home.css';
 
 const offertWhyHref = offertEventUrlForPath('/', 'home_why_cta');
@@ -245,7 +246,7 @@ if (faqLd) {
               <h3>{entry.data.title}</h3>
               {entry.data.kit && <p>{entry.data.kit}</p>}
               {entry.data.crew && <p>{entry.data.crew}</p>}
-              {entry.data.guests && <p>{entry.data.guests} gäster på det här eventet</p>}
+              {entry.data.guests && <p>{formatGuests(entry.data.guests)} på det här eventet</p>}
             </div>
           </a>
         ))}

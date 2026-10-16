@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
 import CapacityOverview from '../../components/CapacityOverview.astro';
+import { formatGuests } from '../../lib/case-display';
 
 const breadcrumbs = [{ name: 'Case', href: '/case/' }];
 
@@ -52,7 +53,7 @@ const cases = (await getCollection('cases')).sort(
             <p class="case-card-fact">{item.data.location} · {item.data.eventType}</p>
             <p>{item.data.kit}</p>
             <p>{item.data.crew}</p>
-            {item.data.guests && <p class="case-card-fact">{item.data.guests} gäster på det här eventet</p>}
+            {item.data.guests && <p class="case-card-fact">{formatGuests(item.data.guests)} på det här eventet</p>}
           </a>
         ))}
       </div>
