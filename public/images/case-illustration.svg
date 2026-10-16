@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="presentation">
+  <rect width="800" height="800" fill="#0e1a2b" />
+  <!-- Motivet ligger innanför kvadratens mitt så att inget beskärs när grafiken
+       fylls ut i olika kortformat. -->
+  <g fill="none" stroke="#f2a900" stroke-width="8" stroke-linecap="round">
+    <path d="M467.9 310.1A96 96 0 0 1 467.9 445.9" opacity="0.45" />
+    <path d="M493.3 284.7A132 132 0 0 1 493.3 471.3" opacity="0.22" />
+    <path d="M332.1 310.1A96 96 0 0 0 332.1 445.9" opacity="0.45" />
+    <path d="M306.7 284.7A132 132 0 0 0 306.7 471.3" opacity="0.22" />
+  </g>
+  <g fill="none" stroke="#f2a900" stroke-width="12" stroke-linecap="round">
+    <rect x="377" y="322" width="46" height="112" rx="23" />
+    <path d="M352 406v12a48 48 0 0 0 96 0v-12" />
+    <path d="M400 466v44" />
+    <path d="M366 510h68" />
+  </g>
+</svg>

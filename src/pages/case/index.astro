@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
 import CapacityOverview from '../../components/CapacityOverview.astro';
-import { formatGuests } from '../../lib/case-display';
+import { formatGuests, getCaseVisual } from '../../lib/case-display';
 
 const breadcrumbs = [{ name: 'Case', href: '/case/' }];
 
@@ -37,25 +37,27 @@ const cases = (await getCollection('cases')).sort(
       </div>
       <CapacityOverview />
       <div class="card-grid card-grid-3">
-        {cases.map((item) => (
-          <a class="solution-card case-card" href={`/case/${item.id}/`}>
-            {item.data.image && (
+        {cases.map((item) => {
+          const visual = getCaseVisual(item.data);
+          return (
+            <a class="solution-card case-card" href={`/case/${item.id}/`}>
               <img
-                src={item.data.image}
-                alt={item.data.imageAlt ?? ''}
+                src={visual.src}
+                alt={visual.alt}
                 width="400"
                 height="267"
                 loading="lazy"
+                class:list={{ 'case-illustration': visual.isIllustration }}
                 style="margin-bottom: 1rem; border-radius: var(--radius); aspect-ratio: 3/2; object-fit: cover; width: 100%;"
               />
-            )}
-            <h3>{item.data.title}</h3>
-            <p class="case-card-fact">{item.data.location} · {item.data.eventType}</p>
-            <p>{item.data.kit}</p>
-            <p>{item.data.crew}</p>
-            {item.data.guests && <p class="case-card-fact">{formatGuests(item.data.guests)} på det här eventet</p>}
-          </a>
-        ))}
+              <h3>{item.data.title}</h3>
+              <p class="case-card-fact">{item.data.location} · {item.data.eventType}</p>
+              <p>{item.data.kit}</p>
+              <p>{item.data.crew}</p>
+              {item.data.guests && <p class="case-card-fact">{formatGuests(item.data.guests)} på det här eventet</p>}
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
