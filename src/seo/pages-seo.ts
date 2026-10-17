@@ -77,9 +77,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['foretagsfest'],
   },
   '/julfest/': {
-    title: 'Julfest i Skåne – eventteknik för företag',
+    title: 'Julfest för företag i Malmö och Skåne: ljud, ljus och DJ',
     description:
-      'Eventteknik till företagsjulfester i Skåne. Ljud, ljus, mikrofoner och stämning för julens företagsevent. Begär offert.',
+      'Ljud, mikrofoner, ljus och DJ till företagets julfest i Malmö, Helsingborg och Lund. Tal som hörs, dansgolv som fylls. Boka i tid inför december.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['julfest'],
