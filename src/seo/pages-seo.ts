@@ -61,9 +61,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['gala', 'scen'],
   },
   '/produktlansering/': {
-    title: 'Produktlansering i Skåne – eventteknik som lyfter budskapet',
+    title: 'Produktlansering i Skåne: LED-skärm, scen och reveal',
     description:
-      'Eventteknik till produktlanseringar i Skåne. Scen, ljud, ljus, bild och tekniker för företagsevent. Begär offert.',
+      'Teknik till produktlansering i Malmö, Lund och Helsingborg. LED-vägg för film, ljus för avtäckningen och tekniker som kör showen. Begär förslag.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['produktlansering', 'scen'],
@@ -117,9 +117,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['foretagsevent', 'malmo'],
   },
   '/malmo/eventteknik/': {
-    title: 'Eventteknik i Malmö – ljud, ljus och rigg',
+    title: 'Eventteknik i Malmö: ljud, ljus, LED och tekniker på plats',
     description:
-      'Professionell eventteknik i Malmö för företagsevent. Ljud, ljus, scen, mikrofoner och tekniker. Begär offert.',
+      'Eventteknik till företagsevent i Malmö, från kontor i Hyllie till presentationer i stan. Ljud, ljus, scen, LED och tekniker. Lager på Lockarpsvägen i Malmö.',
     sitemapPriority: 0.85,
     changefreq: 'monthly',
     focusAreas: ['eventteknik', 'malmo'],
