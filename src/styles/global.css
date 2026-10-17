@@ -267,6 +267,7 @@ a:hover {
 .nav a:not(.btn) {
   font-size: 0.9375rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .nav a:not(.btn):hover {
@@ -344,7 +345,7 @@ body.menu-open {
   width: 100%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   .nav {
     display: flex;
   }
