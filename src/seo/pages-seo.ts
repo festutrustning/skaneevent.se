@@ -85,9 +85,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['julfest'],
   },
   '/kickoff/': {
-    title: 'Kick-off i Skåne – eventteknik som sätter tonen',
+    title: 'Kick-off i Skåne: scen, ljud, bild och DJ på samma leverans',
     description:
-      'Eventteknik till kick-offs och strategidagar i Skåne. Scen, ljud, ljus och bild för energifyllda företagsevent. Begär offert.',
+      'Teknik till kickoff i Malmö, Helsingborg och Kristianstad. Presentationer på dagen, DJ och ljus på kvällen, med en tekniker som stannar hela dagen.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['kickoff'],
