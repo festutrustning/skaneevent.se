@@ -136,6 +136,18 @@ Om eventet streamas påverkar bildvalet produktionen:
 
 Mer om specifika eventtyper: [teknik till konferens](/guider/teknik-till-konferens/), [teknik till gala](/guider/teknik-till-gala/).
 
+## Storbildsvisning utomhus
+
+Utomhus syns en projektor sällan när det är ljust. En LED-skärm syns i dagsljus, och ljudet behöver höra ihop med bilden så att publiken inte måste stå längst fram.
+
+I juni 2026 visade vi en Sverigematch i herrarnas fotbolls-VM offentligt i Helsingborg, för ca 4000 besökare. Vi levererade scen, en LED-skärm i bredbildsformat, ca 4 till 5 meter bred, sändning av matchen, ljudsystem och mikrofoner, tross för skyltning samt ljudtekniker och AV-tekniker på plats. Kunden namnges inte, och den exakta platsen anges inte. Se caset [VM-visning i Helsingborg](/case/tross-led-rigg/).
+
+För publiken betyder det att matchen syns från där de står, och att ljudet följer bilden.
+
+## Vad påverkar upplägget för en LED-skärm
+
+Hur stor skärmen behöver vara beror på hur långt bort publiken står och om det är dagsljus. Var den kan riggas, i tross eller på mark, och om ljudtekniker och bildtekniker ska vara på plats, styr också uppdraget. Vi publicerar inga priser. Hör av er tidigt, så föreslår vi ett upplägg.
+
 ## Nästa steg
 
 Osäker på vad som passar er lokal och ert program? [Begär offert](/offert/?sk_ref=%2Fguider%2Fprojektor-eller-led%2F&cta_context=content_body_cta) – beskriv lokal, ljusförhållanden och program så rekommenderar vi rätt lösning.
