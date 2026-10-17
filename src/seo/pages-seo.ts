@@ -125,9 +125,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['eventteknik', 'malmo'],
   },
   '/lund/foretagsevent/': {
-    title: 'Företagsevent i Lund – eventteknik och produktion',
+    title: 'Företagsevent i Lund: ljud, ljus och DJ till kontor och lokal',
     description:
-      'Professionella företagsevent i Lund med ljud, ljus, scen och tekniker. Partner för event i universitetsstaden. Begär offert.',
+      'Teknik till firmafest, kick-off och konferens i Lund. Vi riggar i kontor, vid campus och i hyrda lokaler, med ljud i flera rum och tekniker på plats.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['foretagsevent', 'lund'],
