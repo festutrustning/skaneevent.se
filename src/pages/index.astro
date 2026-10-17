@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'Hur begär jag offert?',
-    a: 'Fyll i formuläret på Begär offert med datum, ort, typ av event och vad ni behöver hjälp med. Vi återkommer med ett förslag på teknik och pris.',
+    a: 'Fyll i formuläret på Begär offert med datum, ort, typ av event och vad ni behöver hjälp med. Vi återkommer med ett förslag.',
   },
   {
     q: 'Levererar ni i hela Skåne?',
@@ -127,7 +127,7 @@ const steps = [
   {
     n: '02',
     title: 'Förslag',
-    text: 'Vi dimensionerar ljud, ljus, scen och bild efter lokal och program. Offerten kostar inget.',
+    text: 'Vi dimensionerar ljud, ljus, scen och bild efter lokal och program.',
   },
   {
     n: '03',
@@ -198,6 +198,11 @@ if (faqLd) {
           <li><a href={item.href}>{item.label}</a></li>
         ))}
       </ul>
+      {[10, 11, 12].includes(new Date().getMonth() + 1) && (
+        <p class="home-prose">
+          Under hösten och december är julfesten en vanlig förfrågan. Tekniken till tal, middag och dans finns på <a href="/julfest/">julfest</a>.
+        </p>
+      )}
     </div>
   </section>
 

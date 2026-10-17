@@ -1,6 +1,6 @@
 ---
 title: Projektor eller LED-skärm – vad passar ditt företagsevent?
-description: Jämförelse av projektor och LED-skärm till företagsevent i Skåne. Bildkvalitet, ljusförhållanden, kostnad och rekommendationer.
+description: Jämförelse av projektor och LED-skärm till företagsevent i Skåne. Bildkvalitet, ljusförhållanden och när respektive teknik passar.
 pubDate: 2026-06-09
 tags:
   - bild
@@ -14,13 +14,13 @@ Presentationer, video och visuellt innehåll är centralt i de flesta företagse
 
 Dålig bild – suddig projektion, för liten skärm, bländande ljus – distraherar gästerna från budskapet. Bra bild är knappt märkbar: innehållet syns tydligt, talaren står i fokus och tekniken stör inte.
 
-Valet beror inte på vad som är "bäst" i absolut mening – utan på lokal, ljusförhållanden, budget och program.
+Valet beror på lokalen, ljuset i rummet och programmet.
 
 ## Projektor – fördelar och begränsningar
 
 ### Fördelar
 
-- **Kostnadseffektivt** – Projektor och duk kostar generellt mindre än LED
+- **Vanlig i konferenssalar** – Många lokaler har redan duk eller en plats för projektor
 - **Flexibel bildstorlek** – Dukstorlek anpassas efter rummet
 - **Enkel rigg** – Projektor monteras i tak eller på stativ
 - **Beprövad teknik** – Fungerar i de flesta konferenssalar
@@ -28,15 +28,15 @@ Valet beror inte på vad som är "bäst" i absolut mening – utan på lokal, lj
 ### Begränsningar
 
 - **Kräver mörkläggning** – Dagsljus och taklampor försämrar bilden kraftigt
-- **Begränsad ljusstyrka** – I stora salar behövs kraftigare projektor (dyrare)
+- **Begränsad ljusstyrka** – I stora salar behövs en kraftigare projektor
 - **Död zon** – Projektor i salen kan blända gäster
-- **Upplösning** – Budgetprojektorer kan se suddiga ut på stor duk
+- **Upplösning** – En svag projektor kan se suddig ut på stor duk
 
 ### När projektor passar bäst
 
 - Konferens i mörklagd sal
 - Mindre till medelstora rum (upp till ca 200 personer)
-- Budget med begränsning
+- Enkel presentation utan krav på dagsljus
 - Enkel presentation utan avancerade visuella effekter
 - Lokal med projektorduk redan installerad
 
@@ -52,8 +52,7 @@ Valet beror inte på vad som är "bäst" i absolut mening – utan på lokal, lj
 
 ### Begränsningar
 
-- **Högre kostnad** – Hyra och rigg kostar mer
-- **Tyngre rigg** – Kräver stativ, tross eller hängning
+- **Mer rigg** – Kräver stativ, tross eller hängning
 - **El och vikt** – Större skärmar kräver mer ström och bärighet
 - **Upplösning vid nära betraktning** – Modulstorlek påverkar skärpa på nära håll
 
@@ -135,6 +134,18 @@ Om eventet streamas påverkar bildvalet produktionen:
 **Mässa / utställning** → LED för synlighet i ljus miljö.
 
 Mer om specifika eventtyper: [teknik till konferens](/guider/teknik-till-konferens/), [teknik till gala](/guider/teknik-till-gala/).
+
+## Storbildsvisning utomhus
+
+Utomhus syns en projektor sällan när det är ljust. En LED-skärm syns i dagsljus, och ljudet behöver höra ihop med bilden så att publiken inte måste stå längst fram.
+
+I juni 2026 visade vi en Sverigematch i herrarnas fotbolls-VM offentligt i Helsingborg, för ca 4000 besökare. Vi levererade scen, en LED-skärm i bredbildsformat, ca 4 till 5 meter bred, sändning av matchen, ljudsystem och mikrofoner, tross för skyltning samt ljudtekniker och AV-tekniker på plats. Kunden namnges inte, och den exakta platsen anges inte. Se caset [VM-visning i Helsingborg](/case/tross-led-rigg/).
+
+För publiken betyder det att matchen syns från där de står, och att ljudet följer bilden.
+
+## Vad påverkar upplägget för en LED-skärm
+
+Hur stor skärmen behöver vara beror på hur långt bort publiken står och om det är dagsljus. Var den kan riggas, i tross eller på mark, och om ljudtekniker och bildtekniker ska vara på plats, styr också uppdraget. Vi publicerar inga priser. Hör av er tidigt, så föreslår vi ett upplägg.
 
 ## Nästa steg
 

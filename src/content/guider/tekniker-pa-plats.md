@@ -83,33 +83,22 @@ Koordinerar helheten – ljud, ljus, bild och scen. Relevant vid:
 - Event med komplext körschema
 - Utomhusscen med tross och LED
 
-## Vad tekniker kostar – och vad det sparar
+## Vad som ändras när en tekniker är på plats
 
-<!-- TODO Rasmus: bekräfta prisintervallen -->
+Utan tekniker sköter ni ljud, bild och byten själva, mitt i eventet. Med tekniker på plats följer någon programmet, så att tal, film och musik avlöser varandra.
 
-En ljudtekniker för en heldag kostar typiskt 4 000–8 000 kr beroende på omfattning. Ljusoperatör och bildtekniker i liknande range.
+Vad som ingår beror på programmet: en ljudtekniker under konferensen, en ljusoperatör när ljuset ska växla, eller bara rigg och test om ni kör resten själva. Det står i förslaget.
 
-Det kan kännas som en extra kostnad – men jämför med:
-
-- **Keynote som inte hörs** – Förstörd konferens, missnöjda deltagare
-- **Panel som avbryts av mikrofonproblem** – Pinsamt och oprofessionellt
-- **Prisutdelning utan fungerande mikrofon** – Stämningen dör
-- **Er egen tid** – Istället för att välkomna gäster sitter ni vid ljudbordet
-
-Tekniker är en försäkring – inte en lyx.
-
-Se riktlinjer i vår guide [vad teknik kostar](/guider/vad-kostar-teknik-foretagsevent/).
+Läs [vad som påverkar upplägget](/guider/vad-kostar-teknik-foretagsevent/).
 
 ## Tekniker vs. självrigg
 
 | Aspekt | Självrigg | Tekniker på plats |
 |---|---|---|
-| Kostnad | Lägre | Högre |
-| Trygghet | Begränsad | Hög |
 | Felsökning | Er uppgift | Teknikerns uppgift |
 | Fokus på gäster | Delat | Helt |
-| Professionellt intryck | Varierande | Konsekvent |
-| Backup vid problem | Ingen | Ja |
+| Intryck | Beror på den som kör | Någon följer programmet |
+| Om något strular | Ni får lämna gästerna | Teknikern tar det |
 
 ## Så samarbetar ni med tekniker
 
@@ -148,8 +137,8 @@ Vi erbjuder detta som alternativ – men var ärliga med er kompetens. Ett enkla
 **"Vi har någon internt som kan teknik."**
 Kanske – men den personen kan då inte vara värd, projektledare och tekniker samtidigt.
 
-**"Det är för dyrt."**
-Jämför med kostnaden av ett misslyckat event. Tekniker är en bråkdel av total budget.
+**"Vi vill bara ha utrustningen."**
+Då räcker leverans och rigg. Säg till i offerten om ni vill köra eventet själva efter testet.
 
 **"Lokalen har egen teknik."**
 Fast teknik i lokalen hanteras sällan av någon som kan ert specifika program.

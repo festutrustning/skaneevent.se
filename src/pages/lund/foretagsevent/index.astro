@@ -1,79 +1,107 @@
 ---
+import FestLink from '../../../components/FestLink.astro';
 import OffertLink from '../../../components/OffertLink.astro';
 import SolutionPage from '../../../components/SolutionPage.astro';
 
 const faqs = [
   {
-    q: 'Levererar ni företagseventteknik i Lund?',
-    a: 'Ja. Vi arbetar i Lund och närområde – från universitetsmiljöer och forskningsparker till hotell och konferenslokaler i city.',
+    q: 'Kan ni rigga ljud i flera rum samtidigt?',
+    a: 'Ja. På firmafesten i Lund satte vi högtalare och ljus i dans och mingel, i ett karaokerum och i korridoren till entrén, samtidigt.',
   },
   {
-    q: 'Har ni erfarenhet av lokaler i Lund?',
-    a: 'Ja. I september 2026 riggade vi en företagsfest i ett kontor i Lund, med teknik i flera rum samtidigt.',
+    q: 'Kan vi hämta utrustning själva?',
+    a: 'Skåne Event levererar och riggar. Vill ni hämta utrustning själva är det en annan väg, via Festutrustning.',
   },
   {
-    q: 'Kan ni hantera både akademiska och företagsevent?',
-    a: 'Ja. Vi levererar teknik till företagskonferenser, kick-offs, galor och andra professionella event i Lund.',
-  },
-  {
-    q: 'Hur når jag er för offert på event i Lund?',
-    a: 'Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris.',
+    q: 'Hur snabbt kan ni komma till Lund?',
+    a: 'Vi arbetar i Lund. Berätta datum, lokal och typ av event i offerten, så återkommer vi med om vi kan ta uppdraget.',
   },
 ];
 ---
 
 <SolutionPage
-  title="Företagsevent i Lund – eventteknik och produktion"
-  description="Professionella företagsevent i Lund med ljud, ljus, scen och tekniker. Partner för event i universitetsstaden. Begär offert."
+  title="Företagsevent i Lund: ljud, ljus och DJ till kontor och lokal"
+  description="Teknik till firmafest, kick-off och konferens i Lund. Vi riggar i kontor, vid campus och i hyrda lokaler, med ljud i flera rum och tekniker på plats."
   canonicalPath="/lund/foretagsevent/"
   heroImage="/images/konferens-scen.jpg"
   eyebrow="Lund"
-  h1="Företagsevent i Lund"
-  lead="Eventteknik för företagsevent i Lund. Konferenser, kick-offs och galor, även när tekniken ska fungera i flera rum samtidigt."
+  h1="Företagsevent i Lund: teknik till kontor, lokal och campus"
+  lead="I Lund sker många företagsevent på kontoret. Tekniken ska fungera i flera rum samtidigt, inte bara vid ett podium."
   breadcrumbs={[
     { name: 'Företagsevent', href: '/foretagsevent/' },
     { name: 'Lund', href: '/lund/foretagsevent/' },
   ]}
   ogImage="/images/konferens-scen.jpg"
   serviceName="Företagsevent i Lund"
+  areaServedName="Lund"
   faqs={faqs}
 >
-  <h2>Event i kontor och mindre lokaler</h2>
+  <h2>Firmafest på kontoret</h2>
   <p>
-    I september 2026 levererade vi teknik till en företagsfest för ett bolag i vattenbranschen, i deras
-    kontor i Lund, med omkring 80 gäster. Stämningsbelysning och festljus satt i lokalen, och högtalare
-    fanns i alla festytor: dansgolv och mingel där vår DJ spelade och körde quiz, ett karaokerum och
-    korridoren mot entrén.
+    I september 2026 gjorde vi en firmafest för ett företag i vattenbranschen, med ca 80 gäster på kundens kontor i Lund.
+    Vi satte stämningsljus, festljus och högtalare i alla festytor: dansgolv och mingelrum där DJ:n spelade och körde quiz, ett karaokerum, och stämningsljus i korridoren till entrén.
+    Gästerna möttes av ljus redan i korridoren.
+    Läs caset om <a href="/case/ljud-ljus-foretagsfest/">firmafesten i Lund</a>.
   </p>
-  <p>
-    Det är den typen av uppdrag vi tar i Lund: event i kontor och mindre lokaler där tekniken ska fungera
-    i flera rum samtidigt. Läs mer om
-    <a href="/case/ljud-ljus-foretagsfest/">företagsfesten i Lund</a>.
-  </p>
-  <!-- TODO Rasmus: lokaler i Lund där ni har jobbat -->
 
-  <h2>Event i Lunds olika miljöer</h2>
+  <h2>Konferens och föreläsning i Lund</h2>
+  <p>
+    Till tal och panel behövs mikrofoner som hörs i salen, och bild som syns från sista raden.
+    Det samlas på sidan <a href="/konferens/">konferens</a>.
+    Kick-off med presentationer på dagen och fest på kvällen finns på <a href="/kickoff/">kick-off</a>.
+    Julfest för företag finns på <a href="/julfest/">julfest</a>.
+  </p>
+
+  <h2>Lokaltyper</h2>
+  <p>
+    Vi riggar i kontor, i hyrda lokaler och vid campus, utan att lokalen behöver vara byggd som festlokal.
+    Vi namnger inte husen här. Berätta vilken lokal ni har, så utgår vi från rummen, el och hur gästerna rör sig.
+    För uppdrag närmare Malmö, se <a href="/malmo/eventteknik/">eventteknik i Malmö</a>.
+  </p>
+
+  <h2>Hyra själv eller boka med tekniker</h2>
+  <p>
+    Vill ni att någon dimensionerar, levererar och är på plats är det här sidan.
+    Vill ni hämta utrustning själva går det via <FestLink destination="foretag" context="lund_sjalvhamtning" anchorType="partial">Festutrustning</FestLink>.
+  </p>
+
+  <h2>Så sätter vi ihop tekniken</h2>
+  <p>
+    Vi börjar med rummen, antalet gäster och vad som händer i varje yta: tal, quiz, dans eller karaoke.
+    Sedan placerar vi högtalare och ljus så att gästerna kan gå mellan rummen utan att ljudet tar slut i korridoren.
+    Vi riggar och provar innan gästerna kommer.
+  </p>
+
+  <h2>Det här tar vi ansvar för</h2>
   <ul>
-    <li>Konferenser och företagsdagar: <a href="/konferens/">konferens</a></li>
-    <li>Kick-offs och strategimöten: <a href="/kickoff/">kick-off</a></li>
-    <li>Produktlanseringar och partner-event: <a href="/produktlansering/">produktlansering</a></li>
-    <li>Galor och företagsfester: <a href="/gala/">gala</a> och <a href="/foretagsfest/">företagsfest</a></li>
+    <li>Att tal och musik hörs i de rum där de ska höras.</li>
+    <li>Att ljuset möter gästerna redan vid entrén när det ingår.</li>
+    <li>Att DJ, quiz och karaoke kan avlösa varandra.</li>
+    <li>Att kablar ligger säkert där folk går.</li>
+    <li>Nedplock när festen är slut.</li>
   </ul>
+
+  <h2>Från första samtal till genomfört event</h2>
   <p>
-    Vi anpassar <a href="/eventteknik/">eventteknik</a> efter lokal och program, i centrala Lund eller i
-    Brunnshög och Dalby. Mer om <a href="/foretagsevent/">företagsevent i Skåne</a>.
+    Vi är gärna med tidigt i planeringen, så att tekniken kan formas efter lokalen och programmet från början.
+    Vi går igenom kontoret eller lokalen med er, visar vad ljus och ljud kan göra med rummen och skickar ett förslag.
+    Vid behov tittar vi på plats. Efteråt följer vi upp.
+    <a href="/eventproduktion/">Så går en produktion till</a>.
   </p>
 
-  <h2>Lund och Öresundsregionen</h2>
-  <p>
-    Många Lundföretag har deltagare från Malmö, Köpenhamn och övriga Skåne. Vi planerar tekniken efter ert upplägg, även när programmet har hybridmoment. För andra städer finns
-    <a href="/malmo/foretagsevent/">företagsevent i Malmö</a> och
-    <a href="/helsingborg/foretagsevent/">företagsevent i Helsingborg</a>.
-  </p>
+  <h2>Så mycket ansvar ni vill lämna över</h2>
+  <ul>
+    <li>Helhet: vi planerar ljussättning och ljud i rummen och står för utrustning, DJ och tekniker. Vi bokar inte lokal och ordnar inte mat.</li>
+    <li>Teknisk produktion: ni planerar kvällen, vi står för tekniken på plats.</li>
+    <li>Leverans och rigg: vi levererar, riggar och testar.</li>
+  </ul>
 
-  <h2>Begär offert för ert Lund-event</h2>
+  <h2>Vad påverkar upplägget</h2>
   <p>
-    Berätta om datum, ort och typ av event, så skickar vi ett förslag på teknik och pris. Offerten kostar inget.
-    <OffertLink path="/lund/foretagsevent/">Begär offert</OffertLink>. Vi tar hand om tekniken till ert företagsevent i Lund.
+    Antal rum, antal gäster, om det blir tal, DJ, quiz eller karaoke, och hur lång tid vi har för rigg.
+    Hör av er tidigt, gärna innan programmet är spikat. Berätta om datum, ort och typ av event, och hur mycket ni vill att vi tar hand om, så återkommer vi med ett förslag.
+  </p>
+  <p>
+    <OffertLink path="/lund/foretagsevent/">Begär offert</OffertLink>
   </p>
 </SolutionPage>
