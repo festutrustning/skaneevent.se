@@ -37,9 +37,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['eventteknik', 'skane'],
   },
   '/eventproduktion/': {
-    title: 'Eventproduktion i Skåne – teknik och genomförande',
+    title: 'Så arbetar vi: teknisk eventproduktion i Skåne',
     description:
-      'Eventproduktion för företagsevent i Skåne. Planering, ljud, ljus, scen och tekniker – från idé till genomförande. Begär offert.',
+      'Från tidigt samtal och planering till rigg, tekniker på plats och uppföljning. Välj hur mycket av tekniken ni vill lämna över till oss.',
     sitemapPriority: 0.85,
     changefreq: 'monthly',
     focusAreas: ['eventproduktion', 'skane'],
