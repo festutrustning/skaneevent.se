@@ -145,14 +145,14 @@ Skåne har fina lokaler för företagsgalor – hotellballer i Malmö och Helsin
 
 **Bildskärm som ingen ser.** Placera skärmar synligt från alla bord.
 
-## Budget för galateknik
+## Vad som påverkar upplägget
 
-Galor ligger ofta i intervallet 40 000–120 000 kr för teknik beroende på storlek och omfattning. Se vår guide om [vad teknik kostar](/guider/vad-kostar-teknik-foretagsevent/) för riktlinjer.
+Lokal, antal tal, om det ska dansas och om scen och bild ingår. Vi publicerar inga priser. Se [vad som påverkar upplägget](/guider/vad-kostar-teknik-foretagsevent/).
 
 ## Nästa steg
 
 Planerar ni gala i Skåne? [Begär offert](/offert/?sk_ref=%2Fguider%2Fteknik-till-gala%2F&cta_context=content_body_cta) med datum, lokal, gästantal och program. Vi tar fram ljud, ljus, scen och bemanning efter er kväll.
 
-Vi hjälper företag med [företagsevent](/foretagsevent/) i hela regionen och erbjuder komplett [eventteknik](/eventteknik/). Utrustning och genomförande via [Festutrustning](https://festutrustning.se/foretag) – med erfarenhet av galor från 50 till 500 gäster.
+Vi hjälper företag med [företagsevent](/foretagsevent/) i hela regionen och erbjuder komplett [eventteknik](/eventteknik/). Utrustning och genomförande via [Festutrustning](https://festutrustning.se/foretag).
 
 Se även vårt [case om ljud, ljus och DJ till firmafest i Lund](/case/ljud-ljus-foretagsfest/) för ett praktiskt exempel.

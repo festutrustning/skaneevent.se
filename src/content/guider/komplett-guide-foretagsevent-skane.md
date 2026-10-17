@@ -59,7 +59,7 @@ En genomtänkt teknisk lösning inkluderar ofta:
 - **Bild** – projektor, LED-skärm eller monitorer beroende på lokal och ljusförhållanden
 - **Tekniker** – operatör på plats som hanterar övergångar och felsökning
 
-Vi dimensionerar alltid utifrån lokal, program och gästantal – inte utifrån ett fast paket. Det ger en lösning som faktiskt fungerar i er miljö.
+Vi dimensionerar alltid utifrån lokal, program och gästantal. Det ger en lösning som fungerar i er miljö.
 
 ## Budget och offert
 
