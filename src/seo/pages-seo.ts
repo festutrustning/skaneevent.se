@@ -29,9 +29,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['foretagsevent', 'skane'],
   },
   '/eventteknik/': {
-    title: 'Eventteknik i Skåne – ljud, ljus, scen och bild',
+    title: 'Eventteknik i Skåne: ljud, ljus, scen, LED och tekniker',
     description:
-      'Professionell eventteknik i Skåne för företagsevent. Ljud, ljus, scen, bild, mikrofoner och tekniker. Begär offert.',
+      'Eventteknik till konferenser, galor och företagsfester i hela Skåne. Ljud, ljus, scen, LED-skärm, tross och tekniker på plats från en leverantör.',
     sitemapPriority: 0.9,
     changefreq: 'weekly',
     focusAreas: ['eventteknik', 'skane'],
