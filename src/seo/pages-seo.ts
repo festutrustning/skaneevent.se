@@ -47,7 +47,7 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
   '/konferens/': {
     title: 'Teknikleverantör till konferens i Skåne: mikrofoner, bild',
     description:
-      'Hyr konferensutrustning med tekniker i Malmö, Helsingborg och Lund. Bordsmikrofoner till panel, headset, projektor eller LED och inspelning.',
+      'Hyr konferensutrustning med tekniker i Malmö, Helsingborg och Lund. Bordsmikrofoner till panel, headset, projektor eller LED, inspelning eller sändning.',
     sitemapPriority: 0.85,
     changefreq: 'monthly',
     focusAreas: ['konferens', 'eventteknik'],
