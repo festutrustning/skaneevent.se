@@ -45,9 +45,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['eventproduktion', 'skane'],
   },
   '/konferens/': {
-    title: 'Konferens i Skåne – eventteknik för företagsdagar',
+    title: 'Teknikleverantör till konferens i Skåne: mikrofoner, bild',
     description:
-      'Eventteknik till företagskonferenser i Skåne. Ljud, mikrofoner, bild och ljus för tal, paneler och workshops. Begär offert.',
+      'Hyr konferensutrustning med tekniker i Malmö, Helsingborg och Lund. Bordsmikrofoner till panel, headset, projektor eller LED och inspelning.',
     sitemapPriority: 0.85,
     changefreq: 'monthly',
     focusAreas: ['konferens', 'eventteknik'],
