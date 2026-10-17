@@ -133,9 +133,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['foretagsevent', 'lund'],
   },
   '/helsingborg/foretagsevent/': {
-    title: 'Företagsevent i Helsingborg – eventteknik och produktion',
+    title: 'Teknikleverantör i Helsingborg: konferens och event | Skåne Event',
     description:
-      'Professionella företagsevent i Helsingborg med ljud, ljus, scen och tekniker. Partner för event i nordvästra Skåne. Begär offert.',
+      'Ljud, ljus, scen, LED och tekniker till konferenser, företagsevent och publika visningar i Helsingborg. Från träningsevent till VM-visning. Begär offert.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['foretagsevent', 'helsingborg'],
