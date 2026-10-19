@@ -1,119 +1,67 @@
 ---
 title: Vad kostar teknik till företagsevent?
-description: Förstå kostnaderna för eventteknik till företagsevent i Skåne – ljud, ljus, scen, bild, tekniker och vad som påverkar priset.
+description: Vad som påverkar upplägget för eventteknik till företagsevent i Skåne. Lokal, gäster, program, rigg och tekniker. Förslag via offert, inga listpriser.
 pubDate: 2026-06-03
 tags:
-  - budget
-  - pris
+  - upplägg
+  - offert
   - eventteknik
 ---
 
-En av de vanligaste frågorna vi får är: vad kostar teknik till ett företagsevent? Svaret beror på en rad faktorer – lokal, gästantal, program, antal dagar och om ni behöver tekniker på plats. Den här guiden ger er en realistisk bild av kostnadsbilden så att ni kan budgetera smart.
+Vad tekniken kostar beror på lokalen, gästerna och programmet. Vi publicerar inga priser och inga färdiga paket. Den här guiden beskriver vad som påverkar upplägget, och hur ni får ett förslag.
 
-## Varför det inte finns ett fast pris
+## Vad som påverkar upplägget
 
-Eventteknik är inte en standardprodukt. Ett frukostseminarium för 30 personer i en möteslokal i Lund kräver helt andra resurser än en produktlansering med LED-scen, rörligt ljus och tre tekniker i Malmö. Priset påverkas av:
+- **Lokalen.** Storlek, akustik, takhöjd, el och hur lång tid vi har för rigg.
+- **Antal gäster.** Fler som ska höra och se betyder fler högtalare, mikrofoner eller en större bild.
+- **Programmet.** Tal, panel, musik, film och prisutdelning ställer olika krav.
+- **Scen och bild.** En talarplats är ett annat uppdrag än scen, tross och LED.
+- **Dagar.** En dag skiljer sig från en konferens där riggen står kvar över natten.
+- **Tekniker.** Leverans och rigg är ett uppdrag. Tekniker som stannar under eventet är ett annat.
+- **Logistik.** Lastning, avstånd och om lokalen är svår att komma in i.
 
-- **Lokal och akustik** – stora salar kräver kraftigare ljud och mer ljus
-- **Gästantal** – fler gäster, fler högtalare och mikrofoner
-- **Program** – tal, panel, musik, video och prisutdelning ställer olika krav
-- **Scen och bild** – enkel talarpodium vs. full scen med LED
-- **Antal dagar** – en dag vs. flerdagarskonferens med rigg kvar över natten
-- **Tekniker** – självrigg vs. tekniker på plats under eventet
-- **Avstånd och logistik** – leverans, lastning och tid i lokal
+Därför räknar vi varje offert utifrån ert event.
 
-Därför räknar vi varje offert utifrån ert event, inte från ett färdigt paketpris.
+## Ljud, ljus, scen, bild och tekniker
 
-## Typiska kostnadskategorier
+Ljud är ofta grunden: högtalare och mikrofoner så att talet hörs. Panel kräver fler mikrofoner och ofta en ljudtekniker.
 
-### Ljud
+Ljus gör lokalen färdig och kan växla när programmet växlar, till exempel från middag till dans.
 
-Ljud utgör ofta grunden i varje företagsevent. Ett grundläggande PA-system för tal i en medelstor sal kan starta runt 5 000–10 000 kr exklusive rigg. Större system med subwoofer, monitorer och trådlösa mikrofoner ligger högre.
+Scen och tross behövs när lokalen saknar en fast scen, eller när skärm och ljus ska hängas.
 
-Paneldiskussioner med fyra–sex deltagare kräver flera trådlösa mikrofoner, mixer och ofta en ljudtekniker – vilket påverkar totalkostnaden.
+Bild är projektor eller LED. Jämförelsen finns i [projektor eller LED](/guider/projektor-eller-led/).
 
-### Ljus
+Tekniker på plats följer programmet. Läs [tekniker på plats](/guider/tekniker-pa-plats/).
 
-Enklare grundbelysning och scenljus för talare kan ingå i ett samlat paket. Mer avancerat scenljus med rörliga heads, dimmer och programmering kostar mer – särskilt vid galor och produktlanseringar där ljus är en central del av upplevelsen.
+## Vad ett förslag brukar innehålla
 
-### Scen
+När ni [begär offert](/offert/?sk_ref=%2Fguider%2Fvad-kostar-teknik-foretagsevent%2F&cta_context=content_body_cta) beskriver vi:
 
-Scenmoduler, talarpodium, trappräcken och markduk varierar beroende på storlek. En kompakt talarscen för 50 personer är betydligt billigare än en stor scen med tross och tak för 500 gäster.
+- utrustning: ljud, ljus, scen, bild och mikrofoner
+- leverans, rigg och test före gästerna
+- nedplock
+- tekniker, om ni vill ha någon på plats
+- reservutrustning när uppdraget kräver det
 
-### Bild
+## Så blir förslaget träffsäkert
 
-Projektor och duk är ofta det mest kostnadseffektiva alternativet. LED-skärmar ger bättre bildkvalitet men kostar mer att hyra och rigga. Se vår guide [projektor eller LED](/guider/projektor-eller-led/) för en djupare jämförelse.
+Berätta lokal, program och antal gäster. Ju mer vi vet, desto mindre gissar vi. Hör av er tidigt, gärna innan programmet är spikat, så kan tekniken formas efter rummet.
 
-### Tekniker
+Om lokalen redan har grundljud kan det räcka att komplettera med mikrofoner och en tekniker. Det avgör vi när vi sett programmet.
 
-Tekniker på plats är en investering i trygghet. En ljudtekniker under en heldagskonferens, en ljusoperatör vid gala eller en produktionstekniker vid större event – priset beror på antal tekniker, timmar och komplexitet.
+## Jämför förslag på innehållet
 
-Många företag räknar tekniker som en del av uppdraget: färre avbrott mellan programpunkter och någon som löser problem innan gästerna märker det.
+Titta på vad som ingår, inte bara på en summa:
 
-### Rigg och logistik
-
-Leverans, uppsättning, funktionskontroll och nedmontering ingår i de flesta offerter. Vid längre riggtider (t.ex. dagen före) eller svår access kan logistikkostnaden öka. Utomhusevent kräver ofta extra tid för väderskydd och säkring.
-
-## Budget som riktlinje
-
-<!-- TODO Rasmus: bekräfta prisintervallen -->
-
-Som tumregel för medelstora företagsevent i Skåne:
-
-| Typ av event | Ungefärlig teknikbudget |
-|---|---|
-| Mindre seminarium (30–50 pers) | 8 000–20 000 kr |
-| Konferens heldag (100–200 pers) | 25 000–60 000 kr |
-| Produktlansering / gala | 50 000–150 000+ kr |
-| Utomhusscen med LED | 80 000–200 000+ kr |
-
-Siffrorna är riktmärken – inte offerter. Er faktiska kostnad beror på era specifika behov.
-
-## Vad som oftast ingår i en offert
-
-När ni [begär offert](/offert/?sk_ref=%2Fguider%2Fvad-kostar-teknik-foretagsevent%2F&cta_context=content_body_cta) hos oss får ni normalt ett tydligt förslag som specificerar:
-
-- Utrustning (ljud, ljus, scen, bild, mikrofoner)
-- Leverans och rigg
-- Funktionskontroll före event
-- Nedmontering
-- Tekniker (om tillämpligt)
-- Reservutrustning vid behov
-
-Vi specificerar vad som ingår så att ni kan jämföra och förstå vad ni betalar för – utan dolda avgifter.
-
-## Så sparar ni utan att kompromissa
-
-**Boka i god tid.** Sena bokningar begränsar utbudet och kan medföra rushavgifter.
-
-**Var tydliga med behov.** Ju mer vi vet om lokal, program och gästantal, desto träffsäkrare blir offerten – utan onödig utrustning.
-
-**Prioritera rätt.** Investera i det som gästerna märker mest: hörbarhet, synlig bild och pålitlig mikrofon. Spara på det som inte påverkar upplevelsen.
-
-**Använd lokalens befintliga teknik smart.** Ibland räcker det att komplettera med mikrofoner och en tekniker istället för att hyra allt externt.
-
-**Planera ett samtal tidigt.** Ett kort samtal sparar ofta pengar genom att vi kan föreslå en lösning som matchar budgeten.
-
-## Teknik vs. total eventbudget
-
-De flesta eventproffs rekommenderar att avsätta 15–30 % av total eventbudget till teknik. Resten går till lokal, catering, talare, dekoration och projektledning. Att skära för mycket på teknik riskerar att undergräva hela eventets syfte – dåligt ljud eller otydlig bild påverkar hur budskapet tas emot.
-
-## Jämföra offerter rätt
-
-När ni jämför offerter från olika leverantörer, titta inte bara på totalsumman. Kontrollera:
-
-- Ingår rigg och nedmontering?
-- Hur många mikrofoner och av vilken typ?
-- Finns tekniker på plats – och hur många timmar?
-- Ingår backup-utrustning?
-- Vad händer vid försening eller ändringar?
-
-En billigare offert som saknar tekniker, ljudprov eller tillräckligt antal mikrofoner kan bli dyrare i praktiken om något går fel.
+- Ingår rigg och nedplock?
+- Hur många mikrofoner, och av vilken sort?
+- Stannar en tekniker, och under vilken del av programmet?
+- Ingår reservutrustning?
+- Vad händer om programmet ändras?
 
 ## Nästa steg
 
-När ni har en budgetram kan ni börja konkretisera teknikbehovet. Vår [checklista för företagsevent](/guider/checklista-foretagsevent/) hjälper er samla information. Se även [eventteknik](/eventteknik/), [eventproduktion](/eventproduktion/) och [eventteknik i Malmö](/malmo/eventteknik/) beroende på hur stort ansvar ni vill lägga på oss.
+Hör av er tidigt, så föreslår vi ett upplägg. [Checklista för företagsevent](/guider/checklista-foretagsevent/) hjälper er samla det vi behöver veta. Se också [eventteknik](/eventteknik/) och [så går en produktion till](/eventproduktion/).
 
-Vi samarbetar med [Festutrustning](https://festutrustning.se/ljud-ljus-skane) som har ett brett utbud av ljud- och ljusutrustning i Skåne – vilket ger er tillgång till rätt utrustning utan att betala för onödigt omfattande paket.
-
-[Begär offert](/offert/?sk_ref=%2Fguider%2Fvad-kostar-teknik-foretagsevent%2F&cta_context=content_body_cta) med datum, lokal, gästantal och ungefärligt program. Ju mer ni berättar, desto träffsäkrare blir prisbilden.
+[Begär offert](/offert/?sk_ref=%2Fguider%2Fvad-kostar-teknik-foretagsevent%2F&cta_context=content_body_cta) med datum, ort, typ av event och hur mycket ni vill att vi tar hand om.

@@ -191,8 +191,8 @@ else {
       fail('SE-0 money saknar areaServed Helsingborg');
     }
   }
-  if (!moneyHbg.includes('Företagsevent i Helsingborg')) {
-    fail('SE-0 money H1/title-kärna får inte ändras');
+  if (!moneyHbg.includes('Teknikleverantör till företagsevent och konferens i Helsingborg')) {
+    fail('SE-0 money H1 ska vara teknikleverantör i Helsingborg');
   }
 }
 

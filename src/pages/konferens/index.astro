@@ -4,87 +4,106 @@ import SolutionPage from '../../components/SolutionPage.astro';
 
 const faqs = [
   {
-    q: 'Vilken teknik behövs till en företagskonferens?',
-    a: 'Vanligt behövs PA-system, mikrofoner för tal och panel, projektion eller skärmar, samt ljus som gör scenen tydlig för publiken. Vi dimensionerar efter lokal och antal deltagare.',
+    q: 'Hur många mikrofoner behövs till en panel?',
+    a: 'Det beror på hur många som sitter i panelen och om publiken ska ställa frågor. Ofta en mikrofon per talare, plus en handhållen för frågor. Vi räknar efter programmet, inte efter en fast lista.',
   },
   {
-    q: 'Kan ni hantera paneldiskussioner och publikfrågor?',
-    a: 'Ja. Vi riggar trådlösa mikrofoner, panelmikrofoner och eventuellt handmikrofoner för publikfrågor. Tekniker kan finnas på plats så att tal, film och musik följer på varandra utan väntan.',
+    q: 'Kan ni ha en tekniker på plats hela dagen?',
+    a: 'Ja. Teknikern sköter övergångarna mellan talare, så att ingen står och väntar på en mikrofon. Andra konferenser behöver bara att mikrofoner och skärm står klara på morgonen.',
   },
   {
-    q: 'Fungerar lösningen i både små och stora konferenslokaler?',
-    a: 'Ja. Vi anpassar utrustningen till allt från avdelningsmöten i mindre salar till större konferenser med hundratals deltagare.',
+    q: 'Kan ni koppla in talarnas egna datorer?',
+    a: 'Ja. Vi provar bild och presentationer med talarnas egna filer innan deltagarna kommer.',
   },
   {
-    q: 'Hjälper ni med flera spår eller parallella sessioner?',
-    a: 'Ja, vid behov kan vi försörja flera rum eller spår med teknik. Kontakta oss med ert program så planerar vi upplägget.',
+    q: 'Räcker lokalens egen ljudanläggning?',
+    a: 'I ett litet mötesrum räcker den ibland. När publiken är större, eller när det blir panel och flera talare, behövs mikrofoner och ett ljud som är inställt för just den salen.',
+  },
+  {
+    q: 'Vad påverkar upplägget för konferensteknik?',
+    a: 'Lokalen, antal deltagare, programmet, om det blir panel, inspelning eller sändning, hur lång tid vi har för rigg och om en tekniker ska stanna hela dagen. Hör av er tidigt, så föreslår vi ett upplägg.',
   },
 ];
-
 ---
 
 <SolutionPage
-  title="Konferens i Skåne – eventteknik för företagsdagar"
-  description="Eventteknik till företagskonferenser i Skåne. Ljud, mikrofoner, bild och ljus för tal, paneler och workshops. Begär offert."
+  title="Teknikleverantör till konferens i Skåne: mikrofoner, bild"
+  description="Hyr konferensutrustning med tekniker i Malmö, Helsingborg och Lund. Bordsmikrofoner till panel, headset, projektor eller LED, inspelning eller sändning."
   canonicalPath="/konferens/"
   heroImage="/images/konferens-scen.jpg"
-  eyebrow="Konferens & AV"
-  h1="Konferens i Skåne"
-  lead="Ljud, presentationer och paneler för företagskonferenser och företagsdagar i hela Skåne."
+  eyebrow="Konferens"
+  h1="Konferensteknik och konferensutrustning i Skåne"
+  lead="Vi är teknikleverantör till konferenser för företag och organisationer i Skåne, när lokalens grundljud inte räcker till tal, panel och bild."
   breadcrumbs={[{ name: 'Konferens', href: '/konferens/' }]}
   ogImage="/images/konferens-scen.jpg"
-  serviceName="Konferens i Skåne"
+  serviceName="Konferensteknik i Skåne"
   faqs={faqs}
 >
-  <h2>Konferenser där tekniken inte stjäl fokus</h2>
+  <h2>Mikrofoner efter programmet</h2>
   <p>
-    En företagskonferens ska förmedla budskap, skapa engagemang och ge deltagarna en professionell upplevelse.
-    När mikrofonen krånglar, bilden är suddig eller paneldeltagarna inte hörs tappar ni tempo och trovärdighet.
-    Skåne Event levererar <strong>eventteknik till konferenser i Skåne</strong> – så att talare, paneler och
-    presentationer fungerar från första till sista programpunkt.
-  </p>
-  <p>
-    Vi arbetar med företag som arrangerar årsstämmor, strategidagar, kundkonferenser och interna utbildningsevent.
-    Lösningen anpassas till er lokal, ert program och antalet deltagare.
+    Keynote och den som går runt behöver headset. Panelen behöver bordsmikrofoner och ofta ett headset till moderatorn.
+    Publikfrågor behöver handhållna mikrofoner. Ljudet ställs in i lokalen innan deltagarna kommer.
+    Mer om val av mikrofon finns i guiden <a href="/guider/mikrofoner-paneldiskussion/">mikrofoner till panel</a>
+    och i <a href="/guider/teknik-till-konferens/">teknik till konferens</a>.
   </p>
 
-  <h2>Teknik för olika konferensformat</h2>
-  <p>Konferenser varierar i upplägg. Vi har erfarenhet av:</p>
-  <ul>
-    <li>Keynote och huvudtal med presentation och video</li>
-    <li>Paneldiskussioner med flera deltagare och moderator</li>
-    <li>Workshops och breakout-sessioner i mindre grupper</li>
-    <li>Hybridupplägg där deltagare följer med på distans</li>
-    <li>Galakväller och middagar i samband med konferensen – se <a href="/gala/">gala</a></li>
-  </ul>
+  <h2>Bild och presentationer</h2>
   <p>
-    Oavsett format samordnar vi <a href="/eventteknik/">eventteknik</a> så att ni kan gå mellan moment utan avbrott, och teknikerna har tidslinjen.
+    Bilden är projektor eller LED, beroende på ljus och avstånd i salen.
+    Jämförelsen finns i <a href="/guider/projektor-eller-led/">projektor eller LED</a>.
+    Vi provar presentationerna med talarnas egna filer, så att första bilden syns när programmet börjar.
+    Säg till om konferensen ska spelas in eller sändas, så tar vi med det i förslaget.
   </p>
 
-  <h2>Ljud, bild och ljus för tydlig kommunikation</h2>
+  <h2>Panel och frågestund</h2>
   <p>
-    Konferensdeltagare ska kunna höra varje ord – även längst bak i salen. Vi dimensionerar PA-system och mikrofoner
-    utifrån akustik och rumsstorlek. För presentationer levererar vi projektion eller skärmar med rätt upplösning
-    och ljus som gör talaren synlig utan att blända.
-  </p>
-  <p>
-    Behöver ni mer avancerat ljus eller scenbygge i samband med galamiddag eller prisutdelning? Vi kan kombinera
-    konferensteknik med <a href="/ljud-ljus-foretagsevent/">ljud och ljus</a> och
-    <a href="/scen-till-event/">scenlösningar</a> i samma uppdrag.
+    En panel faller om någon inte hörs, eller om frågan från publiken försvinner i rummet.
+    Vi sätter en mikrofon per talare och en väg för frågor, och en tekniker kan följa bytena så att programmet går vidare utan väntan.
   </p>
 
-  <h2>Konferenser i Skåne</h2>
+  <h2>Presentation för inbjudna gäster</h2>
   <p>
-    Regionen har ett rikt utbud av konferensanläggningar – från centrala lokaler i
-    <a href="/malmo/foretagsevent/">Malmö</a> och <a href="/lund/foretagsevent/">Lund</a> till hotell och
-    konferenscenter i <a href="/helsingborg/foretagsevent/">Helsingborg</a> och övriga Skåne.
-    Vi känner till vanliga venue och kan samordna tekniken med lokalens personal.
+    I Malmö i september 2026 höll ett företag i finansbranschen en presentation för inbjudna gäster.
+    Vi levererade mikrofoner, högtalare och stämningsbelysning.
+    Se caset <a href="/case/konferens-panel/">presentation för inbjudna i Malmö</a>.
   </p>
 
-  <h2>Boka teknik till er konferens</h2>
+  <h2>Konferensutrustning i Malmö, Helsingborg och Lund</h2>
   <p>
-    Dela program, datum, lokal och antal deltagare – vi återkommer med ett förslag och offert.
-    <OffertLink path="/konferens/">Begär offert</OffertLink> eller ring oss om ni vill diskutera ert kommande
-    <a href="/foretagsevent/">företagsevent</a> i Skåne.
+    I Malmö och Lund riggar vi i kontor, hotell och konferenssalar.
+    I Helsingborg gör vi samma sak. Mer om teknik på plats där finns under
+    <a href="/helsingborg/foretagsevent/">företagsevent i Helsingborg</a>.
+  </p>
+
+  <h2>Så sätter vi ihop tekniken till konferensen</h2>
+  <p>
+    På en konferens är ljudet viktigast. Alla ska höra talaren och frågorna från publiken utan att anstränga sig, även längst bak.
+    Vi väljer mikrofoner efter programmet: handmikrofon för frågor, headset för den som vill röra sig, och fler mikrofoner om det blir panel.
+    Ljudet ställs in i lokalen innan deltagarna kommer, och bild och presentationer provas med talarnas egna filer.
+  </p>
+  <p>
+    En tekniker är på plats och sköter övergångarna mellan talare, så att programmet går vidare utan att någon står och väntar på en mikrofon.
+  </p>
+  <p>
+    För er betyder det att budskapet når fram och att företaget framstår som välorganiserat inför de gäster ni bjudit in.
+  </p>
+
+  <h2>Så mycket ansvar ni vill lämna över</h2>
+  <p>
+    Vissa konferenser behöver en tekniker som följer hela dagen, andra behöver bara att mikrofoner och skärm står klara på morgonen.
+    Vi är gärna med tidigt i planeringen, så att tekniken kan formas efter lokalen och programmet från början.
+    Vi kan planera och samordna tekniken tillsammans med er och lokalen, stå för teknik och tekniker under dagen, eller bara leverera, rigga och testa.
+    Program, talare och lokal är ert. Vi ser till att tekniken bär dem.
+    Oavsett nivå har ni en kontakt hos oss från första samtalet, och vi följer upp med er efter konferensen.
+    <a href="/eventproduktion/">Så går en produktion till</a>.
+  </p>
+
+  <h2>Vad påverkar upplägget</h2>
+  <p>
+    Lokalen, antal deltagare, programmet, tid för rigg och om ni vill ha tekniker på plats hela dagen.
+    Hör av er tidigt, gärna innan programmet är spikat. Berätta om datum, ort och typ av event, och hur mycket ni vill att vi tar hand om, så återkommer vi med ett förslag.
+  </p>
+  <p>
+    <OffertLink path="/konferens/">Begär offert</OffertLink>
   </p>
 </SolutionPage>

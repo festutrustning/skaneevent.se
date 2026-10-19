@@ -29,25 +29,25 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['foretagsevent', 'skane'],
   },
   '/eventteknik/': {
-    title: 'Eventteknik i Skåne – ljud, ljus, scen och bild',
+    title: 'Eventteknik i Skåne: ljud, ljus, scen, LED och tekniker',
     description:
-      'Professionell eventteknik i Skåne för företagsevent. Ljud, ljus, scen, bild, mikrofoner och tekniker. Begär offert.',
+      'Eventteknik till konferenser, galor och företagsfester i hela Skåne. Ljud, ljus, scen, LED-skärm, tross och tekniker på plats från en leverantör.',
     sitemapPriority: 0.9,
     changefreq: 'weekly',
     focusAreas: ['eventteknik', 'skane'],
   },
   '/eventproduktion/': {
-    title: 'Eventproduktion i Skåne – teknik och genomförande',
+    title: 'Så arbetar vi: teknisk eventproduktion i Skåne',
     description:
-      'Eventproduktion för företagsevent i Skåne. Planering, ljud, ljus, scen och tekniker – från idé till genomförande. Begär offert.',
+      'Från tidigt samtal och planering till rigg, tekniker på plats och uppföljning. Välj hur mycket av tekniken ni vill lämna över till oss.',
     sitemapPriority: 0.85,
     changefreq: 'monthly',
     focusAreas: ['eventproduktion', 'skane'],
   },
   '/konferens/': {
-    title: 'Konferens i Skåne – eventteknik för företagsdagar',
+    title: 'Teknikleverantör till konferens i Skåne: mikrofoner, bild',
     description:
-      'Eventteknik till företagskonferenser i Skåne. Ljud, mikrofoner, bild och ljus för tal, paneler och workshops. Begär offert.',
+      'Hyr konferensutrustning med tekniker i Malmö, Helsingborg och Lund. Bordsmikrofoner till panel, headset, projektor eller LED, inspelning eller sändning.',
     sitemapPriority: 0.85,
     changefreq: 'monthly',
     focusAreas: ['konferens', 'eventteknik'],
@@ -61,9 +61,9 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['gala', 'scen'],
   },
   '/produktlansering/': {
-    title: 'Produktlansering i Skåne – eventteknik som lyfter budskapet',
+    title: 'Produktlansering i Skåne: LED-skärm, scen och reveal',
     description:
-      'Eventteknik till produktlanseringar i Skåne. Scen, ljud, ljus, bild och tekniker för företagsevent. Begär offert.',
+      'Teknik till produktlansering i Malmö, Lund och Helsingborg. LED-vägg för film, ljus för avtäckningen och tekniker som kör showen. Begär förslag.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['produktlansering', 'scen'],
@@ -77,17 +77,17 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['foretagsfest'],
   },
   '/julfest/': {
-    title: 'Julfest i Skåne – eventteknik för företag',
+    title: 'Julfest för företag i Malmö och Skåne: ljud, ljus och DJ',
     description:
-      'Eventteknik till företagsjulfester i Skåne. Ljud, ljus, mikrofoner och stämning för julens företagsevent. Begär offert.',
+      'Ljud, mikrofoner, ljus och DJ till företagets julfest i Malmö, Helsingborg och Lund. Tal som hörs, dansgolv som fylls. Boka i tid inför december.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['julfest'],
   },
   '/kickoff/': {
-    title: 'Kick-off i Skåne – eventteknik som sätter tonen',
+    title: 'Kick-off i Skåne: scen, ljud, bild och DJ på samma leverans',
     description:
-      'Eventteknik till kick-offs och strategidagar i Skåne. Scen, ljud, ljus och bild för energifyllda företagsevent. Begär offert.',
+      'Teknik till kickoff i Malmö, Helsingborg och Kristianstad. Presentationer på dagen, DJ och ljus på kvällen, med en tekniker som stannar hela dagen.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['kickoff'],
@@ -117,25 +117,25 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     focusAreas: ['foretagsevent', 'malmo'],
   },
   '/malmo/eventteknik/': {
-    title: 'Eventteknik i Malmö – ljud, ljus och rigg',
+    title: 'Eventteknik i Malmö: ljud, ljus, LED och tekniker på plats',
     description:
-      'Professionell eventteknik i Malmö för företagsevent. Ljud, ljus, scen, mikrofoner och tekniker. Begär offert.',
+      'Eventteknik till företagsevent i Malmö, från kontor i Hyllie till presentationer i stan. Ljud, ljus, scen, LED och tekniker. Lager på Lockarpsvägen i Malmö.',
     sitemapPriority: 0.85,
     changefreq: 'monthly',
     focusAreas: ['eventteknik', 'malmo'],
   },
   '/lund/foretagsevent/': {
-    title: 'Företagsevent i Lund – eventteknik och produktion',
+    title: 'Företagsevent i Lund: ljud, ljus och DJ till kontor och lokal',
     description:
-      'Professionella företagsevent i Lund med ljud, ljus, scen och tekniker. Partner för event i universitetsstaden. Begär offert.',
+      'Teknik till firmafest, kick-off och konferens i Lund. Vi riggar i kontor, vid campus och i hyrda lokaler, med ljud i flera rum och tekniker på plats.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['foretagsevent', 'lund'],
   },
   '/helsingborg/foretagsevent/': {
-    title: 'Företagsevent i Helsingborg – eventteknik och produktion',
+    title: 'Teknikleverantör i Helsingborg: konferens och event | Skåne Event',
     description:
-      'Professionella företagsevent i Helsingborg med ljud, ljus, scen och tekniker. Partner för event i nordvästra Skåne. Begär offert.',
+      'Ljud, ljus, scen, LED och tekniker till konferenser, företagsevent och publika visningar i Helsingborg. Från träningsevent till VM-visning. Begär offert.',
     sitemapPriority: 0.8,
     changefreq: 'monthly',
     focusAreas: ['foretagsevent', 'helsingborg'],
