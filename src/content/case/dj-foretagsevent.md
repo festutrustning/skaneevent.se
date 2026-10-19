@@ -28,3 +28,5 @@ Vi stod för ljud, ljus och DJ-utrustning. Vi byggde också en trussrigg och sat
 - [Ljud till företagsevent](/guider/ljud-till-foretagsevent/)
 
 [Begär offert](/offert/?sk_ref=%2Fcase%2Fdj-foretagsevent%2F&cta_context=content_body_cta) för kick-off eller företagsevent i Skåne.
+
+[Boka DJ och artister](/dj-och-artister/)
