@@ -1,0 +1,103 @@
+---
+import OffertLink from '../../components/OffertLink.astro';
+import SolutionPage from '../../components/SolutionPage.astro';
+
+const faqs = [
+  {
+    q: 'Kan ni boka DJ och saxofonist till samma kväll?',
+    a: 'Ja. DJ, saxofonist och violinist kan bokas till samma kväll. Vilka som passar tar vi fram i dialog med er, utifrån programmet och den ram ni har.',
+  },
+  {
+    q: 'Kan ni sköta tekniken när vi själva har bokat en artist?',
+    a: 'Ja. Då tar vi scen, ljud och ljus runt den artist ni redan har bokat, och provar innan gästerna kommer.',
+  },
+  {
+    q: 'Vad är en rider och behöver vi en?',
+    a: 'En rider är artistens lista över vad framträdandet behöver. Ni behöver inte skriva den. Vi rättar oss efter listan och löser det som har med teknik att göra. Om något på listan inte är teknik får ni veta det.',
+  },
+  {
+    q: 'Hinner ni göra ljudprov innan gästerna kommer?',
+    a: 'Ja. Vi provar ljudet innan gästerna kommer, så att artisten hör sig själv och första låten inte blir ett test.',
+  },
+  {
+    q: 'Kan DJ:n också leda en quiz?',
+    a: 'På firmafesten i Lund i september 2026 körde DJ:n också quiz. Säg till om ni vill ha det, så tar vi med det när vi tar fram upplägget.',
+  },
+  {
+    q: 'Hur tidigt bör vi boka?',
+    a: 'Hör av er tidigt, gärna innan programmet är spikat. Berätta om datum, ort och typ av event, och hur mycket ni vill att vi tar hand om, så återkommer vi med ett förslag.',
+  },
+];
+---
+
+<SolutionPage
+  title="Boka DJ och artister till företagsevent i Skåne | Skåne Event"
+  description="Vi bokar och koordinerar DJ, saxofonist och artister till företagsfest, julfest och invigning i Skåne, och står för ljud, ljus och scen runt dem."
+  canonicalPath="/dj-och-artister/"
+  heroImage="/images/foretagsevent-dj.jpg"
+  eyebrow="DJ och artister"
+  h1="DJ och artister till företagsevent i Skåne"
+  lead="Vi bokar och koordinerar den som ska uppträda och sköter tekniken, så att ni har en kontakt för både underhållning och teknik. Lokal, mat och resten av programmet är ert eller er eventbyrås."
+  breadcrumbs={[{ name: 'DJ och artister', href: '/dj-och-artister/' }]}
+  ogImage="/images/foretagsevent-dj.jpg"
+  serviceName="DJ och artister till företagsevent i Skåne"
+  faqs={faqs}
+>
+  <h2>Det vi bokar</h2>
+  <p>
+    Vi bokar DJ, saxofonist och violinist, och tar fram andra artister när kvällen kräver det.
+    Vilka som passar bestämmer vi i dialog med er, utifrån programmet och den ram ni har.
+    DJ, saxofonist och violinist kan bokas till samma kväll.
+  </p>
+
+  <h2>Så koordinerar vi framträdandet</h2>
+  <p>
+    Vi stämmer av tider och var i ert körschema framträdandet ska ligga.
+    Vi tar reda på vad artisten behöver och håller kontakten med artisten fram till eventet.
+    Programmet i övrigt är ert.
+  </p>
+
+  <h2>Tekniken runt framträdandet</h2>
+  <p>
+    Vi går igenom artistens rider och löser det som har med teknik att göra:
+    <a href="/scen-till-event/">scen</a>, ljud och ljus, och ett ljudprov innan gästerna kommer, så att artisten hör sig själv.
+    När uppdraget omfattar en tekniker på plats byter ljus och ljud i samma ögonblick som programmet.
+    Om ridern innehåller något som inte är teknik får ni veta det.
+  </p>
+
+  <h2>Så har det sett ut</h2>
+  <ul>
+    <li>
+      <a href="/case/ljud-ljus-foretagsfest/">Firmafest på ett kontor i Lund</a>, september 2026, ca 80 gäster hos ett företag i vattenbranschen: DJ som också körde quiz, karaokerum och ljus i dans, mingel och korridoren till entrén.
+    </li>
+    <li>
+      <a href="/case/utomhus-led-scen-malmo/">Kontorsinvigning i Hyllie</a>, juni 2026, ca 100 gäster hos ett tandvårdsföretag: DJ, ljud, ljus och konfetti på en takterrass.
+    </li>
+    <li>
+      <a href="/case/dj-foretagsevent/">Hyrox på Majoren CrossFit i Helsingborg</a>, december 2025, ca 200 deltagare: DJ-utrustning, ljud och ljus.
+    </li>
+  </ul>
+  <p>
+    Samma bokning kan gälla en <a href="/foretagsfest/">företagsfest</a>, en <a href="/julfest/">julfest</a> eller en invigning.
+  </p>
+
+  <h2>Så mycket ansvar ni vill lämna över</h2>
+  <ul>
+    <li>Bokning och koordinering av artisten, med tekniken runt framträdandet.</li>
+    <li>Tekniken till en artist ni själva har bokat.</li>
+  </ul>
+  <p>
+    Vi är gärna med tidigt i planeringen, så att tekniken kan formas efter lokalen och programmet från början.
+    Efteråt följer vi upp.
+    <a href="/eventproduktion/">Så går en produktion till</a>.
+  </p>
+
+  <h2>Vad påverkar upplägget</h2>
+  <p>
+    Programmet, lokalen, hur många som ska höra, och vad artistens rider kräver.
+    Hör av er tidigt, gärna innan programmet är spikat. Berätta om datum, ort och typ av event, och hur mycket ni vill att vi tar hand om, så återkommer vi med ett förslag.
+  </p>
+  <p>
+    <OffertLink path="/dj-och-artister/">Begär offert</OffertLink>
+  </p>
+</SolutionPage>

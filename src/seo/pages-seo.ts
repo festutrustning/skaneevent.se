@@ -84,6 +84,14 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
     changefreq: 'monthly',
     focusAreas: ['julfest'],
   },
+  '/dj-och-artister/': {
+    title: 'Boka DJ och artister till företagsevent i Skåne | Skåne Event',
+    description:
+      'Vi bokar och koordinerar DJ, saxofonist och artister till företagsfest, julfest och invigning i Skåne, och står för ljud, ljus och scen runt dem.',
+    sitemapPriority: 0.8,
+    changefreq: 'monthly',
+    focusAreas: ['foretagsevent'],
+  },
   '/kickoff/': {
     title: 'Kick-off i Skåne: scen, ljud, bild och DJ på samma leverans',
     description:
