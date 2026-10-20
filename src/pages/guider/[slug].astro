@@ -1,9 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CTASection from '../../components/CTASection.astro';
-import ContentImage from '../../components/ContentImage.astro';
+import SolutionPage from '../../components/SolutionPage.astro';
 import { buildArticleLd } from '../../components/seo/articleLd';
 import { getGuideImage } from '../../data/guide-images';
 
@@ -50,38 +47,29 @@ const jsonLd = buildArticleLd({
 });
 ---
 
-<BaseLayout
+<SolutionPage
   title={pageTitle}
   description={pageDescription}
   canonicalPath={canonicalPath}
-  ogImage={pageOg}
+  h1={title}
+  lead={description}
   breadcrumbs={breadcrumbs}
-  jsonLd={jsonLd}
+  eyebrow="Guider"
+  heroImage={heroImage.src}
+  forceHero
+  ogImage={pageOg}
   noIndex={noindex}
+  extraJsonLd={jsonLd}
+  footerCtaContext="guide_footer_cta"
 >
-  <div class="page-hero">
-    <div class="container">
-      <Breadcrumbs items={breadcrumbs} />
-      <h1>{title}</h1>
-      <p class="page-lead">{description}</p>
-    </div>
+  <p class="guide-meta">
+    Publicerad {pubDate.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}
+    {updatedDate && (
+      <> · Uppdaterad {updatedDate.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}</>
+    )}
+    {tags.length > 0 && <> · {tags.join(' · ')}</>}
+  </p>
+  <div class="article-body">
+    <Content />
   </div>
-
-  <section class="section">
-    <div class="container prose-page">
-      <p class="guide-meta">
-        Publicerad {pubDate.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}
-        {updatedDate && (
-          <> · Uppdaterad {updatedDate.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}</>
-        )}
-        {tags.length > 0 && <> · {tags.join(' · ')}</>}
-      </p>
-      <ContentImage {...heroImage} wide />
-      <div class="article-body">
-        <Content />
-      </div>
-    </div>
-  </section>
-
-  <CTASection sourcePath="/guider/" ctaContext="guide_footer_cta" />
-</BaseLayout>
+</SolutionPage>
