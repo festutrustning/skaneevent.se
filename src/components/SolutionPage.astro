@@ -27,6 +27,13 @@ interface Props {
   areaServedName?: string;
   faqs?: { q: string; a: string }[];
   eyebrow?: string;
+  /** Kortgallerier behöver hela kolumnen, inte läsbredden. */
+  wide?: boolean;
+  /** Visa hero-bilden även när den annars filtreras bort. */
+  forceHero?: boolean;
+  extraJsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  noIndex?: boolean;
+  footerCtaContext?: string;
 }
 
 const {
@@ -42,6 +49,11 @@ const {
   areaServedName,
   faqs = [],
   eyebrow = 'Skåne Event',
+  wide = false,
+  forceHero = false,
+  extraJsonLd,
+  noIndex = false,
+  footerCtaContext = 'landing_footer_cta',
 } = Astro.props;
 
 const seo = getPageSeo(normalizeSeoPath(canonicalPath));
@@ -65,7 +77,8 @@ const crowdHeroes = new Set([
   '/images/foretagsevent-atmosfar.jpg',
 ]);
 const requestedHero = heroImage || ogImage || seo?.ogImage || '';
-const heroPhoto = requestedHero && !crowdHeroes.has(requestedHero) ? requestedHero : '';
+const heroPhoto =
+  requestedHero && (forceHero || !crowdHeroes.has(requestedHero)) ? requestedHero : '';
 
 const heroSet = heroPhoto ? responsiveSources(heroPhoto) : null;
 
@@ -77,6 +90,10 @@ if (serviceName) {
 }
 const faqLd = buildFaqLd(faqs);
 if (faqLd) jsonLd.push(faqLd);
+if (extraJsonLd) {
+  if (Array.isArray(extraJsonLd)) jsonLd.push(...extraJsonLd);
+  else jsonLd.push(extraJsonLd);
+}
 ---
 
 <BaseLayout
@@ -86,6 +103,7 @@ if (faqLd) jsonLd.push(faqLd);
   ogImage={ogImage || heroPhoto}
   breadcrumbs={breadcrumbs}
   jsonLd={jsonLd}
+  noIndex={noIndex}
   darkHero
   heroPreload={heroSet ? { href: heroSet.preload, srcset: heroSet.avif } : undefined}
 >
@@ -124,7 +142,7 @@ if (faqLd) jsonLd.push(faqLd);
 
   <section class="section landing-body">
     <div class="container landing-layout">
-      <div class="prose-page landing-prose">
+      <div class:list={['prose-page', 'landing-prose', { 'landing-prose-wide': wide }]}>
         {visuals?.feature && (
           <ContentImage
             src={visuals.feature.src}
@@ -187,5 +205,5 @@ if (faqLd) jsonLd.push(faqLd);
   <!-- TODO Rasmus: riktiga B2B-omdömen -->
   <FestBrandLogos />
 
-  <CTASection sourcePath={canonicalPath} ctaContext="landing_footer_cta" />
+  <CTASection sourcePath={canonicalPath} ctaContext={footerCtaContext} />
 </BaseLayout>

@@ -1,8 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CTASection from '../../components/CTASection.astro';
+import SolutionPage from '../../components/SolutionPage.astro';
 import { buildArticleLd } from '../../components/seo/articleLd';
 
 export async function getStaticPaths() {
@@ -23,7 +21,6 @@ const {
   eventType,
   guests,
   image,
-  imageAlt,
   kit,
   crew,
   challenge,
@@ -55,35 +52,22 @@ const jsonLd = buildArticleLd({
 });
 ---
 
-<BaseLayout
+<SolutionPage
   title={pageTitle}
   description={pageDescription}
   canonicalPath={canonicalPath}
-  ogImage={pageOg}
+  h1={title}
+  lead={description}
   breadcrumbs={breadcrumbs}
-  jsonLd={jsonLd}
+  eyebrow="Case"
+  heroImage={image}
+  forceHero
+  ogImage={pageOg}
   noIndex={noindex}
+  extraJsonLd={jsonLd}
+  footerCtaContext="case_footer_cta"
 >
-  <div class="page-hero">
-    <div class="container">
-      <Breadcrumbs items={breadcrumbs} />
-      <h1>{title}</h1>
-      <p class="page-lead">{description}</p>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container prose-page">
-      {image && (
-        <img
-          src={image}
-          alt={imageAlt ?? ''}
-          width="960"
-          height="640"
-          loading="eager"
-          style="margin-bottom: 2rem; border-radius: var(--radius-lg); width: 100%; aspect-ratio: 3/2; object-fit: cover;"
-        />
-      )}
+  <div class="case-article">
       <div class="case-meta">
         <span><strong>Plats:</strong> {location}</span>
         <span><strong>Eventtyp:</strong> {eventType}</span>
@@ -116,13 +100,5 @@ const jsonLd = buildArticleLd({
       <div class="article-body">
         <Content />
       </div>
-    </div>
-  </section>
-
-  <CTASection
-    title="Planerar ni ett liknande event?"
-    text="Vi hjälper er med ljud, ljus, scen, bild och tekniker i hela Skåne."
-    sourcePath={canonicalPath}
-    ctaContext="case_footer_cta"
-  />
-</BaseLayout>
+  </div>
+</SolutionPage>
