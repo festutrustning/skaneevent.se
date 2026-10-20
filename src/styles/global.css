@@ -1829,10 +1829,16 @@ body.menu-open {
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.35rem 0.5rem;
   list-style: none;
   font-size: 0.875rem;
   color: var(--gray-500);
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
 }
 
 .breadcrumbs li:not(:last-child)::after {
@@ -1841,10 +1847,14 @@ body.menu-open {
   color: var(--gray-400);
 }
 
-.breadcrumbs a {
+.breadcrumbs a,
+.breadcrumbs [aria-current="page"] {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
+}
+
+.breadcrumbs a {
   color: var(--gray-500);
 }
 
