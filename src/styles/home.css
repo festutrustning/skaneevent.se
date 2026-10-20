@@ -763,6 +763,19 @@ body.page-home .home-hero :focus-visible {
   transform: scale(1.03);
 }
 
+/* Case utan egna foton får ett enfärgat kort i ink, med den neutrala grafiken
+   som en liten ikon högt upp. Den täcker inte kortet och krockar inte med texten. */
+.home-case-graphic {
+  background: var(--ink);
+}
+
+.home-case-graphic img.case-illustration {
+  inset: 0 0 auto;
+  height: 12rem;
+  object-fit: contain;
+  filter: none;
+}
+
 .home-case-copy {
   position: relative;
   z-index: 1;

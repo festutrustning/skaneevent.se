@@ -8,6 +8,7 @@ import { offertEventUrlForPath } from '../data/festutrustning-links';
 import { SITE } from '../data/site';
 import { buildServiceLd } from '../components/seo/serviceLd';
 import { buildFaqLd, faqIdFromQuestion } from '../components/seo/faqLd';
+import { formatGuests, getCaseVisual } from '../lib/case-display';
 import '../styles/home.css';
 
 const offertWhyHref = offertEventUrlForPath('/', 'home_why_cta');
@@ -234,26 +235,34 @@ if (faqLd) {
         </p>
       </div>
       <div class="home-cases">
-        {showcaseCases.map((entry, index) => (
-          <a class:list={['home-case', { 'home-case-lead': index === 0 }]} href={`/case/${entry.id}/`}>
-            {entry.data.image && (
+        {showcaseCases.map((entry, index) => {
+          const visual = getCaseVisual(entry.data, `${entry.data.eventType} i ${entry.data.location}`);
+          return (
+            <a
+              class:list={[
+                'home-case',
+                { 'home-case-lead': index === 0, 'home-case-graphic': visual.isIllustration },
+              ]}
+              href={`/case/${entry.id}/`}
+            >
               <img
-                src={entry.data.image}
-                alt={entry.data.imageAlt ?? `${entry.data.eventType} i ${entry.data.location}`}
+                src={visual.src}
+                alt={visual.alt}
                 width="768"
                 height="1024"
                 loading="lazy"
+                class:list={{ 'case-illustration': visual.isIllustration }}
               />
-            )}
-            <div class="home-case-copy">
-              <p class="home-kicker">{entry.data.location} · {entry.data.eventType}</p>
-              <h3>{entry.data.title}</h3>
-              {entry.data.kit && <p>{entry.data.kit}</p>}
-              {entry.data.crew && <p>{entry.data.crew}</p>}
-              {entry.data.guests && <p>{entry.data.guests} gäster på det här eventet</p>}
-            </div>
-          </a>
-        ))}
+              <div class="home-case-copy">
+                <p class="home-kicker">{entry.data.location} · {entry.data.eventType}</p>
+                <h3>{entry.data.title}</h3>
+                {entry.data.kit && <p>{entry.data.kit}</p>}
+                {entry.data.crew && <p>{entry.data.crew}</p>}
+                {entry.data.guests && <p>{formatGuests(entry.data.guests)} på det här eventet</p>}
+              </div>
+            </a>
+          );
+        })}
       </div>
       <p class="home-after"><a class="home-text-link" href="/case/">Se alla case</a></p>
     </div>
