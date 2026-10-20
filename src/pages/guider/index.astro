@@ -4,8 +4,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import CTASection from '../../components/CTASection.astro';
 import { getGuideImage } from '../../data/guide-images';
+import { responsiveSources } from '../../lib/responsive-image';
 
 const breadcrumbs = [{ name: 'Guider', href: '/guider/' }];
+const heroPhoto = '/images/guider-hero.jpg';
+const heroSet = responsiveSources(heroPhoto);
 
 const guides = (await getCollection('guider')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -17,8 +20,21 @@ const guides = (await getCollection('guider')).sort(
   description="Praktiska guider om eventteknik, planering och genomförande av företagsevent i Skåne. Ljud, ljus, scen, konferens och mer."
   canonicalPath="/guider/"
   breadcrumbs={breadcrumbs}
+  heroPreload={heroSet ? { href: heroSet.preload, srcset: heroSet.avif } : undefined}
 >
-  <div class="page-hero">
+  <div class="page-hero page-hero-photo">
+    <div class="page-hero-bg">
+      {heroSet ? (
+        <picture>
+          <source type="image/avif" srcset={heroSet.avif} sizes="100vw" />
+          <source type="image/webp" srcset={heroSet.webp} sizes="100vw" />
+          <img src={heroPhoto} alt="" width="1400" height="933" fetchpriority="high" decoding="sync" />
+        </picture>
+      ) : (
+        <img src={heroPhoto} alt="" width="1400" height="933" fetchpriority="high" decoding="sync" />
+      )}
+    </div>
+    <div class="page-hero-shade" aria-hidden="true"></div>
     <div class="container">
       <Breadcrumbs items={breadcrumbs} />
       <h1>Guider för företagsevent</h1>
