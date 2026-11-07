@@ -43,7 +43,7 @@ const cases = (await getCollection('cases')).sort(
         <p class="case-card-fact">{item.data.location} · {item.data.eventType}</p>
         <p>{item.data.kit}</p>
         <p>{item.data.crew}</p>
-        {item.data.guests && <p class="case-card-fact">{item.data.guests} gäster på det här eventet</p>}
+        {item.data.guests && <p class="case-card-fact">{item.data.guests} på det här eventet</p>}
       </a>
     ))}
   </div>

@@ -2470,6 +2470,27 @@ body.menu-open {
   margin: 0 0 1.25rem 1.25rem;
 }
 
+.article-body figure {
+  margin: 1.5rem 0 2rem;
+}
+
+.article-body figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.article-body figure.is-portrait {
+  max-width: 24rem;
+}
+
+.article-body figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--gray-500);
+}
+
 .capacity-grid {
   display: grid;
   gap: 1.25rem;

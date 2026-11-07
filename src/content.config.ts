@@ -34,6 +34,7 @@ const cases = defineCollection({
     crew: z.string().optional(),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
+    keywords: z.array(z.string()).optional(),
     challenge: z.string().optional(),
     solution: z.string().optional(),
     result: z.string().optional(),

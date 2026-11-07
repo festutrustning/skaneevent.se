@@ -191,7 +191,7 @@ export const PAGES_SEO: Record<string, PageSeoEntry> = {
   '/case/': {
     title: 'Case – företagsevent i Skåne',
     description:
-      'Se hur vi löst eventteknik till företagsevent i Skåne – utomhus LED-scen, konferens, gala och företagsfester.',
+      'Se hur vi löst eventteknik till företagsevent i Skåne – kongress i Lund, konferens, företagsfest och större visningar.',
     sitemapPriority: 0.7,
     changefreq: 'monthly',
     focusAreas: ['case'],
