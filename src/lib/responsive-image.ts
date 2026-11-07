@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const WIDTHS = [640, 960, 1400];
+const WIDTHS = [640, 768, 960, 1024, 1400];
 
 export function responsiveSources(src: string) {
   if (!src.endsWith('.jpg')) return null;

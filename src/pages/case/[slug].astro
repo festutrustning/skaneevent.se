@@ -23,6 +23,7 @@ const {
   image,
   kit,
   crew,
+  keywords,
   challenge,
   solution,
   result,
@@ -48,6 +49,7 @@ const jsonLd = buildArticleLd({
   canonicalPath,
   datePublished: pubDate,
   image: pageOg,
+  keywords,
   aboutEvent: { name: title, location },
 });
 ---
