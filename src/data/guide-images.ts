@@ -32,9 +32,9 @@ export const GUIDE_IMAGES: Record<string, GuideImage> = {
     caption: 'Mikrofoner till panel och konferens',
   },
   'teknik-till-konferens': {
-    src: '/images/konferens-scen.jpg',
-    alt: 'Publik på företagskonferens i professionell lokalbelysning',
-    caption: 'Konferensteknik som hörs och syns',
+    src: '/images/malmo-live-konferens.jpg',
+    alt: 'Talare och publik på konferens på Malmö Live, med bildskärmar och scenljus',
+    caption: 'Konferens på Malmö Live',
   },
   'ljud-till-foretagsevent': {
     src: '/images/ljud-ljus-utrustning.jpg',
@@ -59,8 +59,8 @@ export const GUIDE_IMAGES: Record<string, GuideImage> = {
 };
 
 const FALLBACK: GuideImage = {
-  src: '/images/konferens-scen.jpg',
-  alt: 'Företagsevent med professionell eventteknik',
+  src: '/images/boozt-awards-malmo.jpg',
+  alt: 'Awards på Boozt HQ i Malmö med projektion, uplights och rollups',
   caption: 'Eventteknik för företagsevent i Skåne',
 };
 
