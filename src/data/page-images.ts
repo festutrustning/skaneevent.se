@@ -10,20 +10,35 @@ export interface PageVisuals {
 }
 
 const I = {
+  malmoLive: {
+    src: '/images/malmo-live-konferens.jpg',
+    alt: 'Talare och publik på konferens på Malmö Live, med bildskärmar och scenljus',
+    caption: 'Konferens på Malmö Live',
+  },
+  booztAwards: {
+    src: '/images/boozt-awards-malmo.jpg',
+    alt: 'Awards på Boozt HQ i Malmö med projektion, uplights och rollups',
+    caption: 'Awards på Boozt HQ i Malmö',
+  },
+  tingsekLive: {
+    src: '/images/tingsek-foretagsevent.jpg',
+    alt: 'Liveframträdande med PA, ljus och bildskärm på företagsevent',
+    caption: 'Live på företagsevent',
+  },
   konferensScen: {
-    src: '/images/konferens-scen.jpg',
-    alt: 'Publik på företagskonferens i professionell blå lokalbelysning',
-    caption: 'Konferens & paneler i professionell miljö',
+    src: '/images/malmo-live-konferens.jpg',
+    alt: 'Talare och publik på konferens på Malmö Live, med bildskärmar och scenljus',
+    caption: 'Konferens på Malmö Live',
   },
   konferensPublik: {
-    src: '/images/konferens-publik.jpg',
-    alt: 'Deltagare på företagskonferens i blå scenbelysning',
-    caption: 'Fokus på publikupplevelsen',
+    src: '/images/malmo-live-konferens.jpg',
+    alt: 'Talare och publik på konferens på Malmö Live, med bildskärmar och scenljus',
+    caption: 'Konferens på Malmö Live',
   },
   scenBelysning: {
-    src: '/images/scen-belysning.jpg',
-    alt: 'Publik på företagskonferens med projekterat ljusmönster',
-    caption: 'Ljusdesign som sätter tonen i salen',
+    src: '/images/malmo-live-konferens.jpg',
+    alt: 'Talare och publik på konferens på Malmö Live, med bildskärmar och scenljus',
+    caption: 'Konferens på Malmö Live',
   },
   scenPublik: {
     src: '/images/scen-publik.jpg',
@@ -91,9 +106,9 @@ const I = {
     caption: 'Tekniker vid mixer och ljusbord',
   },
   eventBackstage: {
-    src: '/images/event-backstage.jpg',
-    alt: 'Publik under konfettiregn och blått scenljus',
-    caption: 'Storskalig eventproduktion med effekter',
+    src: '/images/tingsek-foretagsevent.jpg',
+    alt: 'Liveframträdande med PA, ljus och bildskärm på företagsevent',
+    caption: 'Live på företagsevent',
   },
   gala: {
     src: '/images/foretagsevent-bankett.jpg',
@@ -101,9 +116,9 @@ const I = {
     caption: 'Gala och större företagsevent',
   },
   eventEffekter: {
-    src: '/images/event-effekter.jpg',
-    alt: 'Publik på konferens med blått scenljus och ljusmönster',
-    caption: 'Atmosfär och ljusdesign',
+    src: '/images/boozt-awards-malmo.jpg',
+    alt: 'Awards på Boozt HQ i Malmö med projektion, uplights och rollups',
+    caption: 'Awards på Boozt HQ i Malmö',
   },
 } as const satisfies Record<string, PageImage>;
 
@@ -121,7 +136,7 @@ export const PAGE_VISUALS: Record<string, PageVisuals> = {
     gallery: [I.ledUtomhus, I.foretagseventDj, I.foretagseventBankett],
   },
   '/konferens/': {
-    feature: I.eventEffekter,
+    feature: I.booztAwards,
     gallery: [I.ljudLjus, I.eventProduktion, I.tross],
   },
   '/gala/': {
@@ -129,7 +144,7 @@ export const PAGE_VISUALS: Record<string, PageVisuals> = {
     gallery: [I.tross, I.foretagseventDj, I.eventProduktion],
   },
   '/produktlansering/': {
-    feature: I.eventBackstage,
+    feature: I.tingsekLive,
     gallery: [I.tross, I.eventProduktion, I.foretagseventBankett],
   },
   '/foretagsfest/': {
@@ -157,8 +172,8 @@ export const PAGE_VISUALS: Record<string, PageVisuals> = {
     gallery: [I.eventProduktion, I.foretagseventLedRigg, I.ljudLjus],
   },
   '/lund/foretagsevent/': {
-    feature: I.eventEffekter,
-    gallery: [I.foretagseventDj, I.foretagseventLedRigg, I.scenBelysning],
+    feature: I.eventProduktion,
+    gallery: [I.foretagseventDj, I.foretagseventLedRigg, I.malmoLive],
   },
   '/helsingborg/foretagsevent/': {
     feature: I.foretagseventDj,
@@ -183,6 +198,10 @@ export const PAGE_VISUALS: Record<string, PageVisuals> = {
   '/malmo/eventteknik/': {
     feature: I.tross,
     gallery: [I.eventProduktion, I.foretagseventDj, I.foretagseventLedRigg],
+  },
+  '/dj-och-artister/': {
+    feature: I.tingsekLive,
+    gallery: [I.foretagseventDj, I.eventProduktion, I.foretagseventLedRigg],
   },
 };
 
